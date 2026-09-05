@@ -1,0 +1,22 @@
+# Obsidian 缓存与工作状态，不纳入版本
+.obsidian/cache
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/*/data
+.obsidian/plugins/*/data.json
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*~
+
+# 大体积原始素材（可选取消注释以忽略）
+# /raw/**/*.pdf
+# /raw/**/*.mp4
+# /raw/**/*.zip
+
+# 临时文件
+/tmp/
+*.log
