@@ -14,6 +14,49 @@
 | The Wiki | `wiki/` | AI提炼的结构化知识网络，日常查阅问答的核心 |
 | The Schema | `SCHEMA.md` | AI协作规则，定义结构、流程、输出规范 |
 
+### 整体架构
+
+```mermaid
+flowchart TB
+    subgraph RAW["Raw Source 原始素材层"]
+        direction LR
+        RAW1["articles"] --- RAW2["papers"] --- RAW3["video_transcripts"] --- RAW4["books"]
+        RAW_D["人类写入 · AI只读 · 永不修改"]
+    end
+
+    subgraph WIKI["The Wiki 知识编译层"]
+        direction LR
+        WIKI1["entities"] --- WIKI2["concepts"] --- WIKI3["overviews"] --- WIKI4["comparisons"] --- WIKI5["source_summaries"] --- WIKI6["_archive"]
+        WIKIM["index.md + shturl.md<br/>（AI元数据文件）"]
+        WIKI_D["AI主导生成 · 人类验收阅读"]
+    end
+
+    subgraph SCHEMA["The Schema 规则契约层"]
+        direction LR
+        SCHEMA1["SCHEMA.md"] --- SCHEMA2["AGENTS.md"]
+        SCHEMA3["元数据规范 · 工作流 · 治理规则"]
+        SCHEMA_D["人类维护 · AI读取执行"]
+    end
+
+    subgraph WORKFLOW["三大工作流"]
+        direction LR
+        ING["Ingest 知识摄入<br/>新素材编译为Wiki网络"]
+        QUE["Query 问答回写<br/>高价值答案反哺Wiki"]
+        LINT["Lint 巡检治理<br/>定期体检修复问题"]
+    end
+
+    subgraph META["Wiki页面强制 Frontmatter 元数据标准"]
+        direction LR
+        M1["type · source · description · created_at · updated_at · tags"]
+        M2["created_at 永久不可修改 · updated_at 每次修订刷新<br/>Git版本管控 + Conventional Commits 提交规范"]
+    end
+
+    RAW -->|"Ingest"| WIKI
+    SCHEMA -->|"约束"| WIKI
+    WORKFLOW --- WIKI
+    WIKI --- META
+```
+
 ## 三大工作流
 
 - **Ingest**：喂资料给AI，自动更新10-15个相关页面
