@@ -12,7 +12,7 @@
 |---|---|---|
 | Raw Source | `raw/` | 原始资料，人类写入，AI只读，永不修改 |
 | The Wiki | `wiki/` | AI提炼的结构化知识网络，日常查阅问答的核心 |
-| The Schema | `SCHEMA.md` | AI协作规则，定义结构、流程、输出规范 |
+| The SCHEMA | `SCHEMA.md` | AI协作规则，定义结构、流程、输出规范 |
 
 ### 整体架构
 
@@ -31,7 +31,7 @@ flowchart TB
         WIKI_D["AI主导生成 · 人类验收阅读"]
     end
 
-    subgraph SCHEMA["The Schema 规则契约层"]
+    subgraph SCHEMA["The SCHEMA 规则契约层"]
         direction LR
         SCHEMA1["SCHEMA.md"] --- SCHEMA2["AGENTS.md"]
         SCHEMA3["元数据规范 · 工作流 · 治理规则"]

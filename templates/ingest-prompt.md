@@ -33,7 +33,7 @@
 
 【输出要求】
 1. 按「实体类 / 概念类 / 总览类 / 对比类 / 资料摘要类」分类输出所有生成/更新的Wiki页面完整内容。
-2. 每个页面头部必须包含符合schema规范的Frontmatter元数据（type、source、description、created_at、updated_at、tags）。
+2. 每个页面头部必须包含符合SCHEMA规范的Frontmatter元数据（type、source、description、created_at、updated_at、tags）。
 3. 所有内容必须严格来自原始素材，禁止编造、引申无依据的内容。
 4. 最后单独输出本次更新后的index条目片段与shturl日志条目。
 ```

@@ -3,7 +3,7 @@ type: source_summary
 source: [[llm-wiki知识库方案]]
 description: "对 raw 素材《LLM-Wiki 知识库建设可行性方案》的要点摘录：方案完整覆盖架构设计、三大工作流、治理体系、Git 规范与落地路径，全库所有页面的共同出处。"
 created_at: 2026-09-05 12:37:30
-updated_at: 2026-09-05 12:37:30
+updated_at: 2026-09-05 13:01:56
 tags: [source_summary, llm_wiki, knowledge_base]
 ---
 
@@ -15,7 +15,7 @@ tags: [source_summary, llm_wiki, knowledge_base]
 
 ## 要点拆解（按素材章节）
 - **一 项目概述**：四大痛点（笔记碎片化 / RAG 无沉淀 / AI 笔记垃圾化 / 缺统一规则），五大目标（可编译、可追溯、可治理、可复用、低门槛）。
-- **二 核心架构**：[[三层架构]]（Raw/Wiki/Schema）+ 两个 AI 元数据文件（index.md、shturl.md）。
+- **二 核心架构**：[[三层架构]]（Raw/Wiki/SCHEMA）+ 两个 AI 元数据文件（index.md、shturl.md）。
 - **三 三大工作流**：[[ingest工作流]]、[[query工作流]]、[[lint工作流]] 的完整流程与冲突/回写规则。
 - **四 元数据标准**：[[元数据规范]] Frontmatter 五个 type 取值与六字段约束。
 - **五 治理体系**：治理闭环周期图、[[防膨胀闸门]]、问题处置策略、索引与日志扩展策略（>200 页拆分）。

@@ -8,12 +8,12 @@
 ## entities 实体
 
 - [[karpathy]]：LLM-Wiki 个人知识库框架的提出者，主张由 AI 承担知识编译劳动、人类聚焦思考与决策。目前素材仅一笔带过，背景信息待后续补充。
-- [[LLM-Wiki框架]]：基于 Karpathy 思想、以 Obsidian + Git 落地的一套 AI 编译型个人知识库框架，核心是 raw 原始素材层、wiki 编译知识层、schema 规则契约层的三层架构。
+- [[LLM-Wiki框架]]：基于 Karpathy 思想、以 Obsidian + Git 落地的一套 AI 编译型个人知识库框架，核心是 raw 原始素材层、wiki 编译知识层、SCHEMA 规则契约层的三层架构。
 
 ## concepts 概念
 
 - [[编译型知识库]]：将原始素材一次性预编译为原子化、可关联、可治理的知识网络，而非留存素材碎片的知识管理模式，是 LLM-Wiki 与普通 RAG 的核心分水岭。
-- [[三层架构]]：Raw 原始素材层 / Wiki 知识编译层 / Schema 规则契约层三层权责分离的架构，配套 index.md 索引与 shturl.md 变更日志两个 AI 元数据文件。
+- [[三层架构]]：Raw 原始素材层 / Wiki 知识编译层 / SCHEMA 规则契约层三层权责分离的架构，配套 index.md 索引与 shturl.md 变更日志两个 AI 元数据文件。
 - [[ingest工作流]]：新素材摄入并联动编译整个 Wiki 知识网络的过程：准入判断、存 raw、AI 解析、联动更新 10-15 个页面、双链、冲突检测、同步索引日志、人工验收。
 - [[query工作流]]：基于已编译 Wiki 进行问答并反向沉淀高质量答案的工作流：index 定位、读 Wiki 生成结论先行答案、有长期复用价值时以 source_summary + query_write 标签回写。
 - [[lint工作流]]：对全库做定期质量体检的工作流：按 P0 阻断 / P1 重要 / P2 优化三级输出问题清单与统计，只提建议、禁止自行修改 Wiki 文件。

@@ -85,10 +85,10 @@
 
 ## 回写Wiki页面指令
 
-确认问答结果值得入库时，用该指令直接生成符合schema规范的完整笔记。
+确认问答结果值得入库时，用该指令直接生成符合SCHEMA规范的完整笔记。
 
 ```
-请将本次问答结果整理为一篇标准Wiki页面，严格遵循schema格式规范。
+请将本次问答结果整理为一篇标准Wiki页面，严格遵循SCHEMA格式规范。
 
 要求：
 1. 头部自动补全Frontmatter元数据（`type`统一为`source_summary`，`tags`追加`query_write`）：

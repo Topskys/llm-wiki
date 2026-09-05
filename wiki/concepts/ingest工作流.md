@@ -3,7 +3,7 @@ type: concept
 source: [[llm-wiki知识库方案]]
 description: "新素材摄入并联动编译整个 Wiki 知识网络的过程：准入判断、存 raw、AI 解析、联动更新 10-15 个页面、双链、冲突检测、同步索引日志、人工验收。"
 created_at: 2026-09-05 12:37:30
-updated_at: 2026-09-05 12:37:30
+updated_at: 2026-09-05 13:01:56
 tags: [workflow, ingest, knowledge_base]
 ---
 
@@ -17,7 +17,7 @@ tags: [workflow, ingest, knowledge_base]
 ## 要点拆解
 1. **素材准入判断**：仅长期学习、反复复用的知识才 Ingest；碎片化资讯只存 raw、不编译（闸门 1）。
 2. **存入 raw/**：保留作者、发布时间、原文链接，只增不改，AI 只读。
-3. **AI 解析**：结合 schema 规则提取核心实体、概念与观点。
+3. **AI 解析**：结合 SCHEMA 规则提取核心实体、概念与观点。
 4. **联动更新**：新增/更新 10-15 个相关页面；新页填 `created_at` + `updated_at`，旧页**严禁改 created_at**、只刷新 `updated_at` 与 description。
 5. **建立关联**：全部用 Obsidian 双链 `[[页面]]` 并附一句话关联说明，禁止裸链接。
 6. **冲突检测**：语义矛盾而非视角补充时，标注 `⚠️观点冲突`，并列双方原文与来源，冲突页暂停自动更新，转人工裁决。
