@@ -1,9 +1,5 @@
 # Obsidian 缓存与工作状态，不纳入版本
-.obsidian/cache
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/plugins/*/data
-.obsidian/plugins/*/data.json
+.obsidian
 
 # 系统文件
 .DS_Store

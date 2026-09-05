@@ -10,7 +10,7 @@
 
 | 层级 | 目录 | 说明 |
 |---|---|---|
-| Raw Source | `raw/` | 原始资料，人类写入，AI只读，永不修改 |
+| Raw Source | `raw/` | 原始资料，人类写入，AI只读+只增不改，禁修改删除覆盖 |
 | The Wiki | `wiki/` | AI提炼的结构化知识网络，日常查阅问答的核心 |
 | The SCHEMA | `SCHEMA.md` | AI协作规则，定义结构、流程、输出规范 |
 
@@ -21,7 +21,7 @@ flowchart TB
     subgraph RAW["Raw Source 原始素材层"]
         direction LR
         RAW1["articles"] --- RAW2["papers"] --- RAW3["video_transcripts"] --- RAW4["books"]
-        RAW_D["人类写入 · AI只读 · 永不修改"]
+        RAW_D["人类写入 · AI只读+只增不改 · 禁修改删除覆盖"]
     end
 
     subgraph WIKI["The Wiki 知识编译层"]
@@ -85,7 +85,8 @@ llm-wiki-vault/
 ├─ raw/                  # 原始素材库
 │   ├─ articles/
 │   ├─ papers/
-│   └─ video_transcripts/
+│   ├─ video_transcripts/
+│   └─ _pending/         # 知识缺口看板（登记未覆盖问题）
 │
 ├─ wiki/                 # AI编译知识库
 │   ├─ _archive/         # 归档目录

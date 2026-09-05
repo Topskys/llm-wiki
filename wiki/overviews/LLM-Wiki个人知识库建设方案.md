@@ -3,11 +3,20 @@ type: overview
 source: [[llm-wiki知识库方案]]
 description: "LLM-Wiki 个人知识库建设方案全貌：痛点与目标、三层架构、三大工作流、治理体系、Git 管控、分阶段落地路径与避坑指南。"
 created_at: 2026-09-05 12:37:30
-updated_at: 2026-09-05 13:01:56
+updated_at: 2026-09-06 00:55:05
 tags: [llm_wiki, knowledge_base, overview, personal_knowledge_management]
 ---
 
 # LLM-Wiki 个人知识库建设方案
+
+## 建设路线
+
+```mermaid
+flowchart LR
+    A["启动期 1-3 天<br/>首次 Ingest"] --> B["调优期 1-2 周<br/>3+ 次 Ingest · 首轮 Lint"]
+    B --> C["稳定期 1-3 月<br/>50-100 页 · 引入 Dataview"]
+    C --> D["深化期 3 月+<br/>全自动化治理"]
+```
 
 ## 核心结论
 - 一套基于 [[karpathy|Karpathy]] 提出的 [[LLM-Wiki框架]]，结合 Obsidian + Git 落地的低门槛、可迭代、可治理的个人编译型知识库方案。
@@ -15,7 +24,7 @@ tags: [llm_wiki, knowledge_base, overview, personal_knowledge_management]
 - 总体投入极低（工具零成本、每周维护约 30 分钟），预期回报是知识资产的长期复利。
 
 ## 要点拆解
-- **架构**：[[三层架构]] 权责分离（raw 只读 / wiki 编译 / SCHEMA 约束），配套 `index.md` 与 `shturl.md` 两个 AI 元数据文件，>200 页自动拆分域索引（如 `index-concepts.md`）、shturl >200 条按月归档。
+- **架构**：[[三层架构]] 权责分离（raw 只读+只增不改 / wiki 编译 / SCHEMA 约束），配套 `index.md` 与 `shturl.md` 两个 AI 元数据文件，>200 页自动拆分域索引（如 `index-concepts.md`）、shturl >200 条按月归档。
 - **三大工作流**：[[ingest工作流]]（摄入编译）／ [[query工作流]]（问答回写）／ [[lint工作流]]（巡检治理），形成自增长闭环。
 - **元数据标准**：[[元数据规范]] 强制 Frontmatter，`created_at` 永久固化，支撑溯源与治理。
 - **治理体系**：[[防膨胀闸门]] + 周/月/季度周期治理 + 问题页面处置策略，守护知识库健康度。
