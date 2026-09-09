@@ -32,7 +32,7 @@
 - 更新已存在Wiki页面：严禁修改原有created_at字段；只更新updated_at为当前 YYYY-MM-DD hh:mm:ss；页面主旨发生变化时同步更新description。
 
 【输出要求】
-1. 按「实体类 / 概念类 / 总览类 / 对比类 / 资料摘要类」分类输出所有生成/更新的Wiki页面完整内容。
+1. 按「实体类 / 概念类 / 总览类 / 对比类 / 素材摘要类 / 主题页类 / 冲突记录类」分类输出所有生成/更新的Wiki页面完整内容。
 2. 每个页面头部必须包含符合SCHEMA规范的Frontmatter元数据（type、source、description、created_at、updated_at、tags）。
 3. 所有内容必须严格来自原始素材，禁止编造、引申无依据的内容。
 4. 最后单独输出本次更新后的index条目片段与shturl日志条目。

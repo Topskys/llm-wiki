@@ -11,7 +11,7 @@
 
 ```yaml
 ---
-type: concept|entity|overview|comparison|source_summary
+type: concept|entity|overview|comparison|source_summary|topic|conflict
 source: [[来源双链]]
 description: "1-3句话简述本页面核心内容，用于索引预览、Agent快速理解页面主旨"
 created_at: YYYY-MM-DD hh:mm:ss
@@ -24,7 +24,7 @@ tags: []
 
 | 字段 | 约束规则 |
 |---|---|
-| `type` | 限定5种类型：concept / entity / overview / comparison / source_summary |
+| `type` | 限定7种类型：concept / entity / overview / comparison / source_summary / topic / conflict |
 | `source` | 使用Obsidian双链指向原始素材或来源页面，支持溯源 |
 | `description` | 必填，1-3句话，`index.md`摘要直接复用此字段 |
 | `created_at` | 页面首次创建时间，**后续任何更新永久不可修改** |
@@ -52,8 +52,10 @@ llm-wiki-vault/
 │
 ├─ raw/                  # 原始素材库（AI只读+只增不改：可新增，禁修改/删除/覆盖）
 │   ├─ articles/         # 网页、文章（含联网抓取素材）
+│   ├─ notes/            # 个人笔记、摘录
 │   ├─ papers/           # 论文、报告
 │   ├─ video_transcripts/ # 视频转录稿
+│   ├─ web_clip/         # 网页摘录（Obsidian Web Clipper 剪藏，只增不改）
 │   └─ _pending/         # 知识缺口看板（登记未覆盖问题，AI可新增，人类审核）
 │
 └─ wiki/                 # AI编译知识库
@@ -62,22 +64,26 @@ llm-wiki-vault/
    ├─ concepts/          # 概念类页面（技术、方法论、模型）
    ├─ overviews/         # 总览类页面（领域全景梳理）
    ├─ comparisons/       # 对比类页面（多主题横向对比）
-   ├─ source_summaries/  # 素材摘要页（单份原始素材要点）
+   ├─ summaries/         # 素材摘要页（单份原始素材要点）
+   ├─ topics/            # 主题页（围绕主题的综合归纳）
+   ├─ conflicts/         # 观点冲突记录（双方表述/依据/状态）
    ├─ index.md           # 全局索引页
    └─ shturl.md          # 知识库变更日志
 ```
 
 ### 各目录说明
 
-1. **raw/**：人类维护，AI 只读 + 只增不改：可读取，可新增素材文件（存放论文、网页剪藏、视频转录、摘录、联网抓取的网页等，并保存来源链接）；禁止修改、删除、覆盖已有文件。
+1. **raw/**：人类维护，AI 只读 + 只增不改：可读取，可新增素材文件（存放论文、网页剪藏、视频转录、笔记摘录、联网抓取的网页等，并保存来源链接）；禁止修改、删除、覆盖已有文件。子目录：`articles/`（网页、文章）、`notes/`（个人笔记、摘录）、`papers/`（论文、报告）、`video_transcripts/`（视频转录稿）、`web_clip/`（网页摘录）、`_pending/`（知识缺口看板）。
 2. **wiki/entities/**：实体页面，人物、项目、组织、工具；type: `entity`
 3. **wiki/concepts/**：概念、原理、方法论；type: `concept`
 4. **wiki/overviews/**：领域总览综述；type: `overview`
 5. **wiki/comparisons/**：对象横向对比；type: `comparison`
-6. **wiki/source_summaries/**：单份原始素材摘要；type: `source_summary`
-7. **wiki/_archive/**：归档目录，存放过时、低价值页面，**不纳入index索引，不参与常规Query检索**。
-8. **wiki/index.md**：全库索引，每个页面附带一句话摘要（复用description字段），Ingest操作后更新。
-9. **wiki/shturl.md**：知识库变更日志；字段：时间｜操作类型｜素材来源｜新增页面｜更新页面｜简要说明。
+6. **wiki/summaries/**：单份原始素材摘要；type: `source_summary`
+7. **wiki/topics/**：主题页，围绕某一主题/专题的综合归纳页；type: `topic`
+8. **wiki/conflicts/**：观点冲突记录页，留存双方表述、依据与处理状态，交人工裁决；type: `conflict`
+9. **wiki/_archive/**：归档目录，存放过时、低价值页面，**不纳入index索引，不参与常规Query检索**。
+10. **wiki/index.md**：全库索引，每个页面附带一句话摘要（复用description字段），Ingest操作后更新。
+11. **wiki/shturl.md**：知识库变更日志；字段：时间｜操作类型｜素材来源｜新增页面｜更新页面｜简要说明。
 
 > `shturl` = Stuff Update Record Log，专门记录知识加工操作，区别于普通日志。如觉得难记，可重命名为 `wiki_change_log.md`，同步修改本文件所有引用。
 

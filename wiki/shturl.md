@@ -11,6 +11,7 @@
 | 2026-09-06 00:49:17 | Rule-Update | 规则措辞统一 | 0 | 4 | raw权限统一为「AI只读+只增不改」；冲突处置更新为「Agent先自行调和、无法调和才交人工」：SCHEMA 3.2、query工作流、ingest工作流、lint工作流、三层架构、LLM-Wiki框架、建设方案、两个模板 |
 | 2026-09-06 00:55:05 | Governance | 配图治理 | 0 | 8 | 为8个页面补充Mermaid图：ingest/lint/query（流程总览）、三层架构、防膨胀闸门、LLM-Wiki框架、建设方案、编译型知识库，刷新updated_at |
 | 2026-09-06 01:00:27 | Rule-Update | 新增配图规范 | 0 | 0 | SCHEMA四章增「配图规范（Mermaid）」：流程/架构/机制/路线类必须配图、自判断非表格类；AGENTS.md 同步重申 |
+| 2026-09-08 22:34:02 | Rule-Update | 目录结构调整 | 0 | 4 | 对齐用户目录重构：wiki/source_summaries→summaries，新增topics（主题页）、conflicts（冲突记录），type扩为7种；raw新增notes（笔记）、web_clip（网页摘录）；同步SCHEMA/AGENTS/index/三层架构/LLM-Wiki框架/元数据规范/README/ingest、lint、wiki-note模板；获人类授权同步更新raw素材《llm-wiki知识库方案.md》目录树与type枚举 |
 
 ---
 

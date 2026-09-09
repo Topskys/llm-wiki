@@ -20,13 +20,13 @@
 flowchart TB
     subgraph RAW["Raw Source 原始素材层"]
         direction LR
-        RAW1["articles"] --- RAW2["papers"] --- RAW3["video_transcripts"] --- RAW4["books"]
+        RAW1["articles"] --- RAW2["notes"] --- RAW3["papers"] --- RAW4["video_transcripts"] --- RAW5["web_clip"]
         RAW_D["人类写入 · AI只读+只增不改 · 禁修改删除覆盖"]
     end
 
     subgraph WIKI["The Wiki 知识编译层"]
         direction LR
-        WIKI1["entities"] --- WIKI2["concepts"] --- WIKI3["overviews"] --- WIKI4["comparisons"] --- WIKI5["source_summaries"] --- WIKI6["_archive"]
+        WIKI1["entities"] --- WIKI2["concepts"] --- WIKI3["overviews"] --- WIKI4["comparisons"] --- WIKI5["summaries"] --- WIKI6["topics"] --- WIKI7["conflicts"] --- WIKI8["_archive"]
         WIKIM["index.md + shturl.md<br/>（AI元数据文件）"]
         WIKI_D["AI主导生成 · 人类验收阅读"]
     end
@@ -83,9 +83,11 @@ llm-wiki-vault/
 ├─ .git/hooks/commit-msg # Commit校验钩子
 │
 ├─ raw/                  # 原始素材库
-│   ├─ articles/
-│   ├─ papers/
-│   ├─ video_transcripts/
+│   ├─ articles/         # 网页、文章
+│   ├─ notes/            # 笔记、摘录
+│   ├─ papers/           # 论文、报告
+│   ├─ video_transcripts/# 视频转录稿
+│   ├─ web_clip/         # 网页摘录（Web Clipper 剪藏）
 │   └─ _pending/         # 知识缺口看板（登记未覆盖问题）
 │
 ├─ wiki/                 # AI编译知识库
@@ -94,7 +96,9 @@ llm-wiki-vault/
 │   ├─ concepts/
 │   ├─ overviews/
 │   ├─ comparisons/
-│   ├─ source_summaries/
+│   ├─ summaries/        # 素材摘要页
+│   ├─ topics/           # 主题页
+│   ├─ conflicts/        # 冲突记录
 │   ├─ index.md          # 全局索引
 │   └─ shturl.md         # 变更日志
 │

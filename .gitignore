@@ -15,4 +15,9 @@ Thumbs.db
 
 # 临时文件
 /tmp/
+temp
+tests
 *.log
+
+# 依赖
+node_modules

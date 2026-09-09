@@ -6,7 +6,7 @@
 
 - `raw/` — 原始素材。**AI 只读 + 只增不改：可读取、可新增素材文件（联网抓取网页等），禁止修改、删除、覆盖任何已有文件**。
 - `wiki/` — AI 编译的知识网络。分类目录与 `type` 一一对应：
-  - `entities/` → entity，`concepts/` → concept，`overviews/` → overview，`comparisons/` → comparison，`source_summaries/` → source_summary
+  - `entities/` → entity，`concepts/` → concept，`overviews/` → overview，`comparisons/` → comparison，`summaries/` → source_summary，`topics/` → topic，`conflicts/` → conflict
   - `_archive/` — 归档页，**不纳入 index、不参与常规检索**（页面移入时从 index.md 删除该条目）
   - `index.md` 全库索引 / `shturl.md` 知识变更日志
 - `SCHEMA.md` — 主规则文件（权威）
@@ -15,7 +15,7 @@
 ## 三大工作流（详见 SCHEMA.md 第三章）
 
 - **Ingest**：素材准入判断（仅长期可复用知识才编译，碎片资讯只存 raw）→ 新增或联动更新 10~15 个相关页面 → 同步 index.md 与 shturl.md → 人工验收。
-- **Query**：优先读 `wiki/index.md` 定位 → 只读 wiki/ 作答（非必要不读 raw）→ 结论先行、每观点标注来源 → 答案有长期复用价值时回写 `source_summary` 页面，`tags` 追加 `query_write`。
+- **Query**：优先读 `wiki/index.md` 定位 → 只读 wiki/ 作答（非必要不读 raw）→ 结论先行、每观点标注来源 → 答案有长期复用价值时回写 `summaries/`（type: `source_summary`）页面，`tags` 追加 `query_write`。
 - **Lint**：按 P0/P1/P2 输出问题清单与统计，**只提建议，禁止自行修改 wiki 文件**，等待人类确认。
 
 ## 缺口回退与联网搜索约束
@@ -33,7 +33,7 @@ Query 时 wiki 未命中，按「L1 本地 wiki → L2 raw/本地项目信息 �
 
 每个 wiki 页面 Frontmatter：`type` / `source` / `description` / `created_at` / `updated_at` / `tags`。
 
-- `type` 仅 5 种取值：concept / entity / overview / comparison / source_summary
+- `type` 仅 7 种取值：concept / entity / overview / comparison / source_summary / topic / conflict
 - `source` 用 Obsidian 双链指向来源；`description` 必填 1-3 句（index.md 摘要直接复用，不重复撰写）
 - `created_at` 首次创建后**永久不可改**；每次更新只刷新 `updated_at`，主旨变化时同步 description
 - 时间格式统一 `YYYY-MM-DD hh:mm:ss`（24 小时制，例：`2026-09-05 14:30:00`）

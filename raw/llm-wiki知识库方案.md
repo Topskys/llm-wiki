@@ -42,13 +42,13 @@
 flowchart TB
     subgraph RAW["Raw Source 原始素材层"]
         direction LR
-        RAW1["articles"] --- RAW2["papers"] --- RAW3["video_transcripts"] --- RAW4["books"]
+        RAW1["articles"] --- RAW2["notes"] --- RAW3["papers"] --- RAW4["video_transcripts"] --- RAW5["web_clip"]
         RAW_D["人类写入 · AI只读 · 永不修改"]
     end
 
     subgraph WIKI["The Wiki 知识编译层"]
         direction LR
-        WIKI1["entities"] --- WIKI2["concepts"] --- WIKI3["overviews"] --- WIKI4["comparisons"] --- WIKI5["summaries"] --- WIKI6["_archive"]
+        WIKI1["entities"] --- WIKI2["concepts"] --- WIKI3["overviews"] --- WIKI4["comparisons"] --- WIKI5["summaries"] --- WIKI6["topics"] --- WIKI7["conflicts"] --- WIKI8["_archive"]
         WIKIM["index.md + shturl.md<br/>（AI元数据文件）"]
         WIKI_D["AI主导生成 · 人类验收阅读"]
     end
@@ -103,8 +103,11 @@ llm-wiki-vault/          # Obsidian库根目录
 │
 ├─ raw/                  # 原始素材库
 │   ├─ articles/         # 网页、文章
+│   ├─ notes/            # 笔记、摘录
 │   ├─ papers/           # 论文、报告
-│   └─ video_transcripts/ # 视频转录稿
+│   ├─ video_transcripts/ # 视频转录稿
+│   ├─ web_clip/         # 网页摘录（Web Clipper 剪藏）
+│   └─ _pending/         # 知识缺口看板（登记未覆盖问题）
 │
 └─ wiki/                 # AI编译知识库
    ├─ _archive/          # 归档目录，存放过时/低价值页面，不进索引
@@ -112,7 +115,9 @@ llm-wiki-vault/          # Obsidian库根目录
    ├─ concepts/          # 概念类页面（技术、方法论、模型）
    ├─ overviews/         # 总览类页面（领域全景梳理）
    ├─ comparisons/       # 对比类页面（多主题横向对比）
-   ├─ source_summaries/  # 素材摘要页（单份原始素材要点）
+   ├─ summaries/         # 素材摘要页（单份原始素材要点）
+   ├─ topics/            # 主题页（围绕主题的综合归纳）
+   ├─ conflicts/         # 观点冲突记录（双方表述/依据/状态）
    ├─ index.md           # 全局索引页
    └─ shturl.md          # 知识库变更日志
 ```
@@ -287,7 +292,7 @@ flowchart TD
 
 ```
 ---
-type: concept|entity|overview|comparison|source_summary
+type: concept|entity|overview|comparison|source_summary|topic|conflict
 source: [[来源双链]]
 description: 1-3句话简述页面核心内容，用于索引预览与AI快速理解
 created_at: YYYY-MM-DD hh:mm:ss
@@ -300,7 +305,7 @@ tags: []
 
 | 字段 | 约束规则 |
 | --- | --- |
-| `type` | 限定5种类型，用于分类检索与批量管理 |
+| `type` | 限定7种类型，用于分类检索与批量管理 |
 | `source` | 使用Obsidian双链指向原始素材或来源页面，支持溯源 |
 | `description` | 必填，1-3句话，`index.md`摘要直接复用此字段 |
 | `created_at` | 页面首次创建时间，**后续任何更新永久不可修改** |

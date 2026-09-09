@@ -57,7 +57,7 @@ tags: []
 
 ```markdown
 ---
-type: <% tp.system.prompt("页面类型：concept / entity / overview / comparison / source_summary") %>
+type: <% tp.system.prompt("页面类型：concept / entity / overview / comparison / source_summary / topic / conflict") %>
 source: <% tp.system.prompt("来源双链，格式 [[xxx]]") %>
 description: <% tp.system.prompt("页面简述，1-3句话") %>
 created_at: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
@@ -110,6 +110,16 @@ tags: []
 - 按素材原有结构提炼要点
 - 标注素材来源、作者、发布时间
 - 链接到由该素材衍生出的概念/实体页面
+
+### topic（主题页）
+- 围绕某一主题/专题做综合归纳，可作为该主题的入口
+- 汇总关联概念、实体、素材摘要，梳理主题脉络
+- 链接到该主题下的各概念/实体页面
+
+### conflict（冲突记录页）
+- 开头说明冲突主题与双方立场
+- 并列双方表述与依据（保留原文），标注来源
+- 记录当前处理状态（待裁决）/ 人工裁决结论
 
 ---
 

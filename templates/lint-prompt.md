@@ -21,7 +21,7 @@
 
 2. 【P0 阻断级】元数据严重缺失
    - 缺少 type / created_at / source 任一字段
-   - type 取值不在允许范围内（concept/entity/overview/comparison/source_summary）
+   - type 取值不在允许范围内（concept/entity/overview/comparison/source_summary/topic/conflict）
 
 3. 【P0 阻断级】created_at 被篡改
    - 对比 shturl.md 日志，页面 created_at 与首次创建记录不符

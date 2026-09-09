@@ -3,7 +3,7 @@ type: entity
 source: [[llm-wiki知识库方案]]
 description: "基于 Karpathy 思想、以 Obsidian + Git 落地的一套 AI 编译型个人知识库框架，核心是 raw 原始素材层、wiki 编译知识层、SCHEMA 规则契约层的三层架构。"
 created_at: 2026-09-05 12:37:30
-updated_at: 2026-09-06 00:55:05
+updated_at: 2026-09-08 22:34:02
 tags: [llm_wiki, knowledge_base, personal_knowledge_management]
 ---
 
@@ -17,7 +17,7 @@ flowchart TB
         R1["论文/网页/转录/摘录<br/>人类写入 · AI 只读+只增不改"]
     end
     subgraph WIKI["The Wiki 编译知识层"]
-        W1["entities · concepts · overviews · comparisons · source_summaries · _archive<br/>index.md + shturl.md"]
+        W1["entities · concepts · overviews · comparisons ·<br/>summaries · topics · conflicts · _archive<br/>index.md + shturl.md"]
     end
     subgraph SCHEMA["SCHEMA 规则契约"]
         S1["SCHEMA.md · AGENTS.md<br/>结构/流程/输出规范"]
