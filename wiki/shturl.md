@@ -12,6 +12,7 @@
 | 2026-09-06 00:55:05 | Governance | 配图治理 | 0 | 8 | 为8个页面补充Mermaid图：ingest/lint/query（流程总览）、三层架构、防膨胀闸门、LLM-Wiki框架、建设方案、编译型知识库，刷新updated_at |
 | 2026-09-06 01:00:27 | Rule-Update | 新增配图规范 | 0 | 0 | SCHEMA四章增「配图规范（Mermaid）」：流程/架构/机制/路线类必须配图、自判断非表格类；AGENTS.md 同步重申 |
 | 2026-09-08 22:34:02 | Rule-Update | 目录结构调整 | 0 | 4 | 对齐用户目录重构：wiki/source_summaries→summaries，新增topics（主题页）、conflicts（冲突记录），type扩为7种；raw新增notes（笔记）、web_clip（网页摘录）；同步SCHEMA/AGENTS/index/三层架构/LLM-Wiki框架/元数据规范/README/ingest、lint、wiki-note模板；获人类授权同步更新raw素材《llm-wiki知识库方案.md》目录树与type枚举 |
+| 2026-09-11 23:41:15 | Ingest | [[raw/notes/贸易AI业务.md]] | 15 | 0 | 编译《贸易AI业务》（原：商城AI业务矩阵-面试整理，3013行面试整理）为15页全类型：topics 1（商城AI业务矩阵）、entities 5（灵购AI/DataBus/ModelForge-AI/LiveClip-AI/MultiVis-AI）、concepts 7（RAG五层/Hybrid/TTFT/FEC/微调vsRAG/QLoRA-LoRA/LangGraph）、comparisons 1、summaries 1；素材文件经用户授权改名，全库 source 与链接同步更新 |
 
 ---
 
