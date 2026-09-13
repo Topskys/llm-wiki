@@ -32,15 +32,27 @@
 - [[微调与RAG分工]]：电商垂直场景模型策略：微调管「怎么说」（话术风格），RAG 管「知道什么」（实时业务知识），更新知识库不必重训模型。
 - [[QLoRA与LoRA微调]]：参数高效微调：QLoRA 量化基座降显存单卡可训；本地验证（rank=64）+云端量产（rank=32）两阶段，SFT+DPO 盲评 2.1→4.3。
 - [[LangGraph与Checkpointer工作流]]：LangGraph 子图编排 + PostgreSQL Checkpointer 节点级状态持久化，实现故障自愈与断点续跑，SSE 流式 + 多模型路由配套。
+- [[committed-artifact]]：AI-native SDLC 的核心机制：每个阶段结束时向版本库提交一个 artifact（intent.md/spec.md/plan.md/diff+tests/PR+findings/incident），下一阶段从读它开始，commit 链同时充当审计轨迹。
+- [[CLAUDE记忆文件]]：仓库根目录的 agent 记忆文件：给出新加入者需要的一切（命令/约定/架构/易错点），agent 每次会话开始即读取，全团队共享一份并随错误迭代。
+- [[Skills技能]]：组织把制度知识可操作化的机制：显式、版本化、广泛适用、中心化更新的指令包，按需自动触发；是建议性控制，政策必须必然成立时需 hooks 兜底。
+- [[Hooks护栏与审批门]]：agent 动作前的确定性控制层：build 阶段做护栏（保护路径/格式化/防密钥泄露）、deploy 阶段做强制的审批门（allow/ask/block），非不可商量的 hook 可被工程师关闭。
+- [[plan模式]]：Claude Code plan mode 作为实现阶段的默认入口：给 agent 批准过的 spec.md，让其先产出可审查的实现计划（plan.md），人在计划层把关后再进入实现，实现偏离计划时同步更新。
+- [[并行会话与子代理]]：一个工程师驱动多条并行工作流：parallel session（git worktree 隔离、互不可见、人负责 steering）+ subagent（会话内作用域助手、独立上下文），控制来自仓库配置，输出归属到发起人。
+- [[Agent反馈闭环]]：给 agent 一个验证自己工作的机制：量化验收目标 + 反馈通道（测试/build/截图 diff），可先写失败测试再用 hook 保护它；与 verifier 子代理的区别在于它贯穿整个任务、在工程师看到前自修错误。
+- [[持续评估]]：CI 中的持续评估：把近期真实任务固化为 eval 套件，在 CLAUDE.md/skills/hooks 等 agent 配置变更时自动回归，防止换模型/改提示词降低完成质量；生产事故也沉淀为回归 eval。
+- [[AI代码评审]]：AI 双端参与 PR 评审：对入站 PR 按 REVIEW.md 分 pass 审查（bugs/security/compliance）、对自家 PR 响应 @claude 评审意见并推送修复；findings 不自动放行/拦截，approval 仅来自人类 branch protection。
+- [[监控闭环]]：让 SDLC 闭环自主运转：确定性脚本监控生产指标控制带（1σ 记日志/2σ 只读诊断/3σ 提议修复），带置信门控触发 agent 写 intent.md 走正常管道；Claude Tag 把一线 on-call 纳入频道内闭环。
 
 ## overviews 总览
 
 - [[LLM-Wiki个人知识库建设方案]]：LLM-Wiki 个人知识库建设方案全貌：痛点与目标、三层架构、三大工作流、治理体系、Git 管控、分阶段落地路径与避坑指南。
+- [[AI-native-SDLC]]：AI-native SDLC（AI 原生软件开发生命周期）总览：代码不再是瓶颈，六阶段从线性流程重构为带承交付物与自动触发的循环流程，覆盖 Plan/Design/Build/Test/Deploy/Maintain 六阶段的 plays、控制原语与治理原则。
 
 ## comparisons 对比
 
 - [[知识管理方式对比]]：传统个人笔记、普通 RAG、LLM-Wiki 三种知识管理方式横向对比：知识形态、检索方式、沉淀机制与治理能力差异。
 - [[四大项目架构对比]]：DataBus/ModelForge/LiveClip/MultiVis 横向对比：核心问题、架构形态、状态存储、长任务处理、实时性、产出物与灵购 AI 协作关系。
+- [[传统SDLC与AI-native-SDLC对比]]：传统 SDLC 与 AI-native SDLC 横向对比：阶段形态（线性 vs 循环）、瓶颈位置、阶段产物（文档/门票 vs committed artifact）、控制主体（人类逐项 vs agent 产出+人类 gate）、治理与审计方式差异。
 
 ## topics 主题页
 
@@ -54,6 +66,7 @@
 
 - [[LLM-Wiki知识库方案·素材摘要]]：对 raw 素材《LLM-Wiki 知识库建设可行性方案》的要点摘录：方案完整覆盖架构设计、三大工作流、治理体系、Git 规范与落地路径，全库所有页面的共同出处。
 - [[商城AI业务矩阵·素材摘要]]：对 raw 素材《贸易AI业务》（原：商城AI业务矩阵-面试整理）的要点摘录：五大项目体系、RAG 五层优化、TTFT、FEC/JitterBuffer、LoRA 微调、LangGraph 工作流等核心知识点索引。
+- [[AI-native-SDLC·素材摘要]]：对 raw 素材《The AI-Native SDLC playbook》（Anthropic Applied AI，2026-08-21）的要点摘录：六阶段 plays、承交付物链、CLAUDE.md/Skills/Hooks 控制原语、AI 评审、CI evals、监控闭环与治理原则索引。
 
 ---
 
