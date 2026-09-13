@@ -14,6 +14,7 @@
 | 2026-09-08 22:34:02 | Rule-Update | 目录结构调整 | 0 | 4 | 对齐用户目录重构：wiki/source_summaries→summaries，新增topics（主题页）、conflicts（冲突记录），type扩为7种；raw新增notes（笔记）、web_clip（网页摘录）；同步SCHEMA/AGENTS/index/三层架构/LLM-Wiki框架/元数据规范/README/ingest、lint、wiki-note模板；获人类授权同步更新raw素材《llm-wiki知识库方案.md》目录树与type枚举 |
 | 2026-09-11 23:41:15 | Ingest | [[raw/notes/贸易AI业务.md]] | 15 | 0 | 编译《贸易AI业务》（原：商城AI业务矩阵-面试整理，3013行面试整理）为15页全类型：topics 1（商城AI业务矩阵）、entities 5（灵购AI/DataBus/ModelForge-AI/LiveClip-AI/MultiVis-AI）、concepts 7（RAG五层/Hybrid/TTFT/FEC/微调vsRAG/QLoRA-LoRA/LangGraph）、comparisons 1、summaries 1；素材文件经用户授权改名，全库 source 与链接同步更新 |
 | 2026-09-12 23:03:13 | Ingest | [[raw/papers/The AI-Native SDLC playbook.md]] | 13 | 0 | 编译《The AI-Native SDLC playbook》（Anthropic Applied AI，2026-08-21）为13页：overviews 1（AI-native-SDLC）、concepts 10（committed-artifact/CLAUDE记忆文件/Skills技能/Hooks护栏与审批门/plan模式/并行会话与子代理/Agent反馈闭环/持续评估/AI代码评审/监控闭环）、comparisons 1（传统SDLC与AI-native-SDLC对比）、summaries 1（AI-native-SDLC·素材摘要） |
+| 2026-09-13 18:55:11 | Ingest | [[raw/books/三十六计/000-总说·三十六计.md]] | 12 | 0 | 编译《三十六计》（5000言站已校订版，总说+36计共37篇落盘raw/books/三十六计/）为12页：overviews 1（三十六计全库总览）、concepts 2（阴阳燮理/走为上）、topics 6（胜战/敌战/攻战/混战/并战/败战计）、comparisons 1（六套体系对比）、summaries 1（素材摘要）；2张Mermaid图校验通过；index与shturl同步 |
 
 ---
 
