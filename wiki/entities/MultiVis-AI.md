@@ -3,7 +3,7 @@ type: entity
 source: [[贸易AI业务]]
 description: "图文视频一体化自媒体运营 Agent：基于 LangGraph 编排选题/文案/配图三子图，PostgreSQL Checkpointer 节点级故障自愈，SSE 流式输出，多模型路由降本；素材入素材中心供灵购 AI 多模态回复。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-09-11 23:41:15
+updated_at: 2026-09-13 22:31:33
 tags: [multivis, langgraph, agent, content_generation, workflow]
 ---
 
@@ -74,6 +74,7 @@ LiveClip 短视频 → MultiVis 二次加工（可选）；MultiVis 图文视频
 - [[灵购AI]]：素材中心 → 灵购多模态回复
 - [[LiveClip-AI]]：短视频素材来源
 - [[LangGraph与Checkpointer工作流]]：核心技术原理
+- [[LLM网关动态路由与流量治理总览]]：MultiVis 的多模型路由是**业务层静态分级**（短视频/标准/长图文分段选模型），本页是**网关层动态调度**（429/5xx→换Key/降级），两层互补
 
 ## 参考来源
 - [[贸易AI业务]]

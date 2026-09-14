@@ -3,7 +3,7 @@ type: concept
 source: [[贸易AI业务]]
 description: "大模型首字延迟（Time To First Token）优化全景：RAG 压检索让 LLM 更早开跑、统一 prompt 触发前缀缓存、微调精简 system 与动态 Token 缩短输入、SSE 流式降低体感延迟，复杂咨询首字 15s→2s 口径。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-09-11 23:41:15
+updated_at: 2026-09-13 22:31:33
 tags: [ttft, llm_inference, kv_cache, prefix_caching, sse, performance]
 ---
 
@@ -60,6 +60,7 @@ flowchart LR
 - [[灵购AI]]：TTFT 落地的语音客服场景
 - [[FEC与自适应JitterBuffer]]：听得稳，与 TTFT 分属不同层级
 - [[商城AI业务矩阵]]：同属「答得快」优化主线
+- [[SSE流式容错]]：SSE 是 TTFT 首字即回的流式通道，本页解决该通道中途断流的容错策略
 
 ## 参考来源
 - [[贸易AI业务]]
