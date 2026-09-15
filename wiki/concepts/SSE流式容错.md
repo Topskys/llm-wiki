@@ -3,7 +3,7 @@ type: concept
 source: [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]]
 description: "SSE 流式响应差异化容错：已开始输出即直接中断不重试不切节点，防止拼接内容语义断层；长流以发起时刻计入熔断统计；对流式请求的预扣 Token 按流结束真实 usage 结算。"
 created_at: 2026-09-13 22:31:33
-updated_at: 2026-09-13 22:31:33
+updated_at: 2026-09-14 23:20:00
 tags: [sse, streaming, dynamic_routing, fault_tolerance, llm_inference]
 ---
 
@@ -43,6 +43,7 @@ flowchart TD
 - [[重试预算与幂等保护]]：非幂等与长上下文的重试约束
 - [[双层网关架构]]：SSE 旁路挂在 AI 网关层
 - [[熔断器状态机]]：SSE 特有的统计口径
+- [[SSE背压与内存治理总览]]：SSE 上游快下游慢的 OOM 治理（本页偏重试容错，该页偏背压与内存）
 
 ## 参考来源
 - [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]]

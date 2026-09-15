@@ -16,7 +16,7 @@
 | 2026-09-12 23:03:13 | Ingest | [[raw/papers/The AI-Native SDLC playbook.md]] | 13 | 0 | 编译《The AI-Native SDLC playbook》（Anthropic Applied AI，2026-08-21）为13页：overviews 1（AI-native-SDLC）、concepts 10（committed-artifact/CLAUDE记忆文件/Skills技能/Hooks护栏与审批门/plan模式/并行会话与子代理/Agent反馈闭环/持续评估/AI代码评审/监控闭环）、comparisons 1（传统SDLC与AI-native-SDLC对比）、summaries 1（AI-native-SDLC·素材摘要） |
 | 2026-09-13 18:55:11 | Ingest | [[raw/books/三十六计/000-总说·三十六计.md]] | 12 | 0 | 编译《三十六计》（5000言站已校订版，总说+36计共37篇落盘raw/books/三十六计/）为12页：overviews 1（三十六计全库总览）、concepts 2（阴阳燮理/走为上）、topics 6（胜战/敌战/攻战/混战/并战/败战计）、comparisons 1（六套体系对比）、summaries 1（素材摘要）；2张Mermaid图校验通过；index与shturl同步 |
 | 2026-09-13 22:31:33 | Ingest | [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]] | 11 | 2 | 编译《面向大模型服务的动态路由与流量治理架构研究》为11页：overviews 1（LLM网关动态路由与流量治理总览）、concepts 8（双层网关架构/RPM与TPM联合令牌桶/熔断器状态机/429流量治理/能力标签驱动降级/灰度回切/SSE流式容错/重试预算与幂等保护）、comparisons 1（主流LLM网关方案对比）、summaries 1（素材摘要）；9张Mermaid图校验通过；联动更新 MultiVis-AI、TTFT首字延迟优化（仅刷新updated_at+新增关联链接） |
-| 2026-09-13 23:00:00 | Ingest | [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]] | 1 | 3 | 重新编译（素材新增 MCP 网关架构图）：新增 concepts 1（MCP网关，含 Mermaid 架构图）；联动更新 LLM网关总览/双层网关架构/动态路由素材摘要 3页（补 MCP 三层落地形态说明，仅刷新updated_at） |
+| 2026-09-14 23:20:00 | Ingest | [[raw/papers/面向SSE流式转发的背压与内存治理研究.md]] | 10 | 1 | 编译《面向SSE流式转发的背压与内存治理研究》为10页：overviews 1（SSE背压与内存治理总览）、concepts 7（背压透传/SSE有界队列/慢消费者处置/断线续传/入口网关水位熔断/Node.js stream背压/Python异步背压）、comparisons 1（SSE背压方案三源对比）、summaries 1（素材摘要）；5张Mermaid图校验通过；联动更新 SSE流式容错（补交叉链接，刷新updated_at） |
 
 ---
 
