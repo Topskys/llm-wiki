@@ -3,7 +3,7 @@ type: concept
 source: [[贸易AI业务]]
 description: "粗召回阶段的混合检索：Dense 稠密语义路 + Sparse 稀疏关键词路并行、用 dense_weight 融合两路分数，再进精排；dense_weight 在线按 query 类型预设、离线用评测集调参。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-09-11 23:41:15
+updated_at: 2026-09-16 08:30:12
 tags: [rag, hybrid_search, dense_vector, sparse_vector, retrieval]
 ---
 
@@ -61,6 +61,8 @@ flowchart LR
 - [[RAG检索优化五层]]：Hybrid 叠加在五层主路径上，不替代 HNSW/Int8/元数据
 - [[灵购AI]]：在线 dense_weight 选择落地到语音客服回调
 - [[ModelForge-AI]]：dense_weight 离线调参与检索服务共建
+- [[Embedding向量嵌入]]：Dense 语义路向量的来源与定义
+- [[向量Embedding与向量数据库总览]]：Embedding 与向量库的全景
 
 ## 参考来源
 - [[贸易AI业务]]
