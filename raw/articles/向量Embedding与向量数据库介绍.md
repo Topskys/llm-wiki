@@ -1,6 +1,6 @@
-# 向量(Embedding)与向量数据库介绍 — 豆包会话
+# 向量(Embedding)与向量数据库介绍
 
-> 来源：豆包会话分享 https://www.doubao.com/chat/38441841466259970
+> 来源：AI 会话分享 https://www.doubao.com/chat/38441841466259970
 > 抓取时间：2026-09-14
 > 提示：AI 生成可能有误，注意核实。
 

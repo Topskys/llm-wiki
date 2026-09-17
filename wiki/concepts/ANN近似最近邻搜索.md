@@ -1,6 +1,6 @@
----
+﻿---
 type: concept
-source: [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+source: [[raw/articles/向量Embedding与向量数据库介绍.md]]
 description: "ANN（近似最近邻）是向量库加速的底层：不遍历全部向量算距离，而是用专门索引在高维空间剪枝，只在小部分候选里找最近邻；牺牲一点点召回率，换取百万/亿级向量毫秒级查询。"
 created_at: 2026-09-16 08:30:12
 updated_at: 2026-09-16 08:30:12
@@ -36,4 +36,4 @@ tags: [ann, approximate_nearest_neighbor, vector_search, hnsw, ivf, pq]
 - [[RAG检索优化五层]]：ANN 粗召回在线上五层中的位置
 
 ## 参考来源
-- [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+- [[raw/articles/向量Embedding与向量数据库介绍.md]]

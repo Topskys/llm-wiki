@@ -1,6 +1,6 @@
----
+﻿---
 type: concept
-source: [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+source: [[raw/articles/向量Embedding与向量数据库介绍.md]]
 description: "HNSW（层次化导航小世界）：多层跳表+图结构的 ANN 索引，建索引时高层是稀疏点做粗略导航、底层存全部向量；查询从高层快速跳到目标区域逐层向下导航，Milvus/Qdrant/Chroma 常用。"
 created_at: 2026-09-16 08:30:12
 updated_at: 2026-09-16 08:30:12
@@ -32,4 +32,4 @@ HNSW 常作为 Dense 路的粗召回索引，配合 Int8 量化省内存、元�
 - [[向量数据库]]：HNSW 是专业向量库常用索引
 
 ## 参考来源
-- [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+- [[raw/articles/向量Embedding与向量数据库介绍.md]]

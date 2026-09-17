@@ -1,6 +1,6 @@
----
+﻿---
 type: overview
-source: [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+source: [[raw/articles/向量Embedding与向量数据库介绍.md]]
 description: "Embedding 与向量数据库全景：把非结构化内容翻译成向量空间坐标、以 ANN 近似检索替代暴力扫描，覆盖 Embedding 定义、向量库 vs 传统库、IVF/HNSW/PQ 三大加速机制与检索权衡。"
 created_at: 2026-09-16 08:30:12
 updated_at: 2026-09-16 08:30:12
@@ -42,4 +42,4 @@ flowchart LR
 - [[Hybrid混合检索]]：Dense 语义路 + Sparse 关键词路融合
 
 ## 参考来源
-- [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+- [[raw/articles/向量Embedding与向量数据库介绍.md]]

@@ -1,9 +1,9 @@
 ---
 type: concept
 source: [[The AI-Native SDLC playbook]]
-description: "Skills 是组织把制度知识可操作化的机制：显式、版本化、广泛适用、中心化更新的指令包，按需自动触发；是建议性控制，政策必须必然成立时需 hooks 兜底。"
+description: "Skills 是组织把制度知识可操作化的机制：显式、版本化、广泛适用、中心化更新的指令包，按需自动触发；是建议性控制，政策必须必然成立时需 hooks 兜底。SKILL.md 规范、架构模式与质量评审详见 Skill 工程化系列页面。"
 created_at: 2026-09-12 23:03:13
-updated_at: 2026-09-12 23:03:13
+updated_at: 2026-09-17 10:30:00
 tags: [skills, governance, institutional_knowledge, ai_native_sdlc]
 ---
 
@@ -35,6 +35,9 @@ flowchart LR
 - [[CLAUDE记忆文件]]：团队上下文（CLAUDE.md）与制度知识（skill）的边界
 - [[Hooks护栏与审批门]]：建议性控制背后的确定性层
 - [[AI-native-SDLC]]：skill 在六阶段中的嵌入位置
+- [[SKILL.md规范]]：SKILL.md 标准文件结构与渐进式披露架构
+- [[Skill工程化总览]]：Skill 工程化全景（规范/模式/质量治理）
+- [[Skill质量治理]]：Skill 质量评审检查清单与反面模式
 
 ## 参考来源
 - [[The AI-Native SDLC playbook]]

@@ -1,6 +1,6 @@
----
+﻿---
 type: source_summary
-source: [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+source: [[raw/articles/向量Embedding与向量数据库介绍.md]]
 description: "对 raw 素材《向量(Embedding)与向量数据库介绍》（豆包会话）的要点摘录：Embedding 定义、向量库 vs 传统库、ANN/HNSW/IVF/PQ 索引机制、向量搜索加速的四个关键与速度召回率权衡。"
 created_at: 2026-09-16 08:30:12
 updated_at: 2026-09-16 08:30:12
@@ -11,7 +11,7 @@ tags: [source_summary, embedding, vector_database, ann]
 
 ## 素材信息
 - 标题：向量(Embedding)与向量数据库介绍
-- 位置：[[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+- 位置：[[raw/articles/向量Embedding与向量数据库介绍.md]]
 - 性质：豆包 AI 会话（AI 生成，已标注"可能有误注意核实"），后续追问了向量搜索为什么快
 - 抓取方式：Playwright 有头浏览器会话提取
 
@@ -43,4 +43,4 @@ tags: [source_summary, embedding, vector_database, ann]
 - [[Embedding向量嵌入]] [[ANN近似最近邻搜索]] [[HNSW图索引]] [[IVF倒排索引]] [[PQ乘积量化]]：概念细粒度页面
 
 ## 参考来源
-- [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+- [[raw/articles/向量Embedding与向量数据库介绍.md]]

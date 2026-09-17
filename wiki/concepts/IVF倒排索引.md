@@ -1,6 +1,6 @@
----
+﻿---
 type: concept
-source: [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+source: [[raw/articles/向量Embedding与向量数据库介绍.md]]
 description: "IVF（倒排文件索引）：建索引时把所有向量聚类分桶，查询时只找最近的少数几个桶做距离计算，跳过绝大多数桶；加速明显但可能漏掉分到别的桶的最相似向量，召回率略降。"
 created_at: 2026-09-16 08:30:12
 updated_at: 2026-09-16 08:30:12
@@ -24,4 +24,4 @@ tags: [ivf, inverted_file, ann, vector_index, clustering]
 - [[向量Embedding与向量数据库总览]]：全景总览
 
 ## 参考来源
-- [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+- [[raw/articles/向量Embedding与向量数据库介绍.md]]

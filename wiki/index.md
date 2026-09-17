@@ -67,6 +67,23 @@
 - [[Python异步背压]]：Python SSE 背压实现：aiohttp bytearray 缓冲 + asyncio.Event 水位同步；FastAPI StreamingResponse 生成器串行拉取天然背压，严禁攒 list 再返回。
 - [[重试预算与幂等保护]]：网关重试约束体系：全请求级重试预算（外部重试≤3次、换节点≤2次）防循环放大；非幂等接口禁重试、长上下文低重试快失败、Retry-After 严格等待与指数退避+抖动防惊群，月配额耗尽零重试。
 - [[MCP网关]]：AI 业务网关的 MCP 落地形态：MCP服务端解析 JSON-RPC、路由模块统一编排 RAG/Tool/Memory 等能力模块，模型推理请求下沉 LLM 调用子模块（RPM/TPM 令牌桶→熔断→路由降级）再达上游供应商。
+- [[上下文污染]]：多Agent系统中N个Agent竞争编排器上下文窗口时，任务状态相互污染导致决策质量下降的问题，及RCR-Router/DACS/Agent-Radar等解决方案。
+- [[Agent状态一致性]]：多Agent并发操作共享状态时的一致性保障：写时冲突检测（STORM）、事务补偿（SagaLLM）、Schema验证（PatchBoard）、自动读集重建（S-Bus）四种方案。
+- [[Agent异常处理与循环检测]]：多Agent系统异常处理：阶段感知分类（SHIELDA）、图引导修复（AgentTether）、静态循环检测（IAL-Scan）、自愈编排器方案。
+- [[自注意力机制]]：Transformer 最核心的建模原语：Q/K/V 投影 + 点积相似度 + softmax 加权，让每个 token 与全部 token 建立关联，复杂度 O(N²·d)，完全并行替代 RNN 串行循环。
+- [[多头注意力]]：把注意力拆成 8 个 head 并行，各 head 学习语法/指代/局部模式等不同依赖；衍生 MQA/GQA（LLaMA）/MLA（DeepSeek）/Flash Attention 等高效变体。
+- [[位置编码]]：向排列不变的自注意力注入序列顺序，正弦/余弦固定函数可外推长序列；后续演进出 RoPE（LLaMA/Qwen）、ALiBi 等相对位置编码。
+- [[Transformer编码器结构]]：双向多头自注意力 + FFN 两个子模块，残差+LayerNorm；Pre-LN/Post-LN 影响训练稳定性，BERT 类模型的骨干。
+- [[Transformer解码器结构]]：掩码自注意力 + 交叉注意力（Q=解码器/K/V=编码器）+ FFN 三子模块；GPT 类裁剪交叉注意力只留掩码自注意力 + FFN。
+- [[残差连接与层归一化]]：子层输入直接加到输出的跳连 + 层归一化，缓解深层梯度消失、稳定训练，是 Transformer 可堆叠数十层的保障。
+- [[SKILL.md规范]]：渐进式披露架构：启动只加载 YAML frontmatter 元数据（~100 tokens），命中触发才读 body；token 节省率达 98%，含标准目录结构与 11 大编写模块。
+- [[Skill架构模式]]：Skill 设计模式 P1-P7 七层（手动触发→元技能，按自主程度递增）+ 5 核心 5 支撑十架构模式，配模式选择决策矩阵。
+- [[Skill质量治理]]：六维 100 分评审（SOP 25/意图 20/输出 20/安全 15/性能 10/可维护 10）、Smells 三级反面模式与定义-评审-度量-改进治理闭环。
+- [[Function Calling三阶段模型]]：LLM 工具调用三阶段：Pre-call 意图识别与参数生成 → On-call 函数执行与结果回注 → Post-call 结果解析与后续推理；受控间接执行、语义路由与物理执行分离。
+- [[Function Tool设计规范]]：原子 Tool 设计四铁律：单一职责 / Pydantic 入参校验（自动 JSON Schema）/ 统一 success+data+msg 返回 / 面向 LLM 的 description 工程。
+- [[MCP协议架构]]：MCP（Model Context Protocol）Client-Host-Server 三层 + JSON-RPC 2.0；能力协商、tools/list 自动发现、tools/call 执行，传输层 stdio→SSE→Streamable HTTP 演进。
+- [[结构化输出与Tool抑制]]：strict JSON Schema / CFG 约束解码保证输出合规，但与 tool_call 约束解码空间冲突会压制工具调用（Tool Suppression），两阶段解耦与约束路由可缓解。
+- [[ToolRegistry跨框架互操作]]：所有 tool call 本质是 RPC；协议无关工具管理库用 Adapter 统一适配 OpenAI/Anthropic/Google/MCP，工具一次实现处处复用。
 
 ## overviews 总览
 
@@ -76,6 +93,9 @@
 - [[LLM网关动态路由与流量治理总览]]：LLM 网关动态路由与流量治理全景：Nginx+AI业务网关双层架构、RPM/TPM 联合令牌桶、5xx 熔断与 429 配额感知双通道分离调度、能力标签驱动降级与灰度回切，解决上游 429 限流与业务连续性问题。
 - [[SSE背压与内存治理总览]]：SSE 上游大模型快、下游 C 端慢时的 OOM 分层治理框架：背压透传、每连接有界队列、慢消费者主动断开、断线续传、入口网关水位熔断五层纵深防御，综合豆包/DeepSeek/ChatGLM 三家交叉验证。
 - [[向量Embedding与向量数据库总览]]：Embedding 与向量数据库全景：把非结构化内容翻译成向量空间坐标、以 ANN 近似检索替代暴力扫描，覆盖 Embedding 定义、向量库 vs 传统库、IVF/HNSW/PQ 三大加速机制与检索权衡。
+- [[多Agent上下文管理总览]]：多Agent系统上下文管理全景：上下文路由（RCR-Router/DACS/Agent-Radar）、状态一致性（STORM/SagaLLM/PatchBoard）、异常处理与循环检测（SHIELDA/AgentTether/IAL-Scan）三大核心问题的主流方案与架构演进。
+- [[Transformer总览]]：Transformer 架构全景：自注意力替代循环、Encoder/Decoder 两大块、位置编码/多头注意力/残差+归一化核心机制，是 GPT/BERT/LLaMA 及 RAG 技术的架构基石。
+- [[Skill工程化总览]]：AI Agent Skill 工程化全景：Tool/Skill/MCP 三层抽象、SKILL.md 渐进式披露、P1-P7 架构模式与六维质量治理，Agent 从"即兴调用"走向"可复用流程编排"。
 
 ## comparisons 对比
 
@@ -86,6 +106,8 @@
 - [[主流LLM网关方案对比]]：主流 LLM 网关方案横向对比：LiteLLM/Portkey/APISIX-AI/FrugalGPT 与本文双层网关在 RPM+TPM 联合配额、SSE 容错、能力标签降级、熔断灰度闭环上的能力差异。
 - [[SSE背压方案三源对比]]：豆包/DeepSeek/ChatGLM 三家对 SSE 下游慢导致 OOM 问题的方案交叉对比：在背压透传、有界队列、慢连接主动处置上结论一致，分歧仅在落盘续传优先级与部署层细节补充。
 - [[向量数据库与传统数据库对比]]：传统数据库（MySQL/PostgreSQL/MongoDB）与向量数据库（Chroma/Milvus/Qdrant/Pinecone）横向对比：精确匹配 vs ANN 近似检索、B树/哈希/倒排 vs HNSW/IVF/FAISS、适用场景与各自短板。
+- [[Transformer与RNN对比]]：Transformer 与 RNN/LSTM 横向对比：并行 vs 串行、O(N²) vs O(N)、长距离依赖能力与位置/归纳偏置差异；RNN/LSTM 无统计长记忆、SSM/Transformer 注意力不受指数衰减约束。
+- [[Function Tool与MCP Tool对比]]：Function Tool 与 MCP Tool 横向对比：进程内嵌 vs 独立 Server、单框架绑定 vs 跨框架复用、手动注册 vs 自动发现（tools/list）；按复用范围与生产化程度选型。
 
 ## topics 主题页
 
@@ -110,6 +132,10 @@
 - [[动态路由与流量治理·素材摘要]]：对 raw 论文《面向大模型服务的动态路由与流量治理架构研究》的要点摘录：Nginx+AI网关双层架构、RPM/TPM两级令牌桶、5xx熔断与429配额双通道、能力标签降级、灰度回切、SSE/幂等/长上下文容错、重试预算与可观测设计。
 - [[SSE背压与内存治理·素材摘要]]：对 raw 论文《面向SSE流式转发的背压与内存治理研究》的要点摘录：SSE 上游快下游慢导致 OOM 问题的五层纵深治理框架、三家 AI 方案交叉验证结论、Node.js 与 Python 实现范式。
 - [[向量Embedding与向量数据库·素材摘要]]：对 raw 素材《向量(Embedding)与向量数据库介绍》（豆包会话）的要点摘录：Embedding 定义、向量库 vs 传统库、ANN/HNSW/IVF/PQ 索引机制、向量搜索加速的四个关键与速度召回率权衡。
+- [[多Agent上下文管理·素材摘要]]：对 raw 素材《多Agent模式下的上下文管理机制研究综述》（26篇论文联网整理）的要点摘录：上下文路由/状态一致性/异常处理三大问题的主流方案索引。
+- [[Transformer原理·素材摘要]]：对 raw 素材《Transformer 原理》（豆包会话 + 公开学术资料）的要点摘录：核心思想、整体结构、位置编码/多头注意力/Encoder-Decoder/残差归一化、Transformer vs RNN 实证对比与架构演进路线。
+- [[AI-Agent-Skill工程化·素材摘要]]：对 raw 论文《AI Agent Skill 工程化》的要点摘录：渐进式披露规范、P1-P7 + 十架构模式、六维评审与治理闭环、Skill-MCP 互补关系及五项铁律。
+- [[Function-Calling与MCP-Tool设计·素材摘要]]：对 raw 论文《LLM Function Calling 与 MCP Tool 设计》的要点摘录：三阶段调用模型、Function Tool 四铁律、MCP Client-Host-Server 架构、Tool Suppression 与 ToolRegistry 跨框架互操作。
 
 ---
 

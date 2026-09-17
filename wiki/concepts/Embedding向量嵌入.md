@@ -1,6 +1,6 @@
----
+﻿---
 type: concept
-source: [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+source: [[raw/articles/向量Embedding与向量数据库介绍.md]]
 description: "Embedding 把非结构化数据（文本/图片/音频/视频）通过模型转成固定长度浮点数数组（如768/1536维），语义相近的内容在向量空间里距离更近，检索时用余弦相似度/欧氏距离衡量语义相似度。"
 created_at: 2026-09-16 08:30:12
 updated_at: 2026-09-16 08:30:12
@@ -36,4 +36,4 @@ tags: [embedding, vector, similarity, semantic_search]
 - [[Hybrid混合检索]]：Dense 语义路基于 Embedding
 
 ## 参考来源
-- [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+- [[raw/articles/向量Embedding与向量数据库介绍.md]]

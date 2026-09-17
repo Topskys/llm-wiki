@@ -1,6 +1,6 @@
----
+﻿---
 type: concept
-source: [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+source: [[raw/articles/向量Embedding与向量数据库介绍.md]]
 description: "PQ（乘积量化）：把高维向量压缩成很短编码，省内存、避免磁盘IO、距离计算变查表加速；代价是压缩损失精度。向量原始768维float单条约3072字节。"
 created_at: 2026-09-16 08:30:12
 updated_at: 2026-09-16 08:30:12
@@ -28,4 +28,4 @@ RAG 检索优化线上的 Int8 量化（float32→int8，存储约省 75%）同�
 - [[向量Embedding与向量数据库总览]]：全景总览
 
 ## 参考来源
-- [[raw/articles/doubao-向量Embedding与向量数据库介绍.md]]
+- [[raw/articles/向量Embedding与向量数据库介绍.md]]

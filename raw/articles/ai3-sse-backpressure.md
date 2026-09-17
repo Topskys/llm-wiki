@@ -1,14 +1,14 @@
 ---
 type: source
 source: https://chatglm.cn/main/alltoolsdetail?t=1789393742280&lang=zh&cid=6aa7fb52bcfb614d92c665de
-description: ChatGLM AI 对 SSE 上游快下游慢导致内存暴涨/OOM 的处理方案回答（含重生成 Node/Python 版）
+description: AI 对 SSE 上游快下游慢导致内存暴涨/OOM 的处理方案回答（含重生成 Node/Python 版）
 created_at: 2026-09-14 15:10:00
 tags: sse, backpressure, oom, streaming
 ---
 
-# AI3 ChatGLM：SSE 内存暴涨问题处理
+# AI3：SSE 内存暴涨问题处理
 
-> 来源：ChatGLM AI 回答（会话共享链接：https://chatglm.cn/main/alltoolsdetail?t=1789393742280&lang=zh&cid=6aa7fb52bcfb614d92c665de）
+> 来源：AI 回答（会话共享链接：https://chatglm.cn/main/alltoolsdetail?t=1789393742280&lang=zh&cid=6aa7fb52bcfb614d92c665de）
 
 **问题**：你们用 SSE，上游大模型生成特别快，但是到下游（C 端）特别慢，会导致内存暴涨或者存在 OOM 风险，是怎么处理的？
 

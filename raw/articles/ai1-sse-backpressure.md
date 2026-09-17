@@ -1,14 +1,14 @@
 ---
 type: source
 source: https://www.doubao.com/chat/38441372338426114
-description: 豆包 AI 对 SSE 上游快下游慢导致内存暴涨/OOM 的处理方案回答
+description: AI 对 SSE 上游快下游慢导致内存暴涨/OOM 的处理方案回答
 created_at: 2026-09-14 15:06:00
 tags: sse, backpressure, oom, streaming
 ---
 
-# AI1 豆包：SSE 上游快下游慢内存暴涨/OOM 处理方案
+# AI1：SSE 上游快下游慢内存暴涨/OOM 处理方案
 
-> 来源：豆包 AI 回答（会话共享链接：https://www.doubao.com/chat/38441372338426114）
+> 来源：AI 回答（会话共享链接：https://www.doubao.com/chat/38441372338426114）
 
 **问题**：你们用 SSE，上游大模型生成特别快，但是到下游（C 端）特别慢，会导致内存暴涨或者存在 OOM 风险，是怎么处理的？
 
