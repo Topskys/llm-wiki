@@ -1,9 +1,9 @@
 ---
 type: concept
 source: [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]]
-description: "AI 业务网关的 MCP 落地形态：MCP服务端解析 JSON-RPC、路由模块统一编排 RAG/Tool/Memory 等能力模块，模型推理请求下沉 LLM 调用子模块（RPM/TPM 令牌桶→熔断→路由降级）再达上游供应商。协议层机制见 [[MCP协议架构]]。"
+description: "AI 业务网关的 MCP 落地形态：MCP服务端解析 JSON-RPC、路由模块统一编排 RAG/Tool/Memory 等能力模块，模型推理请求下沉 LLM 调用子模块（RPM/TPM 令牌桶→熔断→路由降级）再达上游供应商。协议层机制见 [[MCP协议架构]]；工具链路安全见 [[工具调用零信任管控]]/[[LLM权限最小化]]。"
 created_at: 2026-09-13 23:00:00
-updated_at: 2026-09-17 10:30:00
+updated_at: 2026-09-18 23:55:00
 tags: [llm_gateway, mcp, model_context_protocol, dynamic_routing, traffic_governance]
 ---
 
@@ -74,6 +74,8 @@ Upstream 是 OpenAI-REST/SSE 语义，非 MCP 协议——LLMProxy 承担两种�
 - [[SSE流式容错]]：Upstream 至 Client 的流式通道
 - [[MCP协议架构]]：MCP Client-Host-Server 协议层原理（本网关的协议基础）
 - [[Function Tool与MCP Tool对比]]：MCP-Tool 服务与原生 Function Tool 的差异
+- [[工具调用零信任管控]]：MCP-Tool 工具链路的安全管控
+- [[LLM权限最小化]]：工具/数据/运行时权限收敛
 
 ## 参考来源
 - [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]]

@@ -70,6 +70,14 @@
 - [[上下文污染]]：多Agent系统中N个Agent竞争编排器上下文窗口时，任务状态相互污染导致决策质量下降的问题，及RCR-Router/DACS/Agent-Radar等解决方案。
 - [[Agent状态一致性]]：多Agent并发操作共享状态时的一致性保障：写时冲突检测（STORM）、事务补偿（SagaLLM）、Schema验证（PatchBoard）、自动读集重建（S-Bus）四种方案。
 - [[Agent异常处理与循环检测]]：多Agent系统异常处理：阶段感知分类（SHIELDA）、图引导修复（AgentTether）、静态循环检测（IAL-Scan）、自愈编排器方案。
+- [[提示词注入]]：LLM 应用头号安全风险（OWASP LLM01）：LLM 无法根本区分指令与数据；直接/间接注入与越狱分类，Agent 间接注入最危险。
+- [[输入清洗与恶意指令向量库]]：输入侧防御战术层：正则黑名单+字符转义+控制字符剥离+长度截断+轻量分类器的清洗管道，与恶意指令向量库（Embedding+FAISS+阈值判定+回流）运营闭环。
+- [[双LLM模式]]：用无权限通用LLM单独处理不可信文本、只把富化纯数据传给有权限Agent的架构隔离，注入指令无法进入干净上下文。
+- [[CaMeL能力沙箱]]：把不可信数据限定进受限Python程序（无字符串构造/严格Schema输出）实现形式化隔离，AgentDojo 77% 任务可证明安全、外部攻击 949 条 0 成功。
+- [[任务对齐验证]]：执行层动态防御三方案：Task Shield（ASR 2.07%）、DRIFT（30.7%→1.3%）、MELON-Aug（ASR 0.32%），逐动作与用户任务对齐验证。
+- [[工具调用零信任管控]]：工具层零信任：参数级Schema校验、动作原语化最小权限、Fail Closed 拒执行，Janus 内核拒绝 + AgentSys 内存隔离。
+- [[LLM权限最小化]]：权限最小化四层：模型只提案、工具最小集+白名单、数据按需分片+uid过滤、Runtime 非root/只读/密钥隔离；权限给得越多越危险。
+- [[输出验证与人工审批]]：最后一道闸门：强制 JSON Schema 校验、敏感/恶意载荷检测、高风险人工审批（人类在环）、全链路审计与对抗性测试。
 - [[自注意力机制]]：Transformer 最核心的建模原语：Q/K/V 投影 + 点积相似度 + softmax 加权，让每个 token 与全部 token 建立关联，复杂度 O(N²·d)，完全并行替代 RNN 串行循环。
 - [[多头注意力]]：把注意力拆成 8 个 head 并行，各 head 学习语法/指代/局部模式等不同依赖；衍生 MQA/GQA（LLaMA）/MLA（DeepSeek）/Flash Attention 等高效变体。
 - [[位置编码]]：向排列不变的自注意力注入序列顺序，正弦/余弦固定函数可外推长序列；后续演进出 RoPE（LLaMA/Qwen）、ALiBi 等相对位置编码。
@@ -96,6 +104,7 @@
 - [[多Agent上下文管理总览]]：多Agent系统上下文管理全景：上下文路由（RCR-Router/DACS/Agent-Radar）、状态一致性（STORM/SagaLLM/PatchBoard）、异常处理与循环检测（SHIELDA/AgentTether/IAL-Scan）三大核心问题的主流方案与架构演进。
 - [[Transformer总览]]：Transformer 架构全景：自注意力替代循环、Encoder/Decoder 两大块、位置编码/多头注意力/残差+归一化核心机制，是 GPT/BERT/LLaMA 及 RAG 技术的架构基石。
 - [[Skill工程化总览]]：AI Agent Skill 工程化全景：Tool/Skill/MCP 三层抽象、SKILL.md 渐进式披露、P1-P7 架构模式与六维质量治理，Agent 从"即兴调用"走向"可复用流程编排"。
+- [[LLM-Agent安全防护总览]]：提示词注入纵深防御六层面（输入治理/架构隔离/任务对齐/工具管控/输出把关/监控运营）+ 权限最小化四层，核心范式从"防被说服"转向"被说服也做不了坏事"。
 
 ## comparisons 对比
 
@@ -108,6 +117,7 @@
 - [[向量数据库与传统数据库对比]]：传统数据库（MySQL/PostgreSQL/MongoDB）与向量数据库（Chroma/Milvus/Qdrant/Pinecone）横向对比：精确匹配 vs ANN 近似检索、B树/哈希/倒排 vs HNSW/IVF/FAISS、适用场景与各自短板。
 - [[Transformer与RNN对比]]：Transformer 与 RNN/LSTM 横向对比：并行 vs 串行、O(N²) vs O(N)、长距离依赖能力与位置/归纳偏置差异；RNN/LSTM 无统计长记忆、SSM/Transformer 注意力不受指数衰减约束。
 - [[Function Tool与MCP Tool对比]]：Function Tool 与 MCP Tool 横向对比：进程内嵌 vs 独立 Server、单框架绑定 vs 跨框架复用、手动注册 vs 自动发现（tools/list）；按复用范围与生产化程度选型。
+- [[Agent注入防御方案对比]]：三大防御范式（输入侧治理/架构隔离/执行层验证）与三套执行层方案（Task Shield/DRIFT/MELON）横向对比：攻击面削减、实时成本、变形抗性与效果数字。
 
 ## topics 主题页
 
@@ -136,6 +146,7 @@
 - [[Transformer原理·素材摘要]]：对 raw 素材《Transformer 原理》（豆包会话 + 公开学术资料）的要点摘录：核心思想、整体结构、位置编码/多头注意力/Encoder-Decoder/残差归一化、Transformer vs RNN 实证对比与架构演进路线。
 - [[AI-Agent-Skill工程化·素材摘要]]：对 raw 论文《AI Agent Skill 工程化》的要点摘录：渐进式披露规范、P1-P7 + 十架构模式、六维评审与治理闭环、Skill-MCP 互补关系及五项铁律。
 - [[Function-Calling与MCP-Tool设计·素材摘要]]：对 raw 论文《LLM Function Calling 与 MCP Tool 设计》的要点摘录：三阶段调用模型、Function Tool 四铁律、MCP Client-Host-Server 架构、Tool Suppression 与 ToolRegistry 跨框架互操作。
+- [[LLM-Agent安全防护·素材摘要]]：对 raw 论文《LLM-Agent安全防护-提示词注入防御与权限最小化综合研究》的要点摘录：注入成因分类、纵深防御六层面、CaMeL/双LLM/任务对齐/权限最小化方案与量化效果索引。
 
 ---
 

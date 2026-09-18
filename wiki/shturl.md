@@ -22,6 +22,7 @@
 | 2026-09-17 10:30:00 | Ingest | [[raw/articles/Transformer原理.md]] | 9 | 0 | 编译《Transformer 原理》（豆包会话+公开学术资料综合）为9页：overviews 1（Transformer总览）、concepts 6（自注意力机制/多头注意力/位置编码/Transformer编码器结构/Transformer解码器结构/残差连接与层归一化）、comparisons 1（Transformer与RNN对比）、summaries 1（素材摘要）；4张Mermaid图校验通过 |
 | 2026-09-17 10:30:00 | Ingest | [[raw/papers/AI-Agent-Skill工程化.md]] | 6 | 2 | 编译《AI Agent Skill 工程化》为6页：overviews 1（Skill工程化总览）、concepts 3（SKILL.md规范/Skill架构模式/Skill质量治理）、summaries 1（素材摘要）；联动更新 Skills技能、MCP网关（补交叉链接，刷新updated_at） |
 | 2026-09-17 10:30:00 | Ingest | [[raw/papers/Function-Calling与MCP-Tool设计.md]] | 6 | 0 | 编译《LLM Function Calling 与 MCP Tool 设计》（关联素材 [[raw/articles/技能与工具开发问题.md]]）为6页：concepts 5（Function Calling三阶段模型/Function Tool设计规范/MCP协议架构/结构化输出与Tool抑制/ToolRegistry跨框架互操作）、comparisons 1（Function Tool与MCP Tool对比）、summaries 1（素材摘要） |
+| 2026-09-18 23:55:00 | Ingest | [[raw/papers/LLM-Agent安全防护-提示词注入防御与权限最小化综合研究.md]] | 11 | 3 | 编译《LLM-Agent安全防护-提示词注入防御与权限最小化综合研究》（三份聊天素材ChatGLM/DeepSeek/豆包 + 联网验证融合）为11页：overviews 1（LLM-Agent安全防护总览）、concepts 8（提示词注入/输入清洗与恶意指令向量库/双LLM模式/CaMeL能力沙箱/任务对齐验证/工具调用零信任管控/LLM权限最小化/输出验证与人工审批）、comparisons 1（Agent注入防御方案对比）、summaries 1（素材摘要）；3张Mermaid图；联动更新 Function Tool设计规范、MCP网关、向量数据库（补交叉链接，刷新updated_at） |
 
 ---
 
