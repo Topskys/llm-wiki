@@ -14,6 +14,7 @@
 - [[ModelForge-AI]]：电商自有化模型微调工厂；本地 QLoRA 验证 + 云端量产（SFT+DPO），搭建 Embedding 粗召回→Cross-Encoder 精排的三段式检索。
 - [[LiveClip-AI]]：直播切片智能剪辑 Agent；FFmpeg.wasm 轻量压缩上传，PostgreSQL 自研任务队列调度 ASR+大模型识别高光片段，批量产出短视频。
 - [[MultiVis-AI]]：图文视频一体化自媒体运营 Agent；LangGraph 三子图 + PostgreSQL Checkpointer 节点级故障自愈，SSE 流式输出 + 多模型路由降本。
+- [[cc-switch]]：跨平台开源 AI 编程工具配置管理总控台（farion1231/cc-switch），统一管理 Claude Code / Codex / Gemini CLI / OpenCode 的 provider、MCP、prompts、skills，v3.16.0 起本地路由支持把第三方模型接入 Codex。
 
 ## concepts 概念
 
@@ -92,6 +93,11 @@
 - [[MCP协议架构]]：MCP（Model Context Protocol）Client-Host-Server 三层 + JSON-RPC 2.0；能力协商、tools/list 自动发现、tools/call 执行，传输层 stdio→SSE→Streamable HTTP 演进。
 - [[结构化输出与Tool抑制]]：strict JSON Schema / CFG 约束解码保证输出合规，但与 tool_call 约束解码空间冲突会压制工具调用（Tool Suppression），两阶段解耦与约束路由可缓解。
 - [[ToolRegistry跨框架互操作]]：所有 tool call 本质是 RPC；协议无关工具管理库用 Adapter 统一适配 OpenAI/Anthropic/Google/MCP，工具一次实现处处复用。
+- [[Codex自定义模型Provider]]：Codex 自定义模型 Provider 机制：~/.codex/config.toml 的 [model_providers.<id>] 定义接入方式（base_url/env_key/wire_api 等），wire_api 当前唯一支持 responses，保留 ID openai/ollama/lmstudio，项目级配置不能覆盖 provider。
+- [[CC Switch本地路由]]：CC Switch 本机协议转换网关（默认 http://127.0.0.1:15721），把 Codex 的 Responses API 请求转换为第三方 Chat Completions / Anthropic Messages，再把响应、SSE、工具调用转回 Responses 格式，是 Chat/Messages 上游接入 Codex 的唯一正路。
+- [[Codex模型映射与模型目录]]：Codex 模型映射与模型目录：Model Mapping（真实 Model ID / 显示名 / 上下文窗口）决定 Codex /model 下拉列表；model_catalog_json 描述模型能力声明；模型列表变更必须重启 Codex 才刷新，错误声明会导致截断与工具调用异常。
+- [[Codex配置档案Profile]]：Codex 配置档案 Profile：$CODEX_HOME/<name>.config.toml 独立配置层，codex --profile / codex exec --profile 按需加载；较新版本弃用旧式 [profiles.<name>] 表，改独立文件叠加，适合多原生 Responses provider 手动管理。
+- [[Codex官方登录保留机制]]：Codex 官方登录保留机制：CC Switch 的 Keep official login 选项在切换第三方 provider 时保留 ~/.codex/auth.json 官方登录态、只改 ~/.codex/config.toml；切第三方前先完成官方登录，切回 OpenAI Official 后验证 codex login status。
 
 ## overviews 总览
 
@@ -105,6 +111,7 @@
 - [[Transformer总览]]：Transformer 架构全景：自注意力替代循环、Encoder/Decoder 两大块、位置编码/多头注意力/残差+归一化核心机制，是 GPT/BERT/LLaMA 及 RAG 技术的架构基石。
 - [[Skill工程化总览]]：AI Agent Skill 工程化全景：Tool/Skill/MCP 三层抽象、SKILL.md 渐进式披露、P1-P7 架构模式与六维质量治理，Agent 从"即兴调用"走向"可复用流程编排"。
 - [[LLM-Agent安全防护总览]]：提示词注入纵深防御六层面（输入治理/架构隔离/任务对齐/工具管控/输出把关/监控运营）+ 权限最小化四层，核心范式从"防被说服"转向"被说服也做不了坏事"。
+- [[Codex接入第三方模型总览]]：Codex 接入第三方模型总览：CC Switch（协议转换+图形切换）、自定义 Responses provider（原生直连）、配置档案 Profile（多档切换）三条路线；协议兼容是核心分水岭，验收分连接/工具/任务三层。
 
 ## comparisons 对比
 
@@ -118,6 +125,7 @@
 - [[Transformer与RNN对比]]：Transformer 与 RNN/LSTM 横向对比：并行 vs 串行、O(N²) vs O(N)、长距离依赖能力与位置/归纳偏置差异；RNN/LSTM 无统计长记忆、SSM/Transformer 注意力不受指数衰减约束。
 - [[Function Tool与MCP Tool对比]]：Function Tool 与 MCP Tool 横向对比：进程内嵌 vs 独立 Server、单框架绑定 vs 跨框架复用、手动注册 vs 自动发现（tools/list）；按复用范围与生产化程度选型。
 - [[Agent注入防御方案对比]]：三大防御范式（输入侧治理/架构隔离/执行层验证）与三套执行层方案（Task Shield/DRIFT/MELON）横向对比：攻击面削减、实时成本、变形抗性与效果数字。
+- [[Codex第三方模型接入方式对比]]：Codex 第三方模型接入三方式横向对比：CC Switch（协议转换+图形切换）、自定义 Responses provider（原生直连）、配置档案 Profile（多档手动切换），在协议前提、适用场景、运行时依赖、上限能力上差异明确。
 
 ## topics 主题页
 
@@ -128,6 +136,7 @@
 - [[混战计]]：三十六计第四套（19-24）：釜底抽薪/浑水摸鱼/金蝉脱壳/关门捉贼/远交近攻/假道伐虢，适用于局势混乱、多方并起时乘乱取利。
 - [[并战计]]：三十六计第五套（25-30）：偷梁换柱/指桑骂槐/假痴不癫/上屋抽梯/树上开花/反客为主，适用于与友军并战、借势扩张时兼并壮大。
 - [[败战计]]：三十六计第六套（31-36）：美人计/空城计/反间计/苦肉计/连环计/走为上，适用于己方劣势、败局求存时攻心破敌。
+- [[Codex接第三方模型排障清单]]：Codex 接第三方模型排障清单：切换不生效、404/400（无 /responses）、401/403、模型不上 /model、能聊天不能读写、流式中断、wire_api=chat 旧配置、登录丢失、Web Search 不可用九大高频问题速查，附两次重启与三层验收纪律。
 
 ## conflicts 冲突记录
 
@@ -147,6 +156,7 @@
 - [[AI-Agent-Skill工程化·素材摘要]]：对 raw 论文《AI Agent Skill 工程化》的要点摘录：渐进式披露规范、P1-P7 + 十架构模式、六维评审与治理闭环、Skill-MCP 互补关系及五项铁律。
 - [[Function-Calling与MCP-Tool设计·素材摘要]]：对 raw 论文《LLM Function Calling 与 MCP Tool 设计》的要点摘录：三阶段调用模型、Function Tool 四铁律、MCP Client-Host-Server 架构、Tool Suppression 与 ToolRegistry 跨框架互操作。
 - [[LLM-Agent安全防护·素材摘要]]：对 raw 论文《LLM-Agent安全防护-提示词注入防御与权限最小化综合研究》的要点摘录：注入成因分类、纵深防御六层面、CaMeL/双LLM/任务对齐/权限最小化方案与量化效果索引。
+- [[cc-switch与Codex多模型接入·素材摘要]]：对《cc-switch 与 Codex 多模型接入》两份联网素材（codex-docs 第三方模型接入指南 + CCNavX 安装教程）的要点摘录：CC Switch 定位、本地路由协议转换、三条接入路线、模型映射、排障与验收。
 
 ---
 
