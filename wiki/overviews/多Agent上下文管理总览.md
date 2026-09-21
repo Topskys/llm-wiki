@@ -3,7 +3,7 @@ type: overview
 source: [[raw/articles/multi-agent-context-management.md]]
 description: "多Agent系统上下文管理全景：上下文路由、状态一致性保障、异常处理与循环检测三大核心问题的主流方案与架构演进。"
 created_at: 2026-09-16 20:00:00
-updated_at: 2026-09-16 20:00:00
+updated_at: 2026-09-20 14:00:00
 tags: [multi_agent, context_management, state_consistency, failure_handling]
 ---
 
@@ -137,6 +137,8 @@ graph LR
 - [[Agent状态一致性]]：多Agent并发状态管理的四种方案
 - [[Agent异常处理与循环检测]]：失败检测、修复与循环预防的五种方案
 - [[多Agent上下文管理·素材摘要]]：原始素材要点摘录
+- [[AI-Agent上下文管理总览]]：单 Agent 视角的上下文七环闭环（预算/组织/压缩/结构化/工具/路由/监控）
+- [[多Agent上下文路由]]：独立上下文空间 + 交接摘要 + Memory ID 引用的路由机制
 
 ## 参考来源
 

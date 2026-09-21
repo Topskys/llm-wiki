@@ -98,6 +98,13 @@
 - [[Codex模型映射与模型目录]]：Codex 模型映射与模型目录：Model Mapping（真实 Model ID / 显示名 / 上下文窗口）决定 Codex /model 下拉列表；model_catalog_json 描述模型能力声明；模型列表变更必须重启 Codex 才刷新，错误声明会导致截断与工具调用异常。
 - [[Codex配置档案Profile]]：Codex 配置档案 Profile：$CODEX_HOME/<name>.config.toml 独立配置层，codex --profile / codex exec --profile 按需加载；较新版本弃用旧式 [profiles.<name>] 表，改独立文件叠加，适合多原生 Responses provider 手动管理。
 - [[Codex官方登录保留机制]]：Codex 官方登录保留机制：CC Switch 的 Keep official login 选项在切换第三方 provider 时保留 ~/.codex/auth.json 官方登录态、只改 ~/.codex/config.toml；切第三方前先完成官方登录，切回 OpenAI Official 后验证 codex login status。
+- [[上下文窗口与Token预算]]：上下文窗口的硬边界与 Token 预算管理：单轮 Agent 交互耗 15k–30k token，按『系统指令>当前消息>工具结果>历史』优先级分配，工具结果超剩余 40% 先压缩。
+- [[上下文分层组织]]：上下文四层组织（固定/半固定/动态注入/交互层）与编排器组装顺序：按稳定性从高到低排布，记忆注入置于历史之前，是『不塞满窗口而分层装配』的核心方法。
+- [[上下文压缩与摘要策略]]：上下文超窗的有损处理：滑动窗口+渐进式摘要（决策/偏好/待办/事实四要素）、P0-P4 关键信息保留金字塔、Compaction 先保召回再提精度，配合外部记忆防信息不可逆丢失。
+- [[结构化上下文]]：以 XML 标签分区提升上下文利用率：注意力引导、按标签块可控截断、程序化可解析、层级化优先级表达，Anthropic 官方印证的分区实践。
+- [[工具结果上下文治理]]：工具结果是上下文污染的第一来源：按工具类型分类截断（搜索限量/文件头尾/Shell 错误优先）、多步工具链折叠为摘要，以及 context editing 自动清除陈旧工具结果。
+- [[多Agent上下文路由]]：多 Agent 场景的上下文路由：每个 Agent 独立上下文空间、交接传结构化摘要（任务/进度/产物/阻塞）、禁止全量复制，与 Memory ID 引用构成三种传递方式。
+- [[上下文监控指标]]：上下文工程的可度量闭环：填充率、工具结果压缩比、记忆命中率、指令遵循率四项监控指标与告警阈值，配合上下文可导出的调试报告（角色/token/压缩位置）。
 
 ## overviews 总览
 
@@ -112,6 +119,7 @@
 - [[Skill工程化总览]]：AI Agent Skill 工程化全景：Tool/Skill/MCP 三层抽象、SKILL.md 渐进式披露、P1-P7 架构模式与六维质量治理，Agent 从"即兴调用"走向"可复用流程编排"。
 - [[LLM-Agent安全防护总览]]：提示词注入纵深防御六层面（输入治理/架构隔离/任务对齐/工具管控/输出把关/监控运营）+ 权限最小化四层，核心范式从"防被说服"转向"被说服也做不了坏事"。
 - [[Codex接入第三方模型总览]]：Codex 接入第三方模型总览：CC Switch（协议转换+图形切换）、自定义 Responses provider（原生直连）、配置档案 Profile（多档切换）三条路线；协议兼容是核心分水岭，验收分连接/工具/任务三层。
+- [[AI-Agent上下文管理总览]]：AI Agent 上下文管理全景：从 Token 预算分配、分层组织、有损压缩、结构化装配到工具结果治理、多 Agent 路由与监控闭环，贯穿『在有限注意力预算内编排最高信号密度 token』的第一性原理。
 
 ## comparisons 对比
 
@@ -127,6 +135,7 @@
 - [[Agent注入防御方案对比]]：三大防御范式（输入侧治理/架构隔离/执行层验证）与三套执行层方案（Task Shield/DRIFT/MELON）横向对比：攻击面削减、实时成本、变形抗性与效果数字。
 - [[Codex第三方模型接入方式对比]]：Codex 第三方模型接入三方式横向对比：CC Switch（协议转换+图形切换）、自定义 Responses provider（原生直连）、配置档案 Profile（多档手动切换），在协议前提、适用场景、运行时依赖、上限能力上差异明确。
 - [[上下文爆炸治理方案对比]]：上下文爆炸治理 24 种方案横向对比：路由/裁剪、压缩/出窗、结构化/架构三大类，每种含实现机制、加载回上下文路径与冲突验证可逆性分析。
+- [[多Agent上下文传递方式对比]]：多 Agent 传递上下文三种方式横向对比：上下文继承（完整保留但 Token 大）、上下文注入（精炼高效但易丢细节）、Memory ID 引用（按需检索不占窗口但需向量库）。
 
 ## topics 主题页
 
@@ -158,6 +167,7 @@
 - [[Function-Calling与MCP-Tool设计·素材摘要]]：对 raw 论文《LLM Function Calling 与 MCP Tool 设计》的要点摘录：三阶段调用模型、Function Tool 四铁律、MCP Client-Host-Server 架构、Tool Suppression 与 ToolRegistry 跨框架互操作。
 - [[LLM-Agent安全防护·素材摘要]]：对 raw 论文《LLM-Agent安全防护-提示词注入防御与权限最小化综合研究》的要点摘录：注入成因分类、纵深防御六层面、CaMeL/双LLM/任务对齐/权限最小化方案与量化效果索引。
 - [[cc-switch与Codex多模型接入·素材摘要]]：对《cc-switch 与 Codex 多模型接入》两份联网素材（codex-docs 第三方模型接入指南 + CCNavX 安装教程）的要点摘录：CC Switch 定位、本地路由协议转换、三条接入路线、模型映射、排障与验收。
+- [[AI-Agent上下文管理·素材摘要]]：《AI Agent 上下文管理综合研究》论文要点摘录：素材源于掘金文章（米小虾，2026-06）并经 Lost in the Middle/Anthropic/MemGPT 等联网核验，覆盖窗口预算、分层组织、压缩、结构化、工具治理、多 Agent 路由与监控七环。
 
 ---
 
