@@ -26,6 +26,7 @@
 | 2026-09-19 14:46:24 | Ingest | [[raw/articles/cc-switch-codex-第三方模型接入.md]] + [[raw/articles/cc-switch安装与使用教程.md]] | 10 | 0 | 编译《Codex 接第三方模型（cc-switch 搭配）》两份联网素材为10页：entities 1（cc-switch）、concepts 5（Codex自定义模型Provider/CC Switch本地路由/Codex模型映射与模型目录/Codex配置档案Profile/Codex官方登录保留机制）、overviews 1（Codex接入第三方模型总览）、comparisons 1（Codex第三方模型接入方式对比）、topics 1（Codex接第三方模型排障清单）、summaries 1（素材摘要，含query_write）；4张Mermaid图；raw/articles 新增两份素材文件（只增不改） |
 | 2026-09-19 15:20:00 | Ingest | [[raw/articles/上下文爆炸治理方案24式·联网整理.md]] | 1 | 0 | 编译"上下文爆炸治理方案对比"1页（comparisons）：24 种方案三大类（路由/裁剪7、压缩/出窗10、结构化/架构7）横向对比，含实现机制/加载回路径/冲突验证可逆性分析；页面内 25 张 Mermaid 图校验通过；raw/articles 新增 1 份联网整理素材（只增不改） |
 | 2026-09-20 14:00:00 | Ingest | [[raw/papers/AI-Agent上下文管理综合研究.md]] + [[raw/articles/juejin-AI-Agent上下文管理综合研究.md]] | 10 | 3 | 编译《AI Agent 上下文管理综合研究》（掘金文章米小虾 2026-06 + 联网核验 Lost in the Middle/Anthropic/MemGPT 融合）为10页：overviews 1（AI-Agent上下文管理总览）、concepts 7（上下文窗口与Token预算/上下文分层组织/上下文压缩与摘要策略/结构化上下文/工具结果上下文治理/多Agent上下文路由/上下文监控指标）、comparisons 1（多Agent上下文传递方式对比）、summaries 1（素材摘要）；6张Mermaid图；联动更新 多Agent上下文管理总览、上下文污染、上下文爆炸治理方案对比（补交叉链接，刷新updated_at） |
+| 2026-09-23 12:00:00 | Ingest | [[raw/papers/Agent Loop.md]] | 6 | 4 | 编译《Agent Loop》论文（Anthropic 官方 5 篇 + ReAct 融合，官方原文已联网核验）为6页：overviews 1（Agent循环总览）、concepts 4（Agent循环/Agentic Harness/Turn与消息生命周期/Agent循环终止与护栏）、summaries 1（素材摘要）；4页联动更新（AI-Agent上下文管理总览/Function Calling三阶段模型/Agent反馈闭环/Agent异常处理与循环检测，补交叉链接，刷新updated_at）；Mermaid 图 6 张 lint 校验通过 |
 
 ---
 

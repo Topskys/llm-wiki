@@ -3,7 +3,7 @@ type: overview
 source: "[[raw/papers/AI-Agent上下文管理综合研究.md]]"
 description: "AI Agent 上下文管理全景：从 Token 预算分配、分层组织、有损压缩、结构化装配到工具结果治理、多 Agent 路由与监控闭环，贯穿『在有限注意力预算内编排最高信号密度 token』的第一性原理。"
 created_at: 2026-09-20 14:00:00
-updated_at: 2026-09-20 14:00:00
+updated_at: 2026-09-23 12:00:00
 tags: [context_management, context_engineering, agent, token_budget]
 ---
 
@@ -53,6 +53,7 @@ flowchart TD
 - [[多Agent上下文管理总览]]：多 Agent 上下文路由/一致性/异常三大问题全景
 - [[上下文污染]]：多 Agent 上下文相互污染的成因与分类
 - [[LLM-Agent安全防护总览]]：上下文注入防护（安全维度与质量维度双线）
+- [[Agent循环总览]]：上下文管理的大宿主——Agent Loop 的四支柱之一
 
 ## 参考来源
 

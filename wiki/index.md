@@ -105,6 +105,10 @@
 - [[工具结果上下文治理]]：工具结果是上下文污染的第一来源：按工具类型分类截断（搜索限量/文件头尾/Shell 错误优先）、多步工具链折叠为摘要，以及 context editing 自动清除陈旧工具结果。
 - [[多Agent上下文路由]]：多 Agent 场景的上下文路由：每个 Agent 独立上下文空间、交接传结构化摘要（任务/进度/产物/阻塞）、禁止全量复制，与 Memory ID 引用构成三种传递方式。
 - [[上下文监控指标]]：上下文工程的可度量闭环：填充率、工具结果压缩比、记忆命中率、指令遵循率四项监控指标与告警阈值，配合上下文可导出的调试报告（角色/token/压缩位置）。
+- [[Agent循环]]：Agent 循环（Agentic Loop）核心概念：在循环中基于环境真实反馈（ground truth）自主决策，直到任务完成或触发终止条件；Anthropic 定义为『LLMs autonomously using tools in a loop』，三阶段模型与 Workflow/Agent 架构区分。
+- [[Agentic Harness]]：包裹在 LLM 外的运行时外壳，提供工具、管理模型所见上下文、驱动 while 循环；模型负责推理、harness 负责行动与信息递送，是『模型+工具+上下文』协同成 Agent 的载体。
+- [[Turn与消息生命周期]]：Agent Loop 的技术单元：一次往返=一个 Turn（Claude 生成→SDK 执行工具→结果自动回喂），循环直至产出无工具调用的最终文本；五类 Message 与 ResultMessage 终止 subtype。
+- [[Agent循环终止与护栏]]：Agent 循环的终止协议与护栏：模型侧 stop_reason + harness 侧硬限制构成终止双保险；hooks 提供 PreToolUse/PostToolUse/Stop 等执行控制点；含六类失败模式排查表。
 
 ## overviews 总览
 
@@ -120,6 +124,7 @@
 - [[LLM-Agent安全防护总览]]：提示词注入纵深防御六层面（输入治理/架构隔离/任务对齐/工具管控/输出把关/监控运营）+ 权限最小化四层，核心范式从"防被说服"转向"被说服也做不了坏事"。
 - [[Codex接入第三方模型总览]]：Codex 接入第三方模型总览：CC Switch（协议转换+图形切换）、自定义 Responses provider（原生直连）、配置档案 Profile（多档切换）三条路线；协议兼容是核心分水岭，验收分连接/工具/任务三层。
 - [[AI-Agent上下文管理总览]]：AI Agent 上下文管理全景：从 Token 预算分配、分层组织、有损压缩、结构化装配到工具结果治理、多 Agent 路由与监控闭环，贯穿『在有限注意力预算内编排最高信号密度 token』的第一性原理。
+- [[Agent循环总览]]：Agent 循环全景：LLM 与工具、上下文、harness 三者构成『收集上下文→采取行动→验证结果』的自适应执行环路；本质句『在循环中基于环境真实反馈自主决策，直到任务完成或触发终止条件』；覆盖三阶段模型、Turn 机制、终止双保险与上下文治理四支柱。
 
 ## comparisons 对比
 
@@ -168,6 +173,7 @@
 - [[LLM-Agent安全防护·素材摘要]]：对 raw 论文《LLM-Agent安全防护-提示词注入防御与权限最小化综合研究》的要点摘录：注入成因分类、纵深防御六层面、CaMeL/双LLM/任务对齐/权限最小化方案与量化效果索引。
 - [[cc-switch与Codex多模型接入·素材摘要]]：对《cc-switch 与 Codex 多模型接入》两份联网素材（codex-docs 第三方模型接入指南 + CCNavX 安装教程）的要点摘录：CC Switch 定位、本地路由协议转换、三条接入路线、模型映射、排障与验收。
 - [[AI-Agent上下文管理·素材摘要]]：《AI Agent 上下文管理综合研究》论文要点摘录：素材源于掘金文章（米小虾，2026-06）并经 Lost in the Middle/Anthropic/MemGPT 等联网核验，覆盖窗口预算、分层组织、压缩、结构化、工具治理、多 Agent 路由与监控七环。
+- [[Agent循环·素材摘要]]：对 raw 论文《Agent Loop》（Anthropic 官方文档 5 篇 + ReAct 融合）的要点摘录：本质定义、三阶段模型、Turn/Message 生命周期、stop_reason 协议、终止双保险与失败护栏、上下文治理、最小实现与六条设计原则索引。
 
 ---
 

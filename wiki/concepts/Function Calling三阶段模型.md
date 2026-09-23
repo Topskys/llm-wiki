@@ -3,7 +3,7 @@ type: concept
 source: [[raw/papers/Function-Calling与MCP-Tool设计.md]]
 description: "LLM Function Calling 三阶段模型：Pre-call 意图识别与参数生成 → On-call 函数执行与结果回注 → Post-call 结果解析与后续推理；LLM 只做语义路由不做物理执行的受控间接执行机制。"
 created_at: 2026-09-17 10:30:00
-updated_at: 2026-09-17 10:30:00
+updated_at: 2026-09-23 12:00:00
 tags: [function_calling, llm, tool_call, three_stage]
 ---
 
@@ -36,6 +36,7 @@ flowchart LR
 - [[结构化输出与Tool抑制]]：结构化约束对 tool_call 的影响
 - [[ToolRegistry跨框架互操作]]：跨 Provider 的工具调用抽象
 - [[Skill工程化总览]]：流程编排承接多步调用
+- [[Agent循环]]：三阶段是 Agent Loop 每一轮工具调用的内部展开（Pre/On/Post-call 即生成-执行-回喂）
 
 ## 参考来源
 - [[raw/papers/Function-Calling与MCP-Tool设计.md]]

@@ -3,7 +3,7 @@ type: concept
 source: [[raw/articles/multi-agent-context-management.md]]
 description: "多Agent系统的异常处理与循环检测：阶段感知异常分类（SHIELDA）、图引导运行时修复（AgentTether）、静态循环检测（IAL-Scan）和自愈编排器方案。"
 created_at: 2026-09-16 20:00:00
-updated_at: 2026-09-16 20:00:00
+updated_at: 2026-09-23 12:00:00
 tags: [multi_agent, failure_handling, loop_detection, self_healing]
 ---
 
@@ -70,6 +70,7 @@ Agent异常的三大特征：
 - [[多Agent上下文管理总览]]：全景总览
 - [[上下文污染]]：上下文路由问题
 - [[Agent状态一致性]]：并发状态管理
+- [[Agent循环终止与护栏]]：IAL 即单/多 Agent 循环缺终止条件的故障形态，终止双保险与循环检测是对策
 
 ## 参考来源
 

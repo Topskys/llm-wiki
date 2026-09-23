@@ -3,7 +3,7 @@ type: concept
 source: [[The AI-Native SDLC playbook]]
 description: "给 agent 一个验证自己工作的机制：量化验收目标 + 反馈通道（测试/build/截图 diff），可先写失败测试再用 hook 保护它；与 verifier 子代理的区别在于它贯穿整个任务、在工程师看到前自修错误。"
 created_at: 2026-09-12 23:03:13
-updated_at: 2026-09-12 23:03:13
+updated_at: 2026-09-23 12:00:00
 tags: [feedback_loop, verification, test_first, ai_native_sdlc]
 ---
 
@@ -38,6 +38,7 @@ flowchart LR
 - [[Hooks护栏与审批门]]：test-file hook 保护测试不被弱化
 - [[持续评估]]：配置级回归（对"agent 是否按标准干活"的评估）
 - [[并行会话与子代理]]：verifier 子代理是反馈循环的最终关卡
+- [[Agent循环]]：反馈闭环即 Agent Loop「Verify Results」阶段在 AI-native SDLC 的具体落地
 
 ## 参考来源
 - [[The AI-Native SDLC playbook]]
