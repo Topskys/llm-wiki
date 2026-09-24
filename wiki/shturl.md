@@ -27,6 +27,8 @@
 | 2026-09-19 15:20:00 | Ingest | [[raw/articles/上下文爆炸治理方案24式·联网整理.md]] | 1 | 0 | 编译"上下文爆炸治理方案对比"1页（comparisons）：24 种方案三大类（路由/裁剪7、压缩/出窗10、结构化/架构7）横向对比，含实现机制/加载回路径/冲突验证可逆性分析；页面内 25 张 Mermaid 图校验通过；raw/articles 新增 1 份联网整理素材（只增不改） |
 | 2026-09-20 14:00:00 | Ingest | [[raw/papers/AI-Agent上下文管理综合研究.md]] + [[raw/articles/juejin-AI-Agent上下文管理综合研究.md]] | 10 | 3 | 编译《AI Agent 上下文管理综合研究》（掘金文章米小虾 2026-06 + 联网核验 Lost in the Middle/Anthropic/MemGPT 融合）为10页：overviews 1（AI-Agent上下文管理总览）、concepts 7（上下文窗口与Token预算/上下文分层组织/上下文压缩与摘要策略/结构化上下文/工具结果上下文治理/多Agent上下文路由/上下文监控指标）、comparisons 1（多Agent上下文传递方式对比）、summaries 1（素材摘要）；6张Mermaid图；联动更新 多Agent上下文管理总览、上下文污染、上下文爆炸治理方案对比（补交叉链接，刷新updated_at） |
 | 2026-09-23 12:00:00 | Ingest | [[raw/papers/Agent Loop.md]] | 6 | 4 | 编译《Agent Loop》论文（Anthropic 官方 5 篇 + ReAct 融合，官方原文已联网核验）为6页：overviews 1（Agent循环总览）、concepts 4（Agent循环/Agentic Harness/Turn与消息生命周期/Agent循环终止与护栏）、summaries 1（素材摘要）；4页联动更新（AI-Agent上下文管理总览/Function Calling三阶段模型/Agent反馈闭环/Agent异常处理与循环检测，补交叉链接，刷新updated_at）；Mermaid 图 6 张 lint 校验通过 |
+| 2026-09-24 23:54:56 | Rule-Update | Query缺口回退规则修订 | 0 | 4 | Query缺口回退由「L1→L2→L3 逐层下探、命中即停」改为「L1/L2/L3 三路并行检索」，来源优先级改为 外链 > wiki > raw > 项目路径（wiki 非实时更新）；L3 联网结果不落盘 raw（仅对话参考+标注来源），长期复用登记缺口看板由用户决定抓取入库（取消自动存 raw/articles）；同步 SCHEMA 3.2/3.4、AGENTS.md、query工作流、index |
+| 2026-09-24 23:53:07 | Rule-Update | 学习资源规则 | 0 | 2 | SCHEMA 新增3.5「Agent 开发学习参考资源」：用户主学 Agent 开发，Agent/AI工程化领域知识缺口与素材抓取可参考 GitHub 仓库（rohitg00/ai-engineering-from-scratch）与中文文档站（aiengineeringfromscratch.docpage.cn）；AGENTS.md 同步增「参考资源（Agent 学习）」节 |
 
 ---
 
