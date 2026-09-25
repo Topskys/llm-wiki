@@ -3,7 +3,7 @@ type: overview
 source: [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]]
 description: "LLM 网关动态路由与流量治理全景：Nginx+AI业务网关双层架构（含 MCP 网关落地形态）、RPM/TPM 联合令牌桶、5xx 熔断与 429 配额感知双通道分离调度、能力标签驱动降级与灰度回切，解决上游 429 限流与业务连续性问题。"
 created_at: 2026-09-13 22:31:33
-updated_at: 2026-09-13 23:00:00
+updated_at: 2026-09-25 15:26:02
 tags: [llm_gateway, dynamic_routing, traffic_governance, circuit_breaker, rate_limiting, sse]
 ---
 
@@ -50,7 +50,7 @@ flowchart LR
 - 降级优先级固定：**同模型换 Key（故障转移）→ 异构模型降级（能力标签硬约束筛选）→ 退避重试保底（Retry-After / 指数退避+抖动）**，配全请求级重试预算防止循环放大。
 - 边界场景收敛到 Marino 规则：已流式输出的 SSE 直接中断不重试、非幂等请求禁重试、长上下文请求低重试快速回 `model_busy`、月度配额用尽标记长期失效。
 - 可观测分层埋点：限流/熔断与调度指标独立统计，可区分「服务端故障 vs 配额耗尽」，指导扩容或加购配额。
-- AI 业务网关在 MCP（Model Context Protocol）场景下以三层落地：MCP服务端（JSON-RPC 解析）→ MCP路由模块（RAG/Tool/Memory 能力编排）→ LLM调用子模块（内置令牌桶-熔断-路由）；业务能力走 MCP 协议，仅模型推理下沉到流量调度，见 [[MCP网关]]。
+- AI 业务网关在 MCP（Model Context Protocol）场景下以三层落地：MCP服务端（JSON-RPC 解析）→ MCP路由模块（RAG/Tool/Memory 能力编排）→ LLM调用子模块（内置令牌桶-熔断-路由）；业务能力走 MCP 协议，仅模型推理下沉到流量调度，见 [[MCP网关]]；配合 MCP 2026 的 `Mcp-Method`/`Mcp-Name` 路由头可免解析请求体分流，见 [[Streamable HTTP]]。
 
 ## 要点拆解
 
@@ -75,6 +75,7 @@ flowchart LR
 - [[TTFT首字延迟优化]]：SSE 流式同属链路优化，本页偏流量治理、TTFT 偏首字延迟
 - [[商城AI业务矩阵]]：网关能力服务于多 Agent 调用上游的路由/限流/降级
 - [[MCP网关]]：AI 业务网关的 MCP 落地形态（协议层-路由层-LLM 调用子模块三层）
+- [[Streamable HTTP]]：MCP 传输层单端点与路由头机制（网关免解析分流的协议依据）
 
 ## 参考来源
 - [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]]

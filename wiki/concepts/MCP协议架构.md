@@ -3,7 +3,7 @@ type: concept
 source: [[raw/papers/Function-Calling与MCP-Tool设计.md]]
 description: "MCP 协议架构（Model Context Protocol）：Anthropic 2024 年发布的开放协议，Client-Host-Server 三层 + JSON-RPC 2.0 通信；能力协商、tools/list 自动发现、tools/call 执行，传输层从 stdio 到 Streamable HTTP 演进，解决 Function Tool 跨框架复用问题。"
 created_at: 2026-09-17 10:30:00
-updated_at: 2026-09-17 10:30:00
+updated_at: 2026-09-25 15:26:02
 tags: [mcp, model_context_protocol, json_rpc, tool_discovery]
 ---
 
@@ -38,10 +38,11 @@ flowchart TD
 - **能力协商**：Client/Server 连接建立时交换各自支持的能力声明，确保协议兼容。
 - **工具发现**：`tools/list` 方法返回所有已注册工具的名称、描述、参数 Schema——Agent 无需硬编码，实现运行时动态发现。
 - **执行**：`tools/call` 封装 tool_call 为 JSON-RPC 请求发送给对应 Server。
-- **传输层演进**：stdio（本地进程）→ SSE → Streamable HTTP（远程部署 + 流式传输），满足企业级生产需求。
+- **传输层演进**：stdio（本地进程）→ HTTP+SSE 双端点 → Streamable HTTP（单端点 + 按需流式），2026-07-28 起无状态化——每请求自包含、轮询负载均衡可直接部署，机制详解见 [[Streamable HTTP]]。
 - **与网关**：MCP 服务端可解析 JSON-RPC、路由模块统一编排 RAG/Tool/Memory 等能力模块，是[[MCP网关]]的协议基础。
 
 ## 相关页面
+- [[Streamable HTTP]]：传输层当前形态的机制详解（单端点三规则、三种响应模式、2026 无状态重构）
 - [[Function Tool与MCP Tool对比]]：与原生 Function Tool 的差异
 - [[MCP网关]]：MCP 协议在 AI 业务网关的落地形态
 - [[ToolRegistry跨框架互操作]]：跨 Provider 的能力抽象
@@ -49,4 +50,5 @@ flowchart TD
 
 ## 参考来源
 - [[raw/papers/Function-Calling与MCP-Tool设计.md]]
+- [[raw/papers/Streamable HTTP.md]]：传输层 Streamable HTTP 机制与 2026 无状态重构
 - [[MCP网关]]：MCP 协议在 AI 业务网关的同主题工程落地面

@@ -3,7 +3,7 @@ type: concept
 source: [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]]
 description: "SSE 流式响应差异化容错：已开始输出即直接中断不重试不切节点，防止拼接内容语义断层；长流以发起时刻计入熔断统计；对流式请求的预扣 Token 按流结束真实 usage 结算。"
 created_at: 2026-09-13 22:31:33
-updated_at: 2026-09-14 23:20:00
+updated_at: 2026-09-25 15:26:02
 tags: [sse, streaming, dynamic_routing, fault_tolerance, llm_inference]
 ---
 
@@ -38,12 +38,17 @@ flowchart TD
 ### 非幂等长请求
 计费/文件上传类 SSE 属 [[重试预算与幂等保护]]：异常绝对禁止重试，防重复扣费或数据不一致。
 
+### 生态对照：MCP Streamable HTTP
+MCP 的 Streamable HTTP 模式B（长任务 SSE 流式响应）同为 SSE 通道；其 2026-07-28 无状态版移除传输层 `Last-Event-ID` 后断流无恢复，应用层须以新请求 ID 重发并配幂等键——与本页「已输出即中断、不盲目续推/重试」同属断流后不拼接的纪律，机制与代价见 [[Streamable HTTP]]。
+
 ## 相关页面
 - [[TTFT首字延迟优化]]：SSE 流式在链路中的位置
 - [[重试预算与幂等保护]]：非幂等与长上下文的重试约束
 - [[双层网关架构]]：SSE 旁路挂在 AI 网关层
 - [[熔断器状态机]]：SSE 特有的统计口径
 - [[SSE背压与内存治理总览]]：SSE 上游快下游慢的 OOM 治理（本页偏重试容错，该页偏背压与内存）
+- [[Streamable HTTP]]：SSE 流式在 MCP 协议中的形态与断流后的应用层兜底
 
 ## 参考来源
 - [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]]
+- [[raw/papers/Streamable HTTP.md]]：MCP 模式B SSE 通道与 2026 断线恢复移除

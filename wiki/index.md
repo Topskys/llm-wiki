@@ -91,6 +91,7 @@
 - [[Function Calling三阶段模型]]：LLM 工具调用三阶段：Pre-call 意图识别与参数生成 → On-call 函数执行与结果回注 → Post-call 结果解析与后续推理；受控间接执行、语义路由与物理执行分离。
 - [[Function Tool设计规范]]：原子 Tool 设计四铁律：单一职责 / Pydantic 入参校验（自动 JSON Schema）/ 统一 success+data+msg 返回 / 面向 LLM 的 description 工程。
 - [[MCP协议架构]]：MCP（Model Context Protocol）Client-Host-Server 三层 + JSON-RPC 2.0；能力协商、tools/list 自动发现、tools/call 执行，传输层 stdio→SSE→Streamable HTTP 演进。
+- [[Streamable HTTP]]：MCP 标准远程传输：单一 /mcp 端点跑 JSON-RPC over HTTP，按任务返回一次性 JSON / SSE 流式 / 202 三种模式；2026-07-28 无状态重构移除会话与 Last-Event-ID 重连，每请求自包含 _meta 与 Mcp-Method/Mcp-Name 路由头，轮询负载均衡可直接部署。
 - [[结构化输出与Tool抑制]]：strict JSON Schema / CFG 约束解码保证输出合规，但与 tool_call 约束解码空间冲突会压制工具调用（Tool Suppression），两阶段解耦与约束路由可缓解。
 - [[ToolRegistry跨框架互操作]]：所有 tool call 本质是 RPC；协议无关工具管理库用 Adapter 统一适配 OpenAI/Anthropic/Google/MCP，工具一次实现处处复用。
 - [[Codex自定义模型Provider]]：Codex 自定义模型 Provider 机制：~/.codex/config.toml 的 [model_providers.<id>] 定义接入方式（base_url/env_key/wire_api 等），wire_api 当前唯一支持 responses，保留 ID openai/ollama/lmstudio，项目级配置不能覆盖 provider。
@@ -174,6 +175,7 @@
 - [[cc-switch与Codex多模型接入·素材摘要]]：对《cc-switch 与 Codex 多模型接入》两份联网素材（codex-docs 第三方模型接入指南 + CCNavX 安装教程）的要点摘录：CC Switch 定位、本地路由协议转换、三条接入路线、模型映射、排障与验收。
 - [[AI-Agent上下文管理·素材摘要]]：《AI Agent 上下文管理综合研究》论文要点摘录：素材源于掘金文章（米小虾，2026-06）并经 Lost in the Middle/Anthropic/MemGPT 等联网核验，覆盖窗口预算、分层组织、压缩、结构化、工具治理、多 Agent 路由与监控七环。
 - [[Agent循环·素材摘要]]：对 raw 论文《Agent Loop》（Anthropic 官方文档 5 篇 + ReAct 融合）的要点摘录：本质定义、三阶段模型、Turn/Message 生命周期、stop_reason 协议、终止双保险与失败护栏、上下文治理、最小实现与六条设计原则索引。
+- [[Streamable HTTP·素材摘要]]：对 raw 论文《Streamable HTTP》的要点摘录：概念分层与传输方案对比、单端点三条规则与三种响应模式、有状态经典机制（会话/重连/终止）、2026-07-28 无状态重构（server/discover、MRTR、subscriptions/listen、双栈）与实现、性能、部署要点索引。
 
 ---
 

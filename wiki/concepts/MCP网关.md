@@ -3,7 +3,7 @@ type: concept
 source: [[raw/papers/面向大模型服务的动态路由与流量治理架构研究.md]]
 description: "AI 业务网关的 MCP 落地形态：MCP服务端解析 JSON-RPC、路由模块统一编排 RAG/Tool/Memory 等能力模块，模型推理请求下沉 LLM 调用子模块（RPM/TPM 令牌桶→熔断→路由降级）再达上游供应商。协议层机制见 [[MCP协议架构]]；工具链路安全见 [[工具调用零信任管控]]/[[LLM权限最小化]]。"
 created_at: 2026-09-13 23:00:00
-updated_at: 2026-09-18 23:55:00
+updated_at: 2026-09-25 15:26:02
 tags: [llm_gateway, mcp, model_context_protocol, dynamic_routing, traffic_governance]
 ---
 
@@ -66,7 +66,11 @@ MCP-RAG/Tool/Memory 是**业务能力**，走 MCP 协议路由；只有**模型�
 ### 与上游的协议转换
 Upstream 是 OpenAI-REST/SSE 语义，非 MCP 协议——LLMProxy 承担两种协议的边界转换，这也是把「网关」与「MCP 能力代理」区分开的关键设计。
 
+### 2026 路由头与免解析路由
+MCP 2026-07-28 无状态重构后，每个请求必带 `Mcp-Method`/`Mcp-Name` HTTP 头，网关与代理无需解析 JSON-RPC 请求体即可识别流量类型，实现按方法的差异化路由与限流；配合会话机制的移除，入口可直接用轮询负载均衡、无需粘性路由，机制见 [[Streamable HTTP]]。
+
 ## 相关页面
+- [[Streamable HTTP]]：本网关所代理的传输层协议（单端点、路由头与无状态化）
 - [[双层网关架构]]：MCP 网关是其 AI 业务网关层的落地形态
 - [[LLM网关动态路由与流量治理总览]]：网关体系总览
 - [[RPM与TPM联合令牌桶]] / [[熔断器状态机]]：LLM 调用子模块内嵌的调度原语

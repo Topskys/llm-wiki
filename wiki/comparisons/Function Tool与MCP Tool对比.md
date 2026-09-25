@@ -3,7 +3,7 @@ type: comparison
 source: [[raw/papers/Function-Calling与MCP-Tool设计.md]]
 description: "Function Tool 与 MCP Tool 横向对比：进程内嵌 vs 独立 Server、同框架绑定 vs 跨框架复用、手动注册 vs 自动发现、同进程 vs 可远程部署；选型建议按复用范围、生产化程度与多 Agent 共享需求权衡。"
 created_at: 2026-09-17 10:30:00
-updated_at: 2026-09-17 10:30:00
+updated_at: 2026-09-25 15:26:02
 tags: [function_tool, mcp_tool, comparison, tool_selection]
 ---
 
@@ -20,7 +20,7 @@ tags: [function_tool, mcp_tool, comparison, tool_selection]
 | 运行形态 | 代码内嵌 Agent 进程内 | 独立进程 MCP Server，进程间通信 JSON-RPC |
 | 复用范围 | 绑定当前 Agent 框架（OpenAI/LangGraph） | 一次编写，所有支持 MCP 的 Agent 直接复用 |
 | 发现机制 | 手动注册工具描述（代码硬编码） | 自动工具发现 `tools/list` |
-| 部署方式 | 同进程，简单直接 | 独立服务，可远程部署（Streamable HTTP） |
+| 部署方式 | 同进程，简单直接 | 独立服务，可远程部署（Streamable HTTP，2026 起无状态、轮询 LB 即可） |
 | 适合场景 | 自研 Agent、快速原型、单框架 | 多 Agent 共享、生产插件化 |
 
 ## 选型决策
@@ -31,6 +31,7 @@ tags: [function_tool, mcp_tool, comparison, tool_selection]
 ## 相关页面
 - [[Function Tool设计规范]]：Function Tool 的写法
 - [[MCP协议架构]]：MCP Tool 的协议基础
+- [[Streamable HTTP]]：MCP Tool 远程部署的传输层机制
 - [[Skill工程化总览]]：Skill 编排两种 Tool 的协作
 - [[MCP网关]]：MCP Tool 在网关中的编排
 
