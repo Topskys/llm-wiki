@@ -30,6 +30,8 @@
 | 2026-09-24 23:54:56 | Rule-Update | Query缺口回退规则修订 | 0 | 4 | Query缺口回退由「L1→L2→L3 逐层下探、命中即停」改为「L1/L2/L3 三路并行检索」，来源优先级改为 外链 > wiki > raw > 项目路径（wiki 非实时更新）；L3 联网结果不落盘 raw（仅对话参考+标注来源），长期复用登记缺口看板由用户决定抓取入库（取消自动存 raw/articles）；同步 SCHEMA 3.2/3.4、AGENTS.md、query工作流、index |
 | 2026-09-24 23:53:07 | Rule-Update | 学习资源规则 | 0 | 2 | SCHEMA 新增3.5「Agent 开发学习参考资源」：用户主学 Agent 开发，Agent/AI工程化领域知识缺口与素材抓取可参考 GitHub 仓库（rohitg00/ai-engineering-from-scratch）与中文文档站（aiengineeringfromscratch.docpage.cn）；AGENTS.md 同步增「参考资源（Agent 学习）」节 |
 | 2026-09-25 15:26:02 | Ingest | [[raw/papers/Streamable HTTP.md]] | 2 | 10 | 编译《Streamable HTTP》论文（概念辨析与传输对比、单端点三规则与三种响应模式、有状态经典机制、2026-07-28 无状态重构、实现示例与性能部署）为12页：concepts 1（Streamable HTTP，含机制图）、summaries 1（素材摘要）；联动更新 10 页（MCP协议架构/MCP网关/断线续传/重试预算与幂等保护/SSE流式容错/Function Tool与MCP Tool对比/双层网关架构/LLM网关动态路由与流量治理总览/入口网关水位熔断/SSE背压与内存治理总览），补 Mcp-Method/Mcp-Name 路由头、Last-Event-ID 移除对照与幂等键静默退化案例，加双链刷 updated_at；index 与 shturl 同步 |
+| 2026-09-27 12:10:00 | Ingest | [[raw/articles/Loop之后为什么是Graph.md]] | 9 | 6 | 编译《Loop 之后为什么是 Graph》（抖音视频17分钟讲清楚，PPT P1-P30 全量对齐）为15页：overviews 0、concepts 6（Loop与Graph控制流演进/单体Loop结构性瓶颈/Graph图编排架构/独立验证机制/共享状态驱动协作/状态持久化四能力）、topics 1（Agent生产落地实践）、comparisons 1（Loop与Graph选型对比）、summaries 1（素材摘要）；联动更新 6 页（Agent循环/Agent循环总览/LangGraph与Checkpointer工作流/上下文污染/输出验证与人工审批/多Agent上下文管理总览，补交叉链接刷updated_at）；新增13张Mermaid图lint全通过（全库127/128，存量灵购AI有1处历史语法错误待处理）；素材经用户授权改名并多轮修订标题 |
+| 2026-09-27 16:43:06 | Lint-Fix | 巡检处理 | 0 | 1 | 修复 灵购AI 技术架构图 Mermaid 词法错误：节点标签 CB[/api/...] 开头斜杠被解析为平行四边形，加双引号改为 CB["/api/..."]；created_at 未动，刷新 updated_at；全库 Mermaid 校验 128/128 通过 |
 
 ---
 

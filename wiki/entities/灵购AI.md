@@ -3,7 +3,7 @@ type: entity
 source: [[贸易AI业务]]
 description: "商城智能语音客服平台：商品知识库 + RTC 7×24 语音客服，核心为 CustomLLM 回调服务的 RAG 检索与微调模型流式推理；用户主负责的 RTC 链路、RAG 接入与 TTFT 优化项目。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-09-11 23:41:15
+updated_at: 2026-09-27 16:43:06
 tags: [lingou_ai, rtc, rag, voice_agent, e_commerce]
 ---
 
@@ -26,7 +26,7 @@ flowchart LR
 
     subgraph LingGou["灵购 AI 自研服务"]
         PROXY[场景代理 / Token 签发]
-        CB[/api/chat_callback<br/>CustomLLM 回调]
+        CB["/api/chat_callback<br/>CustomLLM 回调"]
         RAG[RAG 检索服务]
         LLM[微调大模型推理<br/>ModelForge 产出]
     end

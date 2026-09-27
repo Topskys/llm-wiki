@@ -3,7 +3,7 @@ type: overview
 source: "[[raw/papers/Agent Loop.md]]"
 description: "Agent 循环全景：LLM 与工具、上下文、harness 三者构成『收集上下文→采取行动→验证结果』的自适应执行环路；本质句『在循环中基于环境真实反馈自主决策，直到任务完成或触发终止条件』；覆盖三阶段模型、Turn 机制、终止双保险与上下文治理四支柱。"
 created_at: 2026-09-23 12:00:00
-updated_at: 2026-09-23 12:00:00
+updated_at: 2026-09-27 12:10:00
 tags: [agent_loop, agent, autonomous_agent]
 ---
 
@@ -35,6 +35,10 @@ flowchart TD
 | ③ 终止双保险 | 模型 stop_reason + harness 硬护栏，hooks 控制点 | [[Agent循环终止与护栏]] |
 | ④ 上下文治理 | compaction / scratchpad / 子代理摘要，context rot 防线 | [[上下文压缩与摘要策略]]、[[多Agent上下文路由]] |
 
+## 演进出口：从 Loop 到 Graph
+
+循环本身不解决系统级治理问题。当四支柱仍不足以支撑生产时，演进路径是 **L1 提示词 → L2 上下文 → L3 工具 → L4 Loop → L5 Graph** 的能力叠加：Graph 不是替代 Loop，而是把循环封装为专职节点，叠加调度、观测、恢复等系统级能力（详见 [[Loop与Graph控制流演进]]）。是否升级用**三问判断法**裁决：分支并行、跨会话状态、治理要求，都不需要就继续用 Loop，不要过度设计（详见 [[Loop与Graph选型对比]]）。
+
 ## 相关页面
 
 - [[Agent循环]]：核心概念页（本质定义 + 三阶段模型）
@@ -43,7 +47,11 @@ flowchart TD
 - [[Function Calling三阶段模型]]：单轮工具调用的内部展开
 - [[Agent异常处理与循环检测]]：循环缺终止条件的故障形态（IAL）
 - [[Agent反馈闭环]]：Verify 阶段在 AI-native SDLC 落地为自验回路
+- [[单体Loop结构性瓶颈]]：循环在复杂任务上的五个天花板
+- [[Graph图编排架构]]：Loop 之上的可执行协作网络
+- [[Agent生产落地实践]]：Graph 化之后的工程原则
 
 ## 参考来源
 
 - [[raw/papers/Agent Loop.md]]（编译主源）
+- [[raw/articles/Loop之后为什么是Graph.md]]（演进出口部分）

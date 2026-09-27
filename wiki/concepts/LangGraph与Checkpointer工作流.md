@@ -3,7 +3,7 @@ type: concept
 source: [[贸易AI业务]]
 description: "LangGraph 编排多阶段 Agent 工作流：SubGraph 子图拆分、PostgreSQL Checkpointer 节点级状态持久化实现断点续跑与故障自愈，配合 SSE 流式、多模型路由与可观测体系支撑内容生成类长流程。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-09-11 23:41:15
+updated_at: 2026-09-27 12:10:00
 tags: [langgraph, agent, workflow, checkpoint, sse]
 ---
 
@@ -57,10 +57,27 @@ flowchart TB
 - 配图并发：`asyncio.gather` + `run_in_executor`，1s→2s→4s 指数退避抗抖动，耗时 ↓70%。
 - 高可用：SlowAPI 限流、K8s 健康检查 + 优雅关闭（停接新单、排空进行中）、绘图/LLM 连续失败熔断降级文案-only。
 
+## 与 Graph 图编排理论的对应
+
+本页是 [[Graph图编排架构]] 四要素 $G = V \cdot E \cdot S \cdot P$ 的一个工程实例：
+
+| Graph 要素 | 本项目落地 |
+|------------|-----------|
+| V 节点 | 选题 / 文案 / 配图三个专职节点（内部可带 Loop） |
+| E 边 | 子图连线 + 质量关卡 + 失败回退 |
+| S 状态 | PostgreSQL Checkpointer 的 thread state |
+| P 策略 | 熔断降级、限流、优雅关闭 |
+
+Checkpointer 提供的正是 [[状态持久化四能力]] 中的**状态回放**与**精准重试**；SubGraph 间通过**共享 state** 传递结果，属于 [[共享状态驱动协作]] 而非消息互发。
+
 ## 相关页面
 - [[MultiVis-AI]]：本技术的落地项目
 - [[LiveClip-AI]]：另一种长任务方案（整任务 PG 队列）
 - [[商城AI业务矩阵]]：多 Agent 应用层整体编排
+- [[Graph图编排架构]]：四要素与三拓扑的理论框架
+- [[状态持久化四能力]]：Checkpointer 支撑的四种生产能力
+- [[共享状态驱动协作]]：节点间通过共享 state 协作的方式
 
 ## 参考来源
 - [[贸易AI业务]]
+- [[raw/articles/Loop之后为什么是Graph.md]]（Graph 理论对应部分）
