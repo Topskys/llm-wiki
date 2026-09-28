@@ -32,6 +32,7 @@
 | 2026-09-25 15:26:02 | Ingest | [[raw/papers/Streamable HTTP.md]] | 2 | 10 | 编译《Streamable HTTP》论文（概念辨析与传输对比、单端点三规则与三种响应模式、有状态经典机制、2026-07-28 无状态重构、实现示例与性能部署）为12页：concepts 1（Streamable HTTP，含机制图）、summaries 1（素材摘要）；联动更新 10 页（MCP协议架构/MCP网关/断线续传/重试预算与幂等保护/SSE流式容错/Function Tool与MCP Tool对比/双层网关架构/LLM网关动态路由与流量治理总览/入口网关水位熔断/SSE背压与内存治理总览），补 Mcp-Method/Mcp-Name 路由头、Last-Event-ID 移除对照与幂等键静默退化案例，加双链刷 updated_at；index 与 shturl 同步 |
 | 2026-09-27 12:10:00 | Ingest | [[raw/articles/Loop之后为什么是Graph.md]] | 9 | 6 | 编译《Loop 之后为什么是 Graph》（抖音视频17分钟讲清楚，PPT P1-P30 全量对齐）为15页：overviews 0、concepts 6（Loop与Graph控制流演进/单体Loop结构性瓶颈/Graph图编排架构/独立验证机制/共享状态驱动协作/状态持久化四能力）、topics 1（Agent生产落地实践）、comparisons 1（Loop与Graph选型对比）、summaries 1（素材摘要）；联动更新 6 页（Agent循环/Agent循环总览/LangGraph与Checkpointer工作流/上下文污染/输出验证与人工审批/多Agent上下文管理总览，补交叉链接刷updated_at）；新增13张Mermaid图lint全通过（全库127/128，存量灵购AI有1处历史语法错误待处理）；素材经用户授权改名并多轮修订标题 |
 | 2026-09-27 16:43:06 | Lint-Fix | 巡检处理 | 0 | 1 | 修复 灵购AI 技术架构图 Mermaid 词法错误：节点标签 CB[/api/...] 开头斜杠被解析为平行四边形，加双引号改为 CB["/api/..."]；created_at 未动，刷新 updated_at；全库 Mermaid 校验 128/128 通过 |
+| 2026-09-28 23:24:19 | Ingest | [[raw/papers/RAG知识库权限隔离.md]] | 12 | 2 | 编译《RAG 知识库权限隔离全链路设计》为12页：concepts 8（RAG权限隔离全链路架构/检索前置过滤机制/检索漏斗坍塌/权限元数据绑定/上下文最小化/缓存隔离/审计与越权监控/分层权限模型/段落字段级权限细化）、comparisons 1（向量库metadata过滤能力对比）、topics 1（RAG权限隔离生产实践）、summaries 1（素材摘要）；联动更新 2 页（RAG检索优化五层/LLM权限最小化，补交叉链接刷updated_at）；新增2张Mermaid图lint全通过 |
 
 ---
 

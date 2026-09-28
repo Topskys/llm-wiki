@@ -3,7 +3,7 @@ type: concept
 source: [[raw/papers/LLM-Agent安全防护-提示词注入防御与权限最小化综合研究.md]]
 description: "LLM 应用权限最小化四层落地：模型层（只提案不执行）、工具/函数层（最小权限+强参数校验+白名单）、数据访问层（按需分片+身份过滤）、Runtime 层（非root/只读/密钥隔离）；安全悖论：权限给的越多越危险。"
 created_at: 2026-09-18 23:55:00
-updated_at: 2026-09-18 23:55:00
+updated_at: 2026-09-28 23:24:19
 tags: [least_privilege, permission_model, agent_security]
 ---
 
@@ -48,6 +48,8 @@ flowchart TB
 - [[LLM-Agent安全防护总览]]：权限最小化位置
 - [[工具调用零信任管控]]：工具层执行管控
 - [[输出验证与人工审批]]：高风险动作人类确认
+- [[RAG权限隔离全链路架构]]：RAG 场景下的数据层权限隔离
+- [[分层权限模型]]：三层权限粒度模型
 
 ## 参考来源
 
