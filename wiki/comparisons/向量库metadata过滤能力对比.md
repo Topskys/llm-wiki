@@ -1,6 +1,6 @@
 ---
 type: comparison
-source: "[[raw/papers/RAG知识库权限隔离.md]]"
+source: "[[raw/papers/RAG权限隔离·三道闸门与全链路合并.md]]"
 description: "向量库 metadata 过滤能力对比：Pinecone/Qdrant/Weaviate/Milvus/ChromaDB/pgvector/LanceDB 原生支持标量过滤，FAISS 不支持需降级为业务层白名单；pre-filter 与 post-filter 在延迟和召回率上差异显著。"
 created_at: 2026-09-28 23:24:19
 updated_at: 2026-09-28 23:24:19

@@ -192,6 +192,7 @@
 - [[Function-Calling与MCP-Tool设计·素材摘要]]：对 raw 论文《LLM Function Calling 与 MCP Tool 设计》的要点摘录：三阶段调用模型、Function Tool 四铁律、MCP Client-Host-Server 架构、Tool Suppression 与 ToolRegistry 跨框架互操作。
 - [[LLM-Agent安全防护·素材摘要]]：对 raw 论文《LLM-Agent安全防护-提示词注入防御与权限最小化综合研究》的要点摘录：注入成因分类、纵深防御六层面、CaMeL/双LLM/任务对齐/权限最小化方案与量化效果索引。
 - [[RAG知识库权限隔离·素材摘要]]：对 raw 素材《RAG 知识库权限隔离全链路设计》的要点摘录：Prompt 限制三大缺陷、全链路五层管控、分层权限模型、向量库 metadata 过滤能力与降级方案、段落/字段级权限细化、权限变更传播与性能基准索引。
+- [[RAG权限隔离·三道闸门与全链路合并·素材摘要]]：对合并素材《RAG 权限隔离：三道闸门与全链路管控》的要点摘录：三道闸门威胁模型（看不见/说不出/标签不显）、全链路防御架构、检索前置过滤与漏斗坍塌、生成后置校验与拼图推导泄密、隐式权限向量与标签侧信道、配套工程机制（缓存隔离/动态权限同步/审计监控/诱导防御）、向量库选型与降级、段落/字段级权限细化。
 - [[cc-switch与Codex多模型接入·素材摘要]]：对《cc-switch 与 Codex 多模型接入》两份联网素材（codex-docs 第三方模型接入指南 + CCNavX 安装教程）的要点摘录：CC Switch 定位、本地路由协议转换、三条接入路线、模型映射、排障与验收。
 - [[AI-Agent上下文管理·素材摘要]]：《AI Agent 上下文管理综合研究》论文要点摘录：素材源于掘金文章（米小虾，2026-06）并经 Lost in the Middle/Anthropic/MemGPT 等联网核验，覆盖窗口预算、分层组织、压缩、结构化、工具治理、多 Agent 路由与监控七环。
 - [[Agent循环·素材摘要]]：对 raw 论文《Agent Loop》（Anthropic 官方文档 5 篇 + ReAct 融合）的要点摘录：本质定义、三阶段模型、Turn/Message 生命周期、stop_reason 协议、终止双保险与失败护栏、上下文治理、最小实现与六条设计原则索引。

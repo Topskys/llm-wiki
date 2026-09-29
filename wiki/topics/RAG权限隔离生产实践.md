@@ -1,6 +1,6 @@
 ---
 type: topic
-source: "[[raw/papers/RAG知识库权限隔离.md]]"
+source: "[[raw/papers/RAG权限隔离·三道闸门与全链路合并.md]]"
 description: "RAG 权限隔离生产实践专题：权限变更传播（事件驱动同步向量库 metadata 与缓存）、性能基准（pre-filter vs post-filter 延迟与召回对比）、段落/字段级权限细化、向量库选型与降级策略。"
 created_at: 2026-09-28 23:24:19
 updated_at: 2026-09-28 23:24:19

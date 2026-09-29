@@ -1,10 +1,9 @@
 ---
 type: concept
-source: "[[raw/papers/RAG知识库权限隔离.md]]"
+source: "[[raw/papers/RAG权限隔离·三道闸门与全链路合并.md]]"
 description: "RAG 权限隔离全链路架构：权限拦截置于数据层而非模型层，在文档入库、检索前置过滤、上下文最小化、缓存隔离、审计监控五层实施确定性管控，防止越权召回与信息泄露。"
 created_at: 2026-09-28 23:24:19
 updated_at: 2026-09-28 23:24:19
-tags: [rag, permission_isolation, data_layer_security, architecture]
 ---
 
 # RAG权限隔离全链路架构
@@ -20,8 +19,9 @@ flowchart TD
     E --> F[权限二次校验]
     F --> G[上下文最小化\n仅必要片段送入 LLM]
     G --> H[LLM 生成回答]
-    H --> I[缓存\nKey 绑定用户身份+权限]
-    H --> J[审计日志\n越权行为告警]
+    H --> I[生成后置校验\n拦截拼图推导泄密]
+    I --> J[缓存\nKey 绑定用户身份+权限]
+    H --> K[审计日志\n越权行为告警]
 ```
 
 <p align="center">图 1 全链路权限隔离架构流程图</p>
