@@ -3,7 +3,7 @@ type: concept
 source: [[贸易AI业务]]
 description: "大模型首字延迟（Time To First Token）优化全景：RAG 压检索让 LLM 更早开跑、统一 prompt 触发前缀缓存、微调精简 system 与动态 Token 缩短输入、SSE 流式降低体感延迟，复杂咨询首字 15s→2s 口径。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-09-13 22:31:33
+updated_at: 2026-10-01 20:50:29
 tags: [ttft, llm_inference, kv_cache, prefix_caching, sse, performance]
 ---
 
@@ -47,6 +47,7 @@ flowchart LR
 ### KV Cache（单请求）
 - 自回归生成每产出一个 token 都要对历史做 Attention；KV Cache 存历史 Key/Value，只算新 token 与历史的注意力，是**流式 decode 标配**。
 - 与前缀缓存区分：KV Cache 是**单请求内**必备；前缀缓存是**跨请求复用**相同前缀的 KV，主要降首 token 的 prefill。
+- 容量维度：KV Cache 随序列长度线性增长，70B 模型 128k 上下文即需约 320GB，长上下文场景需靠 [[KV Cache分级存储]] 下沉到 DRAM/SSD 才跑得下。
 - 表述口径：「充分启用（平台内置）、通过 prompt 设计触发前缀缓存」，不是「手写实现」。
 
 ### 其他手段
@@ -61,6 +62,9 @@ flowchart LR
 - [[FEC与自适应JitterBuffer]]：听得稳，与 TTFT 分属不同层级
 - [[商城AI业务矩阵]]：同属「答得快」优化主线
 - [[SSE流式容错]]：SSE 是 TTFT 首字即回的流式通道，本页解决该通道中途断流的容错策略
+- [[KV Cache]]：本页手段之一的底层机制，及其显存墙约束
+- [[KV Cache分级存储]]：单卡装不下 KV 时的分级下沉方案
+- [[前缀缓存与PagedAttention]]：本页「前缀缓存」条目与 PagedAttention 的能力边界辨析
 
 ## 参考来源
 - [[贸易AI业务]]

@@ -36,6 +36,7 @@
 | 2026-09-29 22:01:31 | Ingest | [[raw/papers/RAG权限隔离·三道闸门与全链路合并.md]] | 1 | 12 | 融合《企业级 RAG 三道权限闸门》与《RAG 知识库权限隔离全链路设计》为合并素材，新增摘要页 1 个；联动更新 12 页 source 指向合并文件（RAG权限隔离全链路架构/检索前置过滤机制/检索漏斗坍塌/权限元数据绑定/上下文最小化/缓存隔离/审计与越权监控/分层权限模型/段落字段级权限细化/向量库metadata过滤能力对比/RAG权限隔离生产实践/RAG威胁模型/生成后置校验/隐式权限向量）；合并文件含2张Mermaid图lint全通过 |
 | 2026-09-29 22:36:21 | Ingest | [[raw/papers/企业级RAG三道权限闸门.md]] | 2 | 3 | 编译《企业级 RAG 三道权限闸门》为2页：concepts 1（诱导提问防御）、summaries 1（素材摘要）；联动更新 3 页（RAG威胁模型/检索前置过滤机制/权限元数据绑定，补交叉链接刷updated_at）；新增1张Mermaid图lint全通过 |
 | 2026-09-29 22:36:21 | Ingest | [[raw/papers/工业级AI意图识别架构.md]] | 7 | 0 | 编译《工业级 AI 意图识别架构设计》为7页：concepts 5（工业级意图识别架构/多路并行识别/置信度聚合决策/后置校验过滤/样本回流迭代）、comparisons 1（串行漏斗vs多路并行）、summaries 1（素材摘要）；新增1张Mermaid图lint全通过 |
+| 2026-10-01 20:50:29 | Ingest | [[raw/papers/KV Cache分级存储.md]] | 14 | 2 | 编译《KV Cache 分级存储》为14页：concepts 9（KV Cache/显存墙/KV Cache分级存储/三级存储金字塔/驱逐策略/换入换出与数据迁移/预取机制/压缩机制与体积缩减/前缀缓存与PagedAttention）、entities 4（vLLM/FlexGen/InfiniGen/Mooncake）、comparisons 1（代表项目对比）、summaries 1（素材摘要）；联动更新 2 页（TTFT首字延迟优化/上下文窗口与Token预算，补 KV Cache 容量约束与推理侧对偶链接，刷 updated_at）；新增 Mermaid 图 lint 全通过 |
 
 ---
 

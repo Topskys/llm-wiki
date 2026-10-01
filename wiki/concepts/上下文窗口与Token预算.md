@@ -1,9 +1,9 @@
 ---
 type: concept
 source: "[[raw/papers/AI-Agent上下文管理综合研究.md]]"
-description: "上下文窗口的硬边界与 Token 预算管理：单轮 Agent 交互耗 15k–30k token，按『系统指令>当前消息>工具结果>历史』优先级分配，工具结果超剩余 40% 先压缩。"
+description: "上下文窗口的硬边界与 Token 预算管理：单轮 Agent 交互耗 15k–30k token，按『系统指令>当前消息>工具结果>历史』优先级分配，工具结果超剩余 40% 先压缩；推理侧的对应约束是 KV Cache 线性增长撞上的显存墙。"
 created_at: 2026-09-20 14:00:00
-updated_at: 2026-09-20 14:00:00
+updated_at: 2026-10-01 20:50:29
 tags: [context_management, token_budget, context_window]
 ---
 
@@ -46,7 +46,10 @@ flowchart TD
 - [[AI-Agent上下文管理总览]]：七环闭环中的预算入口
 - [[上下文压缩与摘要策略]]：预算不足时的有损兜底
 - [[上下文监控指标]]：填充率告警阈值（>80%）
+- [[KV Cache]]：窗口内容在推理侧的同源占用，线性增长撞上显存墙
+- [[显存墙]]：窗口预算的物理上限视角，与本页的 token 预算互为表里
 
 ## 参考来源
 
 - [[raw/papers/AI-Agent上下文管理综合研究.md]]
+- [[raw/papers/KV Cache分级存储.md]]

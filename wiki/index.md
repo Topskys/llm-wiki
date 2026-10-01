@@ -15,6 +15,10 @@
 - [[LiveClip-AI]]：直播切片智能剪辑 Agent；FFmpeg.wasm 轻量压缩上传，PostgreSQL 自研任务队列调度 ASR+大模型识别高光片段，批量产出短视频。
 - [[MultiVis-AI]]：图文视频一体化自媒体运营 Agent；LangGraph 三子图 + PostgreSQL Checkpointer 节点级故障自愈，SSE 流式输出 + 多模型路由降本。
 - [[cc-switch]]：跨平台开源 AI 编程工具配置管理总控台（farion1231/cc-switch），统一管理 Claude Code / Codex / Gemini CLI / OpenCode 的 provider、MCP、prompts、skills，v3.16.0 起本地路由支持把第三方模型接入 Codex。
+- [[vLLM]]：伯克利高吞吐 LLM 推理引擎，SOSP 2023 的 PagedAttention 分页管理消除显存碎片；显存不足时整页换出到 CPU 内存，两级存储适用于中等长度序列。
+- [[FlexGen]]：2023 ICML 单 GPU 高吞吐生成推理框架，GPU/CPU/SSD 三级存储 + 线性规划求解最优换入换出调度，面向单请求长上下文。
+- [[InfiniGen]]：2024 OSDI 的动态 KV Cache 管理系统，学习注意力模式预测未来访问并提前预取，减少换入等待，适用于多轮对话场景。
+- [[Mooncake]]：以 KVCache 为中心的分离式 LLM 服务架构，KV 独立存储池支持跨请求跨卡共享，全局调度加预取，面向高并发与长上下文。
 
 ## concepts 概念
 
@@ -147,6 +151,15 @@
 - [[Codex接入第三方模型总览]]：Codex 接入第三方模型总览：CC Switch（协议转换+图形切换）、自定义 Responses provider（原生直连）、配置档案 Profile（多档切换）三条路线；协议兼容是核心分水岭，验收分连接/工具/任务三层。
 - [[AI-Agent上下文管理总览]]：AI Agent 上下文管理全景：从 Token 预算分配、分层组织、有损压缩、结构化装配到工具结果治理、多 Agent 路由与监控闭环，贯穿『在有限注意力预算内编排最高信号密度 token』的第一性原理。
 - [[Agent循环总览]]：Agent 循环全景：LLM 与工具、上下文、harness 三者构成『收集上下文→采取行动→验证结果』的自适应执行环路；本质句『在循环中基于环境真实反馈自主决策，直到任务完成或触发终止条件』；覆盖三阶段模型、Turn 机制、终止双保险与上下文治理四支柱。
+- [[KV Cache]]：自回归解码缓存历史 Key/Value 避免重算注意力，显存随序列长度线性增长（70B/128k 约 320GB），是流式 decode 标配。
+- [[显存墙]]：KV Cache 撞上的容量与经济性双重上限：70B/128k 需 320GB、10 并发需 3.2TB，HBM 成本又远高于 DRAM/SSD，突破方案是分级存储。
+- [[KV Cache分级存储]]：以带宽换容量——冷 KV 下沉 DRAM/SSD、热 KV 驻留 HBM，容量扩展数倍至数十倍；迁移由框架自动执行，开发者仅配置配比与阈值。
+- [[三级存储金字塔]]：L1 HBM（~3TB/s，数十GB）/ L2 DRAM（~100GB/s，数百GB）/ L3 SSD（~数GB/s，TB级）的带宽与容量对照。
+- [[驱逐策略]]：决定谁下沉——H2O 注意力分数、时间局部性、SnapKV 语义重要性；权衡为过激掉精度、过松释放不足。
+- [[换入换出与数据迁移]]：换出异步批量不阻塞计算、换入访问时同步，批量摊薄开销、异步重叠隐藏延迟。
+- [[预取机制]]：基于时间局部性与 heavy-hitter 稳定性预测下步访问并提前迁移，命中免除等待、失准浪费带宽。
+- [[压缩机制与体积缩减]]：量化（FP16→INT8/INT4）与稀疏化缩减 KV 体积，与分级正交、可任意先后或叠加。
+- [[前缀缓存与PagedAttention]]：前缀缓存跨请求复用降 prefill、PagedAttention 分页除碎片，两者均不扩展显存总容量。
 
 ## comparisons 对比
 
@@ -166,6 +179,7 @@
 - [[Loop与Graph选型对比]]：单体 Loop 与 Graph 架构横向对比：上下文/验证/效率/恢复/成本/治理六维差异、三问判断法与适用边界、+90.2% 与约15× 的成本账、简报任务方案A vs 方案B 案例。
 - [[向量库metadata过滤能力对比]]：向量库 metadata 过滤能力对比：Pinecone/Qdrant/Weaviate/Milvus/ChromaDB/pgvector/LanceDB 原生支持标量过滤，FAISS 不支持需降级；pre-filter 与 post-filter 在延迟和召回率上差异显著。
 - [[串行漏斗vs多路并行]]：串行漏斗与多路并行对比：串行先跑规则命中直接返回，算力低但单点失效；多路并行三条线同时推理聚合打分，抗干扰强但算力高。
+- [[代表项目对比]]：vLLM/FlexGen/InfiniGen/Mooncake 四项目从核心机制、层级、驱逐、预取、场景五维对比，作用域从单机页管理到集群 KV 分离架构。
 
 ## topics 主题页
 
@@ -207,6 +221,7 @@
 - [[Agent循环·素材摘要]]：对 raw 论文《Agent Loop》（Anthropic 官方文档 5 篇 + ReAct 融合）的要点摘录：本质定义、三阶段模型、Turn/Message 生命周期、stop_reason 协议、终止双保险与失败护栏、上下文治理、最小实现与六条设计原则索引。
 - [[Streamable HTTP·素材摘要]]：对 raw 论文《Streamable HTTP》的要点摘录：概念分层与传输方案对比、单端点三条规则与三种响应模式、有状态经典机制（会话/重连/终止）、2026-07-28 无状态重构（server/discover、MRTR、subscriptions/listen、双栈）与实现、性能、部署要点索引。
 - [[Loop到Graph演进·素材摘要]]：对 raw 素材《Loop 之后为什么是 Graph》（抖音视频，17分钟讲清楚）的要点摘录：五层控制流演进、单体 Loop 五大瓶颈与失控放大、Graph 四要素与三拓扑、Loop vs Graph 选型与成本账、生产落地七原则与可靠性三原则索引。
+- [[KV Cache分级存储·素材摘要]]：对 raw 论文《KV Cache 分级存储》的要点摘录：显存墙容量与经济性双约束、三级存储金字塔、驱逐/迁移/预取/压缩四大机制、四代表项目对比、工程配比与三类常见问题索引。
 
 ---
 
