@@ -3,7 +3,7 @@ type: concept
 source: "[[raw/papers/KV Cache分级存储.md]]"
 description: "前缀缓存跨请求复用相同前缀的 KV 降 prefill 开销，PagedAttention 用分页管理消除显存碎片提升利用率；两者都只提升利用率、不扩展显存总容量，KV Cache 分级存储才是直接扩容的方案。"
 created_at: 2026-10-01 20:50:29
-updated_at: 2026-10-01 20:50:29
+updated_at: 2026-10-02 19:41:03
 tags: [prefix_caching, paged_attention, vllm, kv_cache, memory_fragmentation]
 ---
 
@@ -32,8 +32,11 @@ flowchart TD
 
 ## PagedAttention
 
-- **机制**：把 KV 按页管理，页大小固定、按需分配，取代连续内存分配带来的碎片。
-- **解决什么**：显存碎片，提升显存利用率。
+- **机制**：把 KV 按页管理，页大小固定（默认 16 Token）、按需分配，取代连续内存分配带来的碎片。
+- **三段映射**：**逻辑块**（序列视角连续）→ **块表/页表**（记录逻辑块到物理块的编号）→ **物理块**（显存中非连续，按需分配用完即还）。物理与逻辑解耦，正是碎片被消除的根源，详见 [[PagedAttention分页内存]]。
+- **解决什么**：显存碎片。朴素连续分配按最大长度预分配，利用率仅 20%–40%、浪费 60%–80%；分页后浪费降至 **4% 以下**、利用率提升至 **96% 以上**。
+- **写时Copy-on-Write**：同 Prompt 多采样共享前缀物理块，只在写入时分裂，beam search 场景显存节省可达 **55%**。
+- **与连续批处理互为使能**：KV 块可独立调度、无需连续对齐，请求得以动态加入退出，GPU 利用率大幅提升。
 - **不解决**：总容量不变；且当 KV 总量确实超过 HBM 容量时，仍需靠换出——页级换出正是它在容量不足时的手段。
 
 ## 三者对照
@@ -49,9 +52,12 @@ flowchart TD
 
 - [[KV Cache]]：三者共同作用的对象
 - [[KV Cache分级存储]]：唯一扩展总容量的方案
+- [[PagedAttention分页内存]]：分页机制本体与块表三段映射
+- [[KV Cache优化技术栈总览]]：系统管理层在五级栈中的位置
 - [[vLLM]]：PagedAttention 的提出方
 - [[TTFT首字延迟优化]]：前缀缓存的收益落点
 
 ## 参考来源
 
+- [[raw/papers/KV Cache.md]]
 - [[raw/papers/KV Cache分级存储.md]]

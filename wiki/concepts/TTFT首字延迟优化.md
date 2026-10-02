@@ -3,7 +3,7 @@ type: concept
 source: [[贸易AI业务]]
 description: "大模型首字延迟（Time To First Token）优化全景：RAG 压检索让 LLM 更早开跑、统一 prompt 触发前缀缓存、微调精简 system 与动态 Token 缩短输入、SSE 流式降低体感延迟，复杂咨询首字 15s→2s 口径。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-10-01 20:50:29
+updated_at: 2026-10-02 19:41:03
 tags: [ttft, llm_inference, kv_cache, prefix_caching, sse, performance]
 ---
 
@@ -50,6 +50,11 @@ flowchart LR
 - 容量维度：KV Cache 随序列长度线性增长，70B 模型 128k 上下文即需约 320GB，长上下文场景需靠 [[KV Cache分级存储]] 下沉到 DRAM/SSD 才跑得下。
 - 表述口径：「充分启用（平台内置）、通过 prompt 设计触发前缀缓存」，不是「手写实现」。
 
+### 阶段归属：TTFT 由 Prefill 主导
+- 推理分 [[Prefill与Decode两阶段]]：**Prefill** 算力密集、计算量与长度平方正相关，**Decode** 访存密集、计算量与长度线性相关。**TTFT 的耗时几乎全部落在 Prefill**，TPOT（每 token 延迟）才由 Decode 决定。
+- 因此凡能缩短 Prefill 的手段——RAG 压检索、前缀缓存、prompt 精简——都直接打在 TTFT 上；而分页管理、量化、分层卸载这些治 Decode/容量的手段，对 TTFT 改善有限。
+- 长 Prompt 阻塞调度是 TTFT 飙升的另一来源，解法是 **Chunked Prefill**：把长 Prompt 切块穿插在 Decode 请求之间调度，避免长请求独占 GPU。
+
 ### 其他手段
 - 微调模型减 prompt：话术进模型，system 可缩短。
 - 动态 Token 分级：简单问法少给 RAG 条数/历史，复杂咨询才给满。
@@ -65,6 +70,9 @@ flowchart LR
 - [[KV Cache]]：本页手段之一的底层机制，及其显存墙约束
 - [[KV Cache分级存储]]：单卡装不下 KV 时的分级下沉方案
 - [[前缀缓存与PagedAttention]]：本页「前缀缓存」条目与 PagedAttention 的能力边界辨析
+- [[Prefill与Decode两阶段]]：TTFT 由 Prefill 主导的阶段归属依据
+- [[KV Cache优化技术栈总览]]：区分哪些层治 TTFT、哪些层治 TPOT 与容量
 
 ## 参考来源
 - [[贸易AI业务]]
+- [[raw/papers/KV Cache.md]]
