@@ -38,6 +38,7 @@
 | 2026-09-29 22:36:21 | Ingest | [[raw/papers/工业级AI意图识别架构.md]] | 7 | 0 | 编译《工业级 AI 意图识别架构设计》为7页：concepts 5（工业级意图识别架构/多路并行识别/置信度聚合决策/后置校验过滤/样本回流迭代）、comparisons 1（串行漏斗vs多路并行）、summaries 1（素材摘要）；新增1张Mermaid图lint全通过 |
 | 2026-10-01 20:50:29 | Ingest | [[raw/papers/KV Cache分级存储.md]] | 14 | 2 | 编译《KV Cache 分级存储》为14页：concepts 9（KV Cache/显存墙/KV Cache分级存储/三级存储金字塔/驱逐策略/换入换出与数据迁移/预取机制/压缩机制与体积缩减/前缀缓存与PagedAttention）、entities 4（vLLM/FlexGen/InfiniGen/Mooncake）、comparisons 1（代表项目对比）、summaries 1（素材摘要）；联动更新 2 页（TTFT首字延迟优化/上下文窗口与Token预算，补 KV Cache 容量约束与推理侧对偶链接，刷 updated_at）；新增 Mermaid 图 lint 全通过 |
 | 2026-10-02 19:41:03 | Ingest | [[raw/papers/KV Cache.md]] | 10 | 5 | 编译《KV Cache 缓存》为15页：concepts 6（PagedAttention分页内存/GQA与MQA多头变体/MLA低秩潜在注意力/KVCache低比特量化/FlashAttention算子优化/Prefill与Decode两阶段）、overviews 1（KV Cache优化技术栈总览）、comparisons 1（主流推理框架KV技术对比）、topics 1（KVCache场景选型指南）、summaries 1（素材摘要）；联动更新 5 页（KV Cache/多头注意力/前缀缓存与PagedAttention/vLLM/TTFT首字延迟优化，补两阶段机制、五级技术栈、块表三段映射与 14–24× 吞吐数据，刷 updated_at、created_at 未动）；index 与 shturl 同步，本次改动 15 页 Mermaid lint 全通过，全库双链 2357 条仅余 6 条既存孤儿（均非本次引入） |
+| 2026-10-03 19:55:15 | Ingest | [[raw/papers/工业级Agent意图识别分层漏斗.md]] | 11 | 0 | 编译《工业级Agent意图识别分层漏斗》为11页：topics 1（Agent意图识别）、concepts 6（分层漏斗路由/规则拦截层/上下文状态层/大模型兜底层/置信度阈值/意图评测）、entities 2（FrugalGPT/RouteLLM）、comparisons 1（全量大模型vs分层漏斗）、summaries 1（素材摘要）；新增1张Mermaid图lint全通过；index 与 shturl 同步 |
 
 ---
 
