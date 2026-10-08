@@ -3,7 +3,7 @@ type: source_summary
 source: [[raw/articles/Transformer原理.md]]
 description: "对 raw 素材《Transformer 原理》（豆包会话 + 公开学术资料综合，2026-09-17 落盘）的要点摘录：核心思想、整体结构、词嵌入+位置编码、多头自注意力、Encoder/Decoder 层结构、残差+归一化、输出层、Transformer vs RNN 实证对比与架构演进路线。"
 created_at: 2026-09-17 10:00:00
-updated_at: 2026-09-17 10:00:00
+updated_at: 2026-10-08 22:05:26
 tags: [transformer, source_summary, attention, llm]
 ---
 
@@ -23,7 +23,7 @@ tags: [transformer, source_summary, attention, llm]
 - **输入端**：词嵌入（$d_{model}=512$）+ 正弦/余弦[[位置编码]]（只加到 Q/K 效果更好；RoPE/ALiBi 为后续演进）。
 - **Encoder 层**：双向自注意力 + FFN（$d_{ff}=2048$），残差 + LayerNorm。
 - **Decoder 层**：掩码自注意力 + 交叉注意力（Q=解码器、K/V=编码器）+ FFN，残差 + LayerNorm。
-- **输出**：Linear → Softmax → 采样下一个 token 循环生成。
+- **输出**：Linear → Softmax → 采样下一个 token 循环生成（该步骤的机制见 [[Softmax归一化原理]] 与 [[温度参数与生成采样]]）。
 - **架构变体**：Decoder-only（GPT/PaLM）、Encoder-only（BERT/RoBERTa）、Encoder-Decoder（T5/BART）。
 
 ### 实证对比
@@ -34,6 +34,11 @@ tags: [transformer, source_summary, attention, llm]
 - [[Transformer总览]]（overview）
 - [[自注意力机制]] / [[多头注意力]] / [[位置编码]] / [[Transformer编码器结构]] / [[Transformer解码器结构]] / [[残差连接与层归一化]]（concept）
 - [[Transformer与RNN对比]]（comparison）
+
+## 关联的 Wiki 页面（后续 Ingest 深挖本页提到的 Softmax）
+- [[Softmax技术全景总览]]（overview）
+- [[Softmax归一化原理]] / [[温度参数与生成采样]] / [[注意力缩放与因果掩码]] / [[Softmax数值稳定性]] / [[交叉熵与梯度简化]] / [[Softmax变体族谱]]（concept）
+- [[Softmax候选方案对比]]（comparison）
 
 ## 参考来源
 - [[raw/articles/Transformer原理.md]]

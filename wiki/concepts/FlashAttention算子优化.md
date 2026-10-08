@@ -3,7 +3,7 @@ type: concept
 source: "[[raw/papers/KV Cache.md]]"
 description: "FlashAttention 是 IO 感知的注意力优化：Q/K/V 分块在片上 SRAM 累加、用在线 Softmax 让 N×N 中间矩阵不落盘，显存从 O(N²) 降到 O(N)，与所有 KV 优化完全正交、长上下文必开。"
 created_at: 2026-10-02 19:41:03
-updated_at: 2026-10-02 19:41:03
+updated_at: 2026-10-08 22:05:26
 tags: [flashattention, attention, io_aware, kv_cache, inference_optimization, kernel]
 ---
 
@@ -31,6 +31,8 @@ FlashAttention 是 **IO 感知**的注意力计算优化：它**不直接减少 
 
 核心思想是将 Q/K/V **分块计算**，利用 GPU 片上 **SRAM** 做中间结果累加，避免 $N \times N$ 的注意力分数矩阵写入 HBM；配合**在线 Softmax**（逐步维护运行最大值与分母），注意力显存从 $O(N^2)$ 降至 $O(N)$，且结果与朴素实现**精确等价**。
 
+在线 Softmax 本身是纯数学技巧，源自 softmax 的平移不变性与分块增量维护，机制见 [[Softmax数值稳定性]]；它被 FlashAttention 拿来当使能技术，是「数学性质 → 算子优化」的典型传导。
+
 ## 版本演进
 
 | 版本 | 核心创新 | 相对基线加速 | 显存复杂度 |
@@ -49,6 +51,8 @@ FlashAttention 已成为长上下文推理的**必开选项**，与 KV 缓存的
 
 - [[KV Cache优化技术栈总览]]：算子计算层在五级栈中的位置
 - [[自注意力机制]]：FlashAttention 所优化的注意力计算本体
+- [[Softmax数值稳定性]]：在线 Softmax 的数学来源与分块流式计算
+- [[注意力缩放与因果掩码]]：被 FlashAttention 分块计算的那个 softmax 及其两个配套设计
 - [[MLA低秩潜在注意力]]：FlashMLA 所适配的低秩架构
 - [[Prefill与Decode两阶段]]：算子加速在两阶段中各自的着力点
 

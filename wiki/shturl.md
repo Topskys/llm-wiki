@@ -41,6 +41,7 @@
 | 2026-10-03 19:55:15 | Ingest | [[raw/papers/工业级Agent意图识别分层漏斗.md]] | 11 | 0 | 编译《工业级Agent意图识别分层漏斗》为11页：topics 1（Agent意图识别）、concepts 6（分层漏斗路由/规则拦截层/上下文状态层/大模型兜底层/置信度阈值/意图评测）、entities 2（FrugalGPT/RouteLLM）、comparisons 1（全量大模型vs分层漏斗）、summaries 1（素材摘要）；新增1张Mermaid图lint全通过；index 与 shturl 同步 |
 | 2026-10-03 21:00:36 | Rule-Update | AGENTS.md 论文格式约定 | 0 | 0 | 参考文献硬规则改写：由「条目间须有空行换行」改为「条目之间不加空行、行尾两个空格硬换行」，与逐行紧排的现行排版一致 |
 | 2026-10-03 23:55:03 | Ingest | [[raw/papers/MoE.md]] | 13 | 2 | 编译《大模型原理之 MoE 混合专家模型》为13页：overviews 1（MoE混合专家模型总览）、concepts 10（门控路由与Top-K稀疏激活/路由范式谱系/稀疏激活与容量解耦/路由坍缩与赢家通吃/辅助均衡损失与Router z-loss/无辅助损失的专家偏置/细粒度专家切分与共享专家/MoE显存墙与量化压缩/MoE通信开销与优化路线/MoE推理部署与冗余专家）、comparisons 1（MoE与稠密模型对比）、summaries 1（素材摘要）；联动更新2页（Transformer编码器结构/MLA低秩潜在注意力）；新增14张Mermaid图lint全通过；index 与 shturl 同步 |
+| 2026-10-08 22:17:55 | Ingest | [[raw/papers/Softmax.md]] | 9 | 3 | 编译《大模型原理之 Softmax》为9页：overviews 1（Softmax技术全景总览）、concepts 6（Softmax归一化原理/温度参数与生成采样/注意力缩放与因果掩码/Softmax数值稳定性/交叉熵与梯度简化/Softmax变体族谱）、comparisons 1（Softmax候选方案对比）、summaries 1（素材摘要）；联动更新3页（FlashAttention算子优化/自注意力机制/Transformer原理·素材摘要）；7张Mermaid图lint全通过；index 与 shturl 同步 |
 
 ---
 
