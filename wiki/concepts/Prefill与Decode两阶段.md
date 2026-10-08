@@ -3,7 +3,7 @@ type: concept
 source: "[[raw/papers/KV Cache.md]]"
 description: "Prefill 算力密集、Decode 访存密集的资源不对称是推理调度的核心矛盾；由此派生 Chunked Prefill 防长 Prompt 阻塞与 PD 分离部署，整体吞吐可提升 30%–50%。"
 created_at: 2026-10-02 19:41:03
-updated_at: 2026-10-02 19:41:03
+updated_at: 2026-10-08 22:28:16
 tags: [prefill, decode, pd_separation, chunked_prefill, llm_serving, kv_cache]
 ---
 
@@ -56,6 +56,8 @@ Chunked Prefill 把长 Prompt 切成多个小块，分批预填充并**穿插在
 
 ## 相关页面
 
+- [[大模型推理全链路]]：两阶段在推理流水线中的位置
+- [[KV Cache显存估算]]：KV Cache 显存公式与实例
 - [[KV Cache]]：两阶段所依托的缓存本体
 - [[TTFT首字延迟优化]]：Prefill 主导的首字延迟优化主线
 - [[KVCache场景选型指南]]：PD 分离与 Chunked Prefill 的选型位置

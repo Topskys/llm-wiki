@@ -3,7 +3,7 @@ type: concept
 source: "[[raw/papers/KV Cache.md]]"
 description: "KV Cache 是自回归解码阶段缓存历史 token 的 Key/Value 张量、避免每步重算注意力的标配机制；分 Prefill 与 Decode 两阶段工作，显存随序列长度线性增长，已形成架构/算子/表示/系统/调度五级正交优化栈。"
 created_at: 2026-10-01 20:50:29
-updated_at: 2026-10-02 19:41:03
+updated_at: 2026-10-08 22:28:16
 tags: [kv_cache, llm_inference, attention, self_attention, memory]
 ---
 
@@ -66,6 +66,8 @@ $$\text{KV 大小} = 2 \times L \times H_{\text{kv}} \times d_k \times S \times 
 
 ## 相关页面
 
+- [[大模型推理全链路]]：KV Cache 在推理流水线中的位置
+- [[KV Cache显存估算]]：显存公式与实例计算
 - [[显存墙]]：KV Cache 线性增长撞上的容量上限
 - [[KV Cache分级存储]]：把 KV 摊到多级存储的解法
 - [[前缀缓存与PagedAttention]]：相邻机制的能力边界
