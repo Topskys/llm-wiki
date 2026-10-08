@@ -1,5 +1,5 @@
 ---
-type: concept
+type: comparison
 source: "[[raw/papers/MoE.md]]"
 description: "MoE 与稠密模型在激活参数、知识容量、单 token FLOPs、训练难度、显存、推理效率与规模收益七个维度的横向对比；结论是规模越大 MoE 越划算，数 B 以内稠密仍占优。"
 created_at: 2026-10-03 21:00:36
