@@ -43,6 +43,7 @@
 | 2026-10-03 23:55:03 | Ingest | [[raw/papers/MoE.md]] | 13 | 2 | 编译《大模型原理之 MoE 混合专家模型》为13页：overviews 1（MoE混合专家模型总览）、concepts 10（门控路由与Top-K稀疏激活/路由范式谱系/稀疏激活与容量解耦/路由坍缩与赢家通吃/辅助均衡损失与Router z-loss/无辅助损失的专家偏置/细粒度专家切分与共享专家/MoE显存墙与量化压缩/MoE通信开销与优化路线/MoE推理部署与冗余专家）、comparisons 1（MoE与稠密模型对比）、summaries 1（素材摘要）；联动更新2页（Transformer编码器结构/MLA低秩潜在注意力）；新增14张Mermaid图lint全通过；index 与 shturl 同步 |
 | 2026-10-08 22:17:55 | Ingest | [[raw/papers/Softmax.md]] | 9 | 3 | 编译《大模型原理之 Softmax》为9页：overviews 1（Softmax技术全景总览）、concepts 6（Softmax归一化原理/温度参数与生成采样/注意力缩放与因果掩码/Softmax数值稳定性/交叉熵与梯度简化/Softmax变体族谱）、comparisons 1（Softmax候选方案对比）、summaries 1（素材摘要）；联动更新3页（FlashAttention算子优化/自注意力机制/Transformer原理·素材摘要）；7张Mermaid图lint全通过；index 与 shturl 同步 |
 | 2026-10-08 22:28:16 | Ingest | [[raw/papers/大模型推理全链路.md]] | 9 | 3 | 编译《大模型推理全链路》为9页：topics 1（大模型推理全链路）、concepts 5（Tokenizer分词编码/Embedding与位置编码/SwiGLU门控激活/采样解码策略/自回归迭代与终止/KV Cache显存估算）、entities 2（BPE分词算法/RoPE旋转位置编码）、summaries 1（素材摘要）；联动更新3页（自注意力机制/Prefill与Decode两阶段/KV Cache，补交叉链接刷updated_at）；1张Mermaid图lint全通过；index 与 shturl 同步 |
+| 2026-10-10 21:15:19 | Ingest | [[raw/papers/Agent沙箱.md]] | 13 | 2 | 编译《AI Agent 沙箱》为13页：overviews 1（Agent沙箱技术全景总览）、concepts 9（Agent沙箱定义与安全价值/隔离技术谱系/OS原语沙箱机制/gVisor用户态内核/Firecracker微虚拟机/容器逃逸与沙箱绕过/沙箱四层技术栈/沙箱冷启动加速技术/沙箱选型权衡与落地避坑）、comparisons 2（沙箱隔离技术选型对比/Agent沙箱平台横评）、summaries 1（Agent沙箱·素材摘要）；联动更新2页（LLM-Agent安全防护总览补运行时环境层沙箱分工与逃逸实证、Agent生产落地实践补角色图权限落沙箱的硬边界，刷updated_at）；11张Mermaid图lint全通过；index 与 shturl 同步 |
 
 ---
 
