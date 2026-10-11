@@ -45,6 +45,7 @@
 | 2026-10-08 22:28:16 | Ingest | [[raw/papers/大模型推理全链路.md]] | 9 | 3 | 编译《大模型推理全链路》为9页：topics 1（大模型推理全链路）、concepts 5（Tokenizer分词编码/Embedding与位置编码/SwiGLU门控激活/采样解码策略/自回归迭代与终止/KV Cache显存估算）、entities 2（BPE分词算法/RoPE旋转位置编码）、summaries 1（素材摘要）；联动更新3页（自注意力机制/Prefill与Decode两阶段/KV Cache，补交叉链接刷updated_at）；1张Mermaid图lint全通过；index 与 shturl 同步 |
 | 2026-10-10 21:15:19 | Ingest | [[raw/papers/Agent沙箱.md]] | 13 | 2 | 编译《AI Agent 沙箱》为13页：overviews 1（Agent沙箱技术全景总览）、concepts 9（Agent沙箱定义与安全价值/隔离技术谱系/OS原语沙箱机制/gVisor用户态内核/Firecracker微虚拟机/容器逃逸与沙箱绕过/沙箱四层技术栈/沙箱冷启动加速技术/沙箱选型权衡与落地避坑）、comparisons 2（沙箱隔离技术选型对比/Agent沙箱平台横评）、summaries 1（Agent沙箱·素材摘要）；联动更新2页（LLM-Agent安全防护总览补运行时环境层沙箱分工与逃逸实证、Agent生产落地实践补角色图权限落沙箱的硬边界，刷updated_at）；11张Mermaid图lint全通过；index 与 shturl 同步 |
 | 2026-10-11 20:30:11 | Rule-Update | 学习资源扩展 | 0 | 2 | SCHEMA 3.5 与 AGENTS.md 参考资源由 2 个扩为 4 个：新增 GitHub 仓库 bojieli/ai-agent-book（《深入理解 AI Agent》开源书，正文+PDF+按章实验，围绕 Agent=LLM+上下文+工具）与 datawhalechina/hello-agents（Datawhale《从零开始构建智能体》16 章系统性教程）；使用要点区分两对来源的定位（1/2 互为镜像、3/4 互为补充） |
+| 2026-10-11 23:12:03 | Ingest | [[raw/papers/大模型幻觉成因与分层治理.md]] | 12 | 3 | 编译《大模型幻觉成因与分层治理》为12页：overviews 1（大模型幻觉技术全景总览）、concepts 8（大模型幻觉定义与本质/事实性幻觉与忠实性幻觉/幻觉归因提示词与模型分诊/幻觉成因四条线/温度归零不消除系统性幻觉/幻觉检测三条路径/幻觉三层治理框架/RAG幻觉治理边界）、comparisons 1（幻觉分类三套口径对比）、topics 1（大模型幻觉治理实践）、summaries 1（素材摘要）；联动更新3页（温度参数与生成采样/采样解码策略/微调与RAG分工，补交叉链接刷updated_at）；index 与 shturl 同步 |
 
 ---
 

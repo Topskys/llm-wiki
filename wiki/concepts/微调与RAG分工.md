@@ -3,7 +3,7 @@ type: concept
 source: [[贸易AI业务]]
 description: "电商垂直场景的模型能力分工策略：微调负责话术风格（语气、转化引导、多轮结构），RAG 承载实时业务知识（参数、价格政策、Care 条款）；新品/活动只更新知识库、不必重训模型。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-09-11 23:41:15
+updated_at: 2026-10-11 23:12:03
 tags: [llm, fine_tuning_vs_rag, e_commerce, model_strategy]
 ---
 
@@ -36,12 +36,14 @@ tags: [llm, fine_tuning_vs_rag, e_commerce, model_strategy]
 ### 常见追问口径
 - 「微调和 RAG 矛盾吗？」→ **不矛盾**：微调=风格，RAG=事实。
 - 「大促知识变了要重训吗？」→ **不要**；更 DataBus → Milvus 即可。
+- 「上了 RAG 就不会幻觉了吗？」→ **不会自动解决**：RAG 补的是知识截止（事实性），不自动解决忠实性（答非所问），详见 [[RAG幻觉治理边界]]。
 
 ## 相关页面
 - [[ModelForge-AI]]：微调一侧的具体实现
 - [[DataBus]]：SFT / RAG 数据同源分流
 - [[灵购AI]]：分工策略的落地场景
 - [[RAG检索优化五层]]：RAG 一侧的检索质量保障
+- [[RAG幻觉治理边界]]：RAG 能治什么、不能治什么
 
 ## 参考来源
 - [[贸易AI业务]]
