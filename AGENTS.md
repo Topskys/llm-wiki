@@ -42,10 +42,12 @@ Query 时 wiki 未命中，L1 本地 wiki、L2 raw/本地项目信息、L3 联�
 
 ## 参考资源（Agent 学习）
 
-用户主要学习 **Agent 开发**；Agent / AI 工程化领域的知识缺口与取材，可参考这两个链接（详见 SCHEMA.md 3.5）：
+用户主要学习 **Agent 开发**；Agent / AI 工程化领域的知识缺口与取材，可参考以下四个链接（详见 SCHEMA.md 3.5）：
 
-- **GitHub 仓库**：https://github.com/rohitg00/ai-engineering-from-scratch.git —— AI 工程化从零实现，含 Agent 构建源码与教程
-- **中文文档站**：https://aiengineeringfromscratch.docpage.cn/ —— 同一内容的中文可读站点
+- **AI 工程化从零实现（GitHub 仓库）**：https://github.com/rohitg00/ai-engineering-from-scratch.git —— AI 工程化从零实现，含 Agent 构建源码与教程
+- **AI 工程化从零实现（中文文档站）**：https://aiengineeringfromscratch.docpage.cn/ —— 同一内容的中文可读站点
+- **深入理解 AI Agent（GitHub 仓库）**：https://github.com/bojieli/ai-agent-book.git —— 《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源书，全书正文 + PDF + 按章配套实验，围绕 Agent = LLM + 上下文 + 工具
+- **从零开始构建智能体（GitHub 仓库）**：https://github.com/datawhalechina/hello-agents.git —— Datawhale 系统性智能体教程（16 章），范式、框架、协议、训练、评估全覆盖，可在线阅读
 
 ## 元数据硬规则（不可违背）
 

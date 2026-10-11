@@ -185,14 +185,16 @@ llm-wiki-vault/
 
 ### 3.5 Agent 开发学习参考资源
 
-> 用户主要学习方向为 **Agent（智能体）开发**。以下两个链接是 Agent / AI 工程化领域常用的学习与取材来源，涉及该领域知识缺口或素材抓取时可参考：
+> 用户主要学习方向为 **Agent（智能体）开发**。以下四个链接是 Agent / AI 工程化领域常用的学习与取材来源，涉及该领域知识缺口或素材抓取时可参考：
 
 1. **GitHub 仓库**：https://github.com/rohitg00/ai-engineering-from-scratch.git —— AI 工程化从零实现系列，含 Agent 构建源码与教程
 2. **中文文档站**：https://aiengineeringfromscratch.docpage.cn/ —— 同一内容的中文可读站点
+3. **GitHub 仓库**：https://github.com/bojieli/ai-agent-book.git —— 《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库，全书正文 + PDF/EPUB + 按章配套实验（109 个），围绕「Agent = LLM + 上下文 + 工具」十章渐进，覆盖上下文工程、工具/MCP、Coding Agent、评估、后训练、多 Agent 协作
+4. **GitHub 仓库**：https://github.com/datawhalechina/hello-agents.git —— Datawhale《从零开始构建智能体》系统性教程（16 章），从智能体基础、经典范式（ReAct 等）到框架实践、记忆/检索、上下文工程、通信协议（MCP/A2A/ANP）、Agentic-RL、评估与综合案例，配套代码与 FAQ，可在线阅读
 
 **使用要点**
-- 日常浏览、提取素材读文档站即可；核对源码细节、原始表述时访问 GitHub。
-- 两站表述不一致时以 GitHub 原仓库为参考。
+- 素材 1/2 为同一内容两处镜像：日常浏览、提取素材读文档站即可；核对源码细节、原始表述时访问 GitHub，两站表述不一致时以 GitHub 原仓库为参考。
+- 素材 3（ai-agent-book）与素材 4（hello-agents）互为补充：前者偏工程原理与实验、后者偏系统性入门与实践，取材时按主题颗粒度二选一或交叉对照。
 - **纪律不变**：联网素材仍存 `raw/`（只增不改）；长期复用走 Ingest + 人工验收，临时查询只标注【来源：互联网搜索】，禁止直接写入 wiki。
 
 ---
