@@ -1,9 +1,9 @@
 ---
 type: overview
-source: [[raw/papers/LLM-Agent安全防护-提示词注入防御与权限最小化综合研究.md]]
+source: [[raw/papers/Prompt注入与防范.md]]
 description: "LLM Agent 安全防护全景：提示词注入纵深防御六大层面（输入治理/架构隔离/任务对齐/工具管控/输出把关/监控运营）+ 权限最小化四层落地，核心范式从『防止模型被说服』转向『确保被说服也做不了坏事』。"
 created_at: 2026-09-18 23:55:00
-updated_at: 2026-10-10 21:15:19
+updated_at: 2026-10-14 23:04:54
 tags: [agent_security, prompt_injection, least_privilege, defense]
 ---
 
@@ -62,11 +62,25 @@ flowchart TB
 ## 素材与文献
 
 - 素材：[[raw/articles/chatglm-防提示词注入方法.md]]、[[raw/articles/deepseek-agent防提示词注入.md]]、[[raw/articles/doubao-LLM权限最小化落地.md]]
-- 论文：[[raw/papers/LLM-Agent安全防护-提示词注入防御与权限最小化综合研究.md]]
+- 论文：[[raw/papers/LLM-Agent安全防护-提示词注入防御与权限最小化综合研究.md]]、[[raw/papers/Prompt注入与防范.md]]
 
 ## 相关页面
 
 - [[提示词注入]]：风险分类与成因
+- [[Prompt注入定义与边界]]：注入在 LLM 上下文中的发生机制
+- [[Prompt注入攻击类型谱系]]：四类载体与已验证案例矩阵
+- [[Prompt注入危害分层]]：信息层/逻辑层/执行层三级分类
+- [[Prompt注入根因分析]]：混淆代理问题与四个难以防御的原因
+- [[纵深防御五原则]]：五条并行互补的防御原则
+- [[Prompt注入分层防御体系]]：六层防御体系全景
+- [[Prompt注入架构层防御方案对比]]：五套架构层方案横向对比
+- [[Prompt注入防御成本与误报权衡]]：延迟/成本/效用/安全效果全景
+- [[Prompt注入失效模式与降级方案]]：fail-closed/fail-open 与三层降级
+- [[Promptware Kill Chain]]：七阶段攻击链
+- [[新兴Prompt注入攻击向量]]：2025-2026 六类新型向量
+- [[Prompt注入防御实施路线]]：三阶段实施路线
+- [[Prompt注入验证与运营]]：验证闭环与工具基准
+- [[EchoLeak零点击攻击案例]]：最严重注入案例完整攻击链
 - [[输入清洗与恶意指令向量库]]：输入侧战术层
 - [[双LLM模式]]：架构隔离基础
 - [[CaMeL能力沙箱]]：架构级最强防御
