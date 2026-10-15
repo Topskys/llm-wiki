@@ -3,7 +3,7 @@ type: concept
 source: [[贸易AI业务]]
 description: "在线检索优化的五层组合拳：HNSW 快、Int8 省、元数据 filter 准、Top20 控、Rerank 精，标准口径 Top20→Top5，命中率 72%→89%、检索耗时降至约 1/4。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-09-28 23:24:19
+updated_at: 2026-10-15 23:08:25
 tags: [rag, retrieval, milvus, hnsw, rerank, vector_database]
 ---
 
@@ -67,6 +67,8 @@ flowchart LR
 - [[Embedding向量嵌入]]：粗召回 Dense 路的向量源头
 - [[检索前置过滤机制]]：权限隔离场景下的元数据前置过滤
 - [[向量库metadata过滤能力对比]]：不同向量库过滤能力差异
+- [[RAG准确率保障体系]]：本页五层在 RAG 质量链路中的定位——属架构层「事前抑制」，与生成侧契约、事后拒答共同构成三层体系
+- [[RAG质量保障主题]]：检索侧知识在质量主线中的统一位置
 
 ## 参考来源
 - [[贸易AI业务]]

@@ -47,6 +47,7 @@
 | 2026-10-11 20:30:11 | Rule-Update | 学习资源扩展 | 0 | 2 | SCHEMA 3.5 与 AGENTS.md 参考资源由 2 个扩为 4 个：新增 GitHub 仓库 bojieli/ai-agent-book（《深入理解 AI Agent》开源书，正文+PDF+按章实验，围绕 Agent=LLM+上下文+工具）与 datawhalechina/hello-agents（Datawhale《从零开始构建智能体》16 章系统性教程）；使用要点区分两对来源的定位（1/2 互为镜像、3/4 互为补充） |
 | 2026-10-11 23:12:03 | Ingest | [[raw/papers/大模型幻觉成因与分层治理.md]] | 12 | 3 | 编译《大模型幻觉成因与分层治理》为12页：overviews 1（大模型幻觉技术全景总览）、concepts 8（大模型幻觉定义与本质/事实性幻觉与忠实性幻觉/幻觉归因提示词与模型分诊/幻觉成因四条线/温度归零不消除系统性幻觉/幻觉检测三条路径/幻觉三层治理框架/RAG幻觉治理边界）、comparisons 1（幻觉分类三套口径对比）、topics 1（大模型幻觉治理实践）、summaries 1（素材摘要）；联动更新3页（温度参数与生成采样/采样解码策略/微调与RAG分工，补交叉链接刷updated_at）；index 与 shturl 同步 |
 | 2026-10-14 23:04:54 | Ingest | [[raw/papers/Prompt注入与防范.md]] | 15 | 1 | 编译《Prompt 注入与防范》为15页：concepts 11（提示词注入更新/Prompt注入定义与边界/Prompt注入攻击类型谱系/Prompt注入危害分层/Prompt注入根因分析/纵深防御五原则/Prompt注入防御成本与误报权衡/Prompt注入失效模式与降级方案/Promptware Kill Chain/新兴Prompt注入攻击向量/Prompt注入验证与运营/EchoLeak零点击攻击案例）、overviews 2（Prompt注入分层防御体系/Prompt注入防御实施路线）、comparisons 1（Prompt注入架构层防御方案对比）、summaries 1（素材摘要）；联动更新 LLM-Agent安全防护总览（source 指向新素材、相关页面补 15 条新页链接、刷 updated_at）；新增 15 张 Mermaid 图；index 与 shturl 同步 |
+| 2026-10-15 23:08:25 | Ingest | [[raw/papers/RAG准确率提升.md]] | 10 | 5 | 编译《RAG 准确率提升体系化方案》为10页：concepts 7（RAG准确率保障体系/RAG绝对准确不可达/RAG阈值拒答机制/生成侧结构化约束/RAG界面溯源设计/领域关键词校验）、comparisons 1（RAG质量三道闸门对比）、topics 1（RAG质量保障主题）、summaries 1（素材摘要）；联动更新5页（RAG检索优化五层/Hybrid混合检索/幻觉检测三条路径/大模型兜底层/输出验证与人工审批，补交叉链接刷updated_at）；2张Mermaid图。**编译期发现素材 4 条引用中 3 条与正文论断失配**（SecAlign/AgentDojo 被用于支撑幻觉检测与人工复核，实际主题不符），已在素材摘要页如实记录且不予传播，wiki 页面改用既有权威页为依据；另标注与大模型兜底层同名不同义边界 |
 
 ---
 
