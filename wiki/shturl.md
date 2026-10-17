@@ -55,6 +55,10 @@
 
 | 2026-10-17 01:14:54 | Ingest | [[raw/papers/Agent轨迹评估和结果评估.md]] | 11 | 4 | 编译《Agent 轨迹评估和结果评估》为11页：overviews 1（Agent评估体系总览）、concepts 7（轨迹评估/结果评估/LLM-as-a-Judge/Agent-as-a-Judge/人工评估与裁判校准/pass@k与pass^k/Agent评估组合策略）、comparisons 1（四类评估方法对比）、entities 1（τ-bench）、summaries 1（素材摘要）；联动更新4页（持续评估/输出验证与人工审批/独立验证机制/意图评测，补交叉链接刷updated_at）；9张Mermaid图。素材为联网多源融合稿，编译期未发现引用失配 |
 
+| 2026-10-17 11:14:55 | Rule-Update | AGENTS.md 论文格式约定 | 0 | 0 | 新增硬规则：图题/表题统一写成居中 p 标签且不得包 b 加粗 |
+
+| 2026-10-17 11:22:06 | Rule-Update | AGENTS.md 论文格式约定 | 0 | 0 | 细化改稿备份纪律：动稿前先查 temp/ 是否已有备份，有则复用不重复备份，每篇只保留一份初始版，Git 已跟踪的以版本库为基线 |
+
 ---
 
 > 操作类型说明：
