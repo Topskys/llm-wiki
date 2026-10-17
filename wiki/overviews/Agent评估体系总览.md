@@ -3,7 +3,7 @@ type: overview
 source: "[[raw/papers/Agent轨迹评估和结果评估.md]]"
 description: "Agent 评估体系总览：以「评估对象—评估方法—评估指标—评估维度—组合策略」五层结构串起轨迹评估与结果评估、code-based/LLM-as-a-Judge/Agent-as-a-Judge/human 四类范式、pass@k 与 pass^k 两类指标、七项评估维度与四阶段组合策略，核心结论是结果评估做门槛、轨迹评估做诊断、pass^k 做可靠性标尺。"
 created_at: 2026-10-17 01:14:54
-updated_at: 2026-10-17 01:14:54
+updated_at: 2026-10-17 14:09:23
 tags: [agent_evaluation, trajectory_evaluation, outcome_evaluation, pass_k, llm_as_judge]
 ---
 
@@ -46,6 +46,7 @@ flowchart TB
 ## 当前局限与演进
 
 - code-based 只覆盖可枚举验证的域，对开放任务无能为力；LLM-as-a-Judge 的位置与长度偏差尚未彻底解决；Agent-as-a-Judge 依赖强 judge agent，存在「谁评估评估者」的元评估问题。
+- 本页回答「评什么、用什么评、怎么量化」，**测量本身可不可信**由 [[大模型评测可信体系总览]] 从基准污染、评委偏差、置信度校准与可验证性四支柱另行论述。
 - 演进方向是从单模型裁判走向动态多 Agent 辩论的裁判框架，基准侧则向语音全双工等多模态交互评测扩展（如 [[τ-bench]] 的 tau2-bench）。
 
 ## 相关页面
@@ -55,6 +56,7 @@ flowchart TB
 - [[独立验证机制]]：生产/审核分离与评估方法独立性的关系
 - [[输出验证与人工审批]]：输出侧闸门与人工评估的分工
 - [[持续评估]]：把评估固化为 CI 可回归套件
+- [[大模型评测可信体系总览]]：分数的可信度（测量本身是否可靠）
 - [[意图评测]]：单点能力的评测方法论参照
 
 ## 参考来源
