@@ -25,7 +25,7 @@ timeline
     2025+ 自动化工作流 : 无人值守运行 : EchoLeak零点击实战 : 防御重心转向架构
 ```
 
-<p align="center"><b>图1 大模型应用攻击面演进时间线</b></p>
+<p align="center">图1 大模型应用攻击面演进时间线</p>
 
 如图1 所示，攻击面随 RAG、Agent 与自动化工作流逐级扩大；Prompt 注入不是语法漏洞，而是语义层面的“指令劫持”：攻击者把恶意指令混入上下文，让模型忽略原有规则、转而执行攻击者意图。
 
@@ -75,7 +75,7 @@ flowchart LR
     style E fill:#fff3cd
 ```
 
-<p align="center"><b>图2 LLM 上下文混合注入点</b></p>
+<p align="center">图2 LLM 上下文混合注入点</p>
 
 ---
 
@@ -123,7 +123,7 @@ quadrantChart
     "金融交易Agent": [0.9, 0.95]
 ```
 
-<p align="center"><b>图3 Agent 场景风险象限</b></p>
+<p align="center">图3 Agent 场景风险象限</p>
 
 **已验证案例矩阵：**
 
@@ -157,7 +157,7 @@ sequenceDiagram
     Note over M365,Ext: CVSS 9.3 / 零用户交互 / 生产环境首次武器化
 ```
 
-<p align="center"><b>图4 EchoLeak 零点击攻击链时序</b></p>
+<p align="center">图4 EchoLeak 零点击攻击链时序</p>
 
 **四类注入路径总览（如图5 所示）：**
 
@@ -171,7 +171,7 @@ flowchart TB
     style SEC fill:#e8e8ff
 ```
 
-<p align="center"><b>图5 四类注入路径总览</b></p>
+<p align="center">图5 四类注入路径总览</p>
 
 ---
 
@@ -192,7 +192,7 @@ flowchart LR
     style D fill:#fff3cd
 ```
 
-<p align="center"><b>图6 注入危害传导链</b></p>
+<p align="center">图6 注入危害传导链</p>
 
 ---
 
@@ -220,7 +220,7 @@ flowchart LR
     style L3 fill:#ffe0e0,stroke:#cc0000
 ```
 
-<p align="center"><b>图7 传统程序与 LLM 的边界对比</b></p>
+<p align="center">图7 传统程序与 LLM 的边界对比</p>
 
 **为什么难防：**
 1. **黑名单不可靠**——自然语言有歧义，编码、多语言、角色扮演皆可绕过；
@@ -259,7 +259,7 @@ mindmap
       告警与回滚
 ```
 
-<p align="center"><b>图8 纵深防御五原则</b></p>
+<p align="center">图8 纵深防御五原则</p>
 
 | 原则 | 一句话定义 | 关键动作 | 拦截的攻击阶段 |
 |---|---|---|---|
@@ -322,7 +322,7 @@ flowchart LR
     style HUMAN fill:#fff3cd
 ```
 
-<p align="center"><b>图9 双 LLM 架构数据流</b></p>
+<p align="center">图9 双 LLM 架构数据流</p>
 
 ### 7.4 权限层
 
@@ -370,7 +370,7 @@ flowchart TB
     style L4 fill:#fff3cd
 ```
 
-<p align="center"><b>图10 六层防御体系</b></p>
+<p align="center">图10 六层防御体系</p>
 
 ---
 
@@ -393,7 +393,7 @@ flowchart TB
     style SB fill:#d4edda
 ```
 
-<p align="center"><b>图11 通用安全架构</b></p>
+<p align="center">图11 通用安全架构</p>
 
 如图11 所示，核心思想：**不要把 LLM 当安全边界，要把 LLM 当不可信的自然语言处理器。** 只有架构分离——确保 Agent 不同时处理不可信输入、拥有写权限、访问机密信息——才能提供可靠防御。
 
@@ -455,7 +455,7 @@ flowchart LR
     style E fill:#fff3cd
 ```
 
-<p align="center"><b>图12 三层降级语义</b></p>
+<p align="center">图12 三层降级语义</p>
 
 **关键原则：** Fallback 保持质量，降级模式保持可用，熔断器防止故障扩散——**未测试过失效条件的降级路径等于不存在**。
 
@@ -489,7 +489,7 @@ timeline
     2025.12 : OWASP 发布 Agentic Top 10（ASI01）<br/>监管转向运行时治理
 ```
 
-<p align="center"><b>图13 2025–2026 防御与基准演进</b></p>
+<p align="center">图13 2025–2026 防御与基准演进</p>
 
 **跟踪节奏建议：** 每季度复盘 OWASP LLM/Agentic 双榜单与 arXiv cs.CR 注入相关论文；持续盯 SecAlign/CaMeL 代码库版本；红队测试集每半年追加新型载荷（记忆投毒、MCP rug pull、多智能体传播三类为当前缺口）。
 
@@ -520,7 +520,7 @@ gantt
     持续迭代(常态化)            :c3, after c2, 90d
 ```
 
-<p align="center"><b>图14 三阶段实施路线</b></p>
+<p align="center">图14 三阶段实施路线</p>
 
 | 阶段 | 目标 | 关键动作 | 完成标志 |
 |---|---|---|---|
@@ -559,7 +559,7 @@ flowchart LR
     style RC fill:#d4edda
 ```
 
-<p align="center"><b>图15 验证与运营闭环</b></p>
+<p align="center">图15 验证与运营闭环</p>
 
 ---
 

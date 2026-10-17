@@ -32,7 +32,7 @@ Agent评估先要回答"评什么"，按评估对象分为轨迹评估与结果�
 | 劣势 | 标注成本高，需处理多条合法路径的对齐问题 | 对"蒙对"与"违规但结果正确"完全失明 |
 | 典型场景 | 多步工具调用、客服流程、生产监控 | SWE-bench [[5]](#ref-5)、τ-bench终态比对 [[1]](#ref-1) |
 
-<p align="center"><b>表1 轨迹评估与结果评估的对比</b></p>
+<p align="center">表1 轨迹评估与结果评估的对比</p>
 
 ### 1.2 评估方法范式
 
@@ -77,7 +77,7 @@ flowchart LR
     D3 --> E
 ```
 
-<p align="center"><b>图1 Agent评估总体流程</b></p>
+<p align="center">图1 Agent评估总体流程</p>
 
 ### 3.2 轨迹评估的实现
 
@@ -112,7 +112,7 @@ flowchart TB
     end
 ```
 
-<p align="center"><b>图2 两类裁判范式的机制差异</b></p>
+<p align="center">图2 两类裁判范式的机制差异</p>
 
 ### 3.5 pass@k 与 pass^k 的数学定义
 
@@ -150,7 +150,7 @@ $$\text{pass}^k = \left(\frac{c}{n}\right)^k$$
 | Agent-as-a-Judge | Judge Agent自主调工具获取中间反馈 | 中高 | 接近人工基线 [[2]](#ref-2) | 复杂多步agentic过程 | 实现复杂，依赖够强的judge agent |
 | human | 人工按rubric评分或偏好比较 | 极高 | 金标准 | 裁判校准、安全审计、高价值决策 | 慢、贵、不可扩展 |
 
-<p align="center"><b>表2 四类评估方法横向对比</b></p>
+<p align="center">表2 四类评估方法横向对比</p>
 
 ### 4.3 评估维度清单
 
@@ -166,7 +166,7 @@ $$\text{pass}^k = \left(\frac{c}{n}\right)^k$$
 | 指令遵循 | 严格遵循系统策略与用户约束 | 规则violation率 | code-based + Judge [[1]](#ref-1) |
 | 输出质量 | 正确性、相关性、groundedness | rubric分数、pairwise胜率 | LLM-as-a-Judge [[6]](#ref-6) |
 
-<p align="center"><b>表3 Agent评估维度清单</b></p>
+<p align="center">表3 Agent评估维度清单</p>
 
 ### 4.4 分阶段组合使用策略
 
@@ -184,7 +184,7 @@ flowchart TB
     M4 --> R
 ```
 
-<p align="center"><b>图3 分阶段组合使用策略</b></p>
+<p align="center">图3 分阶段组合使用策略</p>
 
 - **CI/CD回归**，以code-based结果评估做硬门槛（任务成功率、测试通过率），辅以轨迹定量检查（步数、循环、预算），保证改动不引入回归 [[5]](#ref-5) [[1]](#ref-1)；
 - **离线深度评估**，LLM-as-a-Judge打输出质量分，Agent-as-a-Judge评复杂多步过程，定期用human标注做judge校准与安全审计 [[6]](#ref-6) [[2]](#ref-2)；

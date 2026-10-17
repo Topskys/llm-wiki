@@ -1,4 +1,4 @@
-﻿# RAG 准确率提升体系化方案
+# RAG 准确率提升体系化方案
 
 ## 摘要
 
@@ -52,7 +52,7 @@ flowchart LR
     style GEN fill:#e8f4ff
 ```
 
-<p align="center"><b>图1 架构层保障机制</b></p>
+<p align="center">图1 架构层保障机制</p>
 
 ### 2.2 防护层
 
@@ -79,7 +79,7 @@ flowchart LR
     style PASS fill:#d4edda
 ```
 
-<p align="center"><b>图2 防护层校验流程</b></p>
+<p align="center">图2 防护层校验流程</p>
 
 ### 2.3 兜底机制
 
@@ -109,7 +109,7 @@ flowchart TB
     style M fill:#fff3cd
 ```
 
-<p align="center"><b>图3 兜底机制决策流程</b></p>
+<p align="center">图3 兜底机制决策流程</p>
 
 三层关系：架构层管事前抑制，防护层管事中拦截，兜底层管事后止损。
 
