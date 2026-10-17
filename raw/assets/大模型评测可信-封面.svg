@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="55%" stop-color="#101c33"/>
+      <stop offset="100%" stop-color="#0a1428"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowC" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16233c" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#101a2e" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="layer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1c3a5e" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#132540" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="railGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arw" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7dd3fc" fill-opacity="0.75"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <ellipse cx="170" cy="80" rx="330" ry="220" fill="url(#glowA)"/>
+  <ellipse cx="1080" cy="160" rx="300" ry="210" fill="url(#glowB)"/>
+  <ellipse cx="600" cy="690" rx="520" ry="180" fill="url(#glowC)"/>
+
+  <g opacity="0.55">
+    <rect x="48" y="28" width="182" height="30" rx="15" fill="#0f2544" stroke="#3b82f6" stroke-opacity="0.5"/>
+    <circle cx="67" cy="43" r="5" fill="#22d3ee"/>
+    <text x="82" y="49" font-family="Microsoft YaHei, Source Han Sans SC, sans-serif" font-size="14" fill="#bfdbfe">LLM 评测可信度</text>
+  </g>
+  <text x="46" y="118" font-family="Microsoft YaHei, Source Han Sans SC, sans-serif" font-size="46" font-weight="bold" fill="#f8fafc">大模型评测可信</text>
+  <rect x="48" y="134" width="360" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="48" y="172" font-family="Microsoft YaHei, Source Han Sans SC, sans-serif" font-size="17" fill="#cbd5e1">基准可信 · 评委可信 · 信心可信 · 证据可信</text>
+  <text x="48" y="196" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#94a3b8">测的是什么 · 谁在打分 · 分数有多硬 · 凭什么说对 —— 缺任何一环，可信链即断</text>
+
+  <g opacity="0.9">
+    <text x="1152" y="52" text-anchor="end" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#64748b">四条判定问题</text>
+    <g stroke="#3b82f6" stroke-opacity="0.42" fill="#0e2740">
+      <rect x="700" y="64" width="112" height="32" rx="16"/>
+      <rect x="822" y="64" width="112" height="32" rx="16"/>
+      <rect x="944" y="64" width="108" height="32" rx="16"/>
+      <rect x="1062" y="64" width="90" height="32" rx="16"/>
+    </g>
+    <text x="756" y="85" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#c7ddfd">测什么</text>
+    <text x="878" y="85" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#c7ddfd">谁打分</text>
+    <text x="998" y="85" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#c7ddfd">多硬</text>
+    <text x="1107" y="85" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#c7ddfd">凭什么</text>
+  </g>
+
+  <rect x="140" y="286" width="920" height="32" fill="url(#railGlow)"/>
+  <line x1="174" y1="302" x2="1026" y2="302" stroke="#7dd3fc" stroke-opacity="0.35" stroke-width="2"/>
+  <g fill="none" stroke="#7dd3fc" stroke-opacity="0.75" stroke-width="2" marker-end="url(#arw)">
+    <path d="M 196 302 L 300 302"/>
+    <path d="M 480 302 L 584 302"/>
+    <path d="M 764 302 L 868 302"/>
+  </g>
+  <g filter="url(#shadow)">
+    <circle cx="174" cy="302" r="17" fill="url(#badge)"/>
+    <circle cx="458" cy="302" r="17" fill="url(#badge)"/>
+    <circle cx="742" cy="302" r="17" fill="url(#badge)"/>
+    <circle cx="1026" cy="302" r="17" fill="url(#badge)"/>
+  </g>
+  <text x="174" y="308" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" fill="#06121f">1</text>
+  <text x="458" y="308" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" fill="#06121f">2</text>
+  <text x="742" y="308" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" fill="#06121f">3</text>
+  <text x="1026" y="308" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" fill="#06121f">4</text>
+  <text x="316" y="296" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#7dd3fc">防污染</text>
+  <text x="600" y="296" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#7dd3fc">去偏差</text>
+  <text x="884" y="296" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#7dd3fc">校准</text>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="336" width="252" height="258" rx="16" fill="url(#glass)" stroke="#3b82f6" stroke-opacity="0.30"/>
+    <rect x="332" y="336" width="252" height="258" rx="16" fill="url(#glass)" stroke="#3b82f6" stroke-opacity="0.30"/>
+    <rect x="616" y="336" width="252" height="258" rx="16" fill="url(#glass)" stroke="#3b82f6" stroke-opacity="0.30"/>
+    <rect x="900" y="336" width="252" height="258" rx="16" fill="url(#glass)" stroke="#3b82f6" stroke-opacity="0.30"/>
+  </g>
+  <g>
+    <rect x="48" y="336" width="252" height="4" rx="2" fill="url(#accent)"/>
+    <rect x="332" y="336" width="252" height="4" rx="2" fill="url(#accent)"/>
+    <rect x="616" y="336" width="252" height="4" rx="2" fill="url(#accent)"/>
+    <rect x="900" y="336" width="252" height="4" rx="2" fill="url(#accent)"/>
+  </g>
+  <g font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="bold" fill="#f8fafc" text-anchor="middle">
+    <text x="174" y="374">基准可信</text>
+    <text x="458" y="374">评委可信</text>
+    <text x="742" y="374">信心可信</text>
+    <text x="1026" y="374">证据可信</text>
+  </g>
+  <g stroke="#ffffff" stroke-opacity="0.10">
+    <line x1="66" y1="390" x2="282" y2="390"/>
+    <line x1="350" y1="390" x2="566" y2="390"/>
+    <line x1="634" y1="390" x2="850" y2="390"/>
+    <line x1="918" y1="390" x2="1134" y2="390"/>
+  </g>
+
+  <g font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#dbeafe">
+    <text x="66" y="418"><tspan font-weight="bold" fill="#93c5fd">风险</tspan> 污染 / 饱和 → 分数虚高</text>
+    <text x="66" y="448"><tspan font-weight="bold" fill="#7dd3fc">检测</tspan> 检索比对 · TS-Guessing</text>
+    <text x="66" y="478"><tspan font-weight="bold" fill="#7dd3fc">防御</tspan> 动态题源 · 私有测试集</text>
+    <text x="66" y="508"><tspan font-weight="bold" fill="#a5b4fc">机制</tspan> 程序化出题（客观答案）</text>
+    <text x="66" y="560" fill="#7dd3fc">代表 LiveBench（&lt;70% 保难度）</text>
+  </g>
+
+  <g font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#dbeafe">
+    <text x="350" y="418"><tspan font-weight="bold" fill="#cffafe">偏置</tspan> 位置 / 冗长 / 自我偏好</text>
+    <text x="350" y="448"><tspan font-weight="bold" fill="#7dd3fc">缓解</tspan> 位置对调 · 长度控制</text>
+    <text x="350" y="478"><tspan font-weight="bold" fill="#7dd3fc">集成</tspan> 多评委投票 · 分歧度</text>
+    <text x="350" y="508"><tspan font-weight="bold" fill="#a5b4fc">对齐</tspan> 人工锚例（CoT + 加权）</text>
+    <text x="350" y="560" fill="#7dd3fc">代表 MT-Bench / AlpacaEval</text>
+  </g>
+
+  <g font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#dbeafe">
+    <text x="634" y="418"><tspan font-weight="bold" fill="#c4b5fd">现象</tspan> RLHF 后校准退化</text>
+    <text x="634" y="448"><tspan font-weight="bold" fill="#a5b4fc">度量</tspan> ECE · Brier · 可靠性图</text>
+    <text x="634" y="478"><tspan font-weight="bold" fill="#a5b4fc">手段</tspan> 多次采样 + 语言化置信度</text>
+    <text x="634" y="508"><tspan font-weight="bold" fill="#c4b5fd">回归</tspan> ground truth 锚例</text>
+    <text x="634" y="560" fill="#a5b4fc">边界 事实回忆已证实</text>
+  </g>
+
+  <g font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#dbeafe">
+    <text x="918" y="418"><tspan font-weight="bold" fill="#f9a8d4">通道</tspan> 可执行验证（测试/求解器）</text>
+    <text x="918" y="448"><tspan font-weight="bold" fill="#f0abfc"> —— </tspan> 程序化 ground truth</text>
+    <text x="918" y="478"><tspan font-weight="bold" fill="#f0abfc"> —— </tspan> 引用溯源（忠实度等）</text>
+    <text x="918" y="508"><tspan font-weight="bold" fill="#f0abfc"> —— </tspan> 复现性（脚本/种子公开）</text>
+    <text x="918" y="560" fill="#f9a8d4">代表 RAGAS / HELM</text>
+  </g>
+
+  <rect x="48" y="612" width="1104" height="1.5" fill="#ffffff" fill-opacity="0.10"/>
+  <text x="48" y="648" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#64748b">LLM-Wiki · 论文笔记</text>
+  <text x="1152" y="648" text-anchor="end" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#64748b">防污染 → 去偏差 → 校准 → 可验证</text>
+</svg>
