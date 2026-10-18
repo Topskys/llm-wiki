@@ -62,6 +62,8 @@
 | 2026-10-17 13:11:35 | Rule-Update | paper-doc-md skill（全局 + temp 副本） | 0 | 0 | 图表题注不加粗写入规则与常见错误表；交付流程重构为两阶段：动笔前先列知识点树→目录大纲并对规划自检打分，≥95 过关才写正文；成文后文末附知识点树并再次打分 95+；版本升至 1.4.0 / 1.0.3 |
 | 2026-10-17 14:09:23 | Ingest | [[raw/papers/大模型评测可信.md]] | 11 | 4 | 编译《大模型评测可信》为11页：overviews 1（大模型评测可信体系总览）、concepts 8（基准污染与动态基准/TS-Guessing污染检测/LLM评委偏差与去偏差/长度控制胜率/置信度校准与ECE/语言化置信度/可验证性四通道/RAGAS无参考指标）、entities 1（LiveBench）、summaries 1（素材摘要）；联动更新4页（Agent评估体系总览/LLM-as-a-Judge/人工评估与裁判校准/RAG准确率保障体系，补四支柱与去偏/校准/可验证交叉链接、刷 updated_at、created_at 未动）；11张Mermaid图。素材为联网多源融合稿，正文数据均绑定参考文献；编译期核验 Arena 相关性 0.94→0.98、LiveBench <70%（ICLR 2025 版）、GPT-4 校准 ECE 0.007→0.074、RAGAS 指标计提口径（论文三项 vs 工具库扩展）四项高敏数字；未发现引用失配 |
 
+| 2026-10-17 16:20:35 | Ingest | [[raw/papers/AI安全与红队测试.md]] | 14 | 6 | 编译《AI安全与红队测试》为14页：overviews 1（AI安全与红队测试总览）、concepts 8（AI安全定义与边界/机器学习安全四大类别/三大威胁向量/越狱攻击/红队测试四步闭环/红队量化指标ASR与URR/红队测试边界与军备竞赛/GCG对抗攻击）、entities 3（HarmBench/PyRIT/Constitutional Classifiers）、comparisons 1（红队实现方式对比）、summaries 1（素材摘要）；联动更新2页（LLM-Agent安全防护总览/提示词注入，补「模型级安全上位框架—注入威胁」交叉链接、刷 updated_at、created_at 未动）；6张Mermaid图。素材为多源融合稿，8篇文献均绑定正文；编译期核验 2.7B/13B/52B 规模趋势、38961 条攻击样本、3000+ 小时红队与 10 个目标问题、HarmBench 18×33、GCG 跨黑盒迁移等高敏数字；未发现引用失配 |
+
 ---
 
 > 操作类型说明：
