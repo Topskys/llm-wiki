@@ -1,4 +1,4 @@
-﻿# shturl｜Wiki变更记录日志
+# shturl｜Wiki变更记录日志
 
 > 记录每一次 Ingest、Query回写、Lint修复操作。
 > shturl = Stuff Update Record Log，专门记录知识加工事件。
@@ -63,6 +63,7 @@
 | 2026-10-17 14:09:23 | Ingest | [[raw/papers/大模型评测可信.md]] | 11 | 4 | 编译《大模型评测可信》为11页：overviews 1（大模型评测可信体系总览）、concepts 8（基准污染与动态基准/TS-Guessing污染检测/LLM评委偏差与去偏差/长度控制胜率/置信度校准与ECE/语言化置信度/可验证性四通道/RAGAS无参考指标）、entities 1（LiveBench）、summaries 1（素材摘要）；联动更新4页（Agent评估体系总览/LLM-as-a-Judge/人工评估与裁判校准/RAG准确率保障体系，补四支柱与去偏/校准/可验证交叉链接、刷 updated_at、created_at 未动）；11张Mermaid图。素材为联网多源融合稿，正文数据均绑定参考文献；编译期核验 Arena 相关性 0.94→0.98、LiveBench <70%（ICLR 2025 版）、GPT-4 校准 ECE 0.007→0.074、RAGAS 指标计提口径（论文三项 vs 工具库扩展）四项高敏数字；未发现引用失配 |
 
 | 2026-10-17 16:20:35 | Ingest | [[raw/papers/AI安全与红队测试.md]] | 14 | 6 | 编译《AI安全与红队测试》为14页：overviews 1（AI安全与红队测试总览）、concepts 8（AI安全定义与边界/机器学习安全四大类别/三大威胁向量/越狱攻击/红队测试四步闭环/红队量化指标ASR与URR/红队测试边界与军备竞赛/GCG对抗攻击）、entities 3（HarmBench/PyRIT/Constitutional Classifiers）、comparisons 1（红队实现方式对比）、summaries 1（素材摘要）；联动更新2页（LLM-Agent安全防护总览/提示词注入，补「模型级安全上位框架—注入威胁」交叉链接、刷 updated_at、created_at 未动）；6张Mermaid图。素材为多源融合稿，8篇文献均绑定正文；编译期核验 2.7B/13B/52B 规模趋势、38961 条攻击样本、3000+ 小时红队与 10 个目标问题、HarmBench 18×33、GCG 跨黑盒迁移等高敏数字；未发现引用失配 |
+| 2026-10-19 22:03:27 | Ingest | [[raw/papers/文档智能.md]] | 15 | 0 | 编译《文档智能》为15页：summaries 1（文档智能·素材摘要）、entities 3（MinerU/Docling/OmniDocBench）、concepts 9（文档智能/OCR文档解析/版面分析/表格结构还原/公式识别/文档VLM三大范式/文档智能校验三支柱/文档精度评估三层/文档智能能力边界）、comparisons 1（MinerU与Docling对比）、topics 1（文档智能工程落地）；Mermaid 图 9 张 db 校验通过；raw 素材含封面 svg/png 与论文；封面文件已落位 raw/assets |
 
 ---
 
