@@ -3,7 +3,7 @@ type: entity
 source: "[[raw/papers/文档智能.md]]"
 description: "上海人工智能实验室 / OpenDataLab 开源的高精度文档解析引擎。MinerU 2.5 从模块化流水线转向 1.2B 参数解耦式解析 VLM：Stage I 整页缩放做全局版面分析（bbox 定位更稳），Stage II 按版面裁剪按原生分辨率做局部内容识别（上限 2048×28×28），用两阶段解耦同时在精度、算力与可解释性上取得优势，输出 Markdown / JSON（带 bbox）。"
 created_at: 2026-10-19 22:03:27
-updated_at: 2026-10-19 22:03:27
+updated_at: 2026-10-19 22:22:49
 tags: [document_ai, document_vlm, mineru, ocr, open_source]
 ---
 
@@ -66,5 +66,5 @@ flowchart LR
 
 ## 相关
 
-- 对比：[[MinerU与Docling对比]]
+- 对比：[[MinerU与Docling对比]]；另一条轻量路线见 [[MarkItDown]]
 - 上游框架：[[文档智能]]（四段能力链中的解析段）、[[文档VLM三大范式]]

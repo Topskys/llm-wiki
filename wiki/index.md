@@ -36,6 +36,7 @@
 - [[MinerU]]：上海人工智能实验室/OpenDataLab 开源的高精度文档解析引擎，MinerU 2.5 从模块化流水线转向 1.2B 参数解耦式解析 VLM，Stage I 整页版面分析 + Stage II 原生分辨率局部识别，输出 Markdown/JSON（带 bbox），在精度、算力与可解释性上取得平衡。
 - [[Docling]]：IBM Research 开源的文档转换框架，以统一文档模型 DoclingDocument 为中枢 + 可插拔流水线，背后端/流水线/选项解耦，支持 Markdown/dict 导出与 HybridChunker RAG 分块，默认全本地不共享数据。
 - [[OmniDocBench]]：文档解析与结构还原的公开权威基准，v1.6 含 1,651 页真实文档、八项官方指标，覆盖文本/表格/公式/版面检测等任务的精度评估，是衡量文档智能工具的公共标尺。
+- [[MarkItDown]]：微软 AutoGen 开源的轻量级 Python 工具，把 PDF/Word/PPT/Excel/图片/音频/HTML 统一转成 LLM 友好的干净 Markdown，弱化二维版面建模、强化格式覆盖与 LLM 文本消费；GitHub 约 17.7 万 Star（Rank #43）、PyPI 月下载千万级，与 MinerU/Docling 构成文档智能三条工程路线。
 
 ## concepts 概念
 

@@ -64,6 +64,8 @@
 
 | 2026-10-17 16:20:35 | Ingest | [[raw/papers/AI安全与红队测试.md]] | 14 | 6 | 编译《AI安全与红队测试》为14页：overviews 1（AI安全与红队测试总览）、concepts 8（AI安全定义与边界/机器学习安全四大类别/三大威胁向量/越狱攻击/红队测试四步闭环/红队量化指标ASR与URR/红队测试边界与军备竞赛/GCG对抗攻击）、entities 3（HarmBench/PyRIT/Constitutional Classifiers）、comparisons 1（红队实现方式对比）、summaries 1（素材摘要）；联动更新2页（LLM-Agent安全防护总览/提示词注入，补「模型级安全上位框架—注入威胁」交叉链接、刷 updated_at、created_at 未动）；6张Mermaid图。素材为多源融合稿，8篇文献均绑定正文；编译期核验 2.7B/13B/52B 规模趋势、38961 条攻击样本、3000+ 小时红队与 10 个目标问题、HarmBench 18×33、GCG 跨黑盒迁移等高敏数字；未发现引用失配 |
 | 2026-10-19 22:03:27 | Ingest | [[raw/papers/文档智能.md]] | 15 | 0 | 编译《文档智能》为15页：summaries 1（文档智能·素材摘要）、entities 3（MinerU/Docling/OmniDocBench）、concepts 9（文档智能/OCR文档解析/版面分析/表格结构还原/公式识别/文档VLM三大范式/文档智能校验三支柱/文档精度评估三层/文档智能能力边界）、comparisons 1（MinerU与Docling对比）、topics 1（文档智能工程落地）；Mermaid 图 9 张 db 校验通过；raw 素材含封面 svg/png 与论文；封面文件已落位 raw/assets |
+| 2026-10-19 22:22:49 | Ingest | [[raw/web_clip/MarkItDown.md]] | 1 | 4 | 补编《MarkItDown》（微软AutoGen，文档→LLM友好Markdown，GitHub约17.7万Star·Rank#43、PyPI月下载千万级）为1个entity页；联动更新 MinerU/Docling（补交叉链接）、MinerU与Docling对比（新增第三路线小节）、文档智能工程落地（两条→三条工程路线），刷 updated_at、created_at 未动；raw 新增素材文件（联网融合稿，含抓取时点Star与下载量核验） |
+| 2026-10-19 22:42:41 | Governance | [[raw/web_clip/MarkItDown.md]] | 0 | 0 | 素材归类调整：将《MarkItDown》从 raw/papers/ 移动至 raw/web_clip/（网页抓取素材应归入 web_clip 而非 papers）；同步修正 entity 页 source 与正文的双链引用 |
 
 ---
 

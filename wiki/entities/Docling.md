@@ -3,7 +3,7 @@ type: entity
 source: "[[raw/papers/文档智能.md]]"
 description: "IBM Research 开源的文档转换框架，核心是统一文档模型 DoclingDocument 与可插拔流水线：DocumentConverter 编排 → Format Backend（PDF/DOCX/HTML）→ Pipeline 加工 → 落为 pydantic 的 DoclingDocument（texts/tables/pictures/key_value_items 与 body/furniture/groups 结构），支持 Markdown/dict 导出与 HybridChunker RAG 分块，默认全本地不共享数据，是追求可编排、可扩展的文档底座。"
 created_at: 2026-10-19 22:03:27
-updated_at: 2026-10-19 22:03:27
+updated_at: 2026-10-19 22:22:49
 tags: [document_ai, docling, document_model, ocr, rag, open_source]
 ---
 
@@ -58,5 +58,5 @@ flowchart LR
 
 ## 相关
 
-- 对比：[[MinerU与Docling对比]]
+- 对比：[[MinerU与Docling对比]]；另一条轻量路线见 [[MarkItDown]]
 - 出身上下文：[[文档智能工程落地]]
