@@ -66,6 +66,7 @@
 | 2026-10-19 22:03:27 | Ingest | [[raw/papers/文档智能.md]] | 15 | 0 | 编译《文档智能》为15页：summaries 1（文档智能·素材摘要）、entities 3（MinerU/Docling/OmniDocBench）、concepts 9（文档智能/OCR文档解析/版面分析/表格结构还原/公式识别/文档VLM三大范式/文档智能校验三支柱/文档精度评估三层/文档智能能力边界）、comparisons 1（MinerU与Docling对比）、topics 1（文档智能工程落地）；Mermaid 图 9 张 db 校验通过；raw 素材含封面 svg/png 与论文；封面文件已落位 raw/assets |
 | 2026-10-19 22:22:49 | Ingest | [[raw/web_clip/MarkItDown.md]] | 1 | 4 | 补编《MarkItDown》（微软AutoGen，文档→LLM友好Markdown，GitHub约17.7万Star·Rank#43、PyPI月下载千万级）为1个entity页；联动更新 MinerU/Docling（补交叉链接）、MinerU与Docling对比（新增第三路线小节）、文档智能工程落地（两条→三条工程路线），刷 updated_at、created_at 未动；raw 新增素材文件（联网融合稿，含抓取时点Star与下载量核验） |
 | 2026-10-19 22:42:41 | Governance | [[raw/web_clip/MarkItDown.md]] | 0 | 0 | 素材归类调整：将《MarkItDown》从 raw/papers/ 移动至 raw/web_clip/（网页抓取素材应归入 web_clip 而非 papers）；同步修正 entity 页 source 与正文的双链引用 |
+| 2026-10-19 23:00:22 | Ingest | [[raw/papers/投机解码.md]] | 12 | 4 | 编译《投机解码》为12页：overviews 1（投机解码技术全景总览）、concepts 5（投机解码/投机解码采样机制/期望接受长度/草稿模型分类/MTP多Token预测）、entities 3（Medusa/EAGLE/SpecForge）、comparisons 1（草稿模型方案对比）、topics 1（投机解码工程落地）、summaries 1（投机解码·素材摘要）；联动更新4页（vLLM/采样解码策略/大模型推理全链路/KV Cache优化技术栈总览，补交叉链接刷updated_at、created_at未动）；Mermaid图lint通过；index 与 shturl 同步 |
 
 ---
 

@@ -1,0 +1,145 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 2580 1460" width="2560" height="1440" role="img" aria-labelledby="cv-title cv-desc" font-family="'PingFang SC','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei',sans-serif">
+  <title id="cv-title">投机解码 · 无损加速封面</title>
+  <desc id="cv-desc">以 token 验收链为主视觉：草稿候选 the、quick 被接受，brown 被拒绝并重采样为 fast，右侧为 6.5 倍实测加速，底部为采样机制闭环与草稿方案谱系。</desc>
+
+  <defs>
+    <radialGradient id="gTL" cx="0.12" cy="0.05" r="0.8">
+      <stop offset="0" stop-color="#1e3a5f" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#1e3a5f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gBR" cx="0.85" cy="0.95" r="0.7">
+      <stop offset="0" stop-color="#4a3212" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#4a3212" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.75" stop-color="#e2edfd"/>
+      <stop offset="1" stop-color="#c9ddfa"/>
+    </linearGradient>
+    <linearGradient id="goldBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fcd34d"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cardShadow" x="-40%" y="-80%" width="180%" height="260%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ===== 背景 ===== -->
+  <rect width="2560" height="1440" fill="#0a1220"/>
+  <rect width="2560" height="1440" fill="url(#gTL)"/>
+  <rect width="2560" height="1440" fill="url(#gBR)"/>
+  <g stroke="#16283f" stroke-width="1.5" opacity="0.6">
+    <line x1="240" y1="0" x2="240" y2="1440"/><line x1="480" y1="0" x2="480" y2="1440"/>
+    <line x1="720" y1="0" x2="720" y2="1440"/><line x1="960" y1="0" x2="960" y2="1440"/>
+    <line x1="1200" y1="0" x2="1200" y2="1440"/><line x1="1440" y1="0" x2="1440" y2="1440"/>
+    <line x1="1680" y1="0" x2="1680" y2="1440"/><line x1="1920" y1="0" x2="1920" y2="1440"/>
+    <line x1="2160" y1="0" x2="2160" y2="1440"/><line x1="2400" y1="0" x2="2400" y2="1440"/>
+    <line x1="0" y1="240" x2="2560" y2="240"/><line x1="0" y1="480" x2="2560" y2="480"/>
+    <line x1="0" y1="720" x2="2560" y2="720"/><line x1="0" y1="960" x2="2560" y2="960"/>
+    <line x1="0" y1="1200" x2="2560" y2="1200"/>
+  </g>
+
+  <!-- ===== 顶部：标题区 ===== -->
+  <text x="160" y="155" font-size="24" letter-spacing="4" fill="#7c93ad">LLM 推理优化 · SPECULATIVE DECODING</text>
+  <text x="160" y="305" font-weight="bold" font-size="116" letter-spacing="6" fill="url(#titleGrad)">投机解码</text>
+  <text x="160" y="395" font-size="38" fill="#cbd5e1">草稿抢猜 · 并行验证 · 拒绝重采样 —— 无损加速 Decode</text>
+
+  <!-- 右上：无损徽章 -->
+  <g filter="url(#cardShadow)">
+    <rect x="1980" y="140" width="420" height="84" rx="42" fill="#0f2e22" stroke="#34d399" stroke-width="2"/>
+  </g>
+  <circle cx="2022" cy="182" r="10" fill="#34d399" filter="url(#nodeGlow)"/>
+  <text x="2222" y="193" text-anchor="middle" font-size="27" font-weight="bold" letter-spacing="2" fill="#6ee7b7">输出分布不变 · 无损加速</text>
+
+  <!-- ===== 主视觉：token 验收链 ===== -->
+  <text x="160" y="545" font-size="27" letter-spacing="2" fill="#7c93ad">案例一轮 · 草稿模型猜 3 个候选，目标模型一次前向并行验证，逐位校验 r = min(1, q/p)</text>
+
+  <!-- 候选 1 · the（接受） -->
+  <g filter="url(#cardShadow)">
+    <rect x="160" y="610" width="290" height="180" rx="22" fill="#0f2138" stroke="#34d399" stroke-width="2.5"/>
+  </g>
+  <text x="305" y="658" text-anchor="middle" font-size="22" font-weight="bold" fill="#6ee7b7">接受 ✓ · r≈1.00</text>
+  <text x="305" y="722" text-anchor="middle" font-size="48" font-weight="bold" fill="#eaf2ff">the</text>
+  <text x="305" y="766" text-anchor="middle" font-size="22" fill="#7c93ad">p 0.95 → q 0.98</text>
+
+  <text x="480" y="720" text-anchor="middle" font-size="40" fill="#7c93ad">→</text>
+
+  <!-- 候选 2 · quick（接受） -->
+  <g filter="url(#cardShadow)">
+    <rect x="510" y="610" width="290" height="180" rx="22" fill="#0f2138" stroke="#34d399" stroke-width="2.5"/>
+  </g>
+  <text x="655" y="658" text-anchor="middle" font-size="22" font-weight="bold" fill="#6ee7b7">接受 ✓ · r≈0.97</text>
+  <text x="655" y="722" text-anchor="middle" font-size="48" font-weight="bold" fill="#eaf2ff">quick</text>
+  <text x="655" y="766" text-anchor="middle" font-size="22" fill="#7c93ad">p 0.92 → q 0.89</text>
+
+  <text x="830" y="720" text-anchor="middle" font-size="40" fill="#7c93ad">→</text>
+
+  <!-- 候选 3 · brown（拒绝） -->
+  <g filter="url(#cardShadow)">
+    <rect x="860" y="610" width="290" height="180" rx="22" fill="#0f2138" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="10 7"/>
+  </g>
+  <text x="1005" y="658" text-anchor="middle" font-size="22" font-weight="bold" fill="#f87171">拒绝 ✗ · r≈0.18</text>
+  <text x="1005" y="722" text-anchor="middle" font-size="48" font-weight="bold" fill="#eaf2ff">brown</text>
+  <line x1="925" y1="706" x2="1085" y2="706" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="1005" y="766" text-anchor="middle" font-size="22" fill="#7c93ad">p 0.55 → q 0.10</text>
+
+  <text x="1180" y="720" text-anchor="middle" font-size="40" fill="#fbbf24" opacity="0.9">→</text>
+
+  <!-- 候选 4 · fast（重采样） -->
+  <ellipse cx="1355" cy="700" rx="200" ry="130" fill="url(#goldGlow)"/>
+  <g filter="url(#cardShadow)">
+    <rect x="1210" y="610" width="290" height="180" rx="22" fill="#1f1908" stroke="#fbbf24" stroke-width="2.5"/>
+  </g>
+  <text x="1355" y="658" text-anchor="middle" font-size="22" font-weight="bold" fill="#fcd34d">重采样 ★</text>
+  <text x="1355" y="722" text-anchor="middle" font-size="48" font-weight="bold" fill="#fff7e0">fast</text>
+  <text x="1355" y="766" text-anchor="middle" font-size="22" fill="#b8a06a">q 0.62 · max(0, q−p) 补位</text>
+
+  <!-- 累积箭头 → 加速数字 -->
+  <line x1="1525" y1="700" x2="1640" y2="700" stroke="#fcd34d" stroke-opacity="0.6" stroke-width="3"/>
+  <polygon points="1640,688 1668,700 1640,712" fill="#fcd34d" fill-opacity="0.85"/>
+  <text x="1590" y="676" text-anchor="middle" font-size="22" fill="#7c93ad">累积</text>
+
+  <text x="1700" y="765" font-weight="bold" font-size="170" fill="url(#goldBar)">6.5×</text>
+  <text x="1710" y="815" font-size="26" fill="#cbd5e1">EAGLE-3 端到端加速上限</text>
+  <text x="1710" y="852" font-size="24" fill="#7c93ad">原始方案 2–3× · SGLang 批处理 1.38×</text>
+
+  <!-- ===== 采样机制闭环 ===== -->
+  <text x="160" y="955" font-size="27" letter-spacing="4" fill="#7c93ad">采样机制闭环</text>
+  <rect x="160" y="975" width="2240" height="2.5" rx="1.25" fill="#1e3a5f"/>
+
+  <g filter="url(#cardShadow)">
+    <rect x="160" y="1010" width="410" height="88" rx="16" fill="#0f2138"/>
+    <rect x="625" y="1010" width="410" height="88" rx="16" fill="#0f2138"/>
+    <rect x="1090" y="1010" width="410" height="88" rx="16" fill="#0f2138"/>
+    <rect x="1555" y="1010" width="410" height="88" rx="16" fill="#0f2138"/>
+    <rect x="2020" y="1010" width="410" height="88" rx="16" fill="#0f2e22" stroke="#34d399" stroke-width="1.8"/>
+  </g>
+  <text x="365" y="1064" text-anchor="middle" font-size="25" fill="#cbd5e1">草稿模型抢猜 K 个候选</text>
+  <text x="830" y="1064" text-anchor="middle" font-size="25" fill="#cbd5e1">目标模型一次前向并行验证</text>
+  <text x="1295" y="1064" text-anchor="middle" font-size="25" fill="#cbd5e1">逐位校验 r = min(1, q/p)</text>
+  <text x="1760" y="1064" text-anchor="middle" font-size="25" fill="#cbd5e1">拒绝处修正分布重采样</text>
+  <text x="2225" y="1064" text-anchor="middle" font-size="25" font-weight="bold" fill="#6ee7b7">输出分布不变 · 无损</text>
+
+  <text x="595" y="1065" text-anchor="middle" font-size="30" fill="#7c93ad">→</text>
+  <text x="1060" y="1065" text-anchor="middle" font-size="30" fill="#7c93ad">→</text>
+  <text x="1525" y="1065" text-anchor="middle" font-size="30" fill="#7c93ad">→</text>
+  <text x="1990" y="1065" text-anchor="middle" font-size="30" fill="#7c93ad">→</text>
+
+  <!-- ===== 底部：草稿谱系与生命线 ===== -->
+  <circle cx="172" cy="1180" r="7" fill="#38bdf8"/>
+  <text x="204" y="1190" font-size="26" fill="#a5b4c8">草稿谱系　独立草稿模型 · EAGLE 预测头 · 内置 MTP · n-gram 查表 · 树形投机</text>
+  <circle cx="172" cy="1236" r="7" fill="#fbbf24"/>
+  <text x="204" y="1246" font-size="26" fill="#a5b4c8">生命线　　接受率 40%–80% 为健康区间，低于 50% 加速趋向净负</text>
+
+  <text x="160" y="1360" font-size="22" letter-spacing="6" fill="#3d5674">DRAFT · VERIFY · ACCEPT · RESAMPLE · LOSSLESS</text>
+</svg>

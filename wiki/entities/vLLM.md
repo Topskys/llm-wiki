@@ -3,7 +3,7 @@ type: entity
 source: "[[raw/papers/KV Cache分级存储.md]]"
 description: "vLLM 是伯克利提出的高吞吐 LLM 推理引擎，SOSP 2023 的 PagedAttention 用分页管理消除显存碎片；显存不足时按页换出到 CPU 内存，实现简洁，适用于中等长度序列的两级存储。"
 created_at: 2026-10-01 20:50:29
-updated_at: 2026-10-02 19:41:03
+updated_at: 2026-10-19 23:00:22
 tags: [vllm, inference_engine, paged_attention, sosp, llm_serving]
 ---
 
@@ -58,6 +58,7 @@ flowchart TD
 - [[驱逐策略]]：vLLM 的页级换出属于最简粒度
 - [[主流推理框架KV技术对比]]：vLLM 与其余四家框架的横向对比
 - [[代表项目对比]]：四个代表项目的横向对比
+- [[投机解码工程落地]]：vLLM 通过 --speculative-model 内置投机解码支持
 
 ## 参考来源
 

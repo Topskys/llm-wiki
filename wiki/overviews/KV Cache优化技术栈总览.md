@@ -3,7 +3,7 @@ type: overview
 source: "[[raw/papers/KV Cache.md]]"
 description: "KV Cache 五级正交优化技术栈总览：模型架构层、算子计算层、数据表示层、系统管理层、应用调度层各治一症，可按需叠加，是当代推理引擎的标准优化栈与落地优先级路线。"
 created_at: 2026-10-02 19:41:03
-updated_at: 2026-10-02 19:41:03
+updated_at: 2026-10-19 23:00:22
 tags: [kv_cache, inference_optimization, tech_stack, llm_serving, overview]
 ---
 
@@ -65,6 +65,7 @@ flowchart BT
 - [[KV Cache分级存储]]：应用调度层中「以带宽换容量」的分层解法
 - [[主流推理框架KV技术对比]]：五级栈在各家框架中的落地差异
 - [[KVCache场景选型指南]]：按约束条件反查该用哪几层
+- [[投机解码]]：作用于 Decode 访存摊薄、与 KV 优化栈正交叠加的加速技术
 
 ## 参考来源
 

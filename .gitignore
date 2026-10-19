@@ -21,6 +21,13 @@ tests
 
 # 依赖
 node_modules
+.npm-cache
+.resvg
+*.pptx
+
 
 # Playwright 测试缓存
 .playwright-mcp
+
+# .env
+.env*
