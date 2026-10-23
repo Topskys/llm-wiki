@@ -3,7 +3,7 @@ type: concept
 source: [[The AI-Native SDLC playbook]]
 description: "Hooks 是 agent 动作前的确定性控制层：build 阶段做护栏（保护路径/格式化/防密钥泄露）、deploy 阶段做强制的审批门（allow/ask/block），非不可商量的 hook 可被工程师关闭。"
 created_at: 2026-09-12 23:03:13
-updated_at: 2026-09-12 23:03:13
+updated_at: 2026-10-23 19:32:55
 tags: [hooks, governance, guardrail, approval, ai_native_sdlc]
 ---
 
@@ -38,6 +38,7 @@ flowchart LR
 - [[AI代码评审]]：评审 findings 与 hook 门禁的组成
 - [[并行会话与子代理]]：并行会话下 hook 从配置强制所有会话
 - [[AI-native-SDLC]]：脚手架在六阶段中的位置
+- [[Agent最小权利与审批门]]：两维权限模型 + 审批门四要素（生产化视角）
 
 ## 参考来源
 - [[The AI-Native SDLC playbook]]

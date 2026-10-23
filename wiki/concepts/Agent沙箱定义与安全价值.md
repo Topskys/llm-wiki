@@ -3,7 +3,7 @@ type: concept
 source: "[[raw/papers/Agent沙箱.md]]"
 description: "Agent 沙箱的定义与安全价值：以封闭工作间类比界定其约束对象是智能体自主行动而非外部恶意代码，并解释防线为何从防外部攻击转向防自身失控。"
 created_at: 2026-10-10 21:15:19
-updated_at: 2026-10-10 21:15:19
+updated_at: 2026-10-23 19:32:55
 tags: [agent_sandbox, isolation, security, concept]
 ---
 
@@ -52,6 +52,8 @@ AI 不再是文本生成器，而是能读写文件、调用程序、发起网�
 - [[LLM-Agent安全防护总览]]：沙箱在纵深防御体系中的位置。
 - [[Agent循环]]：产生越界风险的循环本体。
 - [[Agent沙箱技术全景总览]]：本页所属的领域全景。
+- [[四档沙箱隔离模型]]：沙箱"档位分档"视角（T1 Wasm→T4 microVM）
+- [[Agent工程化三层架构总览]]：隔离层在编排/隔离/运维三层中的位置
 
 ## 参考来源
 

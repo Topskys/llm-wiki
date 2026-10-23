@@ -3,7 +3,7 @@ type: concept
 source: "[[raw/papers/Agent Loop.md]]"
 description: "Agentic Harness：包裹在 LLM 外的运行时外壳，提供工具、管理模型所见上下文、驱动 while 循环；模型负责推理、harness 负责行动与信息递送，是『模型+工具+上下文』协同成 Agent 的载体。"
 created_at: 2026-09-23 12:00:00
-updated_at: 2026-09-23 12:00:00
+updated_at: 2026-10-23 19:32:55
 tags: [agent, harness, orchestration, runtime]
 ---
 
@@ -38,6 +38,8 @@ flowchart LR
 - [[Turn与消息生命周期]]：harness 与模型间的往返协议
 - [[Agent循环终止与护栏]]：harness 侧的护栏与 hooks
 - [[AI-Agent上下文管理总览]]：harness 上下文管理能力的全景
+- [[Harness循环五阶段]]：绕性循环的 Perceive→Act→Observe 五阶段抽象
+- [[Agent工程化三层架构总览]]：harness 作为编排层核心的三层生产化视角
 
 ## 参考来源
 

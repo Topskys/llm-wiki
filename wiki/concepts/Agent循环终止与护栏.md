@@ -3,7 +3,7 @@ type: concept
 source: "[[raw/papers/Agent Loop.md]]"
 description: "Agent 循环的终止协议与护栏：模型侧 stop_reason（tool_use/end_turn/max_tokens/refusal）+ harness 侧硬限制（max_turns/预算/超时/循环检测）构成终止双保险；hooks 提供 PreToolUse/PostToolUse/Stop 等执行控制点；含六类失败模式排查表。"
 created_at: 2026-09-23 12:00:00
-updated_at: 2026-09-23 12:00:00
+updated_at: 2026-10-23 19:32:55
 tags: [agent, safety, guardrails, stop_reason, loop_detection]
 ---
 
@@ -62,6 +62,8 @@ flowchart TD
 - [[Agentic Harness]]：护栏与 hooks 的宿主运行时
 - [[Hooks护栏与审批门]]：SDLC 侧阶段化 hooks 治理
 - [[上下文压缩与摘要策略]]：上下文溢出护栏的具体手段
+- [[Agent终止条件多路熔断]]：生产级五路终止（目标/步数/时间/预算/无进展检测）
+- [[Agent工程化三层架构总览]]：终止条件在编排层的生产化视角
 
 ## 参考来源
 
