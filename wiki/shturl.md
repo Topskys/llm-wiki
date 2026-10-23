@@ -69,6 +69,7 @@
 | 2026-10-19 22:42:41 | Governance | [[raw/web_clip/MarkItDown.md]] | 0 | 0 | 素材归类调整：将《MarkItDown》从 raw/papers/ 移动至 raw/web_clip/（网页抓取素材应归入 web_clip 而非 papers）；同步修正 entity 页 source 与正文的双链引用 |
 | 2026-10-19 23:00:22 | Ingest | [[raw/papers/投机解码.md]] | 12 | 4 | 编译《投机解码》为12页：overviews 1（投机解码技术全景总览）、concepts 5（投机解码/投机解码采样机制/期望接受长度/草稿模型分类/MTP多Token预测）、entities 3（Medusa/EAGLE/SpecForge）、comparisons 1（草稿模型方案对比）、topics 1（投机解码工程落地）、summaries 1（投机解码·素材摘要）；联动更新4页（vLLM/采样解码策略/大模型推理全链路/KV Cache优化技术栈总览，补交叉链接刷updated_at、created_at未动）；Mermaid图lint通过；index 与 shturl 同步 |
 | 2026-10-20 09:30:11 | Rule-Update | 封面图归档规范 | 0 | 1 | SCHEMA「配图规范（Mermaid）」下新增「配图规范（封面图与静态图片资产归档）」小节：封面图统一归档 raw/assets/（保留 .svg 源 + .png 产物，禁止放 raw/papers/ 等正文目录）；命名「文章名-封面.png/svg」；引用方式 `../assets/封面.png` 置于标题下居中不加粗；生成流程 SVG→Chrome headless 转 PNG；为《Agent工程化三层架构》落位封面并按其引用 |
+| 2026-10-23 18:58:22 | Ingest | [[raw/papers/正则化.md]] | 14 | 4 | 编译《正则化》为14页：overviews 1（正则化工程实践，含诊断驱动实施顺序 Mermaid）、concepts 12（正则化/过拟合/偏差-方差权衡/L1正则与LASSO/L2正则与权重衰减/弹性网络/Dropout/提前停止EarlyStopping/批量归一化与正则化/数据增强与噪声注入/贝叶斯与优化视角正则化/AdamW与权重衰减解耦）、summaries 1（正则化·素材摘要）；联动更新 2 页（微调与RAG分工/QLoRA与LoRA微调，补正则化交叉链接刷updated_at、created_at未动）；index 与 shturl 同步 |
 
 ---
 

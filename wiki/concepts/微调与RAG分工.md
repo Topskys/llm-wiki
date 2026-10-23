@@ -3,7 +3,7 @@ type: concept
 source: [[贸易AI业务]]
 description: "电商垂直场景的模型能力分工策略：微调负责话术风格（语气、转化引导、多轮结构），RAG 承载实时业务知识（参数、价格政策、Care 条款）；新品/活动只更新知识库、不必重训模型。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-10-11 23:12:03
+updated_at: 2026-10-23 18:58:22
 tags: [llm, fine_tuning_vs_rag, e_commerce, model_strategy]
 ---
 
@@ -44,6 +44,7 @@ tags: [llm, fine_tuning_vs_rag, e_commerce, model_strategy]
 - [[灵购AI]]：分工策略的落地场景
 - [[RAG检索优化五层]]：RAG 一侧的检索质量保障
 - [[RAG幻觉治理边界]]：RAG 能治什么、不能治什么
+- [[正则化]]：微调侧训练防过拟合的核心手段（L2/权重衰减/Dropout 等）
 
 ## 参考来源
 - [[贸易AI业务]]

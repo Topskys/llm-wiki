@@ -3,7 +3,7 @@ type: concept
 source: [[贸易AI业务]]
 description: "参数高效微调：LoRA 冻结基座训练低秩适配器，QLoRA 再量化基座权重降显存；本地验证（rank=64, lr=2e-4）+ 云端量产（rank=32, lr=1e-5）两阶段，SFT 学话术、DPO 做偏好优化，盲评 2.1→4.3。"
 created_at: 2026-09-11 23:41:15
-updated_at: 2026-09-11 23:41:15
+updated_at: 2026-10-23 18:58:22
 tags: [lora, qlora, sft, dpo, llm_finetuning, model_training]
 ---
 
@@ -57,6 +57,7 @@ flowchart TB
 - [[微调与RAG分工]]：微调的定位（话术风格）与 RAG 互补
 - [[DataBus]]：SFT 语料来源
 - [[TTFT首字延迟优化]]：微调精简 system 对 TTFT 的收益
+- [[L2正则与权重衰减]] / [[AdamW与权重衰减解耦]]：微调侧防过拟合的默认正则（权重衰减 + AdamW）
 
 ## 参考来源
 - [[贸易AI业务]]
