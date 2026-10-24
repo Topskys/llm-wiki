@@ -3,7 +3,7 @@ type: concept
 source: "[[raw/papers/Agent Loop.md]]"
 description: "Agent 循环（Agentic Loop）核心概念：在循环中基于环境真实反馈（ground truth）自主决策，直到任务完成或触发终止条件；对应 Anthropic 定义『LLMs autonomously using tools in a loop』，三阶段模型加上 Workflow/Agent 架构区分。"
 created_at: 2026-09-23 12:00:00
-updated_at: 2026-09-27 12:10:00
+updated_at: 2026-10-24 14:36:44
 tags: [agent, agentic_loop, ground_truth, tool_use]
 ---
 
@@ -14,6 +14,7 @@ tags: [agent, agentic_loop, ground_truth, tool_use]
 - **本质定义**：在循环中基于环境真实反馈（ground truth）自主决策，直到任务完成或触发终止条件。
 - Anthropic 官方一句话定义：「LLMs autonomously using tools in a loop」；Agent 不是更聪明的模型，而是"模型 + 工具 + 循环"构成的运行时。
 - 架构区分：**Workflows**（步骤写死、行为可预期）vs **Agents**（LLM 动态决定流程与工具使用，自主掌控完成方式）；开放式、步骤不可预知的任务才上 Agent。
+- **两层定义的边界**：本页是**软件运行时视角**——动作表现为工具调用，反馈表现为工具返回；[[具身Agent与环境接地]] 是**训练与动作表示视角**——动作是环境中的状态变更，反馈是环境真实状态。两者不冲突：把工具换成动作空间、把工具返回换成环境状态，就是同一套循环的具身形态。
 
 ## 三阶段模型
 
@@ -56,6 +57,7 @@ Loop 把执行权交给模型是决定性突破，但单体 Loop 在复杂任务
 - [[单体Loop结构性瓶颈]]：Loop 的五大天花板与失控放大机制
 - [[Loop与Graph控制流演进]]：Loop 之上的 L5 Graph 层
 - [[Loop与Graph选型对比]]：什么时候该从 Loop 升级到 Graph
+- [[具身Agent与环境接地]]：同一个循环在物理/虚拟环境中的形态，动作与反馈都换成环境语义
 
 ## 参考来源
 

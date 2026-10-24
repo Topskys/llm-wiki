@@ -3,7 +3,7 @@ type: concept
 source: [[raw/papers/Function-Calling与MCP-Tool设计.md]]
 description: "Function Tool 设计规范：单一职责原子操作、Pydantic 入参校验（自动 JSON Schema + 运行时类型检查）、统一 success+data+msg 返回结构、面向 LLM 的 description 工程，工具调用不暴露原始堆栈、异常隔离。"
 created_at: 2026-09-17 10:30:00
-updated_at: 2026-09-18 23:55:00
+updated_at: 2026-10-24 14:36:44
 tags: [function_tool, tool_design, pydantic, llm_agent]
 ---
 
@@ -35,6 +35,7 @@ tags: [function_tool, tool_design, pydantic, llm_agent]
 
 ## 相关页面
 - [[Function Calling三阶段模型]]：Tool 设计服务的调用流程
+- [[AgentToken与下一动作预测]]：另一条动作路线——工具表达不了的动作，用 agent token 原生建模
 - [[Function Tool与MCP Tool对比]]：与 MCP Tool 的形态差异
 - [[Skill工程化总览]]：Tool 与 Skill 的职责边界
 - [[Skills技能]]：组织内 Tool 与 Skill 的组织机制
