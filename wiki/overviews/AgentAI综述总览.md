@@ -3,7 +3,7 @@ type: overview
 source: "https://arxiv.org/abs/2401.03568"
 description: "Agent AI 综述总览：以『感知视觉刺激、语言输入与环境接地数据并产出具身动作』定义 Agent AI，串起基础模型整合、Agent Transformer 范式、三级训练阶梯、六类 Agent 分类学、游戏/机器人/医疗三大应用与两个新基准，核心主张是在接地环境中训练可缓解大模型幻觉。"
 created_at: 2026-10-24 14:36:44
-updated_at: 2026-10-24 15:07:05
+updated_at: 2026-10-24 15:22:00
 tags: [agent_ai, overview, multimodal, embodied, survey]
 ---
 
@@ -108,5 +108,4 @@ L2 里论文有一个明确取舍：**用无限记忆智能体做模仿学习，
 ## 参考来源
 
 - 线上原文：[https://arxiv.org/abs/2401.03568](https://arxiv.org/abs/2401.03568)（arXiv:2401.03568v2，80 页，2024-01-25）
-- 本地备份：[[raw/papers/Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction.pdf]]
 - [[Agent-AI综述·素材摘要]]：本页对应的素材要点索引

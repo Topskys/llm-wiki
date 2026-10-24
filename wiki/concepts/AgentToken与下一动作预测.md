@@ -3,7 +3,7 @@ type: concept
 source: "https://arxiv.org/abs/2401.03568"
 description: "Agent Transformer 在视觉 token 与语言 token 之外引入第三类 agent token，为具身动作预留输入输出子空间，并以『下一具身动作预测』作为统一训练目标；本页解析 agent token 的设计动机、相对冻结 LLM 方案的四项优势，以及它与工具调用的本质差异。"
 created_at: 2026-10-24 14:36:44
-updated_at: 2026-10-24 15:07:05
+updated_at: 2026-10-24 15:22:00
 tags: [agent_token, agent_transformer, action_space, next_action_prediction, multimodal]
 ---
 
@@ -93,4 +93,3 @@ Agent Transformer 的核心动作只有一件：**在视觉 token 和语言 toke
 ## 参考来源
 
 - 线上原文：[https://arxiv.org/abs/2401.03568](https://arxiv.org/abs/2401.03568)（§3.1-§3.3 Agent Transformer 定义与创建，图 7 统一多模态 Transformer）
-- 本地备份：[[raw/papers/Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction.pdf]]

@@ -3,7 +3,7 @@ type: concept
 source: "https://arxiv.org/abs/2401.03568"
 description: "Agent 能力从哪来的三级阶梯：零样本/少样本的 Agent 模块与基础设施、预训练微调级的 agentic 基础模型、以及在环境交互中持续自我改进；本页解析每级的适用前提、模仿学习相对强化学习的取舍理由，以及『无限记忆智能体』这一关键设计。"
 created_at: 2026-10-24 14:36:44
-updated_at: 2026-10-24 15:07:05
+updated_at: 2026-10-24 15:22:00
 tags: [agent_training, imitation_learning, reinforcement_learning, agentic_foundation_model, self_improvement]
 ---
 
@@ -85,8 +85,8 @@ Agent 的能力不是二选一（「用大模型」还是「训小模型」）�
 - [[协作效率指标CoS]]：训练之后怎么量化协作水平。
 - [[AgentAI综述总览]]：本节所属的论文骨架。
 - [[微调与RAG分工]]：语言模型 SFT/DPO 的通用微调知识，与 Agent 训练的分工差异。
+- [[递归自我改进RSI]]：L3 持续自我改进再往上走一层——当改进对象变成「改进机制本身」时才叫 RSI，本页的 L3 是其工程前身。
 
 ## 参考来源
 
 - 线上原文：[https://arxiv.org/abs/2401.03568](https://arxiv.org/abs/2401.03568)（§4.1-§4.3 学习策略与机制、§8 持续与自我改进）
-- 本地备份：[[raw/papers/Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction.pdf]]

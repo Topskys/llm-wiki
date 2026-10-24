@@ -3,7 +3,7 @@ type: source_summary
 source: "https://arxiv.org/abs/2401.03568"
 description: "对 raw 论文《Agent AI: Surveying the Horizons of Multimodal Interaction》（线上原文 https://arxiv.org/abs/2401.03568，v2）的要点摘录：Agent AI 定义、Agent Transformer 与 agent token、三级训练阶梯、六类分类学、五大风险面、游戏/机器人/医疗应用与 CuisineWorld/VideoAnalytica 两基准索引。"
 created_at: 2026-10-24 14:36:44
-updated_at: 2026-10-24 15:07:05
+updated_at: 2026-10-24 15:22:00
 tags: [source_summary, agent_ai, multimodal, embodied]
 ---
 
@@ -14,12 +14,11 @@ tags: [source_summary, agent_ai, multimodal, embodied]
 | 项 | 内容 |
 |---|---|
 | 原文链接 | https://arxiv.org/abs/2401.03568 |
-| 本地备份 | [[raw/papers/Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction.pdf]] |
 | 版本 | arXiv:2401.03568v2，2024-01-07 提交、2024-01-25 修订，无后续版本 |
 | 篇幅 | 80 页（约 44 MB），当前仍为预印本（页眉标注 A PREPRINT） |
 | 作者 | Zane Durante（一作）、Qiuyuan Huang、Naoki Wake、Ran Gong、Jae Sung Park、Bidipta Sarkar、Rohan Taori、Yusuke Noda、Demetri Terzopoulos、Yejin Choi、Katsushi Ikeuchi、Hoi Vo、Li Fei-Fei、Jianfeng Gao |
 | 机构 | Microsoft Research / Microsoft Gaming、Stanford University、UCLA、University of Washington |
-| 核验 | 线上原文已核验（arXiv:2401.03568v2）；本地另存 PDF 备份，字节数与 arXiv Content-Length 一致、首尾分段比对一致 |
+| 核验 | 线上原文已核验（arXiv:2401.03568v2）；曾下载 PDF 全文逐节解析，字节数与 arXiv Content-Length 一致、首尾分段比对一致；该 PDF 备份已按用户决定删除，现行引用仅保留线上地址 |
 
 ## 要点索引
 

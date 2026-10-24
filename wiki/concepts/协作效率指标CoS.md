@@ -3,7 +3,7 @@ type: concept
 source: "https://arxiv.org/abs/2401.03568"
 description: "CoS（Collaboration Score，协作效率分）是 CuisineWorld 多智能体协作基准的自动化指标，用来自动量化多智能体在协作任务上的配合效率；本页解析它的设计意图、集中调度与去中心两种模式、以及多智能体系统缺少『协作质量』标尺这一空白。"
 created_at: 2026-10-24 14:36:44
-updated_at: 2026-10-24 15:07:05
+updated_at: 2026-10-24 15:22:00
 tags: [multi_agent, evaluation, collaboration_metric, benchmark, cos]
 ---
 
@@ -86,4 +86,3 @@ flowchart TD
 ## 参考来源
 
 - 线上原文：[https://arxiv.org/abs/2401.03568](https://arxiv.org/abs/2401.03568)（§9.1 CuisineWorld 数据集与 CoS 指标、§6.1.5 MindAgent 基础设施）
-- 本地备份：[[raw/papers/Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction.pdf]]

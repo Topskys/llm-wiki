@@ -3,7 +3,7 @@ type: concept
 source: "https://arxiv.org/abs/2401.03568"
 description: "Agent AI 把智能体定义为能感知视觉刺激、语言输入与环境接地数据并产出有意义的具身动作的交互系统；本页梳理从多模态智能体到具身智能体的定义谱系、动作型与交互型的二分，以及「环境接地」为何是它与软件工具型 Agent 的分水岭。"
 created_at: 2026-10-24 14:36:44
-updated_at: 2026-10-24 15:07:05
+updated_at: 2026-10-24 15:22:00
 tags: [agent_ai, embodied_agent, grounding, multimodal, agent_taxonomy]
 ---
 
@@ -84,4 +84,3 @@ Agent AI 的定义不是「会调用工具的模型」，而是**一类交互式
 ## 参考来源
 
 - 线上原文：[https://arxiv.org/abs/2401.03568](https://arxiv.org/abs/2401.03568)（§1.3 定义、§5.1-§5.4 分类学）
-- 本地备份：[[raw/papers/Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction.pdf]]
