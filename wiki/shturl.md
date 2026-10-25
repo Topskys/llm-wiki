@@ -75,6 +75,7 @@
 | 2026-10-24 15:16:52 | Ingest | [[raw/papers/RSI递归自我改进.md]] | 6 | 2 | 编译《RSI 递归自我改进》（自撰综述型论文，9 条参考文献，自评 98 分）为6页：overviews 1（递归自我改进总览）、concepts 5（递归自我改进RSI/RSI四项判定标准/有界RSI与开放式RSI/点火条件与复利因子G/哥德尔机）、summaries 1（素材摘要）；联动更新2页（Agent训练方法阶梯/机器学习安全四大类别，补 L3→RSI 与对齐退化交叉链接、刷 updated_at、created_at 未动）；7张Mermaid图lint通过；index 与 shturl 同步 |
 | 2026-10-24 15:22:00 | Governance | Agent AI 综述 PDF 备份删除 | 0 | 7 | 原始 PDF（44 MB）经确认已删除；清理 7 页中的「本地备份」断链，来源仅保留 arXiv 线上地址（https://arxiv.org/abs/2401.03568），摘要页同步注明备份状态；created_at 未动、updated_at 统一刷新 |
 | 2026-10-25 11:08:55 | Ingest | [[raw/papers/Jev 决策模型.md]] | 10 | 0 | 编译《Jev 决策模型》（TypeSafe AI 首个 System One 模型）为10页：summaries 1（Jev决策模型·素材摘要）、entities 2（Jev 决策模型/TypeSafe AI）、concepts 5（System One 模型/类型化输出/并行采样机制/校准置信度/决策原语）、comparisons 1（Jev 与传统 LLM 对比）、overviews 1（Jev 决策模型总览）、topics 1（Jev 应用与落地）；8张Mermaid图lint通过；raw 素材含 Jev决策模型.md + 封面 Jev决策模型.svg/png（raw/assets）；index 与 shturl 同步 |
+| 2026-10-25 13:14:20 | Rule-Update | 论文格式标题规范 | 0 | 0 | 新增标题硬规则并对齐 6 处规则源：①标题精炼为 4–10 个字单位（中文逐字计、连续英文数字合并算 1 字），推荐 4 字左右，超 10 字压缩、少于 3 字补足；②标题禁口语化引导词（怎么做/是什么/为什么/有什么作用/有啥用）改用名词性短语；③同步 SKILL.md、论文格式写作Prompt.md、paper-doc-md-v2_prompt.md、paper-doc-md-v2.md、AGENTS.md、SCHEMA.md；④check-paper.ps1 新增 [9] 标题检查项（字数越界/含冒号/口语化即 FAIL），实测合格样本 PASS、违规样本抓到 3 项 |
 
 ---
 
