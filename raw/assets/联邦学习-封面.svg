@@ -1,0 +1,145 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="-74 -74 2708 1588" preserveAspectRatio="xMidYMid slice" font-family="'Source Han Sans SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+
+  <!-- ================= 定义 ================= -->
+  <defs>
+    <radialGradient id="atmoBlue" cx="0.18" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#1e3a5f" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#1e3a5f" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1e3a5f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="atmoWarm" cx="0.86" cy="0.92" r="0.8">
+      <stop offset="0" stop-color="#3a2a10" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#3a2a10" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#3a2a10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9ddfa"/>
+    </linearGradient>
+    <radialGradient id="coreFill" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#7fdbff"/>
+      <stop offset="1" stop-color="#1e5f8f"/>
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4fc3f7" stop-opacity="0.5"/>
+      <stop offset="0.6" stop-color="#4fc3f7" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#4fc3f7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+
+  <!-- ================= 画布与背景（出血 -64px） ================= -->
+  <rect x="-64" y="-64" width="2688" height="1568" fill="#0a1220"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoBlue)"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoWarm)"/>
+
+  <!-- 工程网格线（1.5px / opacity 0.95） -->
+  <g stroke="#16283f" stroke-width="1.5" opacity="0.95">
+    <path d="M 176 -64 V 1504 M 416 -64 V 1504 M 656 -64 V 1504 M 896 -64 V 1504 M 1136 -64 V 1504 M 1376 -64 V 1504 M 1616 -64 V 1504 M 1856 -64 V 1504 M 2096 -64 V 1504 M 2336 -64 V 1504"/>
+    <path d="M -64 176 H 2624 M -64 416 H 2624 M -64 656 H 2624 M -64 896 H 2624 M -64 1136 H 2624 M -64 1376 H 2624"/>
+  </g>
+
+  <!-- ================= 顶部标题区（边距 80） ================= -->
+  <text x="80" y="168" font-size="23" letter-spacing="4" fill="#7c93ad" font-weight="600">FEDERATED LEARNING · PRIVACY-PRESERVING COLLABORATIVE TRAINING</text>
+
+  <!-- 主标题（无冒号） -->
+  <text x="80" y="316" font-size="104" font-weight="bold" letter-spacing="4" fill="url(#titleGrad)">联邦学习</text>
+
+  <!-- 副标题（下方无装饰线） -->
+  <text x="80" y="402" font-size="35" fill="#cbd5e1" letter-spacing="1">原始数据不出域，只交换模型更新——隐私须由安全聚合、差分隐私与可信执行环境共同保障</text>
+
+  <!-- 三关键词徽标 -->
+  <g font-size="26" fill="#8fa6c4">
+    <rect x="80" y="470" width="222" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="191" y="506" text-anchor="middle">FedAvg 聚合</text>
+    <rect x="322" y="470" width="238" height="56" rx="28" fill="none" stroke="#e0b060" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="441" y="506" text-anchor="middle">差分隐私 DP</text>
+    <rect x="580" y="470" width="254" height="56" rx="28" fill="none" stroke="#9be8ff" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="707" y="506" text-anchor="middle">可信执行 TEE</text>
+  </g>
+
+  <!-- ================= 左侧内容块 1：FedAvg 公式卡 ================= -->
+  <g>
+    <rect x="80" y="580" width="820" height="230" rx="14" fill="#0e1c33" fill-opacity="0.55" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="112" y="632" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">FEDAVG · 加权平均聚合规则</text>
+    <!-- 公式（上标基线已统一为 -16） -->
+    <text x="112" y="712" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="44" fill="#dce8fa">w<tspan font-size="26" dy="-16">(t+1)</tspan><tspan font-size="44" dy="16" font-style="normal" fill="#9fb3cc"> = </tspan><tspan font-size="48">Σ</tspan><tspan font-size="24" dy="14">k</tspan><tspan font-size="44" dy="-14"> (n</tspan><tspan font-size="24" dy="12">k</tspan><tspan font-size="44" dy="-12"> / n) · w</tspan><tspan font-size="24" dy="12">k</tspan><tspan font-size="26" dy="-28">(t)</tspan></text>
+    <text x="112" y="774" font-size="25" fill="#7c93ad" letter-spacing="1">按样本量 n<tspan font-size="18" dy="8">k</tspan><tspan dy="-8">/n 加权而非等权；本地步数 K 增大 → 通信轮次减少</tspan></text>
+  </g>
+
+  <!-- ================= 左侧内容块 2：单轮四步流程 ================= -->
+  <g font-size="27">
+    <text x="80" y="892" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">SINGLE ROUND · 单轮通信流程</text>
+    <text x="80" y="948" fill="#8fa6c4" letter-spacing="1">
+      <tspan fill="#4fc3f7" font-weight="700">01</tspan> 下发全局模型
+      <tspan fill="#3a5b8c" dx="14">→</tspan>
+      <tspan dx="14"><tspan fill="#4fc3f7" font-weight="700">02</tspan> 本地 K 步 SGD</tspan>
+      <tspan fill="#3a5b8c" dx="14">→</tspan>
+      <tspan dx="14"><tspan fill="#4fc3f7" font-weight="700">03</tspan> 回传模型更新</tspan>
+      <tspan fill="#3a5b8c" dx="14">→</tspan>
+      <tspan dx="14"><tspan fill="#4fc3f7" font-weight="700">04</tspan> 加权平均聚合</tspan>
+    </text>
+  </g>
+
+  <!-- ================= 左侧内容块 3：梯度泄露警示（已加宽至 900 并精简文案） ================= -->
+  <g>
+    <rect x="80" y="1010" width="900" height="130" rx="14" fill="#0e1c33" fill-opacity="0.45" stroke="#1c3352" stroke-width="1.5"/>
+    <rect x="80" y="1010" width="5" height="130" fill="#e0b060"/>
+    <text x="118" y="1062" font-size="27" fill="#e0b060" font-weight="600">梯度本身会泄露信息</text>
+    <text x="118" y="1108" font-size="25" fill="#8fa6c4" letter-spacing="1">DLG 证明：仅凭共享梯度即可重建训练数据——「没上传」≠「没泄露」</text>
+  </g>
+
+  <!-- ================= 右侧联邦拓扑（中心 1930, 830） ================= -->
+  <circle cx="1930" cy="830" r="440" fill="none" stroke="#9be8ff" stroke-opacity="0.16" stroke-width="2" stroke-dasharray="2 14"/>
+  <circle cx="1930" cy="830" r="385" fill="none" stroke="#e0b060" stroke-opacity="0.3" stroke-width="2.5" stroke-dasharray="60 26"/>
+  <circle cx="1930" cy="830" r="330" fill="none" stroke="#4fc3f7" stroke-opacity="0.35" stroke-width="2.5" stroke-dasharray="110 30"/>
+
+  <circle cx="1930" cy="830" r="262" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.8" stroke-dasharray="6 10">
+    <animate attributeName="stroke-dashoffset" from="0" to="-160" dur="8s" repeatCount="indefinite"/>
+  </circle>
+
+  <g stroke="#4fc3f7" stroke-opacity="0.5" stroke-width="2.5">
+    <line x1="1930" y1="830" x2="1930" y2="568"/>
+    <line x1="1930" y1="830" x2="2157" y2="699"/>
+    <line x1="1930" y1="830" x2="2157" y2="961"/>
+    <line x1="1930" y1="830" x2="1930" y2="1092"/>
+    <line x1="1930" y1="830" x2="1703" y2="961"/>
+    <line x1="1930" y1="830" x2="1703" y2="699"/>
+  </g>
+  <g fill="#9be8ff">
+    <circle r="6"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 1930 568 L 1930 830"/></circle>
+    <circle r="6"><animateMotion dur="2.4s" begin="0.4s" repeatCount="indefinite" path="M 2157 699 L 1930 830"/></circle>
+    <circle r="6"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" path="M 2157 961 L 1930 830"/></circle>
+    <circle r="6"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M 1930 1092 L 1930 830"/></circle>
+    <circle r="6"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite" path="M 1703 961 L 1930 830"/></circle>
+    <circle r="6"><animateMotion dur="2.4s" begin="2.0s" repeatCount="indefinite" path="M 1703 699 L 1930 830"/></circle>
+  </g>
+
+  <g fill="#12294a" stroke="#4fc3f7" stroke-width="3">
+    <circle cx="1930" cy="568" r="26"/>
+    <circle cx="2157" cy="699" r="26"/>
+    <circle cx="2157" cy="961" r="26"/>
+    <circle cx="1930" cy="1092" r="26"/>
+    <circle cx="1703" cy="961" r="26"/>
+    <circle cx="1703" cy="699" r="26"/>
+  </g>
+
+  <circle cx="1930" cy="830" r="150" fill="url(#glowCyan)"/>
+  <circle cx="1930" cy="830" r="72" fill="url(#coreFill)" filter="url(#soft)" opacity="0.7"/>
+  <circle cx="1930" cy="830" r="72" fill="#0e2a4a" stroke="#7fdbff" stroke-width="3"/>
+  <circle cx="1930" cy="830" r="57" fill="none" stroke="#4fc3f7" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="1930" y="822" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">全局</text>
+  <text x="1930" y="860" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">模型</text>
+  <text x="1930" y="952" font-size="25" fill="#7fa8cc" text-anchor="middle">样本量加权平均</text>
+
+  <!-- ================= 底部信息条（边距 80 内） ================= -->
+  <line x1="80" y1="1290" x2="2480" y2="1290" stroke="#16283f" stroke-width="1.5" opacity="0.9"/>
+  <text x="80" y="1345" font-size="27" fill="#55708f" letter-spacing="2">横向联邦 · 纵向联邦 · 联邦迁移</text>
+  <text x="2480" y="1345" font-size="27" fill="#55708f" text-anchor="end" letter-spacing="2">端侧窄任务已成熟 · 通用大模型尚未覆盖</text>
+
+  <!-- 右上角文献标注 -->
+  <text x="2480" y="168" font-size="23" fill="#7c93ad" text-anchor="end" letter-spacing="3">McMAHAN ET AL. 2016 · FEDAVG</text>
+</svg>
