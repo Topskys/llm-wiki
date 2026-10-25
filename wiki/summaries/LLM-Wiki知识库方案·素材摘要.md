@@ -1,6 +1,6 @@
 ---
 type: source_summary
-source: [[llm-wiki知识库方案]]
+source: [[LLM-Wiki个人知识库建设方案]]
 description: "对 raw 素材《LLM-Wiki 知识库建设可行性方案》的要点摘录：方案完整覆盖架构设计、三大工作流、治理体系、Git 规范与落地路径，全库所有页面的共同出处。"
 created_at: 2026-09-05 12:37:30
 updated_at: 2026-09-05 13:01:56
@@ -11,7 +11,7 @@ tags: [source_summary, llm_wiki, knowledge_base]
 
 ## 核心结论
 - 原始素材 `raw/llm-wiki知识库方案.md`（508 行）是一份完整的知识库建设可行性方案，是本库架构与全部规则的源头。
-- 素材定位：理论蓝图，讲「为什么、怎么搭、怎么守」；实操细则由 [[SCHEMA|SCHEMA.md]] 承载。
+- 素材定位：理论蓝图，讲「为什么、怎么搭、怎么守」；实操细则由 `SCHEMA.md` 承载。
 
 ## 要点拆解（按素材章节）
 - **一 项目概述**：四大痛点（笔记碎片化 / RAG 无沉淀 / AI 笔记垃圾化 / 缺统一规则），五大目标（可编译、可追溯、可治理、可复用、低门槛）。
@@ -30,4 +30,4 @@ tags: [source_summary, llm_wiki, knowledge_base]
 - 本库其余全部页面均以本文为 `source` 溯源，见各页「参考来源」
 
 ## 参考来源
-- [[llm-wiki知识库方案]]
+- [[LLM-Wiki个人知识库建设方案]]

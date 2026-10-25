@@ -1,6 +1,6 @@
 ---
 type: concept
-source: [[llm-wiki知识库方案]]
+source: [[LLM-Wiki个人知识库建设方案]]
 description: "对全库做定期质量体检的工作流：按 P0 阻断 / P1 重要 / P2 优化三级输出问题清单与统计，只提建议、禁止自行修改 Wiki 文件。"
 created_at: 2026-09-05 12:37:30
 updated_at: 2026-09-06 00:55:05
@@ -41,4 +41,4 @@ flowchart TD
 - [[三层架构]]：P0 检查项中 source 溯源链所依托的层级结构
 
 ## 参考来源
-- [[llm-wiki知识库方案]]
+- [[LLM-Wiki个人知识库建设方案]]

@@ -1,6 +1,6 @@
 ---
 type: concept
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "参数高效微调：LoRA 冻结基座训练低秩适配器，QLoRA 再量化基座权重降显存；本地验证（rank=64, lr=2e-4）+ 云端量产（rank=32, lr=1e-5）两阶段，SFT 学话术、DPO 做偏好优化，盲评 2.1→4.3。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-10-23 18:58:22
@@ -60,4 +60,4 @@ flowchart TB
 - [[L2正则与权重衰减]] / [[AdamW与权重衰减解耦]]：微调侧防过拟合的默认正则（权重衰减 + AdamW）
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]

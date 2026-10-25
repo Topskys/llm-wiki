@@ -1,6 +1,6 @@
 ---
 type: concept
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "LangGraph 编排多阶段 Agent 工作流：SubGraph 子图拆分、PostgreSQL Checkpointer 节点级状态持久化实现断点续跑与故障自愈，配合 SSE 流式、多模型路由与可观测体系支撑内容生成类长流程。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-10-23 19:32:55
@@ -80,5 +80,5 @@ Checkpointer 提供的正是 [[状态持久化四能力]] 中的**状态回放**
 - [[Checkpoint与DurableExecution差异]]：Checkpoint 与 Durable Execution 的范式对比（重放边界差异）
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]
 - [[raw/articles/Loop之后为什么是Graph.md]]（Graph 理论对应部分）

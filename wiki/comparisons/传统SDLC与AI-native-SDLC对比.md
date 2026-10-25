@@ -1,6 +1,6 @@
 ---
 type: comparison
-source: [[The AI-Native SDLC playbook]]
+source: [[AI-native-SDLC]]
 description: "传统 SDLC 与 AI-native SDLC 横向对比：阶段形态（线性 vs 循环）、瓶颈位置、阶段产物（文档/门票 vs committed artifact）、控制主体（人类逐项 vs agent 产出+人类 gate）、治理与审计方式差异。"
 created_at: 2026-09-12 23:03:13
 updated_at: 2026-09-12 23:03:13
@@ -28,7 +28,7 @@ tags: [comparison, sdlc, ai_native_sdlc]
 ## 核心结论
 - 变换的轴心不是"用 AI 改代码"而是**流程主体重构**：控制目标保留，执行与验证交给 agent，人类精力收敛到决策点（gate）。
 - 每条右列举行的底层是 committed artifact：每阶段写一个 artifact 到版本库（早期为 .md，Build 起为代码及记录），下阶段读它开始，审批即 merge/收尾记录。
-- 多数组织真实状态介于两列之间：不必全量改造，按 plays 依赖逐阶段采用 [[The AI-Native SDLC playbook]]。
+- 多数组织真实状态介于两列之间：不必全量改造，按 plays 依赖逐阶段采用 [[AI-native-SDLC]]。
 
 ## 相关页面
 - [[AI-native-SDLC]]：AI-native SDLC 总览
@@ -36,4 +36,4 @@ tags: [comparison, sdlc, ai_native_sdlc]
 - [[AI代码评审]] / [[Hooks护栏与审批门]]：评审与审批控制的具体形态
 
 ## 参考来源
-- [[The AI-Native SDLC playbook]]
+- [[AI-native-SDLC]]

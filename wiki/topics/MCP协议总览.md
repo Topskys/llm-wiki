@@ -66,6 +66,8 @@ Server 对外提供三类标准化原语：
 - [[MCP安全最佳实践]]：Agent 开发安全六原则
 - [[Streamable HTTP]]：新版传输协议
 - [[MCP·素材摘要]]：原始素材要点摘录
+- [[Function-Calling与MCP-Tool设计·素材摘要]]：本页的素材要点索引与溯源锚点。
+
 
 ## 参考来源
 

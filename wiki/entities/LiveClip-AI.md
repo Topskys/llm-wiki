@@ -1,6 +1,6 @@
 ---
 type: entity
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "直播切片智能剪辑 Agent：前端 FFmpeg.wasm 轻量化压缩上传（流量降 99%），后端 PostgreSQL 自研任务队列调度 ASR + 大模型识别高光片段，批量产出短视频，ASR 与高光标签回流 DataBus。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-09-11 23:41:15
@@ -89,4 +89,4 @@ progress 0-10 上传入库 / 10-40 分段+ASR / 40-80 LLM 分析 / 80-100 写库
 - [[商城AI业务矩阵]] 内 [[四大项目架构对比]]：与其它项目的架构对比
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]

@@ -1,6 +1,6 @@
 ---
 type: entity
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "全域 AI 业务数据中台：汇聚 GT/微信对话、直播 ASR、商城文档等全渠道数据，经 ETL、9 级过滤、三层脱敏、人工质检后产出 SFT 训练集与 RAG 知识库素材，并接收各 Agent 数据回流。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-09-11 23:41:15
@@ -100,4 +100,4 @@ flowchart TB
 - [[RAG检索优化五层]]：灵购侧在线检索在已入库 chunk 上做 HNSW/filter/rerank
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]

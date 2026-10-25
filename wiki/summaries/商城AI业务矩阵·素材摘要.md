@@ -1,6 +1,6 @@
 ---
 type: source_summary
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "对 raw 素材《贸易AI业务》（原：商城AI业务矩阵-面试整理）的要点摘录：大疆商城五项目（DataBus/ModelForge/灵购AI/LiveClip/MultiVis）体系、RAG 五层优化、TTFT、FEC/JitterBuffer、LoRA 微调、LangGraph 工作流等核心知识点索引。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-09-11 23:41:15
@@ -36,4 +36,4 @@ tags: [source_summary, e_commerce, ai_platform, interview_prep]
 - [[商城AI业务矩阵]]：所有衍生页面的父主题页
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]

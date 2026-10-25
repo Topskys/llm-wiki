@@ -1,6 +1,6 @@
 ---
 type: entity
-source: [[llm-wiki知识库方案]]
+source: [[LLM-Wiki个人知识库建设方案]]
 description: "LLM-Wiki 个人知识库框架的提出者，主张由 AI 承担知识编译劳动、人类聚焦思考与决策。目前素材仅一笔带过，背景信息待后续补充。"
 created_at: 2026-09-05 12:37:30
 updated_at: 2026-09-05 12:37:30
@@ -22,4 +22,4 @@ tags: [llm_wiki, person, knowledge_base]
 - [[LLM-Wiki个人知识库建设方案]]：基于该框架的完整落地方案总览
 
 ## 参考来源
-- [[llm-wiki知识库方案]]
+- [[LLM-Wiki个人知识库建设方案]]

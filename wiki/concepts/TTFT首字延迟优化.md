@@ -1,6 +1,6 @@
 ---
 type: concept
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "大模型首字延迟（Time To First Token）优化全景：RAG 压检索让 LLM 更早开跑、统一 prompt 触发前缀缓存、微调精简 system 与动态 Token 缩短输入、SSE 流式降低体感延迟，复杂咨询首字 15s→2s 口径。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-10-02 19:41:03
@@ -74,5 +74,5 @@ flowchart LR
 - [[KV Cache优化技术栈总览]]：区分哪些层治 TTFT、哪些层治 TPOT 与容量
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]
 - [[raw/papers/KV Cache.md]]

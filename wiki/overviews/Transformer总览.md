@@ -50,6 +50,8 @@ flowchart TD
 - [[Transformer与RNN对比]]：为何 Transformer 取代循环网络
 - [[Embedding向量嵌入]]：Transformer 输入的向量化前置
 - [[TTFT首字延迟优化]]：Transformer prefill 阶段的时延优化
+- [[Transformer原理·素材摘要]]：本页的素材要点索引与溯源锚点。
+
 
 ## 参考来源
 - [[raw/articles/Transformer原理.md]]

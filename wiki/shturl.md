@@ -77,6 +77,7 @@
 | 2026-10-25 11:08:55 | Ingest | [[raw/papers/Jev 决策模型.md]] | 10 | 0 | 编译《Jev 决策模型》（TypeSafe AI 首个 System One 模型）为10页：summaries 1（Jev决策模型·素材摘要）、entities 2（Jev 决策模型/TypeSafe AI）、concepts 5（System One 模型/类型化输出/并行采样机制/校准置信度/决策原语）、comparisons 1（Jev 与传统 LLM 对比）、overviews 1（Jev 决策模型总览）、topics 1（Jev 应用与落地）；8张Mermaid图lint通过；raw 素材含 Jev决策模型.md + 封面 Jev决策模型.svg/png（raw/assets）；index 与 shturl 同步 |
 | 2026-10-25 13:14:20 | Rule-Update | 论文格式标题规范 | 0 | 0 | 新增标题硬规则并对齐 6 处规则源：①标题精炼为 4–10 个字单位（中文逐字计、连续英文数字合并算 1 字），推荐 4 字左右，超 10 字压缩、少于 3 字补足；②标题禁口语化引导词（怎么做/是什么/为什么/有什么作用/有啥用）改用名词性短语；③同步 SKILL.md、论文格式写作Prompt.md、paper-doc-md-v2_prompt.md、paper-doc-md-v2.md、AGENTS.md、SCHEMA.md；④check-paper.ps1 新增 [9] 标题检查项（字数越界/含冒号/口语化即 FAIL），实测合格样本 PASS、违规样本抓到 3 项 |
 | 2026-10-25 14:37:58 | Ingest | [[raw/papers/联邦学习.md]] | 8 | 0 | 编译《联邦学习》（8 条参考文献均实际抓取核验标题作者年份）为8页：overviews 1（联邦学习总览）、concepts 5（联邦学习/FedAvg联邦平均/FedProx近端优化/安全聚合SecAgg/差分隐私/梯度泄露攻击）、comparisons 1（横向联邦与纵向联邦）、summaries 1（素材摘要）；11 张 Mermaid 图 lint 通过；封面图 raw/assets/联邦学习-封面.png（2560×1440，由 diagram.png/svg 重命名）已插入文章标题下；index 与 shturl 同步；**本次未提交 Git** |
+| 2026-10-25 15:35:00 | Lint-Fix | 全库巡检 P0/P1 治理 | 0 | 64 | 巡检 435 页：P0 元数据缺失 1 项（RAG权限隔离全链路架构 缺 tags）已修；P1 断链 12 个目标全部清零（批量修正 7 类错误双链共 45 个文件：llm-wiki知识库方案/The AI-Native SDLC playbook/贸易AI业务/Prompt注入架构层防御方案/提示词注入根因分析/工业级AI意图识别架构/古德哈特目标偏移 → 对应正确页；SCHEMA/shturl 改为普通文本；4 处格式示意占位符改为 [[…]]）；P2 无入链页 25 个全部补入链（23 个素材摘要页挂到对应总览/主题页，2 个概念页挂到所属总览），孤儿页与无入链页均归零 |
 
 ---
 

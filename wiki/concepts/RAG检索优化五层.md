@@ -1,6 +1,6 @@
 ---
 type: concept
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "在线检索优化的五层组合拳：HNSW 快、Int8 省、元数据 filter 准、Top20 控、Rerank 精，标准口径 Top20→Top5，命中率 72%→89%、检索耗时降至约 1/4。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-10-15 23:08:25
@@ -71,4 +71,4 @@ flowchart LR
 - [[RAG质量保障主题]]：检索侧知识在质量主线中的统一位置
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]

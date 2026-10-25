@@ -1,6 +1,6 @@
 ---
 type: overview
-source: [[llm-wiki知识库方案]]
+source: "[[raw/llm-wiki知识库方案.md]]"
 description: "LLM-Wiki 个人知识库建设方案全貌：痛点与目标、三层架构、三大工作流、治理体系、Git 管控、分阶段落地路径与避坑指南。"
 created_at: 2026-09-05 12:37:30
 updated_at: 2026-09-06 00:55:05
@@ -40,4 +40,4 @@ flowchart LR
 - [[LLM-Wiki知识库方案·素材摘要]]：本方案页的原始素材摘要
 
 ## 参考来源
-- [[llm-wiki知识库方案]]
+- [[LLM-Wiki个人知识库建设方案]]

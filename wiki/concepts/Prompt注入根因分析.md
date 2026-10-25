@@ -51,7 +51,7 @@ flowchart LR
 
 - [[Prompt注入定义与边界]]：注入在 LLM 上下文中的发生机制
 - [[纵深防御五原则]]：五条并行互补的防御原则
-- [[Prompt注入架构层防御方案]]：StruQ/SecAlign/CaMeL 等架构级防御
+- [[Prompt注入分层防御体系]]：StruQ/SecAlign/CaMeL 等架构级防御
 - [[LLM-Agent安全防护总览]]：注入在 Agent 安全体系中的定位
 
 ## 参考来源

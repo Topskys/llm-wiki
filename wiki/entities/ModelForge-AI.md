@@ -1,6 +1,6 @@
 ---
 type: entity
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "电商自有化模型微调工厂：复用 DataBus 语料，本地 QLoRA 验证 + 云端方舟量产两阶段微调（SFT+DPO），产出商城专属大模型，并搭建 Embedding 粗召回 → Cross-Encoder 精排的三段式 RAG 流水线。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-09-11 23:41:15
@@ -80,4 +80,4 @@ flowchart LR
 - [[RAG检索优化五层]]：与灵购在线五层衔接
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]

@@ -1,6 +1,6 @@
 ---
 type: topic
-source: [[贸易AI业务]]
+source: "[[raw/notes/贸易AI业务.md]]"
 description: "大疆商城 AI 业务矩阵五大项目（DataBus/ModelForge/灵购AI/LiveClip/MultiVis）体系总览：数据底座 → 模型能力 → 多 Agent 应用 → 数据回流闭环，以及各项目在体系中的职责分工。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-09-11 23:41:15
@@ -89,6 +89,8 @@ flowchart TB
 - [[LiveClip-AI]]、[[MultiVis-AI]]：内容生产侧 Agent，参与闭环
 - [[四大项目架构对比]]：DataBus/ModelForge/LiveClip/MultiVis 横向对比
 - [[RAG检索优化五层]]、[[TTFT首字延迟优化]]、[[FEC与自适应JitterBuffer]]：灵购 AI 三条核心优化主线
+- [[商城AI业务矩阵·素材摘要]]：本页的素材要点索引与溯源锚点。
+
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]

@@ -81,6 +81,8 @@ Web Search（需 `supports_standalone_web_search = true` 且上游真实兼容�
 - [[Codex模型映射与模型目录]]：跨两条路线的清单/菜单机制
 - [[Codex官方登录保留机制]]：来回切换的退路保障
 - [[Codex接第三方模型排障清单]]：常见错误速查
+- [[cc-switch与Codex多模型接入·素材摘要]]：本页的素材要点索引与溯源锚点。
+
 
 ## 参考来源
 

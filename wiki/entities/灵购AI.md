@@ -1,6 +1,6 @@
 ---
 type: entity
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "商城智能语音客服平台：商品知识库 + RTC 7×24 语音客服，核心为 CustomLLM 回调服务的 RAG 检索与微调模型流式推理；用户主负责的 RTC 链路、RAG 接入与 TTFT 优化项目。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-09-27 16:43:06
@@ -100,4 +100,4 @@ flowchart LR
 - [[RAG检索优化五层]]、[[TTFT首字延迟优化]]、[[FEC与自适应JitterBuffer]]：灵购优化主线
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]

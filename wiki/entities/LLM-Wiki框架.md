@@ -1,6 +1,6 @@
 ---
 type: entity
-source: [[llm-wiki知识库方案]]
+source: [[LLM-Wiki个人知识库建设方案]]
 description: "基于 Karpathy 思想、以 Obsidian + Git 落地的一套 AI 编译型个人知识库框架，核心是 raw 原始素材层、wiki 编译知识层、SCHEMA 规则契约层的三层架构。"
 created_at: 2026-09-05 12:37:30
 updated_at: 2026-09-08 22:34:02
@@ -44,4 +44,4 @@ flowchart TB
 - [[知识管理方式对比]]：LLM-Wiki 与传统笔记、普通 RAG 的横向对比
 
 ## 参考来源
-- [[llm-wiki知识库方案]]
+- [[LLM-Wiki个人知识库建设方案]]

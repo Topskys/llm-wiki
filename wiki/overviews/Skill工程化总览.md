@@ -40,6 +40,8 @@ flowchart TD
 - [[Function Calling三阶段模型]] / [[Function Tool设计规范]]：Tool 层设计
 - [[MCP协议架构]]：Skill 依赖的工具通信协议
 - [[Function Tool与MCP Tool对比]]：两种工具形态选型
+- [[AI-Agent-Skill工程化·素材摘要]]：本页的素材要点索引与溯源锚点。
+
 
 ## 参考来源
 - [[raw/papers/AI-Agent-Skill工程化.md]]

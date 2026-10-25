@@ -1,6 +1,6 @@
 ---
 type: source_summary
-source: [[The AI-Native SDLC playbook]]
+source: [[AI-native-SDLC]]
 description: "对 raw 素材《The AI-Native SDLC playbook》（Anthropic Applied AI，2026-08-21）的要点摘录：六阶段 plays、承交付物链、CLAUDE.md/Skills/Hooks 控制原语、AI 评审、CI evals、监控闭环与治理原则索引。"
 created_at: 2026-09-12 23:03:13
 updated_at: 2026-09-12 23:03:13
@@ -31,4 +31,4 @@ tags: [source_summary, ai_native_sdlc, claude, governance]
 | comparison | [[传统SDLC与AI-native-SDLC对比]] | The shifts across the six stages |
 
 ## 参考来源
-- [[The AI-Native SDLC playbook]]
+- [[AI-native-SDLC]]

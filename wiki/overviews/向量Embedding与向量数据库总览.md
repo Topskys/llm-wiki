@@ -40,6 +40,8 @@ flowchart LR
 - [[IVF倒排索引]] [[HNSW图索引]] [[PQ乘积量化]]：三大索引/压缩机制
 - [[RAG检索优化五层]]：HNSW 粗召回 + Int8 量化在线上五层组合拳中的实战位置
 - [[Hybrid混合检索]]：Dense 语义路 + Sparse 关键词路融合
+- [[向量Embedding与向量数据库·素材摘要]]：本页的素材要点索引与溯源锚点。
+
 
 ## 参考来源
 - [[raw/articles/向量Embedding与向量数据库介绍.md]]

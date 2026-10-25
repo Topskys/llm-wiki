@@ -1,6 +1,6 @@
 ---
 type: concept
-source: [[贸易AI业务]]
+source: [[商城AI业务矩阵]]
 description: "粗召回阶段的混合检索：Dense 稠密语义路 + Sparse 稀疏关键词路并行、用 dense_weight 融合两路分数，再进精排；dense_weight 在线按 query 类型预设、离线用评测集调参。"
 created_at: 2026-09-11 23:41:15
 updated_at: 2026-10-15 23:08:25
@@ -67,4 +67,4 @@ flowchart LR
 - [[生成侧结构化约束]]：召回之后的生成侧契约约束，与本页构成检索/生成两段
 
 ## 参考来源
-- [[贸易AI业务]]
+- [[商城AI业务矩阵]]
