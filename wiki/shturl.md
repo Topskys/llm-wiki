@@ -74,6 +74,7 @@
 | 2026-10-24 14:36:44 | Ingest | https://arxiv.org/abs/2401.03568 | 7 | 4 | 编译《Agent AI: Surveying the Horizons of Multimodal Interaction》（arXiv:2401.03568v2，80页，2024-01-25）为7页：overviews 1（AgentAI综述总览）、concepts 5（具身Agent与环境接地/AgentToken与下一动作预测/环境接地式幻觉治理/Agent训练方法阶梯/协作效率指标CoS）、summaries 1（Agent-AI综述·素材摘要）；联动更新4页（Agent循环/幻觉成因四条线/幻觉三层治理框架/Function Tool设计规范，补两层定义边界与第五条成因等交叉链接、刷 updated_at、created_at 未动）；7张Mermaid图；采取「按缺口补丁编译」策略，跳过 §6 游戏/机器人/医疗场景实测与 §10-12 伦理声明等约45%无复用价值篇幅；原文PDF为44.16MB二进制素材，字节数与 arXiv Content-Length 一致、首尾分段比对一致；index 与 shturl 同步 |
 | 2026-10-24 15:16:52 | Ingest | [[raw/papers/RSI递归自我改进.md]] | 6 | 2 | 编译《RSI 递归自我改进》（自撰综述型论文，9 条参考文献，自评 98 分）为6页：overviews 1（递归自我改进总览）、concepts 5（递归自我改进RSI/RSI四项判定标准/有界RSI与开放式RSI/点火条件与复利因子G/哥德尔机）、summaries 1（素材摘要）；联动更新2页（Agent训练方法阶梯/机器学习安全四大类别，补 L3→RSI 与对齐退化交叉链接、刷 updated_at、created_at 未动）；7张Mermaid图lint通过；index 与 shturl 同步 |
 | 2026-10-24 15:22:00 | Governance | Agent AI 综述 PDF 备份删除 | 0 | 7 | 原始 PDF（44 MB）经确认已删除；清理 7 页中的「本地备份」断链，来源仅保留 arXiv 线上地址（https://arxiv.org/abs/2401.03568），摘要页同步注明备份状态；created_at 未动、updated_at 统一刷新 |
+| 2026-10-25 11:08:55 | Ingest | [[raw/papers/Jev 决策模型.md]] | 10 | 0 | 编译《Jev 决策模型》（TypeSafe AI 首个 System One 模型）为10页：summaries 1（Jev决策模型·素材摘要）、entities 2（Jev 决策模型/TypeSafe AI）、concepts 5（System One 模型/类型化输出/并行采样机制/校准置信度/决策原语）、comparisons 1（Jev 与传统 LLM 对比）、overviews 1（Jev 决策模型总览）、topics 1（Jev 应用与落地）；8张Mermaid图lint通过；raw 素材含 Jev决策模型.md + 封面 Jev决策模型.svg/png（raw/assets）；index 与 shturl 同步 |
 
 ---
 

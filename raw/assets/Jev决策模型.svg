@@ -1,0 +1,139 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-74 -74 2708 1588" width="2560" height="1440" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="cv-title cv-desc" font-family="'PingFang SC','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei',sans-serif">
+  <title id="cv-title">Jev 决策模型封面</title>
+  <desc id="cv-desc">左侧为 Jev 接口表单：一次调用 POST systemone，Choice、Score、Noul 三种原语并行评估，各返回类型化结果与置信度；右侧为双泳道分工：LLM 泳道经生成文本再解析，慢且贵，Jev 泳道单次前向毫秒返回，下方延迟与成本对比条形图直观呈现百倍差距；底部为分工条与铁律。</desc>
+
+  <defs>
+    <radialGradient id="gTL" cx="0.12" cy="0.05" r="0.8">
+      <stop offset="0" stop-color="#1e3a5f" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#1e3a5f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gBR" cx="0.88" cy="0.96" r="0.7">
+      <stop offset="0" stop-color="#3a2a10" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#3a2a10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.75" stop-color="#e2edfd"/>
+      <stop offset="1" stop-color="#c9ddfa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== 背景：出血 64px，杜绝透明边 ===== -->
+  <rect x="-64" y="-64" width="2688" height="1568" fill="#0a1220"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#gTL)"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#gBR)"/>
+  <g stroke="#16283f" stroke-width="1.5" opacity="0.6">
+    <line x1="240" y1="-64" x2="240" y2="1504"/><line x1="480" y1="-64" x2="480" y2="1504"/>
+    <line x1="720" y1="-64" x2="720" y2="1504"/><line x1="960" y1="-64" x2="960" y2="1504"/>
+    <line x1="1200" y1="-64" x2="1200" y2="1504"/><line x1="1440" y1="-64" x2="1440" y2="1504"/>
+    <line x1="1680" y1="-64" x2="1680" y2="1504"/><line x1="1920" y1="-64" x2="1920" y2="1504"/>
+    <line x1="2160" y1="-64" x2="2160" y2="1504"/><line x1="2400" y1="-64" x2="2400" y2="1504"/>
+    <line x1="-64" y1="240" x2="2624" y2="240"/><line x1="-64" y1="480" x2="2624" y2="480"/>
+    <line x1="-64" y1="720" x2="2624" y2="720"/><line x1="-64" y1="960" x2="2624" y2="960"/>
+    <line x1="-64" y1="1200" x2="2624" y2="1200"/>
+  </g>
+
+  <!-- ===== 顶部：标题区（边距 80） ===== -->
+  <text x="80" y="110" font-size="23" letter-spacing="4" fill="#7c93ad">SYSTEM ONE MODEL · TYPESAFE AI · SEPT 2026</text>
+  <text x="80" y="268" font-weight="bold" font-size="104" letter-spacing="4" fill="url(#titleGrad)">Jev 决策模型</text>
+  <text x="80" y="362" font-size="35" fill="#cbd5e1">首个 System One 模型：产物是给程序用的判断 —— LLM 想方案，Jev 在分叉点下判断</text>
+
+  <!-- ===== 左面板：一次调用 · 接口表单 ===== -->
+  <rect x="80" y="436" width="1150" height="690" rx="20" fill="#0f2138" stroke="#2b4a6e" stroke-width="2"/>
+  <text x="140" y="496" font-size="26" font-weight="bold" fill="#93c5fd">一次调用 · 三种原语并行评估</text>
+
+  <!-- 接口头 -->
+  <rect x="140" y="532" width="1050" height="60" rx="12" fill="#0f2e22" stroke="#34d399" stroke-width="1.8"/>
+  <text x="665" y="572" text-anchor="middle" font-size="22" font-weight="bold" fill="#6ee7b7">POST /systemone　一份状态 + 预定义问题 → 一次前向 · 并行返回</text>
+
+  <!-- 行1 Choice -->
+  <rect x="140" y="624" width="270" height="90" rx="12" fill="#123049" stroke="#2b4a6e" stroke-width="1.5"/>
+  <text x="275" y="662" text-anchor="middle" font-size="22" font-weight="bold" fill="#93c5fd">Choice</text>
+  <text x="275" y="694" text-anchor="middle" font-size="18" fill="#7c93ad">从选项中选一个</text>
+  <text x="435" y="678" text-anchor="middle" font-size="24" fill="#5b7ca3">→</text>
+  <rect x="465" y="624" width="725" height="90" rx="12" fill="#10302a" stroke="#2a6b58" stroke-width="1.5"/>
+  <text x="827" y="662" text-anchor="middle" font-size="20" fill="#d2f0e6">所选选项 + 各选项概率</text>
+  <text x="827" y="694" text-anchor="middle" font-size="18" fill="#7c93ad">+ 校准置信度</text>
+
+  <!-- 行2 Score -->
+  <rect x="140" y="740" width="270" height="90" rx="12" fill="#123049" stroke="#2b4a6e" stroke-width="1.5"/>
+  <text x="275" y="778" text-anchor="middle" font-size="22" font-weight="bold" fill="#93c5fd">Score</text>
+  <text x="275" y="810" text-anchor="middle" font-size="18" fill="#7c93ad">在评分尺度上打分</text>
+  <text x="435" y="794" text-anchor="middle" font-size="24" fill="#5b7ca3">→</text>
+  <rect x="465" y="740" width="725" height="90" rx="12" fill="#10302a" stroke="#2a6b58" stroke-width="1.5"/>
+  <text x="827" y="778" text-anchor="middle" font-size="20" fill="#d2f0e6">分值 + 概率分布</text>
+  <text x="827" y="810" text-anchor="middle" font-size="18" fill="#7c93ad">+ 校准置信度</text>
+
+  <!-- 行3 Noul -->
+  <rect x="140" y="856" width="270" height="90" rx="12" fill="#123049" stroke="#2b4a6e" stroke-width="1.5"/>
+  <text x="275" y="894" text-anchor="middle" font-size="22" font-weight="bold" fill="#93c5fd">Noul</text>
+  <text x="275" y="926" text-anchor="middle" font-size="18" fill="#7c93ad">陈述是否成立</text>
+  <text x="435" y="910" text-anchor="middle" font-size="24" fill="#5b7ca3">→</text>
+  <rect x="465" y="856" width="725" height="90" rx="12" fill="#10302a" stroke="#2a6b58" stroke-width="1.5"/>
+  <text x="827" y="894" text-anchor="middle" font-size="20" fill="#d2f0e6">0 ~ 1 概率</text>
+  <text x="827" y="926" text-anchor="middle" font-size="18" fill="#7c93ad">+ 校准置信度</text>
+
+  <!-- 注脚 -->
+  <text x="665" y="1002" text-anchor="middle" font-size="19" fill="#7c93ad">多类型问题共享一份输入、独立并行评估 · 上下文 64000 token（状态预算 32000）</text>
+  <text x="665" y="1046" text-anchor="middle" font-size="19" fill="#7c93ad">答案约束在预定义 schema 内，结构化错误率 0% · 输出仅几个字节，不计费</text>
+
+  <!-- ===== 右面板：双泳道分工 + 对比条 ===== -->
+  <rect x="1290" y="436" width="1190" height="690" rx="20" fill="#0f2138" stroke="#3a2a10" stroke-width="2"/>
+  <text x="1350" y="496" font-size="26" font-weight="bold" fill="#93c5fd">双泳道分工 · 系统二与系统一各司其职</text>
+
+  <!-- 泳道1：LLM -->
+  <text x="1350" y="544" font-size="21" fill="#93c5fd">LLM · 系统二 · 深度推理</text>
+  <rect x="1350" y="560" width="300" height="68" rx="10" fill="#123049" stroke="#2b4a6e" stroke-width="1.5"/>
+  <rect x="1700" y="560" width="300" height="68" rx="10" fill="#123049" stroke="#2b4a6e" stroke-width="1.5"/>
+  <rect x="2050" y="560" width="370" height="68" rx="10" fill="#123049" stroke="#2b4a6e" stroke-width="1.5"/>
+  <text x="1500" y="602" text-anchor="middle" font-size="20" fill="#d7e6fa">理解开放问题</text>
+  <text x="1850" y="602" text-anchor="middle" font-size="20" fill="#d7e6fa">生成自由文本</text>
+  <text x="2235" y="602" text-anchor="middle" font-size="20" fill="#d7e6fa">解析 · 校验 · 重试</text>
+  <text x="1675" y="602" text-anchor="middle" font-size="22" fill="#5b7ca3">→</text>
+  <text x="2025" y="602" text-anchor="middle" font-size="22" fill="#5b7ca3">→</text>
+  <text x="1350" y="668" font-size="19" fill="#7c93ad">数秒~数十秒 · 每次数美分 · 措辞多变 · 下游易错 · 模式坍缩源于 RLHF</text>
+
+  <!-- 分叉线 -->
+  <line x1="1350" y1="716" x2="2420" y2="716" stroke="#3d5674" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <polygon points="1885,694 1907,716 1885,738 1863,716" fill="#2e2410" stroke="#fbbf24" stroke-width="2"/>
+  <text x="1845" y="724" text-anchor="end" font-size="19" font-weight="bold" fill="#fcd34d">流程分叉点</text>
+  <text x="1925" y="710" font-size="18" fill="#7c93ad">需开放推理 → 交 LLM</text>
+  <text x="1925" y="738" font-size="18" fill="#fcd34d">答案有边界 + 量大 → 交 Jev</text>
+
+  <!-- 泳道2：Jev -->
+  <text x="1350" y="796" font-size="21" fill="#fcd34d">Jev · 系统一 · 直觉判断</text>
+  <rect x="1350" y="812" width="1070" height="68" rx="10" fill="#2e2410" stroke="#fbbf24" stroke-width="1.8"/>
+  <text x="1885" y="854" text-anchor="middle" font-size="21" font-weight="bold" fill="#fcd34d">状态 + 预定义问题 ── 单次前向 ──→ 类型化判断 + 校准置信度</text>
+  <text x="1350" y="920" font-size="19" fill="#7c93ad">70~500ms · 输出免费 · 结构固定 · 软件按置信度决定自动执行或升级人工</text>
+
+  <!-- 对比条形图 -->
+  <text x="1350" y="976" font-size="20" font-weight="bold" fill="#a5b4c8">延迟对比</text>
+  <rect x="1470" y="958" width="660" height="24" rx="6" fill="#123049" stroke="#2b4a6e" stroke-width="1.2"/>
+  <text x="2150" y="977" font-size="18" fill="#7c93ad">LLM · 数秒~数十秒</text>
+  <rect x="1470" y="990" width="110" height="24" rx="6" fill="#0f2e22" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1600" y="1009" font-size="18" fill="#6ee7b7">Jev · 70~500ms（最快 25~193×）</text>
+
+  <text x="1350" y="1066" font-size="20" font-weight="bold" fill="#a5b4c8">成本对比</text>
+  <rect x="1470" y="1048" width="560" height="24" rx="6" fill="#123049" stroke="#2b4a6e" stroke-width="1.2"/>
+  <text x="2050" y="1067" font-size="18" fill="#7c93ad">LLM · 每次数美分</text>
+  <rect x="1470" y="1080" width="70" height="24" rx="6" fill="#0f2e22" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1560" y="1099" font-size="18" fill="#6ee7b7">Jev · ≈0（约 1/200~1/580，数字多为厂商自测）</text>
+
+  <!-- ===== 底部：三段分工条 ===== -->
+  <rect x="80" y="1156" width="740" height="60" rx="12" fill="#0f2138" stroke="#2b4a6e" stroke-width="1.5"/>
+  <rect x="910" y="1156" width="740" height="60" rx="12" fill="#2e2410" stroke="#fbbf24" stroke-width="1.8"/>
+  <rect x="1740" y="1156" width="740" height="60" rx="12" fill="#0f2138" stroke="#2b4a6e" stroke-width="1.5"/>
+  <text x="450" y="1194" text-anchor="middle" font-size="21" fill="#8aa2bd">LLM 系统二 · 理解开放问题 · 生成方案</text>
+  <text x="1280" y="1194" text-anchor="middle" font-size="21" font-weight="bold" fill="#fcd34d">Jev 系统一 · 关键分叉点 · 快速可审计判断</text>
+  <text x="2110" y="1194" text-anchor="middle" font-size="21" fill="#8aa2bd">Agent 决策节点 · 客服分流 · 审核 · 批量标注</text>
+  <text x="865" y="1194" text-anchor="middle" font-size="26" fill="#5b7ca3">→</text>
+  <text x="1705" y="1194" text-anchor="middle" font-size="26" fill="#5b7ca3">→</text>
+
+  <!-- ===== 底部铁律与金句 ===== -->
+  <circle cx="88" cy="1264" r="7" fill="#fbbf24"/>
+  <text x="120" y="1274" font-size="26" fill="#a5b4c8">实施铁律　置信度阈值定自动或人工 · 零幻觉仅指结构层面 · 复杂推理拆成小问题 · 厂商数字需实测核算</text>
+  <text x="2480" y="1274" text-anchor="end" font-size="26" font-weight="bold" fill="#eaf2ff">不写文本 · 只下判断</text>
+
+  <text x="80" y="1370" font-size="21" letter-spacing="6" fill="#3d5674">DECIDE · ROUTE · SCORE · GATE</text>
+</svg>
