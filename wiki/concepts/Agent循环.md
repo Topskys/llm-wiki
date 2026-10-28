@@ -3,7 +3,7 @@ type: concept
 source: "[[raw/papers/Agent Loop.md]]"
 description: "Agent 循环（Agentic Loop）核心概念：在循环中基于环境真实反馈（ground truth）自主决策，直到任务完成或触发终止条件；对应 Anthropic 定义『LLMs autonomously using tools in a loop』，三阶段模型加上 Workflow/Agent 架构区分。"
 created_at: 2026-09-23 12:00:00
-updated_at: 2026-10-24 14:36:44
+updated_at: 2026-10-28 19:12:00
 tags: [agent, agentic_loop, ground_truth, tool_use]
 ---
 
@@ -58,6 +58,7 @@ Loop 把执行权交给模型是决定性突破，但单体 Loop 在复杂任务
 - [[Loop与Graph控制流演进]]：Loop 之上的 L5 Graph 层
 - [[Loop与Graph选型对比]]：什么时候该从 Loop 升级到 Graph
 - [[具身Agent与环境接地]]：同一个循环在物理/虚拟环境中的形态，动作与反馈都换成环境语义
+- [[研究执行链路]]：Deep Research 把循环五步落到「检索 + 阅读」这一任务域
 
 ## 参考来源
 

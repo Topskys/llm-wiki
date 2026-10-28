@@ -3,7 +3,7 @@ type: topic
 source: "[[raw/articles/Loop之后为什么是Graph.md]]"
 description: "Agent 生产落地实践专题：架构选型、渐进实施路径、独立验证、确定性边界、权限治理、共享状态协作、状态持久化七条原则，配可靠性三原则与真实反馈评价标准。"
 created_at: 2026-09-27 12:10:00
-updated_at: 2026-10-10 21:15:19
+updated_at: 2026-10-28 19:12:00
 tags: [agent, production, reliability, governance, evaluation]
 ---
 
@@ -125,6 +125,7 @@ flowchart LR
 - [[LLM权限最小化]]：角色图的权限最小化视角
 - [[Agent沙箱技术全景总览]]：角色图权限在执行环境上的硬边界
 - [[沙箱选型权衡与落地避坑]]：本地/云端两条路线与三条落地误区
+- [[DeepResearch能力边界与风险]]：长时程研究型 Agent 的边界与三项兜底
 
 ## 参考来源
 
