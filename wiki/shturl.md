@@ -79,6 +79,9 @@
 | 2026-10-25 14:37:58 | Ingest | [[raw/papers/联邦学习.md]] | 8 | 0 | 编译《联邦学习》（8 条参考文献均实际抓取核验标题作者年份）为8页：overviews 1（联邦学习总览）、concepts 5（联邦学习/FedAvg联邦平均/FedProx近端优化/安全聚合SecAgg/差分隐私/梯度泄露攻击）、comparisons 1（横向联邦与纵向联邦）、summaries 1（素材摘要）；11 张 Mermaid 图 lint 通过；封面图 raw/assets/联邦学习-封面.png（2560×1440，由 diagram.png/svg 重命名）已插入文章标题下；index 与 shturl 同步；**本次未提交 Git** |
 | 2026-10-25 15:35:00 | Lint-Fix | 全库巡检 P0/P1 治理 | 0 | 64 | 巡检 435 页：P0 元数据缺失 1 项（RAG权限隔离全链路架构 缺 tags）已修；P1 断链 12 个目标全部清零（批量修正 7 类错误双链共 45 个文件：llm-wiki知识库方案/The AI-Native SDLC playbook/贸易AI业务/Prompt注入架构层防御方案/提示词注入根因分析/工业级AI意图识别架构/古德哈特目标偏移 → 对应正确页；SCHEMA/shturl 改为普通文本；4 处格式示意占位符改为 [[…]]）；P2 无入链页 25 个全部补入链（23 个素材摘要页挂到对应总览/主题页，2 个概念页挂到所属总览），孤儿页与无入链页均归零 |
 | 2026-10-28 19:12:00 | Ingest | [[raw/papers/Deep Research.md]] | 11 | 5 | 编译《Deep Research 深度研究模型》为 11 页：overviews 1（DeepResearch总览）、concepts 6（Deep Research定义/端到端强化学习研究/研究执行链路/句子级引用归因/DeepResearch评测基准/DeepResearch能力边界与风险）、comparisons 2（DeepResearch与RAG分野/DeepResearch路线对比）、topics 1（DeepResearch开源复现）、summaries 1（素材摘要）；10 张 Mermaid 图 mermaid-lint 全部通过；联动更新 5 页补入链（Agent循环/上下文压缩与摘要策略/基准污染与动态基准/Agent生产落地实践/四类评估方法对比），created_at 均未改动；11 条新条目写入 index 对应分节 |
+| 2026-10-28 00:00:00 | Governance | [[raw/papers/权重量化.md]] | 0 | 0 | 整理 raw/papers 权重量化原始草稿：去除重复章节、压缩标题与摘要、修正引用编号与图表题注位置，备份已复用 temp/backup/权重量化.md |
+| 2026-10-28 00:30:00 | Governance | [[raw/papers/权重量化.md]] | 0 | 0 | 对权重量化.md执行三项整理校验：错别字/用词优化（塞进→装入、会崩→会失效、纠结→反复斟酌等）、空格/标点/大小写修正（中英文插空、图1→图 1等）、Markdown间隔检查；补充 ## 总结 章节；同步三项校验标准至 SCHEMA.md、AGENTS.md、paper-doc-md-v2_prompt.md、paper-doc-md-v2.md、论文格式写作Prompt.md |
+| 2026-10-29 10:30:00 | Ingest | [[raw/papers/推理时扩展.md]] | 12 | 0 | 编译《推理时扩展》为 12 页：concepts 11（推理时扩展/测试时缩放律/过程奖励模型/Tree of Thoughts/可验证强化学习/过思考/Self-Consistency/Best-of-N/Self-Refine/Reflexion/MCTS 加过程奖励模型）、entities 1（DeepSeek-R1）；index 与 shturl 同步 |
 
 ---
 
