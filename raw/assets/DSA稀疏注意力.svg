@@ -1,0 +1,187 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="-74 -74 2708 1588" preserveAspectRatio="xMidYMid slice" font-family="'Source Han Sans SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+
+  <!-- ================= 定义 ================= -->
+  <defs>
+    <radialGradient id="atmoBlue" cx="0.18" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#1e3a5f" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#1e3a5f" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1e3a5f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="atmoWarm" cx="0.86" cy="0.92" r="0.8">
+      <stop offset="0" stop-color="#3a2a10" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#3a2a10" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#3a2a10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9ddfa"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4fc3f7" stop-opacity="0.4"/>
+      <stop offset="0.6" stop-color="#4fc3f7" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#4fc3f7" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4fc3f7" fill-opacity="0.7"/>
+    </marker>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+
+  <!-- ================= 画布与背景（出血 -64px） ================= -->
+  <rect x="-64" y="-64" width="2688" height="1568" fill="#0a1220"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoBlue)"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoWarm)"/>
+
+  <!-- 工程网格线（1.5px / opacity 0.95） -->
+  <g stroke="#16283f" stroke-width="1.5" opacity="0.95">
+    <path d="M 176 -64 V 1504 M 416 -64 V 1504 M 656 -64 V 1504 M 896 -64 V 1504 M 1136 -64 V 1504 M 1376 -64 V 1504 M 1616 -64 V 1504 M 1856 -64 V 1504 M 2096 -64 V 1504 M 2336 -64 V 1504"/>
+    <path d="M -64 176 H 2624 M -64 416 H 2624 M -64 656 H 2624 M -64 896 H 2624 M -64 1136 H 2624 M -64 1376 H 2624"/>
+  </g>
+
+  <!-- ================= 顶部标题区（边距 80） ================= -->
+  <text x="80" y="168" font-size="23" letter-spacing="4" fill="#7c93ad" font-weight="600">DEEPSEEK SPARSE ATTENTION · QUERY-AWARE TOP-K SELECTION</text>
+
+  <!-- 主标题（无冒号） -->
+  <text x="80" y="316" font-size="104" font-weight="bold" letter-spacing="4" fill="url(#titleGrad)">DSA稀疏注意力</text>
+
+  <!-- 副标题 -->
+  <text x="80" y="402" font-size="35" fill="#cbd5e1" letter-spacing="1">轻量索引器打分，只为每个 query 挑出最相关的 2048 个 token——精确计算而非近似，API 价格应声下调一半</text>
+
+  <!-- 三关键词徽标（描边已统一） -->
+  <g font-size="26" fill="#8fa6c4">
+    <rect x="80" y="470" width="238" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="199" y="506" text-anchor="middle">闪电索引器</text>
+    <rect x="338" y="470" width="238" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="457" y="506" text-anchor="middle">Top-k 2048</text>
+    <rect x="596" y="470" width="238" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="715" y="506" text-anchor="middle">MLA 压缩兼容</text>
+  </g>
+
+  <!-- ================= 左侧内容块 1：复杂度转换卡 ================= -->
+  <g>
+    <rect x="80" y="580" width="900" height="230" rx="14" fill="#0e1c33" fill-opacity="0.55" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="112" y="630" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">COMPLEXITY · 复杂度账本</text>
+    <text x="112" y="718" font-family="Georgia,'Times New Roman',serif" font-style="italic">
+      <tspan font-size="58" fill="#6e86a8">O(L²)</tspan>
+      <tspan font-size="44" fill="#55708f" dx="24">→</tspan>
+      <tspan font-size="58" fill="#7fdbff" font-weight="bold" dx="24">O(L·k)</tspan>
+      <tspan font-size="26" fill="#7c93ad" dx="22" font-style="normal">k = 2048 · 上下文越长收益越大</tspan>
+    </text>
+    <text x="112" y="772" font-size="24" fill="#7c93ad" letter-spacing="1">索引器仍 O(L²) 但 FP8 常数小一到两个数量级——二次项被降权，而非消失</text>
+  </g>
+
+  <!-- ================= 左侧内容块 2：两阶段继续训练双卡 ================= -->
+  <g>
+    <text x="80" y="892" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">TWO-STAGE · 两阶段继续训练</text>
+    <!-- 阶段一 -->
+    <rect x="80" y="912" width="390" height="110" rx="14" fill="#0e1c33" fill-opacity="0.5" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="104" y="954" font-size="25" fill="#bfe9ff" font-weight="600">阶段一 · 索引热身</text>
+    <text x="104" y="996" font-size="23" fill="#7c93ad">主模型冻结 · LR 10<tspan font-size="16" dy="-8">-3</tspan><tspan dy="8"> · 2.1B token</tspan></text>
+    <!-- 箭头 -->
+    <path d="M 484 967 H 546" stroke="#4fc3f7" stroke-opacity="0.7" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <!-- 阶段二 -->
+    <rect x="560" y="912" width="420" height="110" rx="14" fill="#123252" fill-opacity="0.7" stroke="#4fc3f7" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="584" y="954" font-size="25" fill="#dce8fa" font-weight="600">阶段二 · 稀疏联合训练</text>
+    <text x="584" y="996" font-size="22" fill="#9fb3cc">解冻全部 · LR 7.3×10<tspan font-size="15" dy="-8">-6</tspan><tspan dy="8"> · 944B token</tspan></text>
+    <text x="80" y="1060" font-size="24" fill="#6e86a8" letter-spacing="1">KL 对齐主注意力分布 · 梯度各走各的 · 起点为 V3.1-Terminus 128K 检查点</text>
+  </g>
+
+  <!-- ================= 左侧内容块 3：梯度解耦警示卡 ================= -->
+  <g>
+    <rect x="80" y="1095" width="900" height="120" rx="14" fill="#0e1c33" fill-opacity="0.45" stroke="#1c3352" stroke-width="1.5"/>
+    <rect x="80" y="1095" width="5" height="120" fill="#e0b060"/>
+    <text x="118" y="1142" font-size="27" fill="#e0b060" font-weight="600">梯度解耦 而非加权和</text>
+    <text x="118" y="1188" font-size="25" fill="#8fa6c4" letter-spacing="1">索引器输入已断开计算图——写成加权和会把梯度回灌主模型</text>
+  </g>
+
+  <!-- ================= 右侧：索引打分 → Top-k 选择 → 精确注意力 ================= -->
+  <!-- 面板标题 -->
+  <text x="1930" y="505" font-size="24" fill="#7c93ad" text-anchor="middle" letter-spacing="2">历史 KV 条目 · 大多数与当前 query 相关性低</text>
+
+  <!-- 16 个 token 方块：落选 11 列 -->
+  <g fill="#101d33" stroke="#1c3352" stroke-width="1.5">
+    <rect x="1500" y="528" width="48" height="48" rx="6"/><rect x="1608" y="528" width="48" height="48" rx="6"/>
+    <rect x="1662" y="528" width="48" height="48" rx="6"/><rect x="1770" y="528" width="48" height="48" rx="6"/>
+    <rect x="1824" y="528" width="48" height="48" rx="6"/><rect x="1932" y="528" width="48" height="48" rx="6"/>
+    <rect x="1986" y="528" width="48" height="48" rx="6"/><rect x="2094" y="528" width="48" height="48" rx="6"/>
+    <rect x="2148" y="528" width="48" height="48" rx="6"/><rect x="2202" y="528" width="48" height="48" rx="6"/>
+    <rect x="2310" y="528" width="48" height="48" rx="6"/>
+  </g>
+  <!-- 选中 5 列 -->
+  <g fill="#123252" stroke="#4fc3f7" stroke-width="2">
+    <rect x="1554" y="528" width="48" height="48" rx="6"/><rect x="1716" y="528" width="48" height="48" rx="6"/>
+    <rect x="1878" y="528" width="48" height="48" rx="6"/><rect x="2040" y="528" width="48" height="48" rx="6"/>
+    <rect x="2256" y="528" width="48" height="48" rx="6"/>
+  </g>
+
+  <!-- 索引分数柱状（基线 732） -->
+  <g>
+    <!-- 落选矮柱（11 根） -->
+    <g fill="#33507a" fill-opacity="0.55">
+      <rect x="1500" y="706" width="48" height="26" rx="3"/>
+      <rect x="1608" y="698" width="48" height="34" rx="3"/>
+      <rect x="1662" y="710" width="48" height="22" rx="3"/>
+      <rect x="1770" y="700" width="48" height="32" rx="3"/>
+      <rect x="1824" y="712" width="48" height="20" rx="3"/>
+      <rect x="1932" y="694" width="48" height="38" rx="3"/>
+      <rect x="1986" y="708" width="48" height="24" rx="3"/>
+      <rect x="2094" y="702" width="48" height="30" rx="3"/>
+      <rect x="2148" y="696" width="48" height="36" rx="3"/>
+      <rect x="2202" y="710" width="48" height="22" rx="3"/>
+      <rect x="2310" y="704" width="48" height="28" rx="3"/>
+    </g>
+    <!-- 选中高柱（5 根） -->
+    <g fill="#4fc3f7" fill-opacity="0.8">
+      <rect x="1554" y="592" width="48" height="140" rx="3"/>
+      <rect x="1716" y="606" width="48" height="126" rx="3"/>
+      <rect x="1878" y="594" width="48" height="138" rx="3"/>
+      <rect x="2040" y="612" width="48" height="120" rx="3"/>
+      <rect x="2256" y="600" width="48" height="132" rx="3"/>
+    </g>
+    <!-- Top-k 阈值线 -->
+    <line x1="1490" y1="624" x2="2370" y2="624" stroke="#e0b060" stroke-opacity="0.75" stroke-width="2" stroke-dasharray="10 8"/>
+    <!-- 基线 -->
+    <line x1="1490" y1="732" x2="2370" y2="732" stroke="#1c3352" stroke-width="2"/>
+    <text x="1500" y="768" font-size="22" fill="#6e86a8">索引分数 I(t,s) · 64 头 × 128 维 · FP8</text>
+    <text x="2370" y="768" font-size="22" fill="#55708f" text-anchor="end">落选 · 直接丢弃</text>
+  </g>
+
+  <!-- 被选中条目 gather 汇入精确注意力 -->
+  <g fill="none" stroke="#4fc3f7" stroke-opacity="0.6" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M 1578 780 C 1578 830, 1660 850, 1745 866"/>
+    <path d="M 1740 780 L 1800 862"/>
+    <path d="M 1902 780 L 1918 860"/>
+    <path d="M 2064 780 L 2012 862"/>
+    <path d="M 2280 780 C 2280 830, 2200 850, 2115 866"/>
+  </g>
+
+  <!-- 精确注意力盒 -->
+  <circle cx="1930" cy="926" r="120" fill="url(#glowCyan)"/>
+  <rect x="1730" y="866" width="400" height="120" rx="14" fill="#0e2a4a" stroke="#7fdbff" stroke-width="3"/>
+  <text x="1930" y="918" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">精确注意力</text>
+  <text x="1930" y="958" font-size="24" fill="#7fa8cc" text-anchor="middle">MLA · MQA 模式 · KV 跨头共享</text>
+
+  <!-- 输出 -->
+  <path d="M 1930 986 V 1036" stroke="#4fc3f7" stroke-opacity="0.7" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <rect x="1760" y="1046" width="340" height="60" rx="30" fill="none" stroke="#4fc3f7" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="1930" y="1084" font-size="25" fill="#bfe9ff" text-anchor="middle">输出 u_t · softmax 归一化不变</text>
+
+  <!-- 主流程流动光点 -->
+  <circle r="6" fill="#9be8ff">
+    <animateMotion dur="3.5s" repeatCount="indefinite" path="M 1930 552 L 1930 866"/>
+  </circle>
+
+  <!-- 面板底注（含阈值说明） -->
+  <text x="1930" y="1160" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">金色虚线为 Top-k 阈值（k = 2048 与上下文长度无关）——被筛中者仍走标准注意力</text>
+
+  <!-- ================= 底部信息条（边距 80 内） ================= -->
+  <line x1="80" y1="1330" x2="2480" y2="1330" stroke="#16283f" stroke-width="1.5" opacity="0.9"/>
+  <text x="80" y="1385" font-size="27" fill="#55708f" letter-spacing="2">跑分整体持平 · API 价格下调 50%+</text>
+  <text x="2480" y="1385" font-size="27" fill="#55708f" text-anchor="end" letter-spacing="2">主 KV 格式不变 · 二次项被降权而非消失</text>
+
+  <!-- 右上角文献标注 -->
+  <text x="2480" y="168" font-size="23" fill="#7c93ad" text-anchor="end" letter-spacing="3">DEEPSEEK · V3.2-EXP · SEP 2025</text>
+</svg>

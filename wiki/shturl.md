@@ -82,6 +82,7 @@
 | 2026-10-28 00:00:00 | Governance | [[raw/papers/权重量化.md]] | 0 | 0 | 整理 raw/papers 权重量化原始草稿：去除重复章节、压缩标题与摘要、修正引用编号与图表题注位置，备份已复用 temp/backup/权重量化.md |
 | 2026-10-28 00:30:00 | Governance | [[raw/papers/权重量化.md]] | 0 | 0 | 对权重量化.md执行三项整理校验：错别字/用词优化（塞进→装入、会崩→会失效、纠结→反复斟酌等）、空格/标点/大小写修正（中英文插空、图1→图 1等）、Markdown间隔检查；补充 ## 总结 章节；同步三项校验标准至 SCHEMA.md、AGENTS.md、paper-doc-md-v2_prompt.md、paper-doc-md-v2.md、论文格式写作Prompt.md |
 | 2026-10-29 10:30:00 | Ingest | [[raw/papers/推理时扩展.md]] | 12 | 0 | 编译《推理时扩展》为 12 页：concepts 11（推理时扩展/测试时缩放律/过程奖励模型/Tree of Thoughts/可验证强化学习/过思考/Self-Consistency/Best-of-N/Self-Refine/Reflexion/MCTS 加过程奖励模型）、entities 1（DeepSeek-R1）；index 与 shturl 同步 |
+| 2026-11-01 11:00:00 | Ingest | [[raw/papers/DSA稀疏注意力.md]] | 12 | 0 | 编译《DSA 稀疏注意力》为 12 页：concepts 8（DSA 稀疏注意力/闪电索引器/Top-k 选择/索引热身/无分支设计/动态 Top-k 内核/MLA 耦合/稀疏注意力适用边界）、entities 2（DeepSeek-V3.2-Exp/DeepSeek-V3.2）、comparisons 1（DSA 稀疏注意力方案对比）、summaries 1（DSA 稀疏注意力·素材摘要）；2 图 5 表 17 参考文献；index 与 shturl 同步 |
 
 ---
 
