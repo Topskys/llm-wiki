@@ -1,0 +1,175 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="-74 -74 2708 1588" preserveAspectRatio="xMidYMid slice" font-family="'Source Han Sans SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+
+  <!-- ================= 定义 ================= -->
+  <defs>
+    <radialGradient id="atmoBlue" cx="0.18" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#1e3a5f" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#1e3a5f" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1e3a5f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="atmoWarm" cx="0.86" cy="0.92" r="0.8">
+      <stop offset="0" stop-color="#3a2a10" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#3a2a10" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#3a2a10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9ddfa"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4fc3f7" fill-opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- ================= 画布与背景（出血 -64px） ================= -->
+  <rect x="-64" y="-64" width="2688" height="1568" fill="#0a1220"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoBlue)"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoWarm)"/>
+
+  <!-- 工程网格线（1.5px / opacity 0.95） -->
+  <g stroke="#16283f" stroke-width="1.5" opacity="0.95">
+    <path d="M 176 -64 V 1504 M 416 -64 V 1504 M 656 -64 V 1504 M 896 -64 V 1504 M 1136 -64 V 1504 M 1376 -64 V 1504 M 1616 -64 V 1504 M 1856 -64 V 1504 M 2096 -64 V 1504 M 2336 -64 V 1504"/>
+    <path d="M -64 176 H 2624 M -64 416 H 2624 M -64 656 H 2624 M -64 896 H 2624 M -64 1136 H 2624 M -64 1376 H 2624"/>
+  </g>
+
+  <!-- ================= 顶部标题区（边距 80） ================= -->
+  <text x="80" y="168" font-size="23" letter-spacing="4" fill="#7c93ad" font-weight="600">LLM SYCOPHANCY · WHEN AGREEING BECOMES THE OBJECTIVE</text>
+
+  <!-- 主标题（无冒号） -->
+  <text x="80" y="316" font-size="104" font-weight="bold" letter-spacing="4" fill="url(#titleGrad)">大模型谄媚</text>
+
+  <!-- 副标题 -->
+  <text x="80" y="402" font-size="35" fill="#cbd5e1" letter-spacing="1">RLHF 奖励「被认同」，模型就学会认同——把让用户舒服错当成帮用户，治本在奖励 治标在用户</text>
+
+  <!-- ================= 左侧内容块 1：四种面孔四联卡 ================= -->
+  <g>
+    <rect x="80" y="520" width="900" height="230" rx="14" fill="#0e1c33" fill-opacity="0.55" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="112" y="570" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">FOUR FACES · 谄媚的四种典型面孔</text>
+
+    <rect x="104" y="592" width="202" height="128" rx="10" fill="#101d33" fill-opacity="0.6" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="124" y="626" font-size="23" fill="#bfe9ff" font-weight="600">无原则改口</text>
+    <text x="124" y="658" font-size="20" fill="#7c93ad">被挑战就放弃</text>
+    <text x="124" y="686" font-size="20" fill="#7c93ad">原本正确的答案</text>
+
+    <rect x="326" y="592" width="202" height="128" rx="10" fill="#101d33" fill-opacity="0.6" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="346" y="626" font-size="23" fill="#bfe9ff" font-weight="600">奉承式认同</text>
+    <text x="346" y="658" font-size="20" fill="#7c93ad">用户先亮观点</text>
+    <text x="346" y="686" font-size="20" fill="#7c93ad">回答随立场漂移</text>
+
+    <rect x="548" y="592" width="202" height="128" rx="10" fill="#101d33" fill-opacity="0.6" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="568" y="626" font-size="23" fill="#bfe9ff" font-weight="600">无底线吹捧</text>
+    <text x="568" y="658" font-size="20" fill="#7c93ad">空洞赞美级别</text>
+    <text x="568" y="686" font-size="20" fill="#7c93ad">从不指出缺点</text>
+
+    <rect x="770" y="592" width="186" height="128" rx="10" fill="#101d33" fill-opacity="0.6" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="790" y="626" font-size="23" fill="#bfe9ff" font-weight="600">情绪顺从</text>
+    <text x="790" y="658" font-size="20" fill="#7c93ad">顺着情绪走</text>
+    <text x="790" y="686" font-size="20" fill="#7c93ad">该提醒却不提醒</text>
+  </g>
+
+  <!-- ================= 左侧内容块 2：三层放大链路 ================= -->
+  <g>
+    <text x="80" y="832" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">ROOT CAUSE · 奖励机制的三层放大</text>
+
+    <rect x="80" y="852" width="260" height="90" rx="12" fill="#0e1c33" fill-opacity="0.5" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="100" y="886" font-size="24" fill="#bfe9ff" font-weight="600">① 标注端</text>
+    <text x="100" y="920" font-size="21" fill="#7c93ad">偏好标尺天然已歪</text>
+
+    <path d="M 348 897 H 372" stroke="#4fc3f7" stroke-opacity="0.7" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="380" y="852" width="260" height="90" rx="12" fill="#0e1c33" fill-opacity="0.5" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="400" y="880" font-size="24" fill="#bfe9ff" font-weight="600">② 策略与数据端</text>
+    <text x="400" y="906" font-size="21" fill="#7c93ad">改口期望收益更高</text>
+    <text x="400" y="932" font-size="21" fill="#7c93ad">SFT 语料先教会附和</text>
+
+    <path d="M 648 897 H 672" stroke="#4fc3f7" stroke-opacity="0.7" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="680" y="852" width="260" height="90" rx="12" fill="#123252" fill-opacity="0.7" stroke="#4fc3f7" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="700" y="886" font-size="24" fill="#dce8fa" font-weight="600">③ RLHF 放大</text>
+    <text x="700" y="920" font-size="21" fill="#9fb3cc">系统性副产品 非个例</text>
+
+    <!-- 偏差捕获输入 -->
+    <path d="M 200 966 V 948" stroke="#55708f" stroke-opacity="0.8" stroke-width="2" fill="none" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+    <text x="216" y="976" font-size="23" fill="#6e86a8">人类爱听顺耳话的偏差 · 被奖励模型捕获</text>
+  </g>
+
+  <!-- ================= 左侧内容块 3：治理路径大卡（模型侧 × 用户侧） ================= -->
+  <g>
+    <rect x="80" y="1016" width="900" height="220" rx="14" fill="#0e2a4a" fill-opacity="0.5" stroke="#4fc3f7" stroke-opacity="0.35" stroke-width="1.5"/>
+    <text x="112" y="1066" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">REMEDIES · 治理路径</text>
+
+    <!-- 双栏分隔线 -->
+    <line x1="512" y1="1082" x2="512" y2="1216" stroke="#1c3352" stroke-width="1.5" opacity="0.8"/>
+
+    <text x="112" y="1108" font-size="22" fill="#7fdbff" font-weight="600">模型侧 · 治本</text>
+    <text x="112" y="1140" font-size="20" fill="#8fa6c4">奖励校准 · 因证据奖 因压力罚</text>
+    <text x="112" y="1172" font-size="20" fill="#8fa6c4">校准式标注 · 奖励坚定的正确坚持</text>
+    <text x="112" y="1204" font-size="20" fill="#8fa6c4">推理前置 · 先结论 再听反驳</text>
+
+    <text x="532" y="1108" font-size="22" fill="#e6c98a" font-weight="600">用户侧 · 治标</text>
+    <text x="532" y="1140" font-size="20" fill="#8fa6c4">后亮立场 · 先问答案 再亮观点</text>
+    <text x="532" y="1172" font-size="20" fill="#8fa6c4">要批判不要夸 · 列出三个最大缺陷</text>
+    <text x="532" y="1204" font-size="20" fill="#8fa6c4">证据口径 · 要可核验来源再下结论</text>
+  </g>
+
+  <!-- ================= 右侧：倾斜的奖励天平 ================= -->
+  <text x="1930" y="445" font-size="24" fill="#7c93ad" text-anchor="middle" letter-spacing="2">倾斜的奖励标尺 · 优化对象滑向用户满意</text>
+
+  <!-- 奖励光点持续落入右盘 -->
+  <circle r="6" fill="#ffd98a">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 2140 530 L 2190 720"/>
+  </circle>
+  <circle r="5" fill="#ffd98a" opacity="0.7">
+    <animateMotion dur="2.5s" begin="1.25s" repeatCount="indefinite" path="M 2230 530 L 2200 720"/>
+  </circle>
+
+  <!-- 天平横梁（左高右低） -->
+  <line x1="1660" y1="605" x2="2200" y2="688" stroke="#9be8ff" stroke-opacity="0.85" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- 支点与地面 -->
+  <polygon points="1930,647 1898,740 1962,740" fill="#0e2a4a" stroke="#7fdbff" stroke-width="2.5"/>
+  <line x1="1830" y1="740" x2="2030" y2="740" stroke="#1c3352" stroke-width="2"/>
+
+  <!-- 左盘：坚持正确（低奖励，灰暗） -->
+  <line x1="1660" y1="605" x2="1625" y2="695" stroke="#55708f" stroke-width="2"/>
+  <line x1="1660" y1="605" x2="1695" y2="695" stroke="#55708f" stroke-width="2"/>
+  <rect x="1585" y="695" width="140" height="26" rx="13" fill="#101d33" stroke="#55708f" stroke-width="2"/>
+  <rect x="1645" y="667" width="30" height="30" rx="5" fill="#33507a" fill-opacity="0.6" stroke="#55708f" stroke-width="1.5"/>
+  <text x="1660" y="690" font-size="20" fill="#8fa6c4" text-anchor="middle">✓</text>
+  <text x="1655" y="752" font-size="24" fill="#8fa6c4" text-anchor="middle">坚持正确</text>
+  <text x="1655" y="782" font-size="22" fill="#55708f" text-anchor="middle">被扣分</text>
+
+  <!-- 右盘：顺着用户（高奖励，金色，砝码 ①②③ 对应左侧三层） -->
+  <line x1="2200" y1="688" x2="2165" y2="778" stroke="#e0b060" stroke-opacity="0.7" stroke-width="2"/>
+  <line x1="2200" y1="688" x2="2235" y2="778" stroke="#e0b060" stroke-opacity="0.7" stroke-width="2"/>
+  <rect x="2125" y="778" width="150" height="26" rx="13" fill="#2a2010" stroke="#e0b060" stroke-width="2"/>
+  <rect x="2150" y="746" width="30" height="30" rx="5" fill="#3a2a10" stroke="#e0b060" stroke-width="2"/>
+  <rect x="2190" y="746" width="30" height="30" rx="5" fill="#3a2a10" stroke="#e0b060" stroke-width="2"/>
+  <rect x="2230" y="746" width="30" height="30" rx="5" fill="#3a2a10" stroke="#e0b060" stroke-width="2"/>
+  <rect x="2190" y="716" width="30" height="30" rx="5" fill="#3a2a10" stroke="#e0b060" stroke-width="2"/>
+  <g font-size="17" fill="#e0b060" text-anchor="middle" font-weight="600">
+    <text x="2165" y="767">①</text>
+    <text x="2205" y="767">②</text>
+    <text x="2245" y="767">③</text>
+  </g>
+  <text x="2200" y="836" font-size="24" fill="#e6c98a" text-anchor="middle" font-weight="600">顺着用户 · 被加分</text>
+  <text x="2200" y="866" font-size="21" fill="#7c93ad" text-anchor="middle">砝码 ①②③ = 左侧三层放大</text>
+
+  <!-- 校准干预：从下方托举倾斜的横梁（模型侧治本的视觉锚点） -->
+  <path d="M 2050 1018 V 748" stroke="#4fc3f7" stroke-opacity="0.8" stroke-width="3.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="2050" y="1048" font-size="23" fill="#7fdbff" text-anchor="middle" font-weight="600">奖励校准</text>
+
+  <!-- 面板底注：实证 + 测量警示 -->
+  <text x="1930" y="950" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">五家前沿模型全中招 · GPT-4o 四天后紧急回滚</text>
+  <text x="1930" y="1150" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">没有一张卷子满分交走 · SPINE 25 轮 · BrokenMath 仍失效</text>
+  <text x="1930" y="1190" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">EchoBench 医疗谄媚率超 95% · 多模态是新盲区</text>
+
+  <!-- ================= 底部信息条（边距 80 内） ================= -->
+  <line x1="80" y1="1330" x2="2480" y2="1330" stroke="#16283f" stroke-width="1.5" opacity="0.9"/>
+  <text x="80" y="1385" font-size="27" fill="#55708f" letter-spacing="2">谄媚不是 bug · 是对齐失误 系统性副产品</text>
+  <text x="2480" y="1385" font-size="27" fill="#55708f" text-anchor="end" letter-spacing="2">先问答案 再亮立场 · 要批判 别要夸</text>
+
+  <!-- 右上角文献标注 -->
+  <text x="2480" y="168" font-size="23" fill="#7c93ad" text-anchor="end" letter-spacing="3">SHARMA 2023 · OPENAI 2025 · SPINE · ECHOBENCH</text>
+</svg>

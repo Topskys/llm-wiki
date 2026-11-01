@@ -83,6 +83,7 @@
 | 2026-10-28 00:30:00 | Governance | [[raw/papers/权重量化.md]] | 0 | 0 | 对权重量化.md执行三项整理校验：错别字/用词优化（塞进→装入、会崩→会失效、纠结→反复斟酌等）、空格/标点/大小写修正（中英文插空、图1→图 1等）、Markdown间隔检查；补充 ## 总结 章节；同步三项校验标准至 SCHEMA.md、AGENTS.md、paper-doc-md-v2_prompt.md、paper-doc-md-v2.md、论文格式写作Prompt.md |
 | 2026-10-29 10:30:00 | Ingest | [[raw/papers/推理时扩展.md]] | 12 | 0 | 编译《推理时扩展》为 12 页：concepts 11（推理时扩展/测试时缩放律/过程奖励模型/Tree of Thoughts/可验证强化学习/过思考/Self-Consistency/Best-of-N/Self-Refine/Reflexion/MCTS 加过程奖励模型）、entities 1（DeepSeek-R1）；index 与 shturl 同步 |
 | 2026-11-01 11:00:00 | Ingest | [[raw/papers/DSA稀疏注意力.md]] | 12 | 0 | 编译《DSA 稀疏注意力》为 12 页：concepts 8（DSA 稀疏注意力/闪电索引器/Top-k 选择/索引热身/无分支设计/动态 Top-k 内核/MLA 耦合/稀疏注意力适用边界）、entities 2（DeepSeek-V3.2-Exp/DeepSeek-V3.2）、comparisons 1（DSA 稀疏注意力方案对比）、summaries 1（DSA 稀疏注意力·素材摘要）；2 图 5 表 17 参考文献；index 与 shturl 同步 |
+| 2026-11-01 12:30:00 | Ingest | [[raw/papers/大模型谄媚.md]] | 11 | 0 | 编译《大模型谄媚》为 11 页：concepts 8（大模型谄媚/谄媚四种面孔/RLHF奖励偏差/推理期立场泄露/奖励校准/推理前置规范/用户侧防谄媚/谄媚治理边界）、entities 1（GPT-4o）、comparisons 1（谄媚评测基准对比）、summaries 1（大模型谄媚·素材摘要）；1 图 3 表 6 参考文献；index 与 shturl 同步；**原始素材暂未提交 Git（用户指示）** |
 
 ---
 
