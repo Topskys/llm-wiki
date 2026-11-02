@@ -1,0 +1,129 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="-74 -74 2708 1588" preserveAspectRatio="xMidYMid slice" font-family="'Source Han Sans SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+
+  <!-- ================= 定义 ================= -->
+  <defs>
+    <radialGradient id="atmoBlue" cx="0.18" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#1e3a5f" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#1e3a5f" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1e3a5f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="atmoWarm" cx="0.86" cy="0.92" r="0.8">
+      <stop offset="0" stop-color="#3a2a10" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#3a2a10" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#3a2a10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9ddfa"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4fc3f7" fill-opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- ================= 画布与背景（出血 -64px） ================= -->
+  <rect x="-64" y="-64" width="2688" height="1568" fill="#0a1220"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoBlue)"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoWarm)"/>
+
+  <!-- 工程网格线（1.5px / opacity 0.95） -->
+  <g stroke="#16283f" stroke-width="1.5" opacity="0.95">
+    <path d="M 176 -64 V 1504 M 416 -64 V 1504 M 656 -64 V 1504 M 896 -64 V 1504 M 1136 -64 V 1504 M 1376 -64 V 1504 M 1616 -64 V 1504 M 1856 -64 V 1504 M 2096 -64 V 1504 M 2336 -64 V 1504"/>
+    <path d="M -64 176 H 2624 M -64 416 H 2624 M -64 656 H 2624 M -64 896 H 2624 M -64 1136 H 2624 M -64 1376 H 2624"/>
+  </g>
+
+  <!-- ================= 顶部标题区（边距 80） ================= -->
+  <text x="80" y="168" font-size="23" letter-spacing="4" fill="#7c93ad" font-weight="600">AGENT SIMULATION · SANDBOX SOCIETY AND EMERGENCE</text>
+
+  <!-- 主标题（无冒号） -->
+  <text x="80" y="316" font-size="104" font-weight="bold" letter-spacing="4" fill="url(#titleGrad)">大规模智能体仿真</text>
+
+  <!-- 副标题：本质句 -->
+  <text x="80" y="402" font-size="35" fill="#cbd5e1" letter-spacing="1">LLM 智能体当数字居民 沙盒当社会容器 涌现当实验输出——本质是平均人的回声 当实验场 别当真理机器</text>
+
+  <!-- ================= 左侧：纵向三代时间轴 ================= -->
+  <text x="80" y="550" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">TIMELINE · 两年走完三代 范式从写规则到生成决策</text>
+
+  <!-- 时间轴主线 + 底端向下箭头 -->
+  <line x1="150" y1="590" x2="150" y2="1072" stroke="#1c3352" stroke-width="2.5"/>
+  <path d="M 150 1072 V 1092" stroke="#1c3352" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- 节点 1 · 2023 -->
+  <circle cx="150" cy="620" r="11" fill="#123252" stroke="#4fc3f7" stroke-width="2.5"/>
+  <text x="196" y="612" font-size="25" fill="#bfe9ff" font-weight="600">2023 · 25 人 · GENERATIVE AGENTS</text>
+  <text x="196" y="646" font-size="21" fill="#7c93ad">Smallville 小镇自主生活 · 无任何脚本编排</text>
+  <text x="196" y="676" font-size="21" fill="#7c93ad">自传播信息 自组派对 · 首次验证涌现行为</text>
+
+  <!-- 节点 2 · 2024 -->
+  <circle cx="150" cy="812" r="11" fill="#123252" stroke="#4fc3f7" stroke-width="2.5"/>
+  <text x="196" y="804" font-size="25" fill="#bfe9ff" font-weight="600">2024 · 1000 个真人分身 · 个体复刻</text>
+  <text x="196" y="838" font-size="21" fill="#7c93ad">2 小时访谈语料构建数字分身</text>
+  <text x="196" y="868" font-size="21" fill="#7c93ad">问卷精度接近本人两周后的自我重测</text>
+
+  <!-- 节点 3 · 2025（高亮） -->
+  <circle cx="150" cy="1004" r="13" fill="#4fc3f7" fill-opacity="0.85" stroke="#7fdbff" stroke-width="2.5"/>
+  <text x="196" y="996" font-size="25" fill="#dce8fa" font-weight="600">2025 · 百万级 · OASIS × PROJECT SID</text>
+  <text x="196" y="1030" font-size="21" fill="#9fb3cc">OASIS 舆论社会 · Project Sid 长程文明涌现</text>
+  <text x="196" y="1060" font-size="21" fill="#9fb3cc">长出分工 交易 宗教 税收等治理构件</text>
+
+  <!-- 轴底注记：可行性来源 + 三层骨架 + 四类用途 -->
+  <text x="80" y="1130" font-size="22" fill="#6e86a8" letter-spacing="1">规则 ABS 两堵墙 · 行为僵硬 建模以月计 → LLM 三能力拆墙 · 自然语言环境 记忆规划反思 对话社交</text>
+  <text x="80" y="1166" font-size="22" fill="#6e86a8" letter-spacing="1">三层骨架 · 居民像人：画像 记忆 规划 反思 · 环境像社会：空间 网络 经济 · 引擎跑得动：并行 事件 熔断</text>
+  <text x="80" y="1210" font-size="23" fill="#7fa8cc" letter-spacing="1">反事实实验场 · 政策预演 传播研究 经济沙盘 个体代理</text>
+
+  <!-- ================= 右侧：沙盒观测箱（整体下移 25px） ================= -->
+  <text x="1930" y="470" font-size="24" fill="#7c93ad" text-anchor="middle" letter-spacing="2">沙盒社会 · 数字居民自主交互 涌现群体现象</text>
+
+  <!-- 沙盒容器（可配置环境） -->
+  <rect x="1600" y="495" width="660" height="480" rx="16" fill="#0d1828" fill-opacity="0.7" stroke="#1c3352" stroke-width="2" stroke-dasharray="14 10"/>
+  <text x="1624" y="533" font-size="22" fill="#55708f">可配置环境 · 小镇 / 社交媒体 / 经济体</text>
+
+  <!-- 观测接口（与容器标签拉开间距） -->
+  <line x1="1745" y1="585" x2="1745" y2="693" stroke="#4fc3f7" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="6 7"/>
+  <text x="1745" y="581" font-size="22" fill="#7fa8cc" text-anchor="middle">观测面板 · 记录涌现</text>
+
+  <!-- 干预接口 -->
+  <path d="M 2430 735 H 2272" stroke="#4fc3f7" stroke-opacity="0.7" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="2350" y="713" font-size="22" fill="#7fa8cc" text-anchor="middle">干预接口</text>
+
+  <!-- 分散居民（灰，原左上点已移位避让观测标签） -->
+  <g fill="#33507a" fill-opacity="0.6" stroke="#55708f" stroke-width="1.5">
+    <circle cx="1880" cy="625" r="11"/><circle cx="1950" cy="675" r="11"/>
+    <circle cx="2030" cy="615" r="11"/><circle cx="2100" cy="665" r="11"/>
+    <circle cx="2160" cy="595" r="11"/><circle cx="1900" cy="825" r="11"/>
+    <circle cx="1980" cy="855" r="11"/><circle cx="2070" cy="820" r="11"/>
+    <circle cx="2150" cy="865" r="11"/><circle cx="2210" cy="800" r="11"/>
+    <circle cx="1836" cy="640" r="11"/><circle cx="2230" cy="655" r="11"/>
+  </g>
+
+  <!-- 涌现聚团（青，自发派对） -->
+  <g stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="2">
+    <line x1="1700" y1="745" x2="1745" y2="710"/><line x1="1745" y1="710" x2="1765" y2="755"/>
+    <line x1="1765" y1="755" x2="1720" y2="785"/><line x1="1720" y1="785" x2="1700" y2="745"/>
+    <line x1="1745" y1="710" x2="1790" y2="730"/><line x1="1790" y1="730" x2="1765" y2="755"/>
+  </g>
+  <g fill="#123252" stroke="#4fc3f7" stroke-width="2.5">
+    <circle cx="1700" cy="745" r="12"/><circle cx="1745" cy="710" r="12"/>
+    <circle cx="1765" cy="755" r="12"/><circle cx="1720" cy="785" r="12"/>
+    <circle cx="1790" cy="730" r="12"/>
+  </g>
+  <text x="1725" y="825" font-size="22" fill="#7fdbff" text-anchor="middle" font-weight="600">自发派对 · 未编排的涌现</text>
+
+  <!-- 引擎调度条 -->
+  <rect x="1624" y="893" width="612" height="40" rx="8" fill="none" stroke="#1c3352" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <text x="1648" y="919" font-size="20" fill="#55708f">引擎 · 并行调度 · 事件驱动</text>
+
+  <!-- 面板底注：规模跨越 + 陷阱补位（删重复警示语） -->
+  <text x="1930" y="1010" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">25 人小镇 → 千人分身 → 百万舆论社会 · 规模涨了四万倍 可信度不会自动跟上</text>
+  <text x="1930" y="1155" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">继承互联网先验 弱势群体与亚文化代表性差 · 千级长跑 token 开销可观 需观测熔断</text>
+  <text x="1930" y="1195" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">个体问卷答得准 不代表百万级舆论也准 · 政策结论标注为推导</text>
+
+  <!-- ================= 底部信息条（边距 80 内） ================= -->
+  <line x1="80" y1="1330" x2="2480" y2="1330" stroke="#16283f" stroke-width="1.5" opacity="0.9"/>
+  <text x="80" y="1385" font-size="27" fill="#55708f" letter-spacing="2">从 25 人小镇派对到百万级舆论社会 只用了两年</text>
+  <text x="2480" y="1385" font-size="27" fill="#55708f" text-anchor="end" letter-spacing="2">规模大不等于结论可信 · 涌现可能是同源回声</text>
+
+  <!-- 右上角文献标注 -->
+  <text x="2480" y="168" font-size="23" fill="#7c93ad" text-anchor="end" letter-spacing="3">GENERATIVE AGENTS 2023 · OASIS · AGENTSOCIETY · PROJECT SID</text>
+</svg>
