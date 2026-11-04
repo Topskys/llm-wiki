@@ -1,0 +1,197 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="-74 -74 2708 1588" preserveAspectRatio="xMidYMid slice" font-family="'Source Han Sans SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+
+  <!-- ================= 定义 ================= -->
+  <defs>
+    <radialGradient id="atmoBlue" cx="0.18" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#1e3a5f" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#1e3a5f" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1e3a5f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="atmoWarm" cx="0.86" cy="0.92" r="0.8">
+      <stop offset="0" stop-color="#3a2a10" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#3a2a10" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#3a2a10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9ddfa"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4fc3f7" fill-opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- ================= 画布与背景（出血 -64px） ================= -->
+  <rect x="-64" y="-64" width="2688" height="1568" fill="#0a1220"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoBlue)"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoWarm)"/>
+
+  <!-- 工程网格线（1.5px / opacity 0.95） -->
+  <g stroke="#16283f" stroke-width="1.5" opacity="0.95">
+    <path d="M 176 -64 V 1504 M 416 -64 V 1504 M 656 -64 V 1504 M 896 -64 V 1504 M 1136 -64 V 1504 M 1376 -64 V 1504 M 1616 -64 V 1504 M 1856 -64 V 1504 M 2096 -64 V 1504 M 2336 -64 V 1504"/>
+    <path d="M -64 176 H 2624 M -64 416 H 2624 M -64 656 H 2624 M -64 896 H 2624 M -64 1136 H 2624 M -64 1376 H 2624"/>
+  </g>
+
+  <!-- ================= 顶部标题区（边距 80） ================= -->
+  <text x="80" y="168" font-size="23" letter-spacing="4" fill="#7c93ad" font-weight="600">WEIGHT QUANTIZATION · FROM FP16 TO INT4</text>
+
+  <!-- 主标题（无冒号） -->
+  <text x="80" y="316" font-size="104" font-weight="bold" letter-spacing="4" fill="url(#titleGrad)">权重量化</text>
+
+  <!-- 副标题 -->
+  <text x="80" y="402" font-size="35" fill="#cbd5e1" letter-spacing="1">把权重从 2 字节压到 0.5 字节——70B 装进单卡、解码吞吐数倍提升，激活离群值是绕不开的核心矛盾</text>
+
+  <!-- 三关键词徽标（描边统一） -->
+  <g font-size="26" fill="#8fa6c4">
+    <rect x="80" y="470" width="220" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="190" y="506" text-anchor="middle">GPTQ · AWQ</text>
+    <rect x="320" y="470" width="160" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="400" y="506" text-anchor="middle">NF4</text>
+    <rect x="500" y="470" width="220" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="610" y="506" text-anchor="middle">K-quants 超块</text>
+  </g>
+
+  <!-- ================= 左侧内容块 1：显存账本双条卡 ================= -->
+  <g>
+    <rect x="80" y="580" width="900" height="230" rx="14" fill="#0e1c33" fill-opacity="0.55" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="112" y="630" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">MEMORY · 70B 模型的显存账本</text>
+
+    <!-- FP16 条 -->
+    <text x="112" y="693" font-size="26" fill="#dce8fa" font-weight="600">FP16</text>
+    <rect x="230" y="672" width="708" height="28" rx="6" fill="#33507a" fill-opacity="0.55"/>
+    <text x="926" y="693" font-size="24" fill="#e6eef8" text-anchor="end" font-weight="600">140 GB</text>
+    <line x1="635" y1="658" x2="635" y2="708" stroke="#e0b060" stroke-opacity="0.8" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <text x="635" y="650" font-size="21" fill="#e0b060" text-anchor="middle">H100 80GB 上限</text>
+
+    <!-- INT4 条 -->
+    <text x="112" y="745" font-size="26" fill="#7fdbff" font-weight="600">INT4</text>
+    <rect x="230" y="724" width="177" height="28" rx="6" fill="#4fc3f7" fill-opacity="0.75"/>
+    <text x="423" y="745" font-size="24" fill="#7fdbff" font-weight="600">35 GB</text>
+
+    <text x="112" y="792" font-size="23" fill="#7c93ad" letter-spacing="1">从装不下单卡到轻松装入 · 压缩比即解码阶段的带宽收益</text>
+  </g>
+
+  <!-- ================= 左侧内容块 2：六算法芯片墙 ================= -->
+  <g>
+    <text x="80" y="892" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">ALGORITHMS · 六条技术路线</text>
+
+    <rect x="80" y="912" width="284" height="74" rx="12" fill="#123252" fill-opacity="0.7" stroke="#4fc3f7" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="104" y="942" font-size="25" fill="#bfe9ff" font-weight="600">GPTQ</text>
+    <text x="104" y="972" font-size="21" fill="#7c93ad">Hessian 误差补偿</text>
+
+    <rect x="388" y="912" width="284" height="74" rx="12" fill="#0e1c33" fill-opacity="0.5" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="412" y="942" font-size="25" fill="#bfe9ff" font-weight="600">AWQ</text>
+    <text x="412" y="972" font-size="21" fill="#7c93ad">激活感知缩放</text>
+
+    <rect x="696" y="912" width="284" height="74" rx="12" fill="#0e1c33" fill-opacity="0.5" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="720" y="942" font-size="25" fill="#bfe9ff" font-weight="600">SmoothQuant</text>
+    <text x="720" y="972" font-size="21" fill="#7c93ad">等价变换迁离群</text>
+
+    <rect x="80" y="1002" width="284" height="74" rx="12" fill="#0e1c33" fill-opacity="0.5" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="104" y="1032" font-size="25" fill="#bfe9ff" font-weight="600">NF4</text>
+    <text x="104" y="1062" font-size="21" fill="#7c93ad">正态分位码本</text>
+
+    <rect x="388" y="1002" width="284" height="74" rx="12" fill="#0e1c33" fill-opacity="0.5" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="412" y="1032" font-size="25" fill="#bfe9ff" font-weight="600">QuIP# · AQLM</text>
+    <text x="412" y="1062" font-size="21" fill="#7c93ad">非相干加格点码本</text>
+
+    <rect x="696" y="1002" width="284" height="74" rx="12" fill="#0e1c33" fill-opacity="0.5" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="720" y="1032" font-size="25" fill="#bfe9ff" font-weight="600">K-quants</text>
+    <text x="720" y="1062" font-size="21" fill="#7c93ad">超块双重量化</text>
+
+    <text x="80" y="1108" font-size="24" fill="#6e86a8" letter-spacing="1">INT4 首选 GPTQ 或 AWQ · 2-bit SOTA 靠 QuIP# 与 AQLM</text>
+  </g>
+
+  <!-- ================= 左侧内容块 3：加速误区警示卡 ================= -->
+  <g>
+    <rect x="80" y="1130" width="900" height="120" rx="14" fill="#0e1c33" fill-opacity="0.45" stroke="#1c3352" stroke-width="1.5"/>
+    <rect x="80" y="1130" width="5" height="120" fill="#e0b060"/>
+    <text x="118" y="1177" font-size="27" fill="#e0b060" font-weight="600">量化不等于等比例加速</text>
+    <text x="118" y="1223" font-size="25" fill="#8fa6c4" letter-spacing="1">W4A16 反量化后仍走 FP16 矩阵乘 收益主要来自带宽节省</text>
+  </g>
+
+  <!-- ================= 右侧：FP16 → 平滑变换 → INT4 压缩流水线 ================= -->
+  <text x="1930" y="505" font-size="24" fill="#7c93ad" text-anchor="middle" letter-spacing="2">70B 权重 · FP16 到 INT4</text>
+
+  <!-- FP16 权重矩阵（5×6，金色列为离群通道） -->
+  <text x="1636" y="546" font-size="23" fill="#8fa6c4" text-anchor="middle">FP16 · 约 140 GB</text>
+  <g fill="#101d33" stroke="#1c3352" stroke-width="1.5">
+    <rect x="1500" y="560" width="48" height="48" rx="6"/><rect x="1556" y="560" width="48" height="48" rx="6"/>
+    <rect x="1668" y="560" width="48" height="48" rx="6"/><rect x="1724" y="560" width="48" height="48" rx="6"/>
+    <rect x="1500" y="616" width="48" height="48" rx="6"/><rect x="1556" y="616" width="48" height="48" rx="6"/>
+    <rect x="1668" y="616" width="48" height="48" rx="6"/><rect x="1724" y="616" width="48" height="48" rx="6"/>
+    <rect x="1500" y="672" width="48" height="48" rx="6"/><rect x="1556" y="672" width="48" height="48" rx="6"/>
+    <rect x="1668" y="672" width="48" height="48" rx="6"/><rect x="1724" y="672" width="48" height="48" rx="6"/>
+    <rect x="1500" y="728" width="48" height="48" rx="6"/><rect x="1556" y="728" width="48" height="48" rx="6"/>
+    <rect x="1668" y="728" width="48" height="48" rx="6"/><rect x="1724" y="728" width="48" height="48" rx="6"/>
+    <rect x="1500" y="784" width="48" height="48" rx="6"/><rect x="1556" y="784" width="48" height="48" rx="6"/>
+    <rect x="1668" y="784" width="48" height="48" rx="6"/><rect x="1724" y="784" width="48" height="48" rx="6"/>
+    <rect x="1500" y="840" width="48" height="48" rx="6"/><rect x="1556" y="840" width="48" height="48" rx="6"/>
+    <rect x="1668" y="840" width="48" height="48" rx="6"/><rect x="1724" y="840" width="48" height="48" rx="6"/>
+  </g>
+  <!-- 离群通道列（金色） -->
+  <g fill="#3a2a10" stroke="#e0b060" stroke-width="2">
+    <rect x="1612" y="560" width="48" height="48" rx="6"/><rect x="1612" y="616" width="48" height="48" rx="6"/>
+    <rect x="1612" y="672" width="48" height="48" rx="6"/><rect x="1612" y="728" width="48" height="48" rx="6"/>
+    <rect x="1612" y="784" width="48" height="48" rx="6"/><rect x="1612" y="840" width="48" height="48" rx="6"/>
+  </g>
+  <text x="1636" y="928" font-size="22" fill="#e0b060" text-anchor="middle">离群通道</text>
+
+  <!-- 主流程箭头 -->
+  <path d="M 1780 724 H 1842" stroke="#4fc3f7" stroke-opacity="0.7" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- 平滑变换六边形 -->
+  <polygon points="1845,724 1888,664 1972,664 2015,724 1972,784 1888,784" fill="#0e2a4a" stroke="#7fdbff" stroke-width="3"/>
+  <text x="1930" y="716" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">平滑变换</text>
+  <text x="1930" y="752" font-size="20" fill="#7fa8cc" text-anchor="middle">迁移离群难度</text>
+
+  <path d="M 2018 724 H 2088" stroke="#4fc3f7" stroke-opacity="0.7" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- INT4 矩阵（更小的格） -->
+  <text x="2202" y="580" font-size="23" fill="#8fa6c4" text-anchor="middle">INT4 · 约 35 GB</text>
+  <g fill="#123252" stroke="#4fc3f7" stroke-width="2" fill-opacity="0.55">
+    <rect x="2100" y="601" width="36" height="36" rx="5"/><rect x="2142" y="601" width="36" height="36" rx="5"/>
+    <rect x="2184" y="601" width="36" height="36" rx="5"/><rect x="2226" y="601" width="36" height="36" rx="5"/>
+    <rect x="2268" y="601" width="36" height="36" rx="5"/>
+    <rect x="2100" y="685" width="36" height="36" rx="5"/><rect x="2142" y="685" width="36" height="36" rx="5"/>
+    <rect x="2184" y="685" width="36" height="36" rx="5"/><rect x="2226" y="685" width="36" height="36" rx="5"/>
+    <rect x="2268" y="685" width="36" height="36" rx="5"/>
+    <rect x="2100" y="769" width="36" height="36" rx="5"/><rect x="2142" y="769" width="36" height="36" rx="5"/>
+    <rect x="2184" y="769" width="36" height="36" rx="5"/><rect x="2226" y="769" width="36" height="36" rx="5"/>
+    <rect x="2268" y="769" width="36" height="36" rx="5"/>
+  </g>
+  <g fill="#123252" stroke="#4fc3f7" stroke-width="2" fill-opacity="0.9">
+    <rect x="2100" y="643" width="36" height="36" rx="5"/><rect x="2142" y="643" width="36" height="36" rx="5"/>
+    <rect x="2184" y="643" width="36" height="36" rx="5"/><rect x="2226" y="643" width="36" height="36" rx="5"/>
+    <rect x="2268" y="643" width="36" height="36" rx="5"/>
+    <rect x="2100" y="727" width="36" height="36" rx="5"/><rect x="2142" y="727" width="36" height="36" rx="5"/>
+    <rect x="2184" y="727" width="36" height="36" rx="5"/><rect x="2226" y="727" width="36" height="36" rx="5"/>
+    <rect x="2268" y="727" width="36" height="36" rx="5"/>
+    <rect x="2100" y="811" width="36" height="36" rx="5"/><rect x="2142" y="811" width="36" height="36" rx="5"/>
+    <rect x="2184" y="811" width="36" height="36" rx="5"/><rect x="2226" y="811" width="36" height="36" rx="5"/>
+    <rect x="2268" y="811" width="36" height="36" rx="5"/>
+  </g>
+  <text x="2202" y="884" font-size="22" fill="#6e86a8" text-anchor="middle">4-bit 网格</text>
+  <text x="2400" y="736" font-size="28" font-weight="700" fill="#7fdbff" text-anchor="end">4× 压缩</text>
+
+  <!-- 流动光点 -->
+  <circle r="6" fill="#9be8ff">
+    <animateMotion dur="3.5s" repeatCount="indefinite" path="M 1560 724 L 1780 724 L 1930 724 L 2090 724 L 2290 724"/>
+  </circle>
+  <circle r="6" fill="#9be8ff" opacity="0.7">
+    <animateMotion dur="3.5s" begin="1.75s" repeatCount="indefinite" path="M 1560 724 L 1780 724 L 1930 724 L 2090 724 L 2290 724"/>
+  </circle>
+
+  <!-- 面板底注 -->
+  <text x="1930" y="990" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">平滑变换把量化难度从激活迁到权重 · 两侧都落入易量化范围</text>
+  <text x="1930" y="1160" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">KV Cache 长上下文会反超权重 · 需与权重量化协同设计</text>
+
+  <!-- ================= 底部信息条（边距 80 内） ================= -->
+  <line x1="80" y1="1330" x2="2480" y2="1330" stroke="#16283f" stroke-width="1.5" opacity="0.9"/>
+  <text x="80" y="1385" font-size="27" fill="#55708f" letter-spacing="2">离群值是核心矛盾 · 校准集须匹配真实分布</text>
+  <text x="2480" y="1385" font-size="27" fill="#55708f" text-anchor="end" letter-spacing="2">Q4_K_M 实际约 4.85 bit · 显存按实测文件大小算</text>
+
+  <!-- 右上角文献标注 -->
+  <text x="2480" y="168" font-size="23" fill="#7c93ad" text-anchor="end" letter-spacing="3">GPTQ · AWQ · SMOOTHQUANT · GGUF K-QUANTS</text>
+</svg>
