@@ -86,6 +86,7 @@
 | 2026-11-01 12:30:00 | Ingest | [[raw/papers/大模型谄媚.md]] | 11 | 0 | 编译《大模型谄媚》为 11 页：concepts 8（大模型谄媚/谄媚四种面孔/RLHF奖励偏差/推理期立场泄露/奖励校准/推理前置规范/用户侧防谄媚/谄媚治理边界）、entities 1（GPT-4o）、comparisons 1（谄媚评测基准对比）、summaries 1（大模型谄媚·素材摘要）；1 图 3 表 6 参考文献；index 与 shturl 同步；**原始素材暂未提交 Git（用户指示）** |
 | 2026-11-02 10:30:00 | Ingest | [[raw/papers/大规模智能体仿真.md]] | 11 | 0 | 编译《大规模智能体仿真》为 11 页：concepts 5（大规模智能体仿真/数字居民/数字分身/沙盒社会三层架构/仿真涌现边界）、entities 4（Generative Agents/AgentSociety/OASIS/Project Sid）、comparisons 1（传统ABS与LLM沙盒对比）、summaries 1（大规模智能体仿真·素材摘要）；1 图 3 表 5 参考文献；index 与 shturl 同步 |
 | 2026-11-02 12:30:00 | Ingest | [[raw/papers/权重量化.md]] | 14 | 0 | 编译《权重量化》为 14 页：concepts 10（权重量化/KV Cache 量化/GPTQ/AWQ/SmoothQuant/NF4 量化/K-quants/极限低比特量化/量化工具链与kernel/量化选型与避坑）、entities 1（llama.cpp）、comparisons 2（PTQ与QAT对比/主流量化算法对比）、summaries 1（权重量化·素材摘要）；4 图 4 表 12 参考文献；index 与 shturl 同步；相关文件加入暂存区（用户指示，暂不提交） |
+| 2026-11-04 10:30:00 | Ingest | [[raw/papers/自适应推理.md]] | 12 | 1 | 编译《自适应推理》为 12 页并联动更新 1 页：新增 concepts 9（自适应推理/早退/层跳过/动态路由/Token选择/推理长度自适应/难度信号/自适应评测要点/自适应失效模式）、comparisons 2（训练派与免训练派对比/早退与层跳过对比）、summaries 1（自适应推理·素材摘要）；联动更新 concepts 1（投机解码——追加「谱系延伸：自投机线」LayerSkip/SpecEE/DEL 小节与 [[自适应推理]] 互链，updated_at 刷新，created_at 不变）；2 图 0 表 12 参考文献（含 SpecEE ISCA'25 与 DEL COLM 2025 会议引证）；index 与 shturl 同步 |
 ---
 
 > 操作类型说明：

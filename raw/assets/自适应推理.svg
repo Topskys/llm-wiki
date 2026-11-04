@@ -1,0 +1,98 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440" font-family="'Source Han Sans SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <radialGradient id="atmoAI" cx="0.85" cy="0.12" r="0.78">
+      <stop offset="0" stop-color="#0d3a66" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#0d3a66" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#0d3a66" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="atmoAI2" cx="0.1" cy="0.92" r="0.75">
+      <stop offset="0" stop-color="#123a7a" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#123a7a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGradAI" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#bcdcf8"/>
+    </linearGradient>
+    <marker id="arrAI" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" fill-opacity="0.85"/>
+    </marker>
+  </defs>
+
+  <!-- 蓝色偏底 -->
+  <rect x="0" y="0" width="2560" height="1440" fill="#081426"/>
+  <rect x="0" y="0" width="2560" height="1440" fill="url(#atmoAI)"/>
+  <rect x="0" y="0" width="2560" height="1440" fill="url(#atmoAI2)"/>
+  <g stroke="#122a45" stroke-width="1.5" opacity="0.95">
+    <path d="M 200 0 V 1440 M 530 0 V 1440 M 860 0 V 1440 M 1190 0 V 1440 M 1520 0 V 1440 M 1850 0 V 1440 M 2180 0 V 1440 M 2510 0 V 1440"/>
+    <path d="M 0 190 H 2560 M 0 510 H 2560 M 0 830 H 2560 M 0 1150 H 2560"/>
+  </g>
+
+  <text x="80" y="150" font-size="23" letter-spacing="4" fill="#6f95ad" font-weight="600">ADAPTIVE INFERENCE · EARLY EXIT · LAYER SKIP · MoE · TOKEN PRUNING · SPECULATIVE DECODING</text>
+  <text x="80" y="296" font-size="104" font-weight="bold" letter-spacing="4" fill="url(#titleGradAI)">自适应推理</text>
+  <text x="80" y="384" font-size="35" fill="#c3d9ea" letter-spacing="1">简单问题该快就快、难问题该堆就堆——用难度信号驱动算力增减，把精度与效率的权衡曲线整体向外推</text>
+  <g font-size="26" fill="#8fb5d4">
+    <rect x="80" y="448" width="250" height="56" rx="28" fill="none" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="205" y="484" text-anchor="middle">早退 · 提前输出</text>
+    <rect x="350" y="448" width="280" height="56" rx="28" fill="none" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="490" y="484" text-anchor="middle">层跳过 · 绕过部分层</text>
+    <rect x="650" y="448" width="270" height="56" rx="28" fill="none" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="785" y="484" text-anchor="middle">动态路由 · MoE 子模块</text>
+    <rect x="940" y="448" width="250" height="56" rx="28" fill="none" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="1065" y="484" text-anchor="middle">投机解码 · 草稿-验证</text>
+  </g>
+
+  <!-- 机制一句话 -->
+  <text x="80" y="608" font-size="24" fill="#6f95ad" letter-spacing="3">WHY · 给算力大锅饭装难度计</text>
+  <text x="80" y="668" font-size="27" fill="#d6f0e4">标准推理对每个 token 施加统一计算——多数简单 token 被过度计算（overthinking），少数难题又计算不足</text>
+
+  <!-- 左侧主视觉：算力匹配难度 -->
+  <rect x="80" y="790" width="1380" height="360" rx="16" fill="#0b2340" fill-opacity="0.65" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="120" y="846" font-size="26" fill="#7dd3fc" font-weight="600">按需伸缩 · 算力跟着难度走</text>
+  <g font-size="20" fill="#74a0bd">
+    <rect x="960" y="826" width="18" height="18" rx="4" fill="#47596b"/>
+    <text x="988" y="842">难度</text>
+    <rect x="1080" y="826" width="18" height="18" rx="4" fill="#38bdf8" fill-opacity="0.75"/>
+    <text x="1108" y="842">算力（自适应）</text>
+  </g>
+  <!-- 8 列柱：难度（灰基准）/ 算力（自适应蓝） -->
+  <g>
+    <rect x="140"  y="1012" width="18" height="48"  fill="#47596b" opacity="0.9"/>
+    <rect x="164"  y="986"  width="26" height="74"  fill="#38bdf8" fill-opacity="0.55"/>
+    <rect x="290"  y="972"  width="18" height="88"  fill="#47596b" opacity="0.9"/>
+    <rect x="314"  y="936"  width="26" height="124" fill="#38bdf8" fill-opacity="0.62"/>
+    <rect x="440"  y="998"  width="18" height="62"  fill="#47596b" opacity="0.9"/>
+    <rect x="464"  y="980"  width="26" height="80"  fill="#38bdf8" fill-opacity="0.58"/>
+    <rect x="590"  y="938"  width="18" height="122" fill="#47596b" opacity="0.9"/>
+    <rect x="614"  y="912"  width="26" height="148" fill="#38bdf8" fill-opacity="0.68"/>
+    <rect x="740"  y="898"  width="18" height="162" fill="#47596b" opacity="0.9"/>
+    <rect x="764"  y="866"  width="26" height="194" fill="#38bdf8" fill-opacity="0.74"/>
+    <rect x="890"  y="866"  width="18" height="194" fill="#47596b" opacity="0.9"/>
+    <rect x="914"  y="828"  width="26" height="232" fill="#38bdf8" fill-opacity="0.8"/>
+    <rect x="1040" y="834"  width="18" height="226" fill="#47596b" opacity="0.9"/>
+    <rect x="1064" y="812"  width="26" height="248" fill="#38bdf8" fill-opacity="0.88"/>
+    <rect x="1190" y="802"  width="18" height="258" fill="#47596b" opacity="0.9"/>
+    <rect x="1214" y="798"  width="26" height="262" fill="#38bdf8" fill-opacity="0.95"/>
+  </g>
+  <path d="M 120 1060 H 1260" stroke="#1e4a75" stroke-width="2"/>
+  <text x="140" y="1104" font-size="24" fill="#74a0bd">简单</text>
+  <text x="1180" y="1104" font-size="24" fill="#74a0bd">难</text>
+  <text x="640" y="1104" font-size="22" fill="#4a7ba6" letter-spacing="2">难度递增 · 双向浪费病灶被拉平</text>
+
+  <!-- 右上卡：投机解码 -->
+  <rect x="1520" y="790" width="960" height="180" rx="16" fill="#0b2340" fill-opacity="0.6" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="1560" y="846" font-size="25" fill="#7dd3fc" font-weight="600">投机解码 · 一次验 4 付 1</text>
+  <text x="1560" y="894" font-size="21" fill="#a9c6de">小模型草拟 4 个 token，大模型一次前向并行验证，验收 3 退 1</text>
+  <text x="1560" y="938" font-size="24" fill="#9fd8f6" font-family="Consolas,monospace">4 次满配前向 → 1 次满配 + 1 次草稿 · 输出分布数学一致</text>
+
+  <!-- 右下卡：静默掉点 -->
+  <rect x="1520" y="990" width="960" height="160" rx="16" fill="#0b2340" fill-opacity="0.6" stroke="#fbbf24" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="1560" y="1046" font-size="25" fill="#fcd34d" font-weight="600">静默掉点 · 最大的风险不是变慢</text>
+  <text x="1560" y="1094" font-size="21" fill="#aecbe4">判断器失准时输出照样流畅但已经不对，没有报错只有轻微准确率流失</text>
+  <text x="1560" y="1130" font-size="21" fill="#a78b4a">上自适应前，先校准难度计</text>
+
+  <!-- 底部收束条 -->
+  <rect x="80" y="1250" width="2400" height="110" rx="16" fill="#0b2340" fill-opacity="0.6" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="128" y="1300" font-size="26" fill="#d6e6f5" font-weight="600">五类方法各管一段——早退与层跳过动深度，路由动宽度，token 选择动输入，推理长度自适应动思考链，投机解码单开解码捷径</text>
+  <text x="128" y="1338" font-size="22" fill="#6f95ad">训练派把策略学进模型，免训练派用 prompt 与自身信号兜底 · 评测认帕累托外推不认单点</text>
+</svg>
