@@ -1,0 +1,174 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="-74 -74 2708 1588" preserveAspectRatio="xMidYMid slice" font-family="'Source Han Sans SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+
+  <!-- ================= 定义 ================= -->
+  <defs>
+    <radialGradient id="atmoBlue" cx="0.18" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#1e3a5f" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#1e3a5f" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1e3a5f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="atmoWarm" cx="0.86" cy="0.92" r="0.8">
+      <stop offset="0" stop-color="#3a2a10" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#3a2a10" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#3a2a10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9ddfa"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4fc3f7" fill-opacity="0.7"/>
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e0b060" fill-opacity="0.9"/>
+    </marker>
+  </defs>
+
+  <!-- ================= 画布与背景（出血 -64px） ================= -->
+  <rect x="-64" y="-64" width="2688" height="1568" fill="#0a1220"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoBlue)"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoWarm)"/>
+
+  <!-- 工程网格线（1.5px / opacity 0.95） -->
+  <g stroke="#16283f" stroke-width="1.5" opacity="0.95">
+    <path d="M 176 -64 V 1504 M 416 -64 V 1504 M 656 -64 V 1504 M 896 -64 V 1504 M 1136 -64 V 1504 M 1376 -64 V 1504 M 1616 -64 V 1504 M 1856 -64 V 1504 M 2096 -64 V 1504 M 2336 -64 V 1504"/>
+    <path d="M -64 176 H 2624 M -64 416 H 2624 M -64 656 H 2624 M -64 896 H 2624 M -64 1136 H 2624 M -64 1376 H 2624"/>
+  </g>
+
+  <!-- ================= 顶部标题区（边距 80） ================= -->
+  <text x="80" y="168" font-size="23" letter-spacing="4" fill="#7c93ad" font-weight="600">LLM INTERPRETABILITY · OBSERVATION VERSUS INTERVENTION</text>
+
+  <!-- 主标题（无冒号） -->
+  <text x="80" y="316" font-size="104" font-weight="bold" letter-spacing="4" fill="url(#titleGrad)">大模型可解释性</text>
+
+  <!-- 副标题 -->
+  <text x="80" y="402" font-size="35" fill="#cbd5e1" letter-spacing="1">说明必须与真实计算过程一致而非通顺理由——四层手段从日志到电路追踪，按成本落地</text>
+
+  <!-- 三关键词徽标（描边统一） -->
+  <g font-size="26" fill="#8fa6c4">
+    <rect x="80" y="470" width="238" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="199" y="506" text-anchor="middle">线性探针</text>
+    <rect x="338" y="470" width="254" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="465" y="506" text-anchor="middle">稀疏自编码</text>
+    <rect x="612" y="470" width="238" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="731" y="506" text-anchor="middle">电路追踪</text>
+  </g>
+
+  <!-- ================= 左侧内容块 1：四层谱系阶梯卡 ================= -->
+  <g>
+    <rect x="80" y="580" width="900" height="230" rx="14" fill="#0e1c33" fill-opacity="0.55" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="112" y="630" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">FOUR LAYERS · 手段按介入时机分四层</text>
+
+    <g font-size="24">
+      <text x="112" y="672" fill="#dce8fa" font-weight="600">输出层</text>
+      <text x="216" y="672" fill="#8fa6c4">思维链与证据引用</text>
+      <text x="948" y="672" fill="#6e86a8" text-anchor="end">成本极低 · 只有自述</text>
+
+      <text x="112" y="710" fill="#dce8fa" font-weight="600">行为层</text>
+      <text x="216" y="710" fill="#8fa6c4">遮挡 反事实 一致性</text>
+      <text x="948" y="710" fill="#6e86a8" text-anchor="end">成本低 · 输入敏感</text>
+
+      <text x="112" y="748" fill="#7fdbff" font-weight="600">机制层</text>
+      <text x="216" y="748" fill="#8fa6c4">探针 SAE 降维 电路</text>
+      <text x="948" y="748" fill="#6e86a8" text-anchor="end">成本高 · 片段因果</text>
+
+      <text x="112" y="786" fill="#dce8fa" font-weight="600">过程层</text>
+      <text x="216" y="786" fill="#8fa6c4">轨迹日志 动作概率 审批</text>
+      <text x="948" y="786" fill="#6e86a8" text-anchor="end">成本中 · 可复现</text>
+    </g>
+    <!-- 层间分隔线 -->
+    <line x1="112" y1="684" x2="948" y2="684" stroke="#1c3352" stroke-width="1.5" opacity="0.7"/>
+    <line x1="112" y1="722" x2="948" y2="722" stroke="#1c3352" stroke-width="1.5" opacity="0.7"/>
+    <line x1="112" y1="760" x2="948" y2="760" stroke="#1c3352" stroke-width="1.5" opacity="0.7"/>
+  </g>
+
+  <!-- ================= 左侧内容块 2：机制层粒度上升台阶 ================= -->
+  <g>
+    <text x="80" y="892" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">MECHANISTIC · 机制层按粒度递进</text>
+
+    <rect x="80" y="1006" width="205" height="34" rx="8" fill="#16283f"/>
+    <rect x="305" y="976" width="205" height="64" rx="8" fill="#16283f"/>
+    <rect x="530" y="946" width="205" height="94" rx="8" fill="#16283f"/>
+    <rect x="755" y="916" width="225" height="124" rx="8" fill="#123252" fill-opacity="0.7" stroke="#4fc3f7" stroke-opacity="0.4" stroke-width="1.5"/>
+
+    <g font-size="23" text-anchor="middle">
+      <text x="182" y="1030" fill="#8fa6c4">探针 · 单点</text>
+      <text x="407" y="1015" fill="#8fa6c4">SAE · 原子</text>
+      <text x="632" y="1000" fill="#8fa6c4">降维 · 几何</text>
+      <text x="867" y="985" fill="#dce8fa" font-weight="600">电路 · 连接</text>
+    </g>
+    <text x="80" y="1100" font-size="24" fill="#6e86a8" letter-spacing="1">读出不等于使用 · 任何单一结论都要靠干预再验</text>
+  </g>
+
+  <!-- ================= 左侧内容块 3：忠实性警示卡 ================= -->
+  <g>
+    <rect x="80" y="1130" width="900" height="120" rx="14" fill="#0e1c33" fill-opacity="0.45" stroke="#1c3352" stroke-width="1.5"/>
+    <rect x="80" y="1130" width="5" height="120" fill="#e0b060"/>
+    <text x="118" y="1177" font-size="27" fill="#e0b060" font-weight="600">思维链是生成的文本 不是计算记录</text>
+    <text x="118" y="1223" font-size="25" fill="#8fa6c4" letter-spacing="1">偏置可让准确率最多降 36% 模型却只字不提</text>
+  </g>
+
+  <!-- ================= 右侧：模型层堆叠外部透视 ================= -->
+  <!-- 输出节点 -->
+  <rect x="1740" y="410" width="200" height="60" rx="12" fill="#0e2a4a" stroke="#7fdbff" stroke-width="3"/>
+  <text x="1840" y="448" font-size="25" font-weight="700" fill="#ffffff" text-anchor="middle">输出 · 自述理由</text>
+  <text x="1964" y="448" font-size="24" fill="#e0b060" font-weight="600">≠ 内部计算</text>
+  <path d="M 1840 500 V 476" stroke="#4fc3f7" stroke-opacity="0.7" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- 层堆叠（8 层，标注不可直读） -->
+  <text x="1840" y="1052" font-size="23" fill="#55708f" text-anchor="middle" letter-spacing="2">模型权重 · 叠加态致单神经元多义 · 不可直读</text>
+  <g fill="#101d33" stroke="#1c3352" stroke-width="1.5">
+    <rect x="1680" y="500" width="320" height="48" rx="8"/>
+    <rect x="1680" y="570" width="320" height="48" rx="8"/>
+    <rect x="1680" y="640" width="320" height="48" rx="8"/>
+    <rect x="1680" y="710" width="320" height="48" rx="8"/>
+    <rect x="1680" y="780" width="320" height="48" rx="8"/>
+    <rect x="1680" y="850" width="320" height="48" rx="8"/>
+    <rect x="1680" y="920" width="320" height="48" rx="8"/>
+    <rect x="1680" y="990" width="320" height="48" rx="8"/>
+  </g>
+
+  <!-- 观测探针（左） -->
+  <text x="1440" y="640" font-size="24" fill="#8fa6c4">探针 · 逐层读出</text>
+  <line x1="1460" y1="664" x2="1672" y2="664" stroke="#4fc3f7" stroke-opacity="0.6" stroke-width="2.5"/>
+  <text x="1440" y="786" font-size="24" fill="#8fa6c4">SAE · 原子特征</text>
+  <line x1="1460" y1="804" x2="1672" y2="804" stroke="#4fc3f7" stroke-opacity="0.6" stroke-width="2.5"/>
+
+  <!-- 干预箭头（右） -->
+  <text x="2390" y="856" font-size="24" fill="#e0b060" text-anchor="end" font-weight="600">干预 · 激活替换</text>
+  <line x1="2390" y1="880" x2="2010" y2="880" stroke="#e0b060" stroke-opacity="0.75" stroke-width="2.5" marker-end="url(#arrowGold)"/>
+  <text x="2390" y="908" font-size="22" fill="#7c93ad" text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-style="italic">h′ = h + αd</text>
+
+  <!-- 电路追踪归因图（右上） -->
+  <g stroke="#9be8ff" stroke-opacity="0.6" stroke-width="2.5" fill="#12294a">
+    <line x1="2140" y1="540" x2="2230" y2="580"/>
+    <line x1="2230" y1="580" x2="2150" y2="640"/>
+    <line x1="2140" y1="540" x2="2150" y2="640"/>
+    <circle cx="2140" cy="540" r="14"/>
+    <circle cx="2230" cy="580" r="14"/>
+    <circle cx="2150" cy="640" r="14"/>
+  </g>
+  <text x="2190" y="690" font-size="23" fill="#6e86a8" text-anchor="middle">电路追踪 · 归因图</text>
+  <line x1="2160" y1="580" x2="2008" y2="594" stroke="#9be8ff" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 7"/>
+
+  <!-- 过程层日志 -->
+  <rect x="1680" y="1072" width="460" height="56" rx="10" fill="none" stroke="#4fc3f7" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <text x="1704" y="1108" font-size="24" fill="#8fa6c4">过程层 · 全轨迹日志可复现</text>
+
+  <!-- 干预路径流动光点 -->
+  <circle r="6" fill="#ffd98a">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M 2390 880 L 2020 880"/>
+  </circle>
+
+  <!-- 面板底注 -->
+  <text x="1930" y="1190" font-size="24" fill="#7fa8cc" text-anchor="middle" letter-spacing="1">观测加干预闭环 · 三种干预一致假设才成立</text>
+
+  <!-- ================= 底部信息条（边距 80 内） ================= -->
+  <line x1="80" y1="1330" x2="2480" y2="1330" stroke="#16283f" stroke-width="1.5" opacity="0.9"/>
+  <text x="80" y="1385" font-size="27" fill="#55708f" letter-spacing="2">观测只给相关性 · 因果只能靠干预</text>
+  <text x="2480" y="1385" font-size="27" fill="#55708f" text-anchor="end" letter-spacing="2">注意力热力图不是解释 · 便宜日志先做</text>
+
+  <!-- 右上角文献标注 -->
+  <text x="2480" y="168" font-size="23" fill="#7c93ad" text-anchor="end" letter-spacing="3">TRANSFORMER CIRCUITS · 2025</text>
+</svg>
