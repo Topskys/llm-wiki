@@ -88,6 +88,8 @@
 | 2026-11-02 12:30:00 | Ingest | [[raw/papers/权重量化.md]] | 14 | 0 | 编译《权重量化》为 14 页：concepts 10（权重量化/KV Cache 量化/GPTQ/AWQ/SmoothQuant/NF4 量化/K-quants/极限低比特量化/量化工具链与kernel/量化选型与避坑）、entities 1（llama.cpp）、comparisons 2（PTQ与QAT对比/主流量化算法对比）、summaries 1（权重量化·素材摘要）；4 图 4 表 12 参考文献；index 与 shturl 同步；相关文件加入暂存区（用户指示，暂不提交） |
 | 2026-11-04 10:30:00 | Ingest | [[raw/papers/自适应推理.md]] | 12 | 1 | 编译《自适应推理》为 12 页并联动更新 1 页：新增 concepts 9（自适应推理/早退/层跳过/动态路由/Token选择/推理长度自适应/难度信号/自适应评测要点/自适应失效模式）、comparisons 2（训练派与免训练派对比/早退与层跳过对比）、summaries 1（自适应推理·素材摘要）；联动更新 concepts 1（投机解码——追加「谱系延伸：自投机线」LayerSkip/SpecEE/DEL 小节与 [[自适应推理]] 互链，updated_at 刷新，created_at 不变）；2 图 0 表 12 参考文献（含 SpecEE ISCA'25 与 DEL COLM 2025 会议引证）；index 与 shturl 同步 |
 | 2026-11-07 10:30:00 | Ingest | [[raw/papers/大模型可解释性.md]] | 13 | 0 | 编译《大模型可解释性》为 13 页：concepts 11（大模型可解释性/忠实性/叠加与多义/行为层扰动/线性探针/稀疏自编码/降维与激活引导/电路追踪/过程审计/可解释性验证与局限/可解释性落地选型）、comparisons 1（可解释性方法对比）、summaries 1（大模型可解释性·素材摘要）；4 图 2 表 16 参考文献（含 Anthropic 归因图与 OpenAI SAE 缩放）；index 与 shturl 同步 |
+| 2026-11-07 13:28:00 | Rule-Update | AGENTS.md 论文格式约定 + paper-doc-md skill | 0 | 0 | 总结（## 总结）风格由「大白话、口语化」改为「书面精炼，不堆砌术语，表达自然连贯」，其余约束不变（一句话讲透核心、不用冒号与分号、要点齐全简洁）；示例句同步替换为书面体；SKILL.md 同源行同步修改 |
+| 2026-11-07 16:30:00 | Ingest | [[raw/papers/Token分词.md]] | 11 | 2 | 编译《Token分词》为 11 页：concepts 8（分词路线演进/WordPiece分词算法/Unigram分词算法/中文分词特例/分词质量评估/词表大小权衡/分词与模型能力/无分词器架构，3 张 Mermaid 图）、entities 1（SentencePiece）、comparisons 1（主流分词方案对比：三算法+SentencePiece 与 HF Tokenizers/SentencePiece/tiktoken 工具三件套）、summaries 1（Token分词·素材摘要）；联动更新 2 页（BPE分词算法补字节级默认 GPT-2 起与迷你语料手算示例、Tokenizer分词编码补词表量级 3 万→25 万与特殊 Token 清单，created_at 未动）；index 与 shturl 同步 |
 ---
 
 > 操作类型说明：
