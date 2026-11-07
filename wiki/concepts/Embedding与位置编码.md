@@ -3,7 +3,7 @@ type: concept
 source: [[raw/papers/大模型推理全链路.md]]
 description: "Embedding 层将 token ID 映射为高维向量，位置编码从绝对位置演进到 RoPE（旋转位置编码），使注意力得分仅依赖 token 间的相对位置差。"
 created_at: 2026-10-08 22:28:16
-updated_at: 2026-10-08 22:28:16
+updated_at: 2026-11-07 16:40:00
 tags: [embedding, rope, position_encoding, llm]
 ---
 
@@ -42,7 +42,10 @@ LLaMA、Qwen、DeepSeek 等主流开源模型均采用 RoPE。详见 [[RoPE旋�
 - [[Tokenizer分词编码]]：token ID 的产生
 - [[自注意力机制]]：位置编码如何影响注意力得分
 - [[大模型推理全链路]]：Embedding 在推理流水线中的位置
+- [[词嵌入]]：词表示学习的技术史视角（One-Hot 到万物嵌入），与模型内部嵌入层互为表里
+- [[词嵌入·素材摘要]]：词嵌入素材全篇索引
 
 ## 参考来源
 
 - [[raw/papers/大模型推理全链路.md]]
+- [[raw/papers/词嵌入.md]]

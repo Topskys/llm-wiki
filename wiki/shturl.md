@@ -90,6 +90,7 @@
 | 2026-11-07 10:30:00 | Ingest | [[raw/papers/大模型可解释性.md]] | 13 | 0 | 编译《大模型可解释性》为 13 页：concepts 11（大模型可解释性/忠实性/叠加与多义/行为层扰动/线性探针/稀疏自编码/降维与激活引导/电路追踪/过程审计/可解释性验证与局限/可解释性落地选型）、comparisons 1（可解释性方法对比）、summaries 1（大模型可解释性·素材摘要）；4 图 2 表 16 参考文献（含 Anthropic 归因图与 OpenAI SAE 缩放）；index 与 shturl 同步 |
 | 2026-11-07 13:28:00 | Rule-Update | AGENTS.md 论文格式约定 + paper-doc-md skill | 0 | 0 | 总结（## 总结）风格由「大白话、口语化」改为「书面精炼，不堆砌术语，表达自然连贯」，其余约束不变（一句话讲透核心、不用冒号与分号、要点齐全简洁）；示例句同步替换为书面体；SKILL.md 同源行同步修改 |
 | 2026-11-07 16:30:00 | Ingest | [[raw/papers/Token分词.md]] | 11 | 2 | 编译《Token分词》为 11 页：concepts 8（分词路线演进/WordPiece分词算法/Unigram分词算法/中文分词特例/分词质量评估/词表大小权衡/分词与模型能力/无分词器架构，3 张 Mermaid 图）、entities 1（SentencePiece）、comparisons 1（主流分词方案对比：三算法+SentencePiece 与 HF Tokenizers/SentencePiece/tiktoken 工具三件套）、summaries 1（Token分词·素材摘要）；联动更新 2 页（BPE分词算法补字节级默认 GPT-2 起与迷你语料手算示例、Tokenizer分词编码补词表量级 3 万→25 万与特殊 Token 清单，created_at 未动）；index 与 shturl 同步 |
+| 2026-11-07 16:45:00 | Ingest | [[raw/papers/词嵌入.md]] | 11 | 2 | 编译《词嵌入》为 11 页：concepts 9（词嵌入/Word2Vec/GloVe/FastText/动态上下文嵌入/句向量与池化策略/嵌入质量评估/万物皆可嵌入/词嵌入工程选型，4 张 Mermaid 图）、comparisons 1（静态嵌入方案对比：三方案+LSA/PPMI+SVD 前史）、summaries 1（词嵌入·素材摘要）；联动更新 2 页（Embedding与位置编码、Embedding向量嵌入补 [[词嵌入]] 技术史视角交叉链接，created_at 未动）；index 与 shturl 同步 |
 ---
 
 > 操作类型说明：

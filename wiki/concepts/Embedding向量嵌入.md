@@ -3,7 +3,7 @@ type: concept
 source: [[raw/articles/向量Embedding与向量数据库介绍.md]]
 description: "Embedding 把非结构化数据（文本/图片/音频/视频）通过模型转成固定长度浮点数数组（如768/1536维），语义相近的内容在向量空间里距离更近，检索时用余弦相似度/欧氏距离衡量语义相似度。"
 created_at: 2026-09-16 08:30:12
-updated_at: 2026-09-16 08:30:12
+updated_at: 2026-11-07 16:40:00
 tags: [embedding, vector, similarity, semantic_search]
 ---
 
@@ -34,6 +34,10 @@ tags: [embedding, vector, similarity, semantic_search]
 - [[向量Embedding与向量数据库总览]]：Embedding 与向量数据库全景
 - [[RAG检索优化五层]]：Embedding 之后召回/精排的组合拳
 - [[Hybrid混合检索]]：Dense 语义路基于 Embedding
+- [[词嵌入]]：词级嵌入技术页（Word2Vec/GloVe/FastText 谱系与本页的检索通用视角互补）
+- [[词嵌入工程选型]]：获取方式、超参经验值与选型决策
+- [[词嵌入·素材摘要]]：词嵌入素材全篇索引
 
 ## 参考来源
 - [[raw/articles/向量Embedding与向量数据库介绍.md]]
+- [[raw/papers/词嵌入.md]]

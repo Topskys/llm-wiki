@@ -1,0 +1,86 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440" font-family="'Source Han Sans SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <radialGradient id="atmoWE" cx="0.85" cy="0.12" r="0.78">
+      <stop offset="0" stop-color="#0d3a66" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#0d3a66" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#0d3a66" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="atmoWE2" cx="0.1" cy="0.92" r="0.75">
+      <stop offset="0" stop-color="#123a7a" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#123a7a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGradWE" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#bcdcf8"/>
+    </linearGradient>
+    <marker id="arrWE" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" fill-opacity="0.85"/>
+    </marker>
+  </defs>
+
+  <!-- 蓝色偏底 -->
+  <rect x="0" y="0" width="2560" height="1440" fill="#081426"/>
+  <rect x="0" y="0" width="2560" height="1440" fill="url(#atmoWE)"/>
+  <rect x="0" y="0" width="2560" height="1440" fill="url(#atmoWE2)"/>
+  <g stroke="#122a45" stroke-width="1.5" opacity="0.95">
+    <path d="M 200 0 V 1440 M 530 0 V 1440 M 860 0 V 1440 M 1190 0 V 1440 M 1520 0 V 1440 M 1850 0 V 1440 M 2180 0 V 1440 M 2510 0 V 1440"/>
+    <path d="M 0 190 H 2560 M 0 510 H 2560 M 0 830 H 2560 M 0 1150 H 2560"/>
+  </g>
+
+  <text x="80" y="150" font-size="23" letter-spacing="4" fill="#6f95ad" font-weight="600">WORD EMBEDDING · ONE-HOT · WORD2VEC · GLOVE · FASTTEXT · ELMo · BERT · GPT</text>
+  <text x="80" y="296" font-size="104" font-weight="bold" letter-spacing="4" fill="url(#titleGradWE)">词嵌入</text>
+  <text x="80" y="384" font-size="35" fill="#c3d9ea" letter-spacing="1">把离散词语映射成低维稠密向量——意义在于关系，而关系可以计算</text>
+  <g font-size="26" fill="#8fb5d4">
+    <rect x="80" y="448" width="290" height="56" rx="28" fill="none" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="225" y="484" text-anchor="middle">CBOW / Skip-gram</text>
+    <rect x="390" y="448" width="240" height="56" rx="28" fill="none" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="510" y="484" text-anchor="middle">GloVe 全局共现</text>
+    <rect x="650" y="448" width="240" height="56" rx="28" fill="none" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="770" y="484" text-anchor="middle">FastText 子词</text>
+    <rect x="910" y="448" width="280" height="56" rx="28" fill="none" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="1050" y="484" text-anchor="middle">BERT 动态上下文</text>
+  </g>
+
+  <!-- 机制一句话 -->
+  <text x="80" y="608" font-size="24" fill="#6f95ad" letter-spacing="3">KEY IDEA · 观其伴而知其义（Firth, 1957）</text>
+  <text x="80" y="668" font-size="27" fill="#d6e6f5">上下文相似的词在向量空间里彼此靠近——语义相似度变成两点之间的距离与夹角</text>
+
+  <!-- 左侧主视觉：类比推理平行四边形 -->
+  <rect x="80" y="790" width="1380" height="360" rx="16" fill="#0b2340" fill-opacity="0.65" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="120" y="846" font-size="26" fill="#7dd3fc" font-weight="600">类比推理 · king − man + woman ≈ queen</text>
+  <!-- 四个词向量点 -->
+  <g font-size="30" fill="#dbeafe" font-family="Consolas,monospace">
+    <circle cx="300" cy="1080" r="10" fill="#38bdf8"/>
+    <text x="330" y="1092">man</text>
+    <circle cx="680" cy="1080" r="10" fill="#38bdf8"/>
+    <text x="710" y="1092">king</text>
+    <circle cx="300" cy="930" r="10" fill="#7dd3fc"/>
+    <text x="330" y="942">woman</text>
+    <circle cx="680" cy="930" r="10" fill="#fbbf24"/>
+    <text x="710" y="942">queen ≈</text>
+  </g>
+  <path d="M 300 1070 L 660 1070" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrWE)"/>
+  <text x="400" y="1102" font-size="21" fill="#74a0bd">+ royal</text>
+  <path d="M 300 940 L 660 940" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrWE)"/>
+  <path d="M 310 1068 L 310 950" stroke="#5eead4" stroke-width="3" marker-end="url(#arrWE)"/>
+  <text x="215" y="1005" font-size="21" fill="#74a0bd">+ female</text>
+  <text x="1200" y="1005" font-size="22" fill="#6f95ad">意义藏在偏移里</text>
+
+  <!-- 右上卡：One-Hot 之殇 -->
+  <rect x="1520" y="790" width="960" height="170" rx="16" fill="#0b2340" fill-opacity="0.6" stroke="#fbbf24" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="1560" y="846" font-size="25" fill="#fcd34d" font-weight="600">One-Hot 之殇 · 语义鸿沟</text>
+  <text x="1560" y="894" font-size="21" fill="#aecbe4">词表 10 万以上，每词仅一个 1 位——稀疏高维，存储计算双贵</text>
+  <text x="1560" y="938" font-size="24" fill="#fde68a" font-family="Consolas,monospace">sim(猫, 狗) = sim(猫, 汽车) = 0　内积恒为零</text>
+
+  <!-- 右下卡：检索工程等价 -->
+  <rect x="1520" y="990" width="960" height="160" rx="16" fill="#0b2340" fill-opacity="0.6" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="1560" y="1046" font-size="25" fill="#7dd3fc" font-weight="600">检索前做 L2 归一化</text>
+  <text x="1560" y="1094" font-size="21" fill="#a9c6de">归一化后点积与余弦相似度完全等价，直接用更快的点积运算</text>
+  <text x="1560" y="1130" font-size="21" fill="#6f95ad">向量维度常用 50~300 · 静态词向量到动态句向量一路通用</text>
+
+  <!-- 底部收束条 -->
+  <rect x="80" y="1250" width="2400" height="110" rx="16" fill="#0b2340" fill-opacity="0.6" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="128" y="1300" font-size="26" fill="#d6e6f5" font-weight="600">静态三剑客——Word2Vec 拿局部上下文预测，GloVe 数全局共现账，FastText 拆子词兜住生僻词；一词多义是它们共同的死穴</text>
+  <text x="128" y="1338" font-size="22" fill="#6f95ad">ELMo 开路，BERT 确立「预训练 + 微调」范式，如今嵌入已从词长成万物皆可向量——检索、推荐、RAG 全靠它</text>
+</svg>
