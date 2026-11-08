@@ -1,0 +1,149 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="-74 -74 2708 1588" preserveAspectRatio="xMidYMid slice" font-family="'Source Han Sans SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+
+  <!-- ================= 定义 ================= -->
+  <defs>
+    <radialGradient id="atmoBlue" cx="0.18" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#1e3a5f" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#1e3a5f" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1e3a5f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="atmoWarm" cx="0.86" cy="0.92" r="0.8">
+      <stop offset="0" stop-color="#3a2a10" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#3a2a10" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#3a2a10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9ddfa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ================= 画布与背景（出血 -64px） ================= -->
+  <rect x="-64" y="-64" width="2688" height="1568" fill="#0a1220"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoBlue)"/>
+  <rect x="-64" y="-64" width="2688" height="1568" fill="url(#atmoWarm)"/>
+
+  <!-- 工程网格线（1.5px / opacity 0.95） -->
+  <g stroke="#16283f" stroke-width="1.5" opacity="0.95">
+    <path d="M 176 -64 V 1504 M 416 -64 V 1504 M 656 -64 V 1504 M 896 -64 V 1504 M 1136 -64 V 1504 M 1376 -64 V 1504 M 1616 -64 V 1504 M 1856 -64 V 1504 M 2096 -64 V 1504 M 2336 -64 V 1504"/>
+    <path d="M -64 176 H 2624 M -64 416 H 2624 M -64 656 H 2624 M -64 896 H 2624 M -64 1136 H 2624 M -64 1376 H 2624"/>
+  </g>
+
+  <!-- ================= 顶部标题区（边距 80） ================= -->
+  <text x="80" y="168" font-size="23" letter-spacing="4" fill="#7c93ad" font-weight="600">SCALING LAWS · FROM POWER CURVE TO THE SECOND CURVE</text>
+
+  <!-- 主标题（无冒号） -->
+  <text x="80" y="316" font-size="104" font-weight="bold" letter-spacing="4" fill="url(#titleGrad)">Scaling Law</text>
+
+  <!-- 副标题 -->
+  <text x="80" y="402" font-size="35" fill="#cbd5e1" letter-spacing="1">损失随规模按幂律下降——性能可以买到，难在配比与边界</text>
+
+  <!-- 三关键词徽标（描边统一） -->
+  <g font-size="26" fill="#8fa6c4">
+    <rect x="80" y="470" width="204" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="182" y="506" text-anchor="middle">幂律外推</text>
+    <rect x="304" y="470" width="224" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="416" y="506" text-anchor="middle">配比定生死</text>
+    <rect x="548" y="470" width="224" height="56" rx="28" fill="none" stroke="#4fc3f7" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="660" y="506" text-anchor="middle">测试时算力</text>
+  </g>
+
+  <!-- ================= 左侧内容块 1：幂律直线卡 ================= -->
+  <g>
+    <rect x="80" y="560" width="940" height="250" rx="14" fill="#0e1c33" fill-opacity="0.55" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="112" y="608" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">POWER LAW · 对数坐标下近似直线</text>
+
+    <!-- 迷你 log-log 图（loss 随算力下降） -->
+    <g stroke="#1c3352" stroke-width="2" fill="none">
+      <path d="M 140 620 V 776 H 610"/>
+    </g>
+    <path d="M 156 634 L 596 758" fill="none" stroke="#4fc3f7" stroke-opacity="0.85" stroke-width="3.5"/>
+    <text x="610" y="798" font-size="20" fill="#6e86a8" text-anchor="end">算力（对数轴）</text>
+    <text x="300" y="756" font-size="23" fill="#9be8ff" text-anchor="middle">斜率即缩放指数 α ≈ 0.076</text>
+
+    <!-- 右侧公式 -->
+    <text x="648" y="652" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="31" fill="#dce8fa">L(N,D) = E + A/N<tspan font-size="20" dy="-10">α</tspan><tspan dy="10"> + B/D</tspan><tspan font-size="20" dy="-10">β</tspan></text>
+    <text x="648" y="706" font-size="22" fill="#7c93ad">缩放指数决定陡峭程度</text>
+    <text x="648" y="744" font-size="22" fill="#7c93ad">小模型实验，可外推大模型收益</text>
+  </g>
+
+  <!-- ================= 左侧内容块 2：最优配比三格 ================= -->
+  <g>
+    <rect x="80" y="840" width="940" height="250" rx="14" fill="#0e1c33" fill-opacity="0.5" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="112" y="888" font-size="24" letter-spacing="3" fill="#4fc3f7" font-weight="600">RECIPE · 最优配比与口径</text>
+
+    <rect x="112" y="912" width="274" height="86" rx="12" fill="#101d33" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="249" y="956" font-size="27" font-weight="700" fill="#4fc3f7" text-anchor="middle">C ≈ 6ND</text>
+    <text x="249" y="986" font-size="20" fill="#6e86a8" text-anchor="middle">算力 × 参数 × 数据</text>
+
+    <rect x="404" y="912" width="274" height="86" rx="12" fill="#101d33" stroke="#1c3352" stroke-width="1.5"/>
+    <text x="541" y="956" font-size="26" font-weight="700" fill="#4fc3f7" text-anchor="middle">20 token / 参数</text>
+    <text x="541" y="986" font-size="20" fill="#6e86a8" text-anchor="middle">Chinchilla 最优配比</text>
+
+    <rect x="696" y="912" width="300" height="86" rx="12" fill="#123252" stroke="#4fc3f7" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="846" y="956" font-size="26" font-weight="700" fill="#dce8fa" text-anchor="middle">0.73 → 0.50</text>
+    <text x="846" y="986" font-size="20" fill="#6e86a8" text-anchor="middle">2024 调和后口径统一</text>
+
+    <text x="112" y="1056" font-size="23" fill="#6e86a8" letter-spacing="1">先定 N 与 20N，再看公开库存装不装得下</text>
+  </g>
+
+  <!-- ================= 左侧内容块 3：库存警示卡 ================= -->
+  <g>
+    <rect x="80" y="1120" width="940" height="120" rx="14" fill="#0e1c33" fill-opacity="0.45" stroke="#1c3352" stroke-width="1.5"/>
+    <rect x="80" y="1120" width="5" height="120" fill="#e0b060"/>
+    <text x="118" y="1168" font-size="27" fill="#e0b060" font-weight="600">文本库存倒计时</text>
+    <text x="118" y="1214" font-size="25" fill="#8fa6c4" letter-spacing="1">有效库存约 300T token · 预计 2026–2032 年见顶，届时转向合成与合同数据</text>
+  </g>
+
+  <!-- ================= 右侧：对数轴双曲线主视觉 ================= -->
+  <!-- 图例 -->
+  <g font-size="22" fill="#8fa6c4">
+    <line x1="1560" y1="536" x2="1608" y2="536" stroke="#4fc3f7" stroke-width="3.5"/>
+    <text x="1620" y="544">预训练 Scaling</text>
+    <line x1="1854" y1="536" x2="1902" y2="536" stroke="#e0b060" stroke-width="3.5"/>
+    <text x="1914" y="544">测试时 Scaling</text>
+  </g>
+
+  <!-- 坐标轴 -->
+  <g stroke="#1c3352" stroke-width="2" fill="none">
+    <path d="M 1560 600 V 1250 M 1560 1250 H 2480"/>
+  </g>
+  <text transform="rotate(-90 1526 940)" x="1526" y="940" font-size="22" fill="#6e86a8" text-anchor="middle">模型性能（对数轴）</text>
+  <text x="2020" y="1298" font-size="22" fill="#6e86a8" text-anchor="middle">算力投入 C（对数轴）</text>
+
+  <!-- 预训练幂律：实线段 + 库存见顶后虚线段 -->
+  <path d="M 1590 1210 C 1760 1108, 1960 988, 2196 824" fill="none" stroke="#4fc3f7" stroke-opacity="0.85" stroke-width="4"/>
+  <path d="M 2196 824 C 2290 756, 2360 700, 2420 640" fill="none" stroke="#4fc3f7" stroke-opacity="0.4" stroke-width="3" stroke-dasharray="10 8"/>
+
+  <!-- 轨迹锚点：Kaplan 与 Chinchilla -->
+  <circle cx="1756" cy="1138" r="11" fill="#0e2a4a" stroke="#4fc3f7" stroke-width="3"/>
+  <text x="1756" y="1186" font-size="22" fill="#8fa6c4" text-anchor="middle">Kaplan 2020 · 大者为王</text>
+  <circle cx="2072" cy="912" r="11" fill="#0e2a4a" stroke="#4fc3f7" stroke-width="3"/>
+  <text x="2072" y="872" font-size="22" fill="#8fa6c4" text-anchor="end">Chinchilla 2022 · 配比定生死</text>
+
+  <!-- 库存警戒线 -->
+  <line x1="2200" y1="600" x2="2200" y2="1250" stroke="#e0b060" stroke-opacity="0.75" stroke-width="2" stroke-dasharray="9 7"/>
+  <text x="2480" y="584" font-size="22" fill="#e0b060" text-anchor="end">公开文本库存 300T 倒计时</text>
+  <text transform="rotate(-90 2168 1030)" x="2168" y="1030" font-size="20" fill="#8fa6c4" text-anchor="middle">换道区间 · 合成与合同数据</text>
+
+  <!-- 测试时算力第二曲线 -->
+  <path d="M 2200 1250 C 2320 1140, 2420 880, 2470 640" fill="none" stroke="#e0b060" stroke-opacity="0.9" stroke-width="4"/>
+  <text x="2216" y="630" font-size="23" fill="#e0b060" font-weight="600">测试时算力 · 第二曲线</text>
+
+  <!-- 交叉注解 -->
+  <text x="2196" y="716" font-size="23" fill="#cbd5e1" text-anchor="end">难任务上，多思考可以胜过放大参数</text>
+
+  <!-- 训练曲线流动光点 -->
+  <circle r="6" fill="#9be8ff">
+    <animateMotion dur="7s" repeatCount="indefinite" path="M 1590 1210 C 1760 1108 1960 988 2196 824"/>
+  </circle>
+
+  <!-- ================= 底部信息条（边距 80 内） ================= -->
+  <line x1="80" y1="1330" x2="2480" y2="1330" stroke="#16283f" stroke-width="1.5" opacity="0.9"/>
+  <text x="80" y="1385" font-size="27" fill="#55708f" letter-spacing="2">参数大者为王 → 配比定生死 → 按预算推进</text>
+  <text x="2480" y="1385" font-size="27" fill="#55708f" text-anchor="end" letter-spacing="2">定律未死，只是每换一个自变量就重新拟一遍曲线</text>
+
+  <!-- 右上角文献标注 -->
+  <text x="2480" y="168" font-size="23" fill="#7c93ad" text-anchor="end" letter-spacing="3">KAPLAN 2020 · CHINCHILLA 2022 · O1 2024</text>
+</svg>
