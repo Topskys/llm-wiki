@@ -92,6 +92,7 @@
 | 2026-11-07 16:30:00 | Ingest | [[raw/papers/Token分词.md]] | 11 | 2 | 编译《Token分词》为 11 页：concepts 8（分词路线演进/WordPiece分词算法/Unigram分词算法/中文分词特例/分词质量评估/词表大小权衡/分词与模型能力/无分词器架构，3 张 Mermaid 图）、entities 1（SentencePiece）、comparisons 1（主流分词方案对比：三算法+SentencePiece 与 HF Tokenizers/SentencePiece/tiktoken 工具三件套）、summaries 1（Token分词·素材摘要）；联动更新 2 页（BPE分词算法补字节级默认 GPT-2 起与迷你语料手算示例、Tokenizer分词编码补词表量级 3 万→25 万与特殊 Token 清单，created_at 未动）；index 与 shturl 同步 |
 | 2026-11-07 16:45:00 | Ingest | [[raw/papers/词嵌入.md]] | 11 | 2 | 编译《词嵌入》为 11 页：concepts 9（词嵌入/Word2Vec/GloVe/FastText/动态上下文嵌入/句向量与池化策略/嵌入质量评估/万物皆可嵌入/词嵌入工程选型，4 张 Mermaid 图）、comparisons 1（静态嵌入方案对比：三方案+LSA/PPMI+SVD 前史）、summaries 1（词嵌入·素材摘要）；联动更新 2 页（Embedding与位置编码、Embedding向量嵌入补 [[词嵌入]] 技术史视角交叉链接，created_at 未动）；index 与 shturl 同步 |
 | 2026-11-08 15:05:00 | Ingest | [[raw/papers/Scaling Law.md]] | 12 | 2 | 编译《Scaling Law》为 12 页：concepts 10（规模定律 hub/Kaplan与Chinchilla定律/训练前预测与算力配比/数据受限扩展/MoE缩放律/临界批大小与超参迁移/涌现能力与度量之争/预训练撞墙与下半场/稳定性与Muon优化器/Scaling失效五边界，4 张 Mermaid 图）、comparisons 1（训练与推理时Scaling对比：经济学五维+o1/R1/s1）、summaries 1（Scaling Law·素材摘要）；第 5 章推理时扩展复用既有页，联动更新 2 页（测试时缩放律、推理时扩展补 [[规模定律]] 与对比页交叉链接，created_at 未动）；index 与 shturl 同步 |
+| 2026-11-24 08:45:00 | Ingest | [[raw/leetcode-hot100/README.md]] | 0 | 0 | 素材落盘不编译：LeetCode 热题 HOT 100 JavaScript 题解 100 文件按官方 17 分类存入 raw/leetcode-hot100/（核对补齐原清单遗漏的 240-搜索二维矩阵 II），每文件含头部注释（题号/题目/链接/描述/分点算法思路/复杂度）+ 算法代码 + node 可执行测试；全量回归 100/100 通过；原拟提交后补编译 wiki 索引页，待人工验收决定 |
 ---
 
 > 操作类型说明：
